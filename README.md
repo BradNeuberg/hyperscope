@@ -53,6 +53,10 @@ HyperScope also has an advanced command-line mode that is based on the Augment h
 
 HyperScope works with any documents published in its OPML-based file format, a simple XML format that is easy to generate. It is a client-side JavaScript library that does not require the installation of any special server software.
 
+##VIDEOS
+
+Watch the original HyperScope release presentation at SRI: [1](https://www.youtube.com/watch?v=MMm7NlH2KWo), [2](https://www.youtube.com/watch?v=ObVFk_UJ94I), [3](https://www.youtube.com/watch?v=hYKll4kUflk), [4](https://www.youtube.com/watch?v=4FXCNuXOfQM)
+
 ##FILE FORMAT
 
 HyperScope will work with any OPML documents. In order to view your documents under the HyperScope, all you have to do is transform your documents into OPML and put a link in your OPML to the stylesheet specified below.
