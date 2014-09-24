@@ -17,9 +17,6 @@ its base file format. It is open source and available under the GPL.
 
 ##MORE INFORMATION
 
-See the documents in the docs directory for more information on
-installing, configuring, and using the HyperScope.
-
 More information is available on our web site at:
 
   [http://hyperscope.org/](https://web.archive.org/web/20140401230652/http://hyperscope.org/)
@@ -42,13 +39,13 @@ HyperScope gives you the ability to change how you view a document (view specifi
 
 For example, every paragraph in a HyperScope document has a location number, an address corresponding to the paragraph's location in a document. For example, the second paragraph in the top-level of a document has the location number 2. To link to this paragraph, you can use the address:
 
-  http://foo/bar.opml#2
+    http://foo/bar.opml#2
 
 To jump directly to the second paragraph while viewing a document, you can click on the Jump button, type 2, and press Apply.
 
 You can see the location numbers for every paragraph, you can click Viewspecs, check the Numbering checkbox, and click on Apply. You'll notice that this view corresponds with the viewspec m. To link to the second paragraph of the document with numbering turned on, you can use the address:
 
-  http://foo/bar.opml#2:m
+    http://foo/bar.opml#2:m
 
 You can also jump to this particular paragraph and view by clicking on Jump and typing 2:m.
 
@@ -163,9 +160,9 @@ Augment, in an interoperable way. Furthermore, as we learn to leverage
 these new capabilities in our everyday work, we should be able to
 coevolve those capabilities continuously.
 
-The HyperScope is meant to be a [http://codinginparadise.org/projects/hyperscope/release2/hyperscope/src/demos/bi-2120.opml](first step)
+The HyperScope is meant to be a [first step](http://codinginparadise.org/projects/hyperscope/release2/hyperscope/src/demos/bi-2120.opml)
 towards this vision of an Open Hyperdocument System. We have three
-goals:<
+goals:
 
 * Give as many people as possible the ability to experience the
 capabilities of the original Augment system first-hand.
@@ -404,8 +401,7 @@ The focus for the HyperScope 1.1 release was to get a networked HTML transformer
 up on the network, get our HyperScope architecture documentation up to date, and
 fix various bugs.
 
-* The big new feature for this release is an XHTML Transformer. This transformer can dynamically
-take HTML documents and bring them into the HyperScope.
+* The big new feature for this release is an XHTML Transformer. This transformer can dynamically take HTML documents and bring them into the HyperScope.
 
 There is a bookmarklet available that you can drag to your links toolbar;
 when browsing the web, you can press this button to suck the page into the HyperScope.
