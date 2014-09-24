@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="31"
+   name=""
+   committed-date="2006-05-17T19:35:45.566621Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/tests/client/lib/jsunit/tests"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="31"
+   name="jsUnitDeclSetUpTearDownTests.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="8d6aa86e3b57e883e846ae35d00759e3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitTestSetUpPages.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="5eae2ea6853c97d3e0a9a10ee8b46272"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitDeclTestSuite.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="4d9610513f2fed3451ac7dc4b22f7351"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitDeclAssertionTests.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="b27300c5064fe967b6d5077fe459110e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitDeclTestSetUpPagesSuite.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="be795534f50c7a1c5f01ef4cb56069a8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitUtilityTests.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="49a45295cb1dbebd4eb36ab6ee1c0451"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitSetUpTearDownTests.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="3ab4525aa60d93f22eaed4d12f98653e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitDeclOnLoadTests.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="6c654d20df71db6e404b5a3af1503aa6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitTestSuite.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="76b6a31289ce3922a8eb79e0a76aa04b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitTestSetUpPagesSuite.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="17e95e097a8b502d4320526318c672d8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitAssertionTests.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="7bde2b767ebfbf50f569a25f3215fed6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitDeclFrameworkUtilityTests.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="2fc01a37290724c5c67da2f403f9db5c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitOnLoadTests.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="d644876ed3ea5750e56bc24684542f25"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitDeclTestLoadData.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="55bf95b9fd6e93a8bf60f5553374bb8d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitDeclTestFailures.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="6227899f8569af3134f3f1a59c6234db"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitTestLoadStaff.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="cfb8a743d18dbb815cf3a360ffa1277d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitFrameworkUtilityTests.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="ec4fc9c0e6ef50d5a94d0ddbfad7d0e6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitDeclarationTests.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="bfb78b3412ec7243ae8bece9464fae5c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitDeclTestSetUpPages.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="43d58f0cd923475181af7382e4aa2229"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   name="data"
+   kind="dir"/>
+<entry
+   committed-rev="31"
+   name="jsUnitTestLoadData.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="9cbf36965035f12844059b155f30846a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="index.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="8b654a39efcd8807acb9715033231ab3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitTestFailures.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="e5e6863caf934e559adb382a9e104a71"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jsUnitDeclUtilityTests.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="39384d1ce87eda4c4f855b0fee2a15d6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+</wc-entries>

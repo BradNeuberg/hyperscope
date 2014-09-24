@@ -1,0 +1,36 @@
+<div 	dojoType="FloatingPane" 
+		id="${this.widgetId}Pane"
+		hasShadow="true" 
+		title="Jump (to) Item" 
+		resizable="false"
+		displayCloseAction="false"
+		constrainToContainer="true"
+		dojoAttachPoint="jumpOverlay"
+		class="jumpOverlay initial-overlay-state">
+    
+    <div class="jumpInput dialog-content">
+    	<table width="100%">
+    		<tr valign="middle">
+				<span>
+		            Click on the item or enter its address:
+		        </span>
+				
+		        <input	type="text" 
+						dojoAttachPoint="addressInput"
+						dojoAttachEvent="onkeypress: handleKey">
+				</input>
+			</tr>
+		</table>
+    </div>
+    
+    <div class="jumpButtons dialog-content">
+    	<!-- Commenting out for future implementation -->
+		<!--
+		<button class="jumpHelpButton">?</button>
+    	<button class="jumpMoreButton">More</button>
+    	-->
+		
+    	<button class="jumpCancelButton" dojoAttachEvent="onclick: handleCancel">Cancel</button>
+    	<button class="jumpOKButton" dojoAttachEvent="onclick: handleOK">OK</button>
+    </div>
+</div>

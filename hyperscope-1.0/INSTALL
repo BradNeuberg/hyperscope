@@ -1,0 +1,20 @@
+HyperScope Installation
+=======================
+
+To use HyperScope with your OPML documents, you must do two things.
+You must install the HyperScope code in your web directory, and you
+must insert one line into your OPML document.
+
+The hyperscope directory (this directory) must be in your root web
+directory.  The easiest way to do this is to copy this directory into
+your root web directory.  If you would like to put the source files
+elsewhere, and if you are running the Apache web server, you can add
+the mod_rewrite rule in hyperscope/etc/httpd.conf to your server
+configuration.
+
+The second line of your OPML documents should be an xml-stylesheet
+processing instruction that looks like:
+
+<?xml-stylesheet type="text/xsl" href="/hyperscope/src/client/lib/hs/xslt/hyperscope.xsl"?>
+
+For examples, see the OPML documents in hyperscope/src/demos.

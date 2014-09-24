@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<title>LayoutPane / StatusBar Widget Test</title>
+
+<script type="text/javascript">
+
+	var djConfig = {isDebug: true};
+
+	//djConfig.debugAtAllCosts = true;
+
+</script>
+<script type="text/javascript" src="../../dojo.js"></script>
+<script language="JavaScript" type="text/javascript">
+
+	dojo.require("dojo.widget.HtmlLayoutPane");
+	dojo.require("dojo.widget.HtmlResizeHandle");
+
+	dojo.hostenv.writeIncludes();
+
+	//dojo.addOnLoad(function(){
+	//	dojo.debug('status bar min width: '+dojo.widget.getWidgetById('statusBar').getMinWidth());
+	//	dojo.debug('window thing min width: '+dojo.widget.getWidgetById('mywindow').getMinWidth());
+	//});
+</script>
+<style>
+
+div.statusBar {
+	background-color: ThreeDFace;
+	height: 28px;
+	padding: 1px;
+}
+
+div.statusPanel {
+	background-color: ThreeDFace;
+	border: 1px solid;
+	border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow;
+	margin: 1px;
+	padding: 2px 6px;
+}
+
+</style>
+</head>
+<body>
+
+<p>HTML before</p>
+<p>HTML before</p>
+
+<div dojoType="LayoutPane"
+	widgetId="mywindow"
+	minHeight="20"
+	style="border: 2px solid black; width: 90%; height: 200px;"
+>
+	<div dojoType="LayoutPane" layoutAlign="bottom" class="statusBar" minHeight="28" widgetId="statusBar">
+
+		<div dojoType="LayoutPane" layoutAlign="left" class="statusPanel">
+			panel 1
+		</div>
+		<div dojoType="LayoutPane" layoutAlign="left" class="statusPanel">
+			panel 2
+		</div>
+		<div dojoType="LayoutPane" layoutAlign="client" class="statusPanel" style="padding-right: 0px; z-index: 1;" minWidth="80">
+			panel 3
+		</div>
+		<div dojoType="ResizeHandle" targetElmId="mywindow"></div>
+	</div>
+</div>
+
+<p>HTML after</p>
+<p>HTML after</p>
+
+</body>
+</html>

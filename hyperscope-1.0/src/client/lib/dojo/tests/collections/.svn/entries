@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/tests/collections"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="test_Dictionary.js"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="1b6e7403e5593aea4df9e5ed9e2c279c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Stack.js"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="934943f285bd374e0c1e34a987f15d4f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_DictionaryEntry.js"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5258e2db2a3cb2ebc2c5ddb6aac19b42"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ArrayList.js"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2c218400c85590d865adb60943dd096f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Set.js"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2aa23f230a60d2ca61006d8ef0d7886c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_SortedList.js"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="1341f300e4b0c1a8e86446f3ba22b049"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Queue.js"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a4cc496d50473f752036139dc2bde541"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+</wc-entries>

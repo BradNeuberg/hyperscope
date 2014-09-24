@@ -1,0 +1,276 @@
+<html>
+	<head>
+		<title>Test Page for hs.util.AddressTokenizer</title>
+		
+		<script language="javascript" src="../lib/jsunit/app/jsUnitCore.js"></script>
+
+		<script type="text/javascript" src="../../../client/lib/sarissa/sarissa.js"></script>
+		<script type="text/javascript" src="../../../client/lib/sarissa/sarissa_ieemu_xpath.js"></script>
+		
+		<script type="text/javascript">
+			var djConfig = { testing: true, isDebug: true, disableFlashStorage: true };
+		</script>
+		<script type="text/javascript" src="../../../client/lib/dojo/dojo.js.uncompressed.js"></script>
+		
+		<script type="text/javascript" src="../../../client/lib/hs/exception.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/filter.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/util.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/address.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/model.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/commands.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/ui.js"></script>
+	</head>
+	<body>
+		<h1>Test Page for hs.util.AddressSerializer</h1>
+
+	    <p>This page contains a suite of tests for testing
+	    HyperScope.</p>
+	
+		<script language="javascript">
+			// wait for page to finish loading
+			dojo.event.connect(dojo, "loaded", pageLoaded);
+			
+			function setUpPage(){
+			}
+			
+			function pageLoaded(){
+				debug("page loaded");
+				setUpPageStatus = "complete";
+			}
+			
+			function testSerializer(){
+				var s, addr, url, exp = null, p;
+				
+				info("---TestAddressSerializer:testSerializer()");
+				
+				// NON-RELATIVE ADDRESSES
+				
+				url = "http://bootstrap.org";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals("http://bootstrap.org/", s.serialize());
+				
+				url = "http://bootstrap.org:100/someDir/someFile.opml?query1=query2#3A:x";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals(url, s.serialize());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#0";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals(url, s.serialize());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023+2w";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals("http://bootstrap.org/someDir/someFile.opml#023 +2w", 
+							 s.serialize());
+		
+				url = "http://bootstrap.org/someDir/someFile.opml#023 +c";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals(url, s.serialize());
+	
+				url = "http://bootstrap.org/someDir/someFile.opml#023 +e-10v+f+w";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals(url, s.serialize());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023%20+e%20-10v%20+f+w";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals("http://bootstrap.org/someDir/someFile.opml#023 +e-10v+f+w", 
+							 s.serialize());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023-5i+w";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals("http://bootstrap.org/someDir/someFile.opml#023 -5i+w", 
+							 s.serialize());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023.nbudoehtspcrrf5n10u \"test\" :wxbb ;/foobar/;";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals("http://bootstrap.org/someDir/someFile.opml#023 .nbudoehtspcrrf5n10u \"test\":wxbb;/foobar/;", 
+							 s.serialize());
+
+				url = "http://bootstrap.org/someDir/someFile.opml#023.nbudoehtspcrrf5n10u /'test?'/ :wxbb ;/foobar/;";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals("http://bootstrap.org/someDir/someFile.opml#023 .nbudoehtspcrrf5n10u /'test?'/:wxbb;/foobar/;", 
+							 s.serialize());
+			
+				url = "http://bootstrap.org/someDir/someFile.opml#023 \"test\\:foo\\;\" :wxbb ;/foobar/;";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals("http://bootstrap.org/someDir/someFile.opml#023 \"test\\:foo\\;\":wxbb;/foobar/;", 
+							 s.serialize());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023;/foobar/i;";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals(url, s.serialize());
+			
+				url = "http://bootstrap.org/someDir/someFile.opml#;/foobar/;";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals(url, s.serialize());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023.nbudoehtspcrrf5n10u2l 2A5C2.n  \"test\" :wxbb ;/foobar/;";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals("http://bootstrap.org/someDir/someFile.opml#023 .nbudoehtspcrrf5n10u2l 2A5C2 .n \"test\":wxbb;/foobar/;", 
+							 s.serialize());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023.nbudoehtspcrrf5n10u%20\"test\"%20:wxbb%20;/foobar/;";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals("http://bootstrap.org/someDir/someFile.opml#023 .nbudoehtspcrrf5n10u \"test\":wxbb;/foobar/;", 
+							 s.serialize());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#     023     .nbudoehtspcrrf5n10u \"test\": w x b b   ;/foobar/;    ";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals("http://bootstrap.org/someDir/someFile.opml#023 .nbudoehtspcrrf5n10u \"test\":wxbb;/foobar/;", 
+							 s.serialize());
+	
+				url = "http://bootstrap.org/someDir/someFile.opml#Foobar!2A5AA20E .10l";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals("http://bootstrap.org/someDir/someFile.opml#Foobar !2A5AA20E .10l", 
+							 s.serialize());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#2";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals(url, s.serialize());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#0";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals(url, s.serialize());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#!2A5AA20";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals(url, s.serialize());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#@someMarker";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals(url, s.serialize());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#$external";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals(url, s.serialize());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#*foobar!branchSearch";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals("http://bootstrap.org/someDir/someFile.opml#*foobar !branchSearch", 
+							 s.serialize());
+				
+				// RELATIVE ADDRESSES
+				
+				url = "#023+2w";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals("./#023 +2w", s.serialize());
+				
+				url = "someFile.opml#023+2w";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals("someFile.opml#023 +2w", s.serialize());
+				
+				url = "someFile.opml#";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals("someFile.opml", s.serialize());
+				
+				url = "../../someDir/someFile.opml#label:x";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals(url, s.serialize());
+				
+				url = "../../someDir/someFile.opml#:x";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				s = new hs.util.AddressSerializer(addr);
+				assertEquals(url, s.serialize());
+			
+				// INVALID ADDRESSES
+				url = "INVALID: http://";
+				info("url: " + url);
+				exp = null;
+				try{ 
+					addr = new hs.address.Address(url);
+					s = new hs.util.AddressSerializer(addr); 
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				url = "INVALID: http://http://";
+				info("url: " + url);
+				exp = null;
+				try{ 
+					addr = new hs.address.Address(url);
+					s = new hs.util.AddressSerializer(addr); 
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				url = "INVALID: #label#marker";
+				info("url: " + url);
+				exp = null;
+				try{ 
+					addr = new hs.address.Address(url);
+					s = new hs.util.AddressSerializer(addr); 
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				url = "INVALID: #023+2w:x:x";
+				info("url: " + url);
+				exp = null;
+				try{ 
+					addr = new hs.address.Address(url);
+					s = new hs.util.AddressSerializer(addr); 
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+			}
+		</script>
+	</body>
+</html>

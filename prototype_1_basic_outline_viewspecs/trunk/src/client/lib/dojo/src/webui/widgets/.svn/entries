@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2006-03-06T23:36:47.192473Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/prototype_1_basic_outline_viewspecs/trunk/src/client/lib/dojo/src/webui/widgets"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="11"
+   name="Menu.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="ce04054f6a4e7fde58283d10ffc82d92"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="ComboBox.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="69192e506176705e863eca3939986321"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="HTMLMenuItem.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="f910b795f7ff5bb27088e29dbc41994b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="ContextMenu.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="e0a1d16f03e2b9b5057dfd56108eb4e3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="Parse.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="2cf527124ef9903fb78063970069418f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="Button.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="a7636e849c4fd1b299a5c02dbec4f2ad"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="DropdownButtons.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="922b9ab3f7f1dd3e0c59eceb43d67910"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="MenuItem.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="5cb97d821632a5c1356d93046cf5f21c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="5e1736f8f99e655d60f83202a50e2403"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="Tabs.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="e798a170e590653df69f0e31fb0ff2db"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="HTMLMenu.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="2d0cf1b6aee431ea5e4e5877f8a3956f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="SVGButton.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="ae9af94aee55a3bd7827c337afd99dfb"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="HTMLComboBox.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="a0b9552f26b1da06e68bf127bf3d006c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="InlineEditBox.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="fd55585cbabe0aaffb6c2506494213bf"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="HTMLContextMenu.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="69325c92c1c8b977f6f659ad07122e0c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="HTMLButton.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="4a90d35af9acdfc11ca3df3314251be4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="SlideShow.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="32ae1833a61682d9395aa73a32d0dcec"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="HTMLResizableTextarea.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="b7531d2442b2098365b2a0b0bb7c1afc"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+</wc-entries>

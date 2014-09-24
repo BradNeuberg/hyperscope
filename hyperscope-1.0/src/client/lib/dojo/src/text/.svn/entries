@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/src/text"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="Text.js"
+   text-time="2006-10-14T01:00:12.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="054aaa78e61ab172a28b7dfa7d818aed"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Builder.js"
+   text-time="2006-10-14T01:00:12.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="ecfb47082190cbb9749c113a3526e587"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="String.js"
+   text-time="2006-10-14T01:00:12.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3596094350cac2ea8038fa763814b356"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:12.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="6c48bbd8858397103983da635b97e181"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="textDirectory.js"
+   text-time="2006-10-14T01:00:12.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5df64cc0b363c74128a40fd91c70746e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+</wc-entries>

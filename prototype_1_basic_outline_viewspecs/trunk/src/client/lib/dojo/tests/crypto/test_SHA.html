@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>SHA Test</title>
+		<script language="JavaScript" type="text/javascript">
+			// Dojo configuration
+			djConfig = { 
+				isDebug: true
+			};
+		</script>
+		<script language="JavaScript" type="text/javascript" src="../../dojo.js"></script>
+		<script language="JavaScript" type="text/javascript" src="../jsunit_browser.js"></script>
+		<script language="JavaScript" type="text/javascript" src="test_SHA.js"></script>
+		<script language="JavaScript" type="text/javascript">
+			function init(){
+				test_SHA_compute();
+			}
+			dojo.hostenv.modulesLoadedListeners.push(init);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

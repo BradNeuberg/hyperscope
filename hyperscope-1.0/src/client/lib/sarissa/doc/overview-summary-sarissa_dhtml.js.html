@@ -1,0 +1,273 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<HTML>
+<HEAD>
+<TITLE>
+sarissa Overview
+</TITLE>
+<LINK REL ="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<SCRIPT>
+function asd()
+{
+parent.document.title=" Overview";
+}
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#eeeeee" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<A NAME="navbar_top"><!-- --></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#b8cade" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3">
+  <TR ALIGN="center" VALIGN="top">
+  
+  
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-summary.html"><FONT CLASS="NavBarFont1"><b>Overview</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev">	&nbsp;<FONT CLASS="NavBarFont1Rev"><b>File</b></FONT>&nbsp;</TD>
+  
+
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"> 	<FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-tree.html"><FONT CLASS="NavBarFont1"><b>Tree</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="index-all.html"--><FONT CLASS="NavBarFont1"><b>Index</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="help-doc.html"><FONT CLASS="NavBarFont1"><b>Help</b></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD BGCOLOR="#b8cade" ALIGN="right" VALIGN="top">
+<EM>
+<b>sarissa</b></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="index.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="overview-summary.html" TARGET="_top"><B>NO FRAMES</B></A>
+&nbsp;&nbsp;
+<SCRIPT>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+</TABLE>
+<!-- =========== END OF NAVBAR =========== -->
+
+<HR>
+<CENTER>
+
+   <H2>sarissa_dhtml.js</H2>
+
+</CENTER>
+        
+            
+        
+        
+        <h4>Summary</h4>
+        <p>
+        
+           No overview generated for 'sarissa_dhtml.js'<BR/><BR/>
+           
+        </p>
+
+<HR>
+
+
+
+
+
+
+<!-- START SOURCECODE -->
+<pre class="sourceview">
+<span class="comment">/**
+ * ====================================================================
+ * About
+ * ====================================================================
+ * Sarissa cross browser XML library - AJAX module
+ * <span class="attrib">@version</span> 0.9.7
+ * <span class="attrib">@author</span>: Copyright Manos Batsis, mailto: mbatsis at users full stop sourceforge full stop net
+ *
+ * This module contains some convinient AJAX tricks based on Sarissa 
+ *
+ * ====================================================================
+ * Licence
+ * ====================================================================
+ * Sarissa is free software distributed under the GNU GPL version 2 (see &lt;a href="gpl.txt"&gt;gpl.txt&lt;/a&gt;) or higher, 
+ * GNU LGPL version 2.1 (see &lt;a href="lgpl.txt"&gt;lgpl.txt&lt;/a&gt;) or higher and Apache Software License 2.0 or higher 
+ * (see &lt;a href="asl.txt"&gt;asl.txt&lt;/a&gt;). This means you can choose one of the three and use that if you like. If 
+ * you make modifications under the ASL, i would appreciate it if you submitted those.
+ * In case your copy of Sarissa does not include the license texts, you may find
+ * them online in various formats at &lt;a href="http://www.gnu.org"&gt;http://www.gnu.org&lt;/a&gt; and 
+ * &lt;a href="http://www.apache.org"&gt;http://www.apache.org&lt;/a&gt;.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+ */</span>
+<span class="comment">/**
+ * Update an element with response of a GET request on the given URL.  Passing a configured XSLT 
+ * processor will result in transforming and updating oNode before using it to update oTargetElement.
+ * You can also pass a callback function to be executed when the update is finished. The function will be called as 
+ * &lt;code&gt;functionName(oNode, oTargetElement);&lt;/code&gt;
+ * <span class="attrib">@addon</span>
+ * <span class="attrib">@param</span> sFromUrl the URL to make the request to
+ * <span class="attrib">@param</span> oTargetElement the element to update
+ * <span class="attrib">@param</span> xsltproc (optional) the transformer to use on the returned
+ *                  content before updating the target element with it
+ * <span class="attrib">@param</span> callback (optional) a Function object to execute once the update is finished successfuly, called as &lt;code&gt;callback(oNode, oTargetElement)&lt;/code&gt;
+ * <span class="attrib">@param</span> skipCache (optional) whether to skip any cache
+ */</span>
+Sarissa.updateContentFromURI = <span class="reserved">function</span>(sFromUrl, oTargetElement, xsltproc, callback, skipCache) {
+    try{
+        oTargetElement.style.cursor = <span class="literal">"wait"</span>;
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open(<span class="literal">"GET"</span>, sFromUrl);
+        <span class="reserved">function</span> sarissa_dhtml_loadHandler() {
+            <span class="reserved">if</span> (xmlhttp.readyState == 4) {
+                oTargetElement.style.cursor = <span class="literal">"auto"</span>;
+                Sarissa.updateContentFromNode(xmlhttp.responseXML, oTargetElement, xsltproc, callback);
+            };
+        };
+        xmlhttp.onreadystatechange = sarissa_dhtml_loadHandler;
+        <span class="reserved">if</span> (skipCache) {
+             var oldage = <span class="literal">"Sat, 1 Jan 2000 00:00:00 GMT"</span>;
+             xmlhttp.setRequestHeader(<span class="literal">"If-Modified-Since"</span>, oldage);
+        };
+        xmlhttp.send(<span class="literal">""</span>);
+        oTargetElement.style.cursor = <span class="literal">"auto"</span>;
+    }
+    catch(e){
+        oTargetElement.style.cursor = <span class="literal">"auto"</span>;
+        throw e;
+    };
+};
+
+<span class="comment">/**
+ * Update an element's content with the given DOM node. Passing a configured XSLT 
+ * processor will result in transforming and updating oNode before using it to update oTargetElement.
+ * You can also pass a callback function to be executed when the update is finished. The function will be called as 
+ * &lt;code&gt;functionName(oNode, oTargetElement);&lt;/code&gt;
+ * <span class="attrib">@addon</span>
+ * <span class="attrib">@param</span> oNode the URL to make the request to
+ * <span class="attrib">@param</span> oTargetElement the element to update
+ * <span class="attrib">@param</span> xsltproc (optional) the transformer to use on the given 
+ *                  DOM node before updating the target element with it
+ * <span class="attrib">@param</span> callback (optional) a Function object to execute once the update is finished successfuly, called as &lt;code&gt;callback(oNode, oTargetElement)&lt;/code&gt;
+ */</span>
+Sarissa.updateContentFromNode = <span class="reserved">function</span>(oNode, oTargetElement, xsltproc, callback) {
+    try {
+        oTargetElement.style.cursor = <span class="literal">"wait"</span>;
+        Sarissa.clearChildNodes(oTargetElement);
+<span class="comment">        // check for parsing errors</span>
+        var ownerDoc = oNode.nodeType == Node.DOCUMENT_NODE?oNode:oNode.ownerDocument;
+        <span class="reserved">if</span>(ownerDoc.parseError &amp;&amp; ownerDoc.parseError != 0) {
+            var pre = document.createElement(<span class="literal">"pre"</span>);
+            pre.appendChild(document.createTextNode(Sarissa.getParseErrorText(ownerDoc)));
+            oTargetElement.appendChild(pre);
+        }
+        <span class="reserved">else</span> {
+<span class="comment">            // transform if appropriate</span>
+            <span class="reserved">if</span>(xsltproc) {
+                oNode = xsltproc.transformToDocument(oNode);
+            };
+<span class="comment">            // be smart, maybe the user wants to display the source instead</span>
+            <span class="reserved">if</span>(oTargetElement.tagName.toLowerCase() == <span class="literal">"textarea"</span> || oTargetElement.tagName.toLowerCase() == <span class="literal">"input"</span>) {
+                oTargetElement.value = new XMLSerializer.serializeToString(oNode);
+            }
+            <span class="reserved">else</span> {
+<span class="comment">                // ok that was not smart; it was paranoid. Keep up the good work by trying to use DOM instead of innerHTML</span>
+                <span class="reserved">if</span>(oNode.nodeType == Node.DOCUMENT_NODE || oNode.ownerDocument.documentElement == oNode) {
+                    oTargetElement.innerHTML = new XMLSerializer.serializeToString(oNode);
+                }
+                <span class="reserved">else</span>{
+                    oTargetElement.appendChild(oTargetElement.ownerDocument.importNode(oNode, true));
+                };
+            };  
+        };
+        <span class="reserved">if</span> (callback) {
+            callback(oNode, oTargetElement);
+        };
+    }
+    catch(e) {
+            throw e;
+    }
+    finally{
+        oTargetElement.style.cursor = <span class="literal">"auto"</span>;
+    };
+};
+
+
+</pre>
+<!-- END SOURCECODE -->
+<HR>
+
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<A NAME="navbar_top"><!-- --></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#b8cade" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3">
+  <TR ALIGN="center" VALIGN="top">
+  
+  
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-summary.html"><FONT CLASS="NavBarFont1"><b>Overview</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev">	&nbsp;<FONT CLASS="NavBarFont1Rev"><b>File</b></FONT>&nbsp;</TD>
+  
+
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"> <FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-tree.html"><FONT CLASS="NavBarFont1"><b>Tree</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="index-all.html"--><FONT CLASS="NavBarFont1"><b>Index</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="help-doc.html"><FONT CLASS="NavBarFont1"><b>Help</b></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD BGCOLOR="#b8cade" ALIGN="right" VALIGN="top"><EM>
+<b>sarissa</b></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="index.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="overview-summary.html" TARGET="_top"><B>NO FRAMES</B></A>
+&nbsp;&nbsp;
+<SCRIPT>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+</TABLE>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<FONT SIZE="-1">
+
+</FONT>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Tue May  9 22:30:39 2006</div>
+</BODY>
+</HTML>

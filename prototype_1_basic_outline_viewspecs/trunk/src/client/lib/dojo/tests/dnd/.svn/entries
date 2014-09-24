@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2006-03-06T23:36:47.192473Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/prototype_1_basic_outline_viewspecs/trunk/src/client/lib/dojo/tests/dnd"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="11"
+   name="test_nested_drop_targets.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="7e39b83743c53da587e5edb542fee547"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_dragmove.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="c8173abf5aeab769ce943cd04ef5a822"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_draghandle.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="bde912e9c5d8ec407d38a126b17c8f2a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_simple.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="298fe0d27c30c33f0b40637339b1fe8a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_draghandle_2.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="08985df20874a6db38d33e0b778ec12b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+</wc-entries>

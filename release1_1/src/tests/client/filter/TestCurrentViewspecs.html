@@ -1,0 +1,1187 @@
+<html>
+	<head>
+		<title>Test Page for hs.filter.CurrentViewspecs</title>
+		
+		<script language="javascript" src="../lib/jsunit/app/jsUnitCore.js"></script>
+
+		<script type="text/javascript" src="../../../client/lib/sarissa/sarissa.js"></script>
+		<script type="text/javascript" src="../../../client/lib/sarissa/sarissa_ieemu_xpath.js"></script>
+		
+		<script type="text/javascript">
+			var djConfig = { testing: true, isDebug: true, disableFlashStorage: true };
+		</script>
+		<script type="text/javascript" src="../../../client/lib/dojo/dojo.js.uncompressed.js"></script>
+		
+		<script type="text/javascript" src="../../../client/lib/hs/exception.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/filter.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/util.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/address.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/model.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/commands.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/ui.js"></script>
+	</head>
+	<body>
+		<h1>Test Page for hs.filter.CurrentViewspecs</h1>
+
+		<p>This page contains a suite of tests for testing
+		HyperScope.</p>
+	
+		<script language="javascript">
+			/** Our HyperScope design document, using full HyperScope attributes in the OPML. */ 
+			var hyDoc = new Object();
+			
+			// wait for page to finish loading
+			dojo.event.connect(dojo, "loaded", pageLoaded);
+			
+			function setUpPage(){
+			}
+			
+			function pageLoaded(){
+				debug("page loaded");
+				var addr, fetch, url;
+				
+				// setup our fake testing environment
+				hs.model.testing = true;
+				hs.model.testingCurrentURL = getDocRoot() 
+						+ "../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml";
+						
+				// load our test files
+				var root = getDocRoot();
+				
+				info("---TestDocumentAndNode:pageLoaded()");
+				
+				info("Loading testing files...");
+				
+				// HyperScope-specific OPML
+				url = root + 
+						"../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml";
+				info("Loading url: " + url);
+				addr = new hs.address.Address(url);
+				fetch = new hs.util.XMLFetcher();
+				var hyDocHandler = function(address, dom, error){
+					if(dom == null || error != null
+						|| dojo.lang.isUndefined(dom)){
+						dojo.raise("Test file could not be loaded, file=" + address + ", error=" + error);
+					}
+					
+					debug("Loaded: " + address);
+					
+					hyDoc = new hs.model.Document(address, dom);
+					debug("xml="+dojo.dom.innerXML(hyDoc.dom));
+					
+					setUpPageStatus = "complete";
+				}
+				fetch.load(url, hyDocHandler);
+			}
+			
+			function getDocRoot(){
+				var url = window.location.href;
+				var endCut = null, hasFilename = false;
+				
+				// chop off any filenames
+				for(var i = url.length; i--; i >= 0){
+					// url[i] not supported on IE, because
+					// underlying window.location.href is not
+					// a String object but something native
+					if(url.charAt(i) == "/"){
+						if(hasFilename){
+							endCut = i + 1;
+						}
+						break;
+					}else if(url.charAt(i) == "."){
+						hasFilename = true;
+					}
+				}
+
+				if(hasFilename){
+					url = url.substring(0, endCut);
+				}
+				return url;
+			}
+			
+			function testCurrentViewspecs(){
+				var v, str, exp = null, xslt;
+				var origDom = hyDoc.dom;
+				
+				info("---TestCurrentViewspecs:testCurrentViewspecs()");
+				
+				str = "gebbzA";
+				info("Viewspec: " + str + " relative to 04");
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				hyDoc.jumpId("04");
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(3, v.getLevelClipping());
+				assertEquals(1, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(false, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("tebbz", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("3", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals(1, getXSLTParameter(xslt, "lineClipping"));
+				assertEquals(3, getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(false, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// no viewspec
+				str = "";
+				info("Viewspec: blank");
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(1, v.getLevelClipping());
+				assertEquals(1, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("0", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals(1, getXSLTParameter(xslt, "lineClipping"));
+				assertEquals(1, getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// default viewspecs
+				str = hs.filter.ViewspecConstants.DEFAULT_VIEWSPECS;
+				info("Viewspec: " + str);
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(1, v.getLevelClipping());
+				assertEquals(1, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("0", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals(1, getXSLTParameter(xslt, "lineClipping"));
+				assertEquals(1, getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// null viewspecs
+				str = null;
+				info("Viewspec: " + str);
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(1, v.getLevelClipping());
+				assertEquals(1, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("0", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals(1, getXSLTParameter(xslt, "lineClipping"));
+				assertEquals(1, getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// do non-standard options and test that doing lot's of 'show one level less' 
+				// past the 'top' level works
+				str = "maaaaaaaaaaacflpsuvyDEoFHGIKPQiO";
+				info("Viewspec: " + str + " relative to 0624");
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				hyDoc.jumpId("0624");
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(hs.filter.ViewspecConstants.MAX_LEVEL_CLIPPING, v.getLevelClipping());
+				assertEquals(hs.filter.ViewspecConstants.MAX_LINE_CLIPPING, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.PLEX_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(true, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.RIGHT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_ID, v.getNodeAddressingType());
+				assertEquals(false, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.FILTER_ALL, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_TO_CONTENT, v.getLevelIndentingType());
+				assertEquals(true, v.showFrozenNodes());
+				assertEquals(true, v.showNodeSignatures());
+				assertEquals(true, v.runSequenceGenerators());
+				// toString
+				assertEquals("wlimDKGIoQO", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("3B", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals("none", getXSLTParameter(xslt, "lineClipping"));
+				assertEquals("none", getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.RIGHT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(true, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_ID, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.PLEX_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.FILTER_ALL, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_TO_CONTENT, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+			
+				// 'flip' everything back to the default, except for 'k' and 'h'
+				str = "maaaaaaaaaaacflosuvyDEFHGIKPQiOxngpCHJLPAjkyh";
+				info("Viewspec: " + str + " relative to 0624");
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				hyDoc.jumpId("0624");
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(1, v.getLevelClipping());
+				assertEquals(1, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.NO_STRUCTURAL_CLIPPING, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NEXT_FILTERED_NODE, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("hk", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("3B", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals(1, getXSLTParameter(xslt, "lineClipping"));
+				assertEquals(1, getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.NO_STRUCTURAL_CLIPPING, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NEXT_FILTERED_NODE, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// test using a viewspec array
+				str = "maaaaaaaaaaacflosuvyDEFHGIKPQiOxngpCHJLPAjkyh";
+				info("Viewspec array: " + str + " relative to 0624");
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				hyDoc.jumpId("0624");
+				v = new hs.filter.CurrentViewspecs(toViewspecArray(str), hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(1, v.getLevelClipping());
+				assertEquals(1, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.NO_STRUCTURAL_CLIPPING, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NEXT_FILTERED_NODE, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("hk", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("3B", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals(1, getXSLTParameter(xslt, "lineClipping"));
+				assertEquals(1, getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.NO_STRUCTURAL_CLIPPING, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NEXT_FILTERED_NODE, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// test add()
+				str = "maaaaaaaaaaacflosuvyDEFHGIKPQiOxngpCHJLPAjkyh";
+				info("Viewspec: " + str + " relative to 0624");
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				hyDoc.jumpId("0624"); // level 2
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				// add()
+				v.add("b");
+				v.add("b");
+				v.add("b");
+				v.add("z");
+				// make sure we can't add() more than one at once
+				exp = null;
+				try{ 
+					add("bb");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals(4, v.getLevelClipping());
+				assertEquals(1, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.NO_STRUCTURAL_CLIPPING, v.getStructuralClippingType());
+				assertEquals(false, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NEXT_FILTERED_NODE, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("tebbhkz", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("3B", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals(1, getXSLTParameter(xslt, "lineClipping"));
+				assertEquals(4, getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(false, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.NO_STRUCTURAL_CLIPPING, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NEXT_FILTERED_NODE, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// make sure 'x' is generated correctly
+				str = "wdt";
+				info("Viewspec: " + str);
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(1, v.getLevelClipping());
+				assertEquals(1, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				// x is in default viewspecs so should be blank
+				assertEquals("", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("0", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals(1, getXSLTParameter(xslt, "lineClipping"));
+				assertEquals(1, getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+				
+				// make sure 'w' is generated correctly
+				str = "xexscaabbbbbbqqrrrrr";
+				info("Viewspec: " + str);
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(hs.filter.ViewspecConstants.MAX_LEVEL_CLIPPING, v.getLevelClipping());
+				assertEquals(hs.filter.ViewspecConstants.MAX_LINE_CLIPPING, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("w", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("0", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals("none", getXSLTParameter(xslt, "lineClipping"));
+				assertEquals("none", getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// make sure 't' is generated correctly
+				str = "w";
+				for(var i = 1; i <= hs.filter.ViewspecConstants.MAX_LINE_CLIPPING; i++){
+					str += "q";
+				}
+				info("Viewspec: " + str);
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(hs.filter.ViewspecConstants.MAX_LEVEL_CLIPPING, v.getLevelClipping());
+				assertEquals(1, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("tc", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("0", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals(1, getXSLTParameter(xslt, "lineClipping"));
+				assertEquals("none", getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// make sure 's' is generated correctly
+				str = "x";
+				for(var i = 1; i <= hs.filter.ViewspecConstants.MAX_LINE_CLIPPING; i++){
+					str += "r";
+				}
+				info("Viewspec: " + str);
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(1, v.getLevelClipping());
+				assertEquals(hs.filter.ViewspecConstants.MAX_LINE_CLIPPING, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("sd", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("0", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals("none", getXSLTParameter(xslt, "lineClipping"));
+				assertEquals(1, getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// make sure generating line clipping when near end of max is correct
+				str = "sqqqqqrrrqqq";
+				info("Viewspec: " + str);
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(1, v.getLevelClipping());
+				assertEquals(hs.filter.ViewspecConstants.MAX_LINE_CLIPPING - 5, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("sqqqqqd", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("0", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals(hs.filter.ViewspecConstants.MAX_LINE_CLIPPING - 5, getXSLTParameter(xslt, "lineClipping"));
+				assertEquals(1, getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+				
+				// make sure generating line clipping when near 1 is correct
+				str = "rrrr";
+				info("Viewspec: " + str);
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(1, v.getLevelClipping());
+				assertEquals(5, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("trrrrd", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("0", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals(5, getXSLTParameter(xslt, "lineClipping"));
+				assertEquals(1, getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// make sure 'd' is computed correctly
+				str = "s";
+				info("Viewspec: " + str);
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(1, v.getLevelClipping());
+				assertEquals(hs.filter.ViewspecConstants.MAX_LINE_CLIPPING, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("sd", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("0", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals("none", getXSLTParameter(xslt, "lineClipping"));
+				assertEquals(1, getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// make sure 'c' is computed correctly
+				str = "qsq";
+				for(var i = 1; i <= hs.filter.ViewspecConstants.MAX_LEVEL_CLIPPING; i++){
+					str += "b";
+				}
+				info("Viewspec: " + str);
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(hs.filter.ViewspecConstants.MAX_LEVEL_CLIPPING, v.getLevelClipping());
+				assertEquals(hs.filter.ViewspecConstants.MAX_LINE_CLIPPING - 1, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("sqc", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("0", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals(hs.filter.ViewspecConstants.MAX_LINE_CLIPPING - 1, getXSLTParameter(xslt, "lineClipping"));
+				assertEquals("none", getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// make sure level clipping = 0 works
+				str = "e";
+				info("Viewspec: " + str);
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(0, v.getLevelClipping());
+				assertEquals(1, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("tda", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("0", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals(1, getXSLTParameter(xslt, "lineClipping"));
+				assertEquals("0", getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// make sure level clipping with twenty units of max value writes
+				// out correctly
+				str = "waaaaaaaaaa";
+				info("Viewspec: " + str);
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(hs.filter.ViewspecConstants.MAX_LEVEL_CLIPPING - 10, v.getLevelClipping());
+				assertEquals(hs.filter.ViewspecConstants.MAX_LINE_CLIPPING, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("scaaaaaaaaaa", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("0", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals("none", getXSLTParameter(xslt, "lineClipping"));
+				assertEquals(hs.filter.ViewspecConstants.MAX_LEVEL_CLIPPING - 10, getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// make sure 'e' works correctly when context node's level is less than our 
+				// clipping level
+				str = "bbbbbbbbb";
+				info("Viewspec: " + str + " from 0563");
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				hyDoc.jumpId("0563"); // level 9
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(10, v.getLevelClipping());
+				assertEquals(1, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("teb", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("4C1A4D1B4", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals(1, getXSLTParameter(xslt, "lineClipping"));
+				assertEquals(10, getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// make sure 'e' works correctly when context node's level is more than our 
+				// clipping level and near the context node
+				str = "bbbbbb";
+				info("Viewspec: " + str + " from 0563");
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				hyDoc.jumpId("0563"); // level 9
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(7, v.getLevelClipping());
+				assertEquals(1, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("teaa", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("4C1A4D1B4", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals(1, getXSLTParameter(xslt, "lineClipping"));
+				assertEquals(7, getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// make sure 'e' works correctly when context node's level is more than our 
+				// clipping level and near level 1
+				str = "bb";
+				info("Viewspec: " + str + " from 0563");
+				hyDoc.dom = origDom;
+				hyDoc.jumpOrigin();
+				hyDoc.jumpId("0563"); // level 9
+				v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				assertNotNull(v);
+				assertNotUndefined(v);
+				assertEquals(3, v.getLevelClipping());
+				assertEquals(1, v.getLineClipping());
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, v.getStructuralClippingType());
+				assertEquals(true, v.showBlankLines());
+				assertEquals(false, v.showNodeAddressing());
+				assertEquals(hs.filter.ViewspecConstants.LEFT, v.getNodeAddressingPlacement());
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, v.getNodeAddressingType());
+				assertEquals(true, v.showNodeLabels());
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, v.getContentFilterType());
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, v.getLevelIndentingType());
+				assertEquals(false, v.showFrozenNodes());
+				assertEquals(false, v.showNodeSignatures());
+				assertEquals(false, v.runSequenceGenerators());
+				// toString
+				assertEquals("tdbb", v.toString());
+				// apply
+				hyDoc.currentViewspecs = v;
+				hyDoc.render();
+				xslt = hyDoc.getRenderXSLT();
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				assertEquals("4C1A4D1B4", getXSLTParameter(xslt, "context-node-number"));
+				assertEquals(1, getXSLTParameter(xslt, "lineClipping"));
+				assertEquals(3, getXSLTParameter(xslt, "levelClipping"));
+				assertEquals(true, getXSLTParameter(xslt, "show-node-labels"));
+				assertEquals(true, getXSLTParameter(xslt, "show-blank-lines"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-addressing"));
+				assertEquals(hs.filter.ViewspecConstants.LEFT, 
+							getXSLTParameter(xslt, "node-addressing-placement"));
+				assertEquals(false, getXSLTParameter(xslt, "show-node-signatures"));
+				assertEquals(false, getXSLTParameter(xslt, "show-frozen-nodes"));
+				assertEquals(hs.filter.ViewspecConstants.SHOW_NODE_NUMBER, 
+							getXSLTParameter(xslt, "node-addressing-type"));
+				assertEquals(hs.filter.ViewspecConstants.BRANCH_ONLY, 
+							getXSLTParameter(xslt, "structure-clipping"));
+				assertEquals(hs.filter.ViewspecConstants.NO_FILTERING, 
+							getXSLTParameter(xslt, "content-filtering-type"));
+				assertEquals(hs.filter.ViewspecConstants.INDENT_ON, 
+							getXSLTParameter(xslt, "level-indenting-type"));
+							
+				// invalid
+				str = "mZ";
+				info("INVALID viewspec: " + str);
+				exp = null;
+				try{ 
+					v = new hs.filter.CurrentViewspecs(str, hyDoc);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+			}
+			
+			function toViewspecArray(str){
+				var results = new Array();
+				for(var i = 0; i < str.length; i++){
+					var v = new hs.address.Viewspec(str.charAt(i));
+					results.push(v);
+				}
+				
+				return results;
+			}
+			
+			function getXSLTParameter(xslt, name){
+				var results = 
+					xslt.getParameter(hs.model.Document.HS_INTERNAL_NAMESPACE_URI, name);
+				
+				if(results == "true"){
+					results = true;
+				}else if(results == "false"){
+					results = false;
+				}
+				
+				return results;
+			}
+		</script>
+	</body>
+</html>

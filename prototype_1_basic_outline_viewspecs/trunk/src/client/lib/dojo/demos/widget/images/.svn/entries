@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2006-03-06T23:36:47.192473Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/prototype_1_basic_outline_viewspecs/trunk/src/client/lib/dojo/demos/widget/images"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="11"
+   name="icon_calendar.svg"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="1bb578ab4f89a0cd9e3d97669c57c5e8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+<entry
+   committed-rev="11"
+   name="icon_texteditor.svg"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="562ac4589020f2bb09029e5a1ba0f59d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+<entry
+   committed-rev="11"
+   name="icon_email.png"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="5f4e200cd8ed29dd56be0e9fd0012471"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+<entry
+   committed-rev="11"
+   name="icon_readme.txt"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="b8acefef837b342531fa8ffcf180fb4b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+<entry
+   committed-rev="11"
+   name="icon_calendar.png"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="e3a3adf8b3dc0139867c8f9e69d02755"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+<entry
+   committed-rev="11"
+   name="icon_texteditor.png"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="4b249499126a04b34e341200e2de9dfd"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+<entry
+   committed-rev="11"
+   name="icon_users.svg"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="ac4b31333cc1a73873ea83304131c35e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+<entry
+   committed-rev="11"
+   name="icon_update.svg"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="0ce4466070d3b2b92e546801e227dd5d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+<entry
+   committed-rev="11"
+   name="icon_browser.svg"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="72e08776e23fc67cd26433e545ed4d9a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+<entry
+   committed-rev="11"
+   name="icon_users.png"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="49e6e8881845dd7680f0bfa62f8f6005"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+<entry
+   committed-rev="11"
+   name="icon_email.svg"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="fccb5c183de9cf6d7b9197568927019e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+<entry
+   committed-rev="11"
+   name="icon_update.png"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="cdb2e206682bed58c833cf22b4484db1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+<entry
+   committed-rev="11"
+   name="icon_browser.png"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="d6679f4be682b04c6307a56d21a014c9"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+</wc-entries>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/src/flash/flash8"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="DojoExternalInterface.as"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="c3d2ad1496131b3e20f931c9f5e83db2"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="ExpressInstall.as"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="85b22abdf1c8f956f878922a2aecc319"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+</wc-entries>

@@ -1,0 +1,422 @@
+<?xml version="1.0"?>
+<project name="hyperScope" default="release" basedir=".">
+	
+	<property environment="env"/>
+	<property name="dojo_home" value="${env.dojo_home}"/>
+	<property file="build.properties"/>
+	<tstamp>
+		<format property="today" pattern="MM_dd_yyyy" locale="en"/>
+	</tstamp>
+	<property name="release.zip.filename" value="hyperscope-${today}.zip"/>
+	
+	<path id="project.classpath">
+		<fileset dir="src/server/xhtml_transformer/lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+	
+	
+	<target name="help">
+		<echo><![CDATA[
+To use this ant file, you must have a Dojo 0.3.1 source
+checkout:
+
+svn co http://svn.dojotoolkit.org/dojo/tags/release-0.3.1/
+
+You must then define an environment variable
+named 'dojo_home' that points to this checkout:
+
+set dojo_home=c:/dev/dojo/release-0.3.1
+export dojo_home=~/dev/dojo/release-0.3.1 (for Unix/Mac)
+
+This is needed to build a Dojo profile and compress our HyperScope 
+files.
+
+You must also have Cygwin installed if you are on Windows. You
+can configure the build process, including what remote host
+and dir it is pushed to, with the build.properties file
+in the same directory as this build.xml file.
+
+Ant tasks:
+
+deploy:
+		Copies release files to a remote
+		web server. Does not copy the
+		release zip.
+		You must define the remote host and user
+		in your build.properties file, and have SSH
+		setup on both ends to do secure copying.
+		Does not call 'release'.
+
+deploy-zip:
+		Copies our release zip to a remote web server.
+		Does not call 'release'.
+		
+release:
+		Generates a zip file with the 
+		release and copies all files into release/ directory
+
+optimize:
+		Generates a subset of Dojo using a profile; 
+		compresses HyperScope source; 
+		and joins them together
+
+transformers:
+		Just build our transformers, such as the
+		XHTML transformer which uses Java.
+		
+all:
+		Runs all of the above
+		
+The default task is 'release'.
+		]]></echo>
+	</target>
+	
+	<target name="clean">		
+		<delete dir="compile"/>
+	</target>
+	
+	<target name="clobber" depends="clean">
+	</target>
+	
+	<target name="init" depends="clean">
+		<mkdir dir="src/client/lib/all"/>
+	</target>
+	
+	<target name="optimize" depends="init">
+		<description>
+			Generates a subset of Dojo using a profile; 
+			compresses HyperScope source; 
+			and joins them together
+		</description>
+		
+		<!--
+			Overview:
+			We copy over our custom Dojo profile and all of our
+			HyperScope source files over to dojo_home; execute
+			Dojo's release task; copy the results back over to
+			ourselves; then clean up.
+			
+			We do this for two reasons: so that we don't have a
+			giant Dojo src tree in our repository which makes for
+			huge src downloads of HyperScope, and to make it easier
+			to rev to future versions of Dojo when they come
+			out.
+		-->
+		
+		<echo>Building Dojo using dojo_home=${dojo_home}...</echo>
+		
+		<!-- Copy our custom Dojo profile over -->
+		<copy	file="src/etc/hyperscope.profile.js" 
+				todir="${dojo_home}/buildscripts/profiles"/>
+		
+		<!-- Copy our HyperScope and Sarissa sources over -->
+		<mkdir 	dir="${dojo_home}/src/hs"/>
+		<copy 	todir="${dojo_home}/src/hs">
+			<fileset dir="src/client/lib/hs"/>
+		</copy>
+		<mkdir 	dir="${dojo_home}/src/sarissa"/>
+		<copy 	todir="${dojo_home}/src/sarissa">
+			<fileset dir="src/client/lib/sarissa"/>
+		</copy>
+		
+		<!-- 
+			For our custom widgets, change their path to now point
+			to where their template files are, which we will need to
+			intern their html and CSS.
+		-->
+		<replaceregexp match="&quot;\.\.\/hs" byline="true" 
+			replace="&quot;src/hs" flags="g">
+			<fileset file="${dojo_home}/src/hs/ui.js"/>
+		</replaceregexp> 
+		
+		<!--
+			Inline our render XSLT file
+		-->
+		<antcall target="_inlineXSLT"/>
+		
+		<!--
+			Dojo uses Jython for alot of it's heavy lifting in it's
+			Ant file; unfortunately, Jython has trouble when we run
+			it using the 'ant' task, so we have to do it indirectly
+			using the 'exec' task.
+		-->
+		<exec	executable="ant" 
+				failonerror="true"
+				dir="${dojo_home}/buildscripts">
+			<arg line="release -Ddocless=true -Dprofile=hyperscope -Dversion=0.3.1"/>
+		</exec>
+		
+		<exec	executable="ant" 
+				failonerror="true"
+				dir="${dojo_home}/buildscripts">
+			<arg line="intern-strings -Ddocless=true -Dprofile=hyperscope -Dversion=0.3.1"/>
+		</exec>
+		
+		<!-- Copy our new Dojo/HyperScope release over -->
+		<copy todir="src/client/lib/all">
+			<fileset file="${dojo_home}/release/dojo/dojo.js"/>
+			<fileset file="${dojo_home}/release/dojo/dojo.js.uncompressed.js"/>
+		</copy>
+		<move	file="src/client/lib/all/dojo.js" 
+				tofile="src/client/lib/all/all.js"/>
+		<move	file="src/client/lib/all/dojo.js.uncompressed.js"
+				tofile="src/client/lib/all/all.js.uncompressed.js"/>
+				
+		<!--
+			Change the path for Dojo's shadow images to our own.
+		-->
+		<replaceregexp	match="src/html/images/shadow"
+						flags="gi"
+						replace="/hyperscope/src/client/images/shadow">
+			<fileset file="src/client/lib/all/all.js"/>
+			<fileset file="src/client/lib/all/all.js.uncompressed.js"/>
+		</replaceregexp>	
+		
+		<!--
+			Change the path for Dojo's floating pane close icon to
+			our own.
+		-->
+		<replaceregexp	match="images/floatingPaneClose"
+						flags="gi"
+						replace="/hyperscope/src/client/images/floatingPaneClose">
+			<fileset file="src/client/lib/all/all.js"/>
+			<fileset file="src/client/lib/all/all.js.uncompressed.js"/>
+		</replaceregexp>	
+				
+		<!-- Cleanup the HyperScope files we copied over -->
+		<delete file="${dojo_home}/buildscripts/profiles/hyperscope.profile.js"/>
+		<delete dir="${dojo_home}/src/hs"/>
+		<delete dir="${dojo_home}/src/sarissa"/>
+	
+		<echo>
+			Rewriting all source paths to ${release.hyperscope_dir}...
+		</echo>
+		
+		<!--
+			Some people might want to install HyperScope in a 
+			different place than /hyperscope, and might not want
+			to install a mod_rewrite; let them configure
+			during the build process a different location.
+		-->
+		<!-- 
+			Ant has a bug where even if I put
+			&quot; into the replace value it will not
+			pass through to the underlying replaced
+			regular expression value. This means that
+			release.hyperscope_dir must have a leading
+			quote defined in it inside build.properties
+		-->
+		<replaceregexp	match="&quot;/hyperscope"
+						flags="gi"
+						replace="${release.hyperscope_dir}/hyperscope">
+			<fileset file="src/client/lib/hs/xslt/hyperscope.xsl"/>
+			<fileset file="src/client/lib/all/all.js"/>
+			<fileset file="src/client/lib/all/all.js.uncompressed.js"/>
+			<fileset file="src/client/style/global.css"/>
+			<fileset dir="src/demos">
+				<include name="*.opml"/>	
+			</fileset>
+			
+		</replaceregexp>
+	</target>
+	
+	<target name="release"
+			depends="optimize,transformers">
+		<description>
+			Generates a zip file with the release
+			into ${release.zip.filename}
+		</description>
+		
+		<zip	destfile="../${release.zip.filename}"
+				basedir="../hyperscope"/>
+	</target>
+	
+	<target name="deploy">
+		<description>
+			Copies release files and zip files to a remote
+			web server
+		</description>
+		
+		<echo>
+Rsyncing HyperScope release to
+${release.user}@${release.host}:${release.dir}...
+		</echo>
+
+		<exec executable="rsync">
+			<arg line="--verbose --checksum --cvs-exclude --progress --recursive --delete --rsh=ssh --times"/>
+			<!-- source -->
+			<arg value="../hyperscope"/>
+
+			<!-- destination -->
+			<arg value="${release.user}@${release.host}:${release.dir}"/>
+		</exec>
+		
+		<echo>
+Making everything publicly accessible...
+		</echo>
+		
+		<exec executable="ssh">
+			<arg value="${release.user}@${release.host}"/>
+			<arg value="chmod -R a+rx ${release.dir}"/>
+		</exec>
+	</target>
+	
+	<target name="_inlineXSLT" description="Inline our render XSLT file">
+		<!-- 
+			Escape all double quotes with a backslash.
+			This is tricky, because we run into double-encoding
+			issue when we put this escaped version back into
+			our file (Ant loses any backslashs for some reason).
+			Instead, encode it into a custom encoding which
+			we will re-replace when we are done.
+		-->
+		<replaceregexp	match="&quot;"
+						replace="__QUOTE_REPLACE_ME" 
+						flags="g"
+						file="${dojo_home}/src/hs/xslt/render.xsl"/>
+		<!-- Load XSLT into a property -->
+		<loadfile	property="render_xsl"
+					srcFile="${dojo_home}/src/hs/xslt/render.xsl">
+			<filterchain>
+				<striplinebreaks/>
+				<tabstospaces tablength="2"/>
+			</filterchain>	
+		</loadfile>
+		<!--
+			Strip out XML comments to make
+			HTML results from XSLT smaller, which
+			impacts performance.
+		-->
+		<script language="javascript"><![CDATA[
+			function print(){
+				var args = [];
+				for(var x=0; x<arguments.length; x++){
+					args.push(arguments[x]);
+				}
+				java.lang.System.out.println.apply(java.lang.System.out, args);
+			}
+			
+			var startCut, endCut;
+			var insideComment = false;
+			var results = new Array();
+			for(var i = 0; i < render_xsl.length; i++){
+				// if we aren't currently processing an XML comment, and
+				// we encounter a < char...
+				if(insideComment == false && render_xsl.charAt(i) == "<"){
+					// are we at the end of the entire file?
+					if((i + "<!--".length) < render_xsl.length){
+						var chunk = render_xsl.substring(i, i + "<!--".length);
+						// are the next few characters a <!-- substring?
+						if(chunk == "<!--"){
+							startCut = i;
+							insideComment = true;
+						}
+					}
+				}else if(insideComment == true && render_xsl.charAt(i) == "-"){
+					// are we at the end of the entire file?
+					if((i + 2) < render_xsl.length){
+						var chunk = render_xsl.substring(i, i + 3);
+						// do we have a final XML end comment?
+						if(chunk == ("-->")){
+							endCut = i + 3;
+							// jump i forward past the end
+							// of the comment
+							i = endCut;
+							insideComment = false;
+						}
+					}
+				}
+				
+				// if we aren't inside a comment, then write the value into 
+				// a results array
+				if(insideComment == false){
+					results[results.length] = render_xsl.charAt(i);
+				}
+			}
+			
+			results = results.join("");
+			
+			// set the new XSLT value
+			var prop = project.setNewProperty("final_render_xsl", results);
+		]]></script>
+		<!-- Inline our XSLT variable -->
+		<replaceregexp	match="hs\.model\.Document\._RENDER_XSLT_CONTENT \= null\;"
+						replace="hs.model.Document._RENDER_XSLT_CONTENT = &quot;${final_render_xsl}&quot;;"
+						file="${dojo_home}/src/hs/model.js"/>		
+		<!-- 
+			Turn our custom encoded double quotes, which
+			have the name __QUOTE_REPLACE_ME, back into
+			double quotes but add a backslash before them.
+		-->
+		<replaceregexp	match="__QUOTE_REPLACE_ME"
+						flags="g"
+						replace="\\\\&quot;"
+						file="${dojo_home}/src/hs/model.js"/>	
+	</target>
+		
+	<target name="deploy-zip">
+		<description>
+			Copies our release zip to a remote
+			web server. Broken out into a seperate
+			task because it can be quite slow to
+			push the ZIP over every time.	
+		</description>
+		
+		<echo>
+Copying ${release.zip.filename} to ${release.host}:${release.dir}...
+		</echo>
+		
+		<exec executable="scp">
+			<!-- source -->
+			<arg value="../${release.zip.filename}"/>
+
+			<!-- destination -->
+			<arg value="${release.user}@${release.host}:${release.dir}"/>
+		</exec>
+		
+		<echo>
+Making everything publicly accessible...
+		</echo>
+		
+		<exec executable="ssh">
+			<arg value="${release.user}@${release.host}"/>
+			<arg value="chmod -R a+rx ${release.dir}"/>
+		</exec>
+	</target>
+	
+	<target name="transformers">
+		<description>
+			Builds our transformers. Right now just
+			builds the XHTML transformer, which uses Java,
+			and then creates a WAR file ready for deployment
+			to a servlet engine.
+		</description>
+		
+		<mkdir dir="compile"/>
+		
+		<!-- Compile our Java source files -->
+		<javac	classpathref="project.classpath"
+				debug="true"
+				target="1.4"
+				source="1.4"
+				srcdir="src/server/xhtml_transformer/org/hyperscope/transformers/xhtml/"
+				destdir="compile"/>
+		
+		<!-- Generate a WAR file ready for deployment -->
+		<war destfile="src/server/xhtml_transformer.war"
+			 webxml="src/server/xhtml_transformer/WEB-INF/web.xml">
+			<fileset dir="src/server/xhtml_transformer/">
+				<include name="xhtml.xsl"/>
+			</fileset>
+			<lib dir="src/server/xhtml_transformer/lib">
+				<include name="*.jar"/>
+				<exclude name="servlet-api.jar"/>
+			</lib>
+			<classes dir="compile"/>
+		</war>
+	</target>
+	
+	<target name="all" depends="release,deploy">
+	</target>
+</project>

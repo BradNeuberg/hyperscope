@@ -1,0 +1,12 @@
+<h2 id="dojo.alg">dojo.alg</h2><h3>Methods</h3><pre>find (arr, val)
+inArray (arr, val)
+inArr (arr, val)
+getNameInObj (ns, _99)
+has (obj, name)
+forEach (arr, _101, _102)
+for_each (arr, _101, _102)
+map (arr, obj, _104)
+tryThese ()
+delayThese (farr, cb, _107, _108)
+for_each_call (arr, obj, _104)
+</pre>

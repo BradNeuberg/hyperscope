@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="338"
+   name=""
+   committed-date="2006-09-04T00:29:51.730934Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="Storage_version8.swf"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="f205ea281943a40298cf258d483f9a0d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   name="release"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="storage_dialog.swf"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="ee5e812be3bec7fe6918dca0d59c5373"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   name="tests"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="LICENSE"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="81fea7e90bc637ccbde20b82fdf0489c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="flash6_gateway.swf"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a20bd0bc570839106163f096ae20d3f7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="213"
+   name="dojo.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-05T00:29:34.044185Z"
+   checksum="e6e72d28f59ec35ef20044d9e13ff821"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   name="demos"
+   kind="dir"/>
+<entry
+   name="src"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="dojo.js.uncompressed.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="6f6fcc8077d428f0bb6c721e6df1d466"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="iframe_history.html"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="e4f4df0ada453daa80b108cfb3bbbe90"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="README"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d6e77384b71a18b30299a5aa60b5b614"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:22.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Storage_version6.swf"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="f3163ed398d51f08b34c5f85fb79fbc5"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:22.000000Z"/>
+<entry
+   committed-rev="203"
+   name="build.txt"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a59702f678ed20c5a1bb74804d6724c7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:22.000000Z"/>
+</wc-entries>

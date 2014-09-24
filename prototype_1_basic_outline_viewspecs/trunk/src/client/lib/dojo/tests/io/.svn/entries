@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2006-03-06T23:36:47.192473Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/prototype_1_basic_outline_viewspecs/trunk/src/client/lib/dojo/tests/io"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="11"
+   name="test_BrowserIO.cache.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="d4e7a6bb0975ba456c462ec4aefe634d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_postResponse.txt"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="2a470627bdb68dc504b8607de76ede70"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_BrowserIO_data.txt"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="3d892386e885047df6d3365563a2026a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_BrowserIO.javascript.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="1b5982d034f69c11e6eb5d1bec59b7ca"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_BrowserIO_cacheData2.js"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="60b9035241bde259c63300678882b2ec"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="data.js"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="6d599f2a87f843fec7e63cdbb887c3f2"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="upload.cgi"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="2ac0969e48c26aef3641437bf5bfa554"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_BrowserIO.formNode.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="6d29ce3b4c816e62b8190e1c90c44cf7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_BrowserIO.frag.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="228aef8d630d8b612b51bd06015449ad"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_IframeIO.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="55b5bd28c0d968999d9212abffff13fa"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_Cookies.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="e1c26ba92c66b4da9f6673c3cec948bf"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="button.png"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="a058557d22f4ed375e6e7e9e7daa5b20"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_BrowserIO_cacheData.js"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="e7f394dcf8f9dafeed35b33a682cb8b8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_BrowserIO.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="a7fbe24581eb6c376961d94819f8ece5"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="frag.xml"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="589ca26875a0036c276dd019e4675c67"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+</wc-entries>

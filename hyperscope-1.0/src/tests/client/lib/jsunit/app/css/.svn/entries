@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="31"
+   name=""
+   committed-date="2006-05-17T19:35:45.566621Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/tests/client/lib/jsunit/app/css"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="31"
+   name="jsUnitStyle.css"
+   text-time="2006-10-14T00:59:51.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="00dfddfac232e822acd4578a79d95731"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:51.000000Z"/>
+<entry
+   committed-rev="31"
+   name="readme"
+   text-time="2006-10-14T00:59:51.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="3c3f7e26f2d440b57d417d6d9156b179"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:51.000000Z"/>
+</wc-entries>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="366"
+   name=""
+   committed-date="2006-09-11T03:15:41.785512Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/trunk/augxml/src/java/org/nlsaugment/augxml/util"
+   last-author="jcheyer"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="354"
+   name="MetaData.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-09-04T07:11:34.984977Z"
+   checksum="619f0601fda21e1d83ca97daedd07079"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="122"
+   name="TenexDate.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-14T16:23:22.925076Z"
+   checksum="a8ed6bb37b84d4aa686e43da1b14c1b9"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="23"
+   name="Field.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-05-02T16:54:06.197732Z"
+   checksum="61809e923bf892856e324a617341a54d"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="327"
+   name="FieldHelper.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-09-02T19:53:22.460695Z"
+   checksum="01ece7479687e55e6788a98c81d1a39a"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="73"
+   name="RingElementManager.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-05-26T09:10:41.897375Z"
+   checksum="d9ca17b4d680f70081ac6f36bb742033"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="117"
+   name="WriteableBitBox.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-13T22:18:12.643972Z"
+   checksum="ab146fbb8090aaebe9ed96e949720686"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="127"
+   name="BitBox.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-16T04:02:15.622960Z"
+   checksum="2c9662d825250f597252a80db222b66d"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="114"
+   name="XmlSerializer.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-12T14:54:17.309001Z"
+   checksum="b9effb36a062bf8d9a937cb53e7b079d"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="126"
+   name="FileUtil.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-15T23:46:39.661044Z"
+   checksum="35e46d0373bf40d3a495a148a18f3652"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="366"
+   name="Util.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-09-11T03:15:41.785512Z"
+   checksum="fca7886580a2898080cf5da7a0728cc1"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+</wc-entries>

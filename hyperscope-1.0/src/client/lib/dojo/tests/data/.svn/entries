@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/tests/data"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="test_delicious.html"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="7111a8d4675bb129094067f24f46cffc"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_data.js"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="c77ceabc64a64757cc9edd8353b2b618"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+<entry
+   committed-rev="203"
+   name="states_with_header_row.json"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="83fd2f5cef03c53c9f098c9b48d97f22"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_data_binding.html"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="cbb26b2e2d3146b42fc7cd01f7e922cd"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+<entry
+   committed-rev="203"
+   name="data_set_four.json"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="e652fa7ee373b26f9a8d5ea45321c003"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_delicious.js"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="847084bffa9d307a441042f05da83c93"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_data.html"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="ab435000466c5621fc1f27fe620a9073"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+<entry
+   committed-rev="203"
+   name="BindingHack.js"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="58bd9aa2bcbbe8871f5559ee0e3133d0"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+<entry
+   committed-rev="203"
+   name="movies.csv"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a793e54972571642d2227a28779194da"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+<entry
+   committed-rev="203"
+   name="states_with_keywords.json"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="97b2b3c27682bcc2e610206b8276ddca"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_data_binding.js"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="f3f210e74edb36744645e4ef0e0048cf"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+</wc-entries>

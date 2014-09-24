@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+			"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head profile="http://developers.technorati.com/wiki/xhtmloutlines">
+	<!-- 
+				Test XOXO file taken from Microformats Wiki:
+				http://microformats.org/wiki/xoxo
+				http://homepage.mac.com/ctholland/thelab/outlines/
+	-->
+	
+	<title>Mark's Subscriptions</title>
+	
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+</head>
+<body>
+	
+	<!-- start OL example without compact items -->
+	<ol>
+	  <li><a>Linkblogs</a>
+	    <ol>
+	      <li><a href="http://diveintomark.org/xml/blink.xml" type="application/rss+xml">dive into mark b-links</a></li>
+	      <li><a href="http://www.thauvin.net/blog/xml.jsp?format=rdf" type="application/rss+xml">Eric&#39;s Weblog</a></li>
+	      <li><span>here is a nested item</span>
+	
+	      		<ol>
+	      			<li>hello</li>
+	      			<li>mom</li>
+	      			<li><span>Yet another nested item!</span>
+	      				<ol>
+	      					<li>one</li>
+	      					<li>two</li>
+	
+	      					<li>three</li>
+	      				</ol>
+	      			</li>
+	      		</ol>
+	      </li>
+	    </ol>
+	  </li>
+	  <li><a>Weblogs</a>
+	
+	    <ol>
+	      <li><a href="http://intertwingly.net/blog/index.rss2" type="application/rss+xml">Sam Ruby</a></li>
+	      <li><a href="http://diveintomark.org/xml/atom.xml" type="application/atom+xml">dive into mark</a></li>
+	      <li><a href="http://www.decafbad.com/blog/index.rss" type="application/rss+xml">0xDECAFBAD</a></li>
+	    </ol>
+	  </li>
+	</ol>
+</body>
+</html>
+
+

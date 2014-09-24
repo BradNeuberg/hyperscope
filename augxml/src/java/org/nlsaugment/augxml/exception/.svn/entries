@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="73"
+   name=""
+   committed-date="2006-05-26T09:10:41.897375Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/trunk/augxml/src/java/org/nlsaugment/augxml/exception"
+   last-author="jcheyer"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="73"
+   name="AugmentException.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-05-26T09:10:41.897375Z"
+   checksum="0ef6d0d4d38b2e68e39bebcaa1528af0"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="73"
+   name="LocationOutOfRangeException.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-05-26T09:10:41.897375Z"
+   checksum="f9bb7b87772cde41d25e2de25bfb8d64"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="73"
+   name="UnusedFieldException.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-05-26T09:10:41.897375Z"
+   checksum="750f199b3283575af49e1ef56d011fd1"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+</wc-entries>

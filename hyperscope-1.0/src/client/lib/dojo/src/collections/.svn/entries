@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/src/collections"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="BinaryTree.js"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="974acd33c88ba11905408476172a0c16"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Queue.js"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="254f7cdcfdf46904d58b614f0c825dfe"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Dictionary.js"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="696240370bdc92a11a21c176d824d075"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Stack.js"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="c0bc4f0b8db231b4ebb16b06df240163"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d95c673af4c2666008f701ab22227b66"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="ArrayList.js"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="19d45f6058226d9b597f6236992d50cd"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Set.js"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="fbc98ef77262ea41c9df2f660baa5798"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="SortedList.js"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="48c7372ff82b85ea826acb1e08b40555"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Collections.js"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="aee3bf7b26c372d6a22a52073b5635fd"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Graph.js"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="31f0daaabed4fb0c8bce5ae318065798"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="SkipList.js"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="aaaa5ba78e31fc3a072083bf119c9078"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+</wc-entries>

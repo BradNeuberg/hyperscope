@@ -1,0 +1,1152 @@
+<html>
+	<head>
+		<title>Test Page for hs.address.Piece Subclasses</title>
+		
+		<script language="javascript" src="../lib/jsunit/app/jsUnitCore.js"></script>
+
+		<script type="text/javascript" src="../../../client/lib/sarissa/sarissa.js"></script>
+		<script type="text/javascript" src="../../../client/lib/sarissa/sarissa_ieemu_xpath.js"></script>
+		
+		<script type="text/javascript">
+			var djConfig = { testing: true, isDebug: true, disableFlashStorage: true };
+		</script>
+		<script type="text/javascript" src="../../../client/lib/dojo/dojo.js.uncompressed.js"></script>
+		
+		<script type="text/javascript" src="../../../client/lib/hs/exception.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/filter.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/util.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/address.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/model.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/commands.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/ui.js"></script>
+	<body>
+		<h1>Test Page for hs.address.Piece Subclasses</h1>
+
+	    <p>This page contains a suite of tests for testing subclasses of hs.address.Piece</p>
+	
+		<script language="javascript">
+			// wait for page to finish loading
+			dojo.event.connect(dojo, "loaded", pageLoaded);
+			
+			function setUpPage(){
+			}
+			
+			function pageLoaded(){
+				debug("page loaded");
+				setUpPageStatus = "complete";
+			}
+
+			function testConstructors(){
+				var p, exp = null;
+				
+				info("---TestPiece:testConstructors()");
+				
+				// --- NodeNumber ---
+				// valid
+				info('new hs.address.NodeNumber("2A", true)');
+				p = new hs.address.NodeNumber("2A", true);
+				assertEquals("2A", p.number);
+				assertTrue(p.isOffset);
+				assertEquals("2A", p.toString());
+				
+				// valid
+				info('new hs.address.NodeNumber("2b10c")');
+				p = new hs.address.NodeNumber("2b10c");
+				assertEquals("2B10C", p.number);
+				assertFalse(p.isOffset);
+				assertEquals("2B10C", p.toString());
+				
+				// valid
+				// this threw an exception while running tests
+				// for TestAddress.html - adding here to make sure
+				// it is fixed -- Brad Neuberg, bkn3@columbia.edu
+				info('new hs.address.NodeNumber("3B1H")');
+				p = new hs.address.NodeNumber("3B1H");
+				assertEquals("3B1H", p.number);
+				assertFalse(p.isOffset);
+				assertEquals("3B1H", p.toString());
+				
+				// valid
+				info('new hs.address.NodeNumber("0")');
+				p = new hs.address.NodeNumber("0");
+				assertEquals("0", p.number);
+				assertFalse(p.isOffset);
+				assertEquals("0", p.toString());
+				
+				// valid
+				info('new hs.address.NodeNumber("5")');
+				p = new hs.address.NodeNumber("5");
+				assertEquals("5", p.number);
+				assertFalse(p.isOffset);
+				assertEquals("5", p.toString());
+				
+				// invalid
+				info('INVALID: new hs.address.NodeNumber(null)');
+				exp = null;
+				try{ 
+					p = new hs.address.NodeNumber(null);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.NodeNumber(undefined)');
+				exp = null;
+				try{ 
+					p = new hs.address.NodeNumber(undefined);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.NodeNumber("B")');
+				exp = null;
+				try{ 
+					p = new hs.address.NodeNumber("B");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.NodeNumber("")');
+				exp = null;
+				try{ 
+					p = new hs.address.NodeNumber("");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.NodeNumber("023")');
+				exp = null;
+				try{ 
+					p = new hs.address.NodeNumber("023");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				
+				
+				// --- NodeID ---
+				// valid
+				info('new hs.address.NodeID("023")');
+				p = new hs.address.NodeID("023");
+				assertEquals("023", p.id);
+				assertEquals("023", p.toString());
+				
+				// invalid
+				info('INVALID: new hs.address.NodeID("2A")');
+				exp = null;
+				try{ 
+					p = new hs.address.NodeID("2A");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.NodeID("0")');
+				exp = null;
+				try{ 
+					p = new hs.address.NodeID("0");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.NodeID("23")');
+				exp = null;
+				try{ 
+					p = new hs.address.NodeID("23");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.NodeID(null)');
+				exp = null;
+				try{ 
+					p = new hs.address.NodeID(null);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.NodeID("")');
+				exp = null;
+				try{ 
+					p = new hs.address.NodeID("");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.NodeID(undefined)');
+				exp = null;
+				try{ 
+					p = new hs.address.NodeID(undefined);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				
+				
+				// --- NodeLabel ---
+				// valid
+				info('new hs.address.NodeLabel("foobar")');
+				p = new hs.address.NodeLabel("foobar");
+				assertEquals("foobar", p.label);
+				assertEquals("foobar", p.toString());
+				assertEquals(hs.address.NodeLabel.START_AT_FIRST, p.type);
+				
+				// valid
+				info('new hs.address.NodeLabel("foobar", hs.address.NodeLabel.BRANCH_SEARCH)');
+				p = new hs.address.NodeLabel("foobar", hs.address.NodeLabel.BRANCH_SEARCH);
+				assertEquals("foobar", p.label);
+				assertEquals("foobar", p.toString());
+				assertEquals(hs.address.NodeLabel.BRANCH_SEARCH, p.type);
+				
+				// valid
+				info('new hs.address.NodeLabel("foobar", hs.address.NodeLabel.MOVE_TO_NEXT)');
+				p = new hs.address.NodeLabel("foobar", hs.address.NodeLabel.MOVE_TO_NEXT);
+				assertEquals("foobar", p.label);
+				assertEquals("foobar", p.toString());
+				assertEquals(hs.address.NodeLabel.MOVE_TO_NEXT, p.type);
+				
+				// valid
+				info('new hs.address.NodeLabel("foobar", hs.address.NodeLabel.EXTERNAL)');
+				p = new hs.address.NodeLabel("foobar", hs.address.NodeLabel.EXTERNAL);
+				assertEquals("foobar", p.label);
+				assertEquals("foobar", p.toString());
+				assertEquals(hs.address.NodeLabel.EXTERNAL, p.type);
+				
+				// valid
+				info('new hs.address.NodeLabel("FOOBAR", hs.address.NodeLabel.EXTERNAL)');
+				p = new hs.address.NodeLabel("FOOBAR", hs.address.NodeLabel.EXTERNAL);
+				assertEquals("FOOBAR", p.label);
+				assertEquals("FOOBAR", p.toString());
+				assertEquals(hs.address.NodeLabel.EXTERNAL, p.type);
+				
+				// valid
+				info('new hs.address.NodeLabel("complex203-foobar_33@\'")');
+				p = new hs.address.NodeLabel("complex203-foobar_33@\'");
+				assertEquals("complex203-foobar_33@\'", p.label);
+				assertEquals("complex203-foobar_33@\'", p.toString());
+				assertEquals(hs.address.NodeLabel.START_AT_FIRST, p.type);
+				
+				// invalid
+				info('INVALID: new hs.address.NodeLabel(null)');
+				exp = null;
+				try{ 
+					p = new hs.address.NodeLabel(null);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.NodeLabel(undefined)');
+				exp = null;
+				try{ 
+					p = new hs.address.NodeLabel(undefined);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.NodeLabel("22nonumber")');
+				exp = null;
+				try{ 
+					p = new hs.address.NodeLabel("22nonumber");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.NodeLabel("badchars!@#$")');
+				exp = null;
+				try{ 
+					p = new hs.address.NodeLabel("badchars!@#$");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.NodeLabel("")');
+				exp = null;
+				try{ 
+					p = new hs.address.NodeLabel("");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				
+				
+				// --- Marker ---
+				// valid
+				info('new hs.address.NodeMarker("foobar")');
+				p = new hs.address.Marker("foobar");
+				assertEquals("foobar", p.name);
+				assertEquals("foobar", p.toString());
+				
+				// invalid
+				info('INVALID: new hs.address.Marker(null)');
+				exp = null;
+				try{ 
+					p = new hs.address.Marker(null);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.Marker(undefined)');
+				exp = null;
+				try{ 
+					p = new hs.address.Marker(undefined);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.Marker("22nonumber")');
+				exp = null;
+				try{ 
+					p = new hs.address.Marker("22nonumber");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.Marker("badchars!@#$")');
+				exp = null;
+				try{ 
+					p = new hs.address.Marker("badchars!@#$");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.Marker("")');
+				exp = null;
+				try{ 
+					p = new hs.address.Marker("");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				
+				
+				// --- Relative ---
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.BRANCH_END)');
+				p = new hs.address.Relative(hs.address.Relative.BRANCH_END);
+				assertEquals(hs.address.Relative.BRANCH_END, p.type);
+				assertEquals(1, p.offset);
+				assertEquals(hs.address.Relative.BRANCH_END, p.toString());
+				assertEquals("e", hs.address.Relative.BRANCH_END);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.BRANCH_END, 10)');
+				p = new hs.address.Relative(hs.address.Relative.BRANCH_END, 10);
+				assertEquals(hs.address.Relative.BRANCH_END, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("10" + hs.address.Relative.BRANCH_END, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.NODE_NEXT)');
+				p = new hs.address.Relative(hs.address.Relative.NODE_NEXT);
+				assertEquals(hs.address.Relative.NODE_NEXT, p.type);
+				assertEquals(1, p.offset);
+				assertEquals(hs.address.Relative.NODE_NEXT, p.toString());
+				assertEquals("n", hs.address.Relative.NODE_NEXT);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.NODE_NEXT, 10)');
+				p = new hs.address.Relative(hs.address.Relative.NODE_NEXT, 10);
+				assertEquals(hs.address.Relative.NODE_NEXT, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("10" + hs.address.Relative.NODE_NEXT, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.NODE_BACK)');
+				p = new hs.address.Relative(hs.address.Relative.NODE_BACK);
+				assertEquals(hs.address.Relative.NODE_BACK, p.type);
+				assertEquals(1, p.offset);
+				assertEquals(hs.address.Relative.NODE_BACK, p.toString());
+				assertEquals("b", hs.address.Relative.NODE_BACK);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.NODE_BACK, 10)');
+				p = new hs.address.Relative(hs.address.Relative.NODE_BACK, 10);
+				assertEquals(hs.address.Relative.NODE_BACK, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("10" + hs.address.Relative.NODE_BACK, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.NODE_UP)');
+				p = new hs.address.Relative(hs.address.Relative.NODE_UP);
+				assertEquals(hs.address.Relative.NODE_UP, p.type);
+				assertEquals(1, p.offset);
+				assertEquals(hs.address.Relative.NODE_UP, p.toString());
+				assertEquals("u", hs.address.Relative.NODE_UP);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.NODE_UP, 10)');
+				p = new hs.address.Relative(hs.address.Relative.NODE_UP, 10);
+				assertEquals(hs.address.Relative.NODE_UP, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("10" + hs.address.Relative.NODE_UP, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.NODE_DOWN)');
+				p = new hs.address.Relative(hs.address.Relative.NODE_DOWN);
+				assertEquals(hs.address.Relative.NODE_DOWN, p.type);
+				assertEquals(1, p.offset);
+				assertEquals(hs.address.Relative.NODE_DOWN, p.toString());
+				assertEquals("d", hs.address.Relative.NODE_DOWN);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.NODE_DOWN, 10)');
+				p = new hs.address.Relative(hs.address.Relative.NODE_DOWN, 10);
+				assertEquals(hs.address.Relative.NODE_DOWN, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("10" + hs.address.Relative.NODE_DOWN, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.ORIGIN)');
+				p = new hs.address.Relative(hs.address.Relative.ORIGIN);
+				assertEquals(hs.address.Relative.ORIGIN, p.type);
+				assertEquals(1, p.offset);
+				assertEquals(hs.address.Relative.ORIGIN, p.toString());
+				assertEquals("o", hs.address.Relative.ORIGIN);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.ORIGIN, 10)');
+				p = new hs.address.Relative(hs.address.Relative.ORIGIN, 10);
+				assertEquals(hs.address.Relative.ORIGIN, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("10" + hs.address.Relative.ORIGIN, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.PLEX_HEAD)');
+				p = new hs.address.Relative(hs.address.Relative.PLEX_HEAD);
+				assertEquals(hs.address.Relative.PLEX_HEAD, p.type);
+				assertEquals(1, p.offset);
+				assertEquals(hs.address.Relative.PLEX_HEAD, p.toString());
+				assertEquals("h", hs.address.Relative.PLEX_HEAD);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.PLEX_HEAD, 10)');
+				p = new hs.address.Relative(hs.address.Relative.PLEX_HEAD, 10);
+				assertEquals(hs.address.Relative.PLEX_HEAD, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("10" + hs.address.Relative.PLEX_HEAD, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.PLEX_TAIL)');
+				p = new hs.address.Relative(hs.address.Relative.PLEX_TAIL);
+				assertEquals(hs.address.Relative.PLEX_TAIL, p.type);
+				assertEquals(1, p.offset);
+				assertEquals(hs.address.Relative.PLEX_TAIL, p.toString());
+				assertEquals("t", hs.address.Relative.PLEX_TAIL);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.PLEX_TAIL, 10)');
+				p = new hs.address.Relative(hs.address.Relative.PLEX_TAIL, 10);
+				assertEquals(hs.address.Relative.PLEX_TAIL, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("10" + hs.address.Relative.PLEX_TAIL, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.NODE_SUCCESSOR)');
+				p = new hs.address.Relative(hs.address.Relative.NODE_SUCCESSOR);
+				assertEquals(hs.address.Relative.NODE_SUCCESSOR, p.type);
+				assertEquals(1, p.offset);
+				assertEquals(hs.address.Relative.NODE_SUCCESSOR, p.toString());
+				assertEquals("s", hs.address.Relative.NODE_SUCCESSOR);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.NODE_SUCCESSOR, 10)');
+				p = new hs.address.Relative(hs.address.Relative.NODE_SUCCESSOR, 10);
+				assertEquals(hs.address.Relative.NODE_SUCCESSOR, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("10" + hs.address.Relative.NODE_SUCCESSOR, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.NODE_PREDECESSOR)');
+				p = new hs.address.Relative(hs.address.Relative.NODE_PREDECESSOR);
+				assertEquals(hs.address.Relative.NODE_PREDECESSOR, p.type);
+				assertEquals(1, p.offset);
+				assertEquals(hs.address.Relative.NODE_PREDECESSOR, p.toString());
+				assertEquals("p", hs.address.Relative.NODE_PREDECESSOR);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.NODE_PREDECESSOR, 10)');
+				p = new hs.address.Relative(hs.address.Relative.NODE_PREDECESSOR, 10);
+				assertEquals(hs.address.Relative.NODE_PREDECESSOR, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("10" + hs.address.Relative.NODE_PREDECESSOR, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.CONTENT_SEARCH)');
+				p = new hs.address.Relative(hs.address.Relative.CONTENT_SEARCH);
+				assertEquals(hs.address.Relative.CONTENT_SEARCH, p.type);
+				assertEquals(1, p.offset);
+				assertEquals(hs.address.Relative.CONTENT_SEARCH, p.toString());
+				assertEquals("c", hs.address.Relative.CONTENT_SEARCH);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.CONTENT_SEARCH, 10)');
+				p = new hs.address.Relative(hs.address.Relative.CONTENT_SEARCH, 10);
+				assertEquals(hs.address.Relative.CONTENT_SEARCH, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("10" + hs.address.Relative.CONTENT_SEARCH, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.RETURN_NODE)');
+				p = new hs.address.Relative(hs.address.Relative.RETURN_NODE);
+				assertEquals(hs.address.Relative.RETURN_NODE, p.type);
+				assertEquals(1, p.offset);
+				assertEquals(hs.address.Relative.RETURN_NODE, p.toString());
+				assertEquals("r", hs.address.Relative.RETURN_NODE);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.RETURN_NODE, 10)');
+				p = new hs.address.Relative(hs.address.Relative.RETURN_NODE, 10);
+				assertEquals(hs.address.Relative.RETURN_NODE, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("10" + hs.address.Relative.RETURN_NODE, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.RETURN_FILE)');
+				p = new hs.address.Relative(hs.address.Relative.RETURN_FILE);
+				assertEquals(hs.address.Relative.RETURN_FILE, p.type);
+				assertEquals(1, p.offset);
+				assertEquals(hs.address.Relative.RETURN_FILE, p.toString());
+				assertEquals("rf", hs.address.Relative.RETURN_FILE);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.Relative.RETURN_FILE, 10)');
+				p = new hs.address.Relative(hs.address.Relative.RETURN_FILE, 10);
+				assertEquals(hs.address.Relative.RETURN_FILE, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("10" + hs.address.Relative.RETURN_FILE, p.toString());
+				
+				// invalid
+				info('INVALID: new hs.address.Relative(null)');
+				exp = null;
+				try{ 
+					p = new hs.address.Relative(null);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.Relative(undefined)');
+				exp = null;
+				try{ 
+					p = new hs.address.Relative(undefined);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.Relative("x")');
+				exp = null;
+				try{ 
+					p = new hs.address.Relative("x");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.Relative("l")');
+				exp = null;
+				try{ 
+					p = new hs.address.Relative("l");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.Relative("")');
+				exp = null;
+				try{ 
+					p = new hs.address.Relative("");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.Relative(hs.address.Relative.NODE_PREDECESSOR, -10)');
+				exp = null;
+				try{ 
+					p = new hs.address.Relative(hs.address.Relative.NODE_PREDECESSOR, -10);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				
+				
+				
+				// --- Indirect Link ---
+				// valid
+				info('new hs.address.IndirectLink()');
+				p = new hs.address.IndirectLink();
+				assertEquals(1, p.offset);
+				assertEquals("l", p.toString());
+				
+				// valid
+				info('new hs.address.IndirectLink(5)');
+				p = new hs.address.IndirectLink(5);
+				assertEquals(5, p.offset);
+				assertEquals("5l", p.toString());
+				
+				// invalid
+				info('INVALID: new hs.address.IndirectLink(-10)');
+				exp = null;
+				try{ 
+					p = new hs.address.IndirectLink(-10);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.IndirectLink(0)');
+				exp = null;
+				try{ 
+					p = new hs.address.IndirectLink(0);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				
+				
+				// --- String Search ---
+				// valid
+				info('new hs.address.StringSearch(\'"foobar"\')');
+				p = new hs.address.StringSearch('"foobar"');
+				assertEquals('"foobar"', p.search);
+				assertEquals('"foobar"', p.toString());
+				
+				// valid
+				info('new hs.address.StringSearch("/foobar/")');
+				p = new hs.address.StringSearch('/foobar/');
+				assertEquals('/foobar/', p.search);
+				assertEquals('/foobar/', p.toString());
+				
+				// valid
+				info('new hs.address.StringSearch("/f+o?o(?:bar)*/i")');
+				p = new hs.address.StringSearch('/f+o?o(?:bar)*/i');
+				assertEquals('/f+o?o(?:bar)*/i', p.search);
+				assertEquals('/f+o?o(?:bar)*/i', p.toString());
+				
+				// invalid
+				info('INVALID: new hs.address.StringSearch(null)');
+				exp = null;
+				try{ 
+					p = new hs.address.StringSearch(null);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.StringSearch(undefined)');
+				exp = null;
+				try{ 
+					p = new hs.address.StringSearch(undefined);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.StringSearch("")');
+				exp = null;
+				try{ 
+					p = new hs.address.StringSearch("");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.StringSearch("[\"boobah\"]")');
+				exp = null;
+				try{ 
+					p = new hs.address.StringSearch("[\"boobah\"]");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.StringSearch("boobah")');
+				exp = null;
+				try{ 
+					p = new hs.address.StringSearch("boobah");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// --- String Position ---
+				// valid
+				info('new StringPosition(hs.address.StringPosition.LAST_CHAR)');
+				p = new hs.address.StringPosition(hs.address.StringPosition.LAST_CHAR);
+				assertEquals(hs.address.StringPosition.LAST_CHAR, p.type);
+				assertEquals(1, p.offset);
+				assertEquals("+" + hs.address.StringPosition.LAST_CHAR, p.toString());
+				assertEquals("e", hs.address.StringPosition.LAST_CHAR);
+				
+				// valid
+				info('new StringPosition(hs.address.StringPosition.FIRST_CHAR)');
+				p = new hs.address.StringPosition(hs.address.StringPosition.FIRST_CHAR);
+				assertEquals(hs.address.StringPosition.FIRST_CHAR, p.type);
+				assertEquals(1, p.offset);
+				assertEquals("+" + hs.address.StringPosition.FIRST_CHAR, p.toString());
+				assertEquals("f", hs.address.StringPosition.FIRST_CHAR);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.StringPosition.CHARACTER)');
+				p = new hs.address.StringPosition(hs.address.StringPosition.CHARACTER);
+				assertEquals(hs.address.StringPosition.CHARACTER, p.type);
+				assertEquals(1, p.offset);
+				assertEquals("+" + hs.address.StringPosition.CHARACTER, p.toString());
+				assertEquals("c", hs.address.StringPosition.CHARACTER);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.StringPosition.CHARACTER, 10)');
+				p = new hs.address.StringPosition(hs.address.StringPosition.CHARACTER, 10);
+				assertEquals(hs.address.StringPosition.CHARACTER, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("+10" + hs.address.StringPosition.CHARACTER, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.StringPosition.CHARACTER, -10)');
+				p = new hs.address.StringPosition(hs.address.StringPosition.CHARACTER, -10);
+				assertEquals(hs.address.StringPosition.CHARACTER, p.type);
+				assertEquals(-10, p.offset);
+				assertEquals("-10" + hs.address.StringPosition.CHARACTER, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.StringPosition.WORD)');
+				p = new hs.address.StringPosition(hs.address.StringPosition.WORD);
+				assertEquals(hs.address.StringPosition.WORD, p.type);
+				assertEquals(1, p.offset);
+				assertEquals("+" + hs.address.StringPosition.WORD, p.toString());
+				assertEquals("w", hs.address.StringPosition.WORD);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.StringPosition.WORD, 10)');
+				p = new hs.address.StringPosition(hs.address.StringPosition.WORD, 10);
+				assertEquals(hs.address.StringPosition.WORD, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("+10" + hs.address.StringPosition.WORD, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.StringPosition.WORD, -10)');
+				p = new hs.address.StringPosition(hs.address.StringPosition.WORD, -10);
+				assertEquals(hs.address.StringPosition.WORD, p.type);
+				assertEquals(-10, p.offset);
+				assertEquals("-10" + hs.address.StringPosition.WORD, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.StringPosition.VISIBLE)');
+				p = new hs.address.StringPosition(hs.address.StringPosition.VISIBLE);
+				assertEquals(hs.address.StringPosition.VISIBLE, p.type);
+				assertEquals(1, p.offset);
+				assertEquals("+" + hs.address.StringPosition.VISIBLE, p.toString());
+				assertEquals("v", hs.address.StringPosition.VISIBLE);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.StringPosition.VISIBLE, 10)');
+				p = new hs.address.StringPosition(hs.address.StringPosition.VISIBLE, 10);
+				assertEquals(hs.address.StringPosition.VISIBLE, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("+10" + hs.address.StringPosition.VISIBLE, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.StringPosition.VISIBLE, -10)');
+				p = new hs.address.StringPosition(hs.address.StringPosition.VISIBLE, -10);
+				assertEquals(hs.address.StringPosition.VISIBLE, p.type);
+				assertEquals(-10, p.offset);
+				assertEquals("-10" + hs.address.StringPosition.VISIBLE, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.StringPosition.INVISIBLE)');
+				p = new hs.address.StringPosition(hs.address.StringPosition.INVISIBLE);
+				assertEquals(hs.address.StringPosition.INVISIBLE, p.type);
+				assertEquals(1, p.offset);
+				assertEquals("+" + hs.address.StringPosition.INVISIBLE, p.toString());
+				assertEquals("i", hs.address.StringPosition.INVISIBLE);
+				
+				// valid
+				info('new hs.address.Relative(hs.address.StringPosition.INVISIBLE, 10)');
+				p = new hs.address.StringPosition(hs.address.StringPosition.INVISIBLE, 10);
+				assertEquals(hs.address.StringPosition.INVISIBLE, p.type);
+				assertEquals(10, p.offset);
+				assertEquals("+10" + hs.address.StringPosition.INVISIBLE, p.toString());
+				
+				// valid
+				info('new hs.address.Relative(hs.address.StringPosition.INVISIBLE, -10)');
+				p = new hs.address.StringPosition(hs.address.StringPosition.INVISIBLE, -10);
+				assertEquals(hs.address.StringPosition.INVISIBLE, p.type);
+				assertEquals(-10, p.offset);
+				assertEquals("-10" + hs.address.StringPosition.INVISIBLE, p.toString());
+				
+				// invalid
+				info('INVALID: new hs.address.StringPosition("x")');
+				exp = null;
+				try{ 
+					p = new hs.address.StringPosition("x");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.StringPosition(hs.address.StringPosition.INVISIBLE, 0)');
+				exp = null;
+				try{ 
+					p = new hs.address.StringPosition(hs.address.StringPosition.INVISIBLE, 0);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				
+				// --- Viewspec ---
+				// valid
+				info('new Viewspec("A")');
+				p = new hs.address.Viewspec("A");
+				assertEquals("A", p.letter);
+				assertEquals("A", p.toString());
+				
+				// valid
+				info('new Viewspec("g")');
+				p = new hs.address.Viewspec("g");
+				assertEquals("g", p.letter);
+				assertEquals("g", p.toString());
+				
+				// invalid
+				info('INVALID: new hs.address.Viewspec("aa")');
+				exp = null;
+				try{ 
+					p = new hs.address.Viewspec("aa");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.Viewspec("1")');
+				exp = null;
+				try{ 
+					p = new hs.address.Viewspec("1");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.Viewspec("")');
+				exp = null;
+				try{ 
+					p = new hs.address.Viewspec("");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.Viewspec(" ")');
+				exp = null;
+				try{ 
+					p = new hs.address.Viewspec(" ");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.Viewspec(null)');
+				exp = null;
+				try{ 
+					p = new hs.address.Viewspec(null);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.Viewspec(undefined)');
+				exp = null;
+				try{ 
+					p = new hs.address.Viewspec(undefined);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				
+				
+				// --- Content Filter ---
+				// valid
+				info('new hs.address.ContentFilter("/foobar/")');
+				p = new hs.address.ContentFilter("/foobar/");
+				assertEquals("/foobar/", p.search);
+				assertEquals("/foobar/", p.toString());
+				
+				// valid
+				info('new hs.address.ContentFilter("/foobar/i")');
+				p = new hs.address.ContentFilter("/foobar/i");
+				assertEquals("/foobar/i", p.search);
+				assertEquals("/foobar/i", p.toString());
+				
+				// valid
+				info('new hs.address.ContentFilter("/fo\[obar \/foo\]bar*/")');
+				p = new hs.address.ContentFilter("/fo\[obar \/foo\]bar*/");
+				assertEquals("/fo\[obar \/foo\]bar*/", p.search);
+				assertEquals("/fo\[obar \/foo\]bar*/", p.toString());
+				
+				// valid
+				info('new hs.address.ContentFilter("/fo\[obar foo\]bar*/")');
+				p = new hs.address.ContentFilter("/fo\[obar foo\]bar*/");
+				assertEquals("/fo\[obar foo\]bar*/", p.search);
+				assertEquals("/fo\[obar foo\]bar*/", p.toString());
+				
+				// valid
+				info('new hs.address.ContentFilter("\"foobar\"")');
+				p = new hs.address.ContentFilter("\"foobar\"");
+				assertEquals("\"foobar\"", p.search);
+				assertEquals("\"foobar\"", p.toString());
+				
+				// valid
+				info('new hs.address.ContentFilter("\"fo\"ob\"ar\"")');
+				p = new hs.address.ContentFilter("\"fo\"ob\"ar\"");
+				assertEquals("\"fo\"ob\"ar\"", p.search);
+				assertEquals("\"fo\"ob\"ar\"", p.toString());
+				
+				// invalid
+				info('INVALID: new hs.address.ContentFilter("foobar");');
+				exp = null;
+				try{ 
+					p = new hs.address.ContentFilter("foobar");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				// invalid
+				info('INVALID: new hs.address.ContentFilter(";/foobar/;");');
+				exp = null;
+				try{ 
+					p = new hs.address.ContentFilter(";/foobar;/");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+			}
+			
+			function testPieceType(){
+				var p;
+				
+				info("---TestNodeAddress:testPieceType()");
+				
+				info('new hs.address.NodeNumber("2A")');
+				p = new hs.address.NodeNumber("2A");
+				assertTrue(p.isPieceType("hs.address.NodeNumber"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.NodeID"));
+				
+				info('new hs.address.NodeID("023")');
+				p = new hs.address.NodeID("023");
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.NodeNumber"));
+				
+				info('new hs.address.NodeLabel("foobar")');
+				p = new hs.address.NodeLabel("foobar");
+				assertTrue(p.isPieceType("hs.address.NodeLabel"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.NodeID"));
+				
+				info('new hs.address.Marker("foobar")');
+				p = new hs.address.Marker("foobar");
+				assertTrue(p.isPieceType("hs.address.Marker"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.NodeID"));
+				
+				info('new hs.address.Relative(hs.address.Relative.NODE_BACK)');
+				p = new hs.address.Relative(hs.address.Relative.NODE_BACK);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.NodeID"));
+				
+				info('new hs.address.IndirectLink()');
+				p = new hs.address.IndirectLink();
+				assertTrue(p.isPieceType("hs.address.IndirectLink"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.NodeID"));
+				
+				info('new hs.address.StringSearch("/foobar/i")');
+				p = new hs.address.StringSearch("/foobar/i");
+				assertTrue(p.isPieceType("hs.address.StringSearch"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.NodeID"));
+				
+				info('new hs.address.StringPosition(hs.address.StringPosition.CHARACTER, -5)');
+				p = new hs.address.StringPosition(hs.address.StringPosition.CHARACTER, -5);
+				assertTrue(p.isPieceType("hs.address.StringPosition"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.NodeID"));
+				
+				info('new hs.address.Viewspec("g")');
+				p = new hs.address.Viewspec("g");
+				assertFalse(p.isPieceType("hs.address.StringPosition"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				
+				info('new hs.address.ContentFilter("/foobar/")');
+				p = new hs.address.ContentFilter("/foobar/");
+				assertFalse(p.isPieceType("hs.address.StringPosition"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.Viewspec"));
+				assertTrue(p.isPieceType("hs.address.ContentFilter"));
+			}
+			
+			function testToNodeNumber(){
+				var addr, parentAddr, offset;
+				
+				info("---TestPiece:testToNodeNumber()");
+				
+				info('hs.address.NodeNumber.toNodeNumber("0", 1)');
+				addr = hs.address.NodeNumber.toNodeNumber("0", 1);
+				assertNotNull(addr);
+				assertNotUndefined(addr);
+				assertEquals("1", addr.number);
+				assertFalse(addr.isOffset);
+				
+				info('hs.address.NodeNumber.toNodeNumber(null, 1)');
+				addr = hs.address.NodeNumber.toNodeNumber(null, 1);
+				assertNotNull(addr);
+				assertNotUndefined(addr);
+				assertEquals("1", addr.number);
+				assertFalse(addr.isOffset);
+				
+				info('hs.address.NodeNumber.toNodeNumber("0", 3)');
+				addr = hs.address.NodeNumber.toNodeNumber("0", 3);
+				assertNotNull(addr);
+				assertNotUndefined(addr);
+				assertEquals("3", addr.number);
+				assertFalse(addr.isOffset);
+				
+				info('hs.address.NodeNumber.toNodeNumber("3", 2)');
+				addr = hs.address.NodeNumber.toNodeNumber("3", 2);
+				assertNotNull(addr);
+				assertNotUndefined(addr);
+				assertEquals("3B", addr.number);
+				assertFalse(addr.isOffset);
+				
+				info('hs.address.NodeNumber.toNodeNumber("5C20B", 25)');
+				addr = hs.address.NodeNumber.toNodeNumber("5C20B", 25);
+				assertNotNull(addr);
+				assertNotUndefined(addr);
+				assertEquals("5C20B25", addr.number);
+				assertFalse(addr.isOffset);
+				
+				info('hs.address.NodeNumber.toNodeNumber("5C20", 26)');
+				addr = hs.address.NodeNumber.toNodeNumber("5C20", 26);
+				assertNotNull(addr);
+				assertNotUndefined(addr);
+				assertEquals("5C20Z", addr.number);
+				assertFalse(addr.isOffset);
+				
+				info('hs.address.NodeNumber.toNodeNumber("5C20", 27)');
+				addr = hs.address.NodeNumber.toNodeNumber("5C20", 27);
+				assertNotNull(addr);
+				assertNotUndefined(addr);
+				assertEquals("5C20AA", addr.number);
+				assertFalse(addr.isOffset);
+				
+				info('hs.address.NodeNumber.toNodeNumber("5C20", 29)');
+				addr = hs.address.NodeNumber.toNodeNumber("5C20", 29);
+				assertNotNull(addr);
+				assertNotUndefined(addr);
+				assertEquals("5C20AC", addr.number);
+				assertFalse(addr.isOffset);
+				
+				info('hs.address.NodeNumber.toNodeNumber("5C20", 53)');
+				addr = hs.address.NodeNumber.toNodeNumber("5C20", 53);
+				assertNotNull(addr);
+				assertNotUndefined(addr);
+				assertEquals("5C20BA", addr.number);
+				assertFalse(addr.isOffset);
+				
+				info('hs.address.NodeNumber.toNodeNumber("5C20", 53)');
+				addr = hs.address.NodeNumber.toNodeNumber("5C20", 53);
+				assertNotNull(addr);
+				assertNotUndefined(addr);
+				assertEquals("5C20BA", addr.number);
+				assertFalse(addr.isOffset);
+				
+				info('hs.address.NodeNumber.toNodeNumber("5C20", 677)');
+				addr = hs.address.NodeNumber.toNodeNumber("5C20", 677);
+				assertNotNull(addr);
+				assertNotUndefined(addr);
+				assertEquals("5C20ZA", addr.number);
+				assertFalse(addr.isOffset);
+				
+				info('hs.address.NodeNumber.toNodeNumber("5C20", 703)');
+				addr = hs.address.NodeNumber.toNodeNumber("5C20", 703);
+				assertNotNull(addr);
+				assertNotUndefined(addr);
+				assertEquals("5C20AAA", addr.number);
+				assertFalse(addr.isOffset);
+				
+				info('hs.address.NodeNumber.toNodeNumber("5C20BD", 5)');
+				addr = hs.address.NodeNumber.toNodeNumber("5C20BD", 5);
+				assertNotNull(addr);
+				assertNotUndefined(addr);
+				assertEquals("5C20BD5", addr.number);
+				assertFalse(addr.isOffset);
+				
+				info('hs.address.NodeNumber.toNodeNumber("5c20bd5", 5)');
+				addr = hs.address.NodeNumber.toNodeNumber("5c20bd5", 5);
+				assertNotNull(addr);
+				assertNotUndefined(addr);
+				assertEquals("5C20BD5E", addr.number);
+				assertFalse(addr.isOffset);
+			}
+		</script>
+	</body>
+</html>

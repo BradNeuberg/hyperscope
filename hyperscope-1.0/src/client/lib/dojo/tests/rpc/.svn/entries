@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/tests/rpc"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="JSON.php"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="781d2aaf4b5ee13959579fe1bc741ad5"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_YahooService.html"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="e46a9600862df43a2b56b61e7f14f2a0"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+<entry
+   committed-rev="203"
+   name="testClass.smd"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="9c49fa16a69e68b2751dc955d7a73654"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_JsonRPCMediator.php"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="6e07591016cbdd8925aa3022116f9ac7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+<entry
+   committed-rev="203"
+   name="testClass.php"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="ac14d0dcf80e6c28a50befb0b91a8ee2"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_JsonService.html"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="bee0bd59dbc7826457b71830adf99822"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+</wc-entries>

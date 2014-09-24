@@ -1,0 +1,12 @@
+<div 	dojoType="FloatingPane" 
+		id="${this.widgetId}Pane"
+		hasShadow="true" 
+		title="Help" 
+		resizable="true"
+		displayCloseAction="true"
+		constrainToContainer="true"
+		dojoAttachPoint="helpOverlay"
+		href="/hyperscope/src/client/lib/hs/templates/HelpContent.html"
+		class="helpOverlay initial-overlay-state">
+
+</div>

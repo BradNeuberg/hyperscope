@@ -1,0 +1,226 @@
+/** Document Window Definitions and Placement. */
+		
+html,
+body{
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+}
+
+
+/** Our RenderDocument iframe */
+
+#docWindow{
+	width: 100%;
+	height: 100%;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+			
+iframe{ 
+	width: 100%;
+	height: 91%;
+	position: relative;
+	top: 9%;
+	overflow: visible;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	z-index: 1;
+}
+
+
+/** Profiling and debug output */
+
+body.profiling #docWindow,
+body.profiling iframe{
+	height: 10em !important;
+	overflow: hidden !important;
+}
+
+#docProfile{
+	margin-left: 0.5em;
+}
+
+body.debugging #docWindow{
+	height: 60% !important;
+}
+
+body.debugging #debugOutput{
+	overflow: visible !important;
+	margin-left: 0.5em;
+}
+
+/** 
+	Needed for debug output to print correctly in browser. 
+*/
+div{
+	display: block;
+}
+
+/** Our status area */
+#statusArea{
+	position: absolute;
+	right: 30px;
+	top: 10%;
+	background-color: red;
+	color: white;
+	z-index: 100;
+	overflow: hidden;
+	text-align: right;
+	padding: 2px 5px 2px 5px;
+	display: none;
+}
+
+/**
+	Styles for displayed HyperScope documents inside the iframe.
+*/
+
+.node-row{
+	width: 100%;
+}
+
+/** 
+	Prevents a small line from appearing when blank lines
+	are showing and a line is selected.
+*/
+.node-row td{
+	padding: 0px;
+	border: 0px;
+}
+
+.quick-buttons img{
+	padding-left: 4px;
+	visibility: hidden;
+}
+
+.node-data{
+	padding-left: 1em !important;
+	width: 91%;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.node-data .node-data-content{
+	overflow: hidden; /** line clipping */
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/**
+	Some elements, such as H1 elements, have a 
+	large vertical margin; remove this for
+	line clipping calculations to be 
+	correct.
+*/
+.node-data .node-data-content *{
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	display: inline;
+}
+
+.node-data .node-data-content tr {
+	display: block !important;
+}
+
+.node-data .node-data-content td {
+	padding-right: 5px;
+}
+
+.node-data .node-data-content table {
+	padding-left: 1.5em;
+	display: block;
+}
+
+.node-address{
+	font-family: Verdana, Trebuchet, Arial, Helvetica;
+	font-style: normal;
+	font-weight: bold;
+	font-size: x-small;
+	text-decoration: none;
+	color: #C8A8FF; /** light purple */
+	padding-right: 0.6em !important;
+	float: left;
+}
+
+.included-node .node-address{
+	color: #A52A2A !important; /** brown */
+}
+
+.node-addressing-column{
+	visibility: visible !important;
+	text-align: right;
+	overflow: hidden;
+	width: 9%;
+}
+
+.node-addressing-column a{
+	padding-right: 10px;
+}
+
+.include-failed{
+	color: red;
+}
+
+/** 
+	Folks found the selected-row effects annoying; commenting out. 
+*/
+/*
+.selected-row{
+	background-color: #C0C0FF; */ /** light blue */
+	/*cursor: pointer;
+}*/
+
+.selected-row .quick-buttons img{
+	visibility: visible;
+	cursor: pointer;
+	width: 14px;
+	height: 14px;
+}
+
+/*.selected-row .node-address{
+	color: #0000FF;*/ /** blue */
+/*}*/
+
+/** Viewspec y - show blank lines. */
+.space-nodes .node-row td{
+	/**
+		border-bottom is a trick so that we can
+		get more space below each node-line
+		_without_ having that space highlight
+		with a background color when run over
+		with the mouse (border's don't have a
+		background color). margin-bottom
+		does not work on TR or TD elements;
+		only padding-bottom does, which we
+		do not want because our selection
+		highlight will select the blank space
+		as well.
+	*/
+	border-bottom: 1em solid white;
+}
+
+.marked{
+	background-color: black;
+	color: white;
+}
+
+.marked a{
+	color: #EEEEEE; /* lighter gray */
+}
+
+.marked a:visited{
+	color: #BBBBBB; /* light gray */
+}
+
+.nothing-to-show-message{
+	padding-left: 10px;
+	padding-top: 10px;
+}

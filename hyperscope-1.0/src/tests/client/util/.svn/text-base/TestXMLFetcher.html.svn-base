@@ -1,0 +1,226 @@
+<html>
+	<head>
+		<title>Test Page for hs.util.XMLFetcher</title>
+		
+		<script language="javascript" src="../lib/jsunit/app/jsUnitCore.js"></script>
+
+		<script type="text/javascript" src="../../../client/lib/sarissa/sarissa.js"></script>
+		<script type="text/javascript" src="../../../client/lib/sarissa/sarissa_ieemu_xpath.js"></script>
+		
+		<script type="text/javascript">
+			var djConfig = { testing: true, isDebug: true, disableFlashStorage: true };
+		</script>
+		<script type="text/javascript" src="../../../client/lib/dojo/dojo.js.uncompressed.js"></script>
+		
+		<script type="text/javascript" src="../../../client/lib/hs/exception.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/filter.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/util.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/address.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/model.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/commands.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/ui.js"></script>
+	</head>
+	<body>
+		<h1>Test Page for hs.util.XMLFetcher</h1>
+
+		<p>This page contains a suite of tests for testing HyperScope.</p>
+	
+		<script language="javascript">
+			// wait for page to finish loading
+			dojo.event.connect(dojo, "loaded", pageLoaded);
+			
+			function setUpPage(){
+			}
+			
+			function pageLoaded(){
+				debug("page loaded");
+				
+				hs.model.testing = true;
+				hs.model.testingCurrentURL = getDocRoot() 
+						+ "../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml";
+						
+				setUpPageStatus = "complete";
+			}
+			
+			function getDocRoot(){
+				var url = window.location.href;
+				var endCut = null, hasFilename = false;
+				
+				// chop off any filenames
+				for(var i = url.length; i--; i >= 0){
+					// url[i] not supported on IE, because
+					// underlying window.location.href is not
+					// a String object but something native
+					if(url.charAt(i) == "/"){
+						if(hasFilename){
+							endCut = i + 1;
+						}
+						break;
+					}else if(url.charAt(i) == "."){
+						hasFilename = true;
+					}
+				}
+
+				if(hasFilename){
+					url = url.substring(0, endCut);
+				}
+				return url;
+			}
+			
+			function testFetcher(fromCache){
+				var fetch, url, loadHandler, xpath, elem, exp;
+				var root = getDocRoot();
+				
+				if(dojo.lang.isUndefined(fromCache)){
+					fromCache = false;
+				}
+				
+				info("---TestXMLFetcher:testFetcher(), loading from cache=" + fromCache);
+				
+				// tests
+				
+				// valid
+				url = root + 
+						"../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml";
+				info("url: " + url);
+				loadHandler = function(address, dom, error){
+					assertNull(error);
+					assertNotNull(address);
+					assertNotNull(dom);
+					assertNotUndefined(address);
+					assertNotUndefined(dom);
+					assertEquals(url, address.toString());
+					
+					// make sure xpath is working
+					xpath = dom.selectNodes("/opml");
+					assertNotNull(xpath);
+					assertEquals(1, xpath.length);
+					elem = xpath.item(0);
+					assertNotNull(elem);
+					assertEquals("opml", elem.nodeName);
+					
+					// see if it came from the cache
+					assertEquals(fromCache, fetch._fromCache);
+					
+					// change the document to make sure we get
+					// clean copies from the cache later on, side-effect
+					// free
+					if(fromCache == false){
+						elem.setAttribute("foobar", "helloworld");
+						assertEquals("helloworld", elem.getAttribute("foobar"));
+					}else{ // doc from cache
+						assertNull(elem.getAttribute("foobar"));
+					}
+				}
+				fetch = new hs.util.XMLFetcher()
+				fetch.load(url, loadHandler);
+				
+				// valid - second version should load from cache
+				url = root + 
+						"../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml#2A:x;/foobar/;";
+				info("url: " + url);
+				loadHandler = function(address, dom, error){
+					assertNull(error);
+					assertNotNull(address);
+					assertNotNull(dom);
+					assertNotUndefined(address);
+					assertNotUndefined(dom);
+					assertEquals(url, address.toString());
+					
+					// make sure xpath is working
+					xpath = dom.selectNodes("/opml");
+					assertNotNull(xpath);
+					assertEquals(1, xpath.length);
+					elem = xpath.item(0);
+					assertNotNull(elem);
+					assertEquals("opml", elem.nodeName);
+					
+					// see if it came from the cache
+					assertEquals(true, fetch._fromCache);
+					
+					// make sure we get clean copies from the cache
+					assertNull(elem.getAttribute("foobar"));
+				}
+				fetch = new hs.util.XMLFetcher()
+				fetch.load(url, loadHandler);
+				
+				// query parameters, even with same path and everything else, should
+				// not retrieve the document above from the cache!
+				url = root + 
+						"../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml?uselessparam=hello";
+				info("url: " + url);
+				loadHandler = function(address, dom, error){
+					assertNull(error);
+					assertNotNull(address);
+					assertNotNull(dom);
+					assertNotUndefined(address);
+					assertNotUndefined(dom);
+					assertEquals(url, address.toString());
+					
+					// make sure xpath is working
+					xpath = dom.selectNodes("/opml");
+					assertNotNull(xpath);
+					assertEquals(1, xpath.length);
+					elem = xpath.item(0);
+					assertNotNull(elem);
+					assertEquals("opml", elem.nodeName);
+					
+					// see if it came from the cache
+					if(fromCache == false){
+						assertEquals(false, fetch._fromCache);
+					}else{
+						assertTrue(fetch._fromCache);
+					}
+					
+					
+					// make sure we get clean copies from the cache
+					assertNull(elem.getAttribute("foobar"));
+				}
+				fetch = new hs.util.XMLFetcher()
+				fetch.load(url, loadHandler);
+						
+				// invalid
+				url = root + "bad/bad.opml";
+				info("INVALID url: " + url);
+				loadHandler = function(address, dom, error){
+					assertNotNull(address);
+					assertEquals(url, address.toString());
+					assertNull(dom);
+					assertNotNull(error);
+					assertNotEquals(-1, error.toString().indexOf("404"));
+				}
+				fetch = new hs.util.XMLFetcher()
+				fetch.load(url, loadHandler);
+				
+				// invalid
+				url = root + "../../data/bad_files/InvalidOPML.opml";
+				info("INVALID url: " + url);
+				loadHandler = function(address, dom, error){
+					assertNotNull(address);
+					assertEquals(url, address.toString());
+					assertNotNull(dom);
+					assertNotNull(error);
+				}
+				fetch = new hs.util.XMLFetcher()
+				fetch.load(url, loadHandler);
+				
+				// invalid
+				url = root + "../../data/bad_files/NotOPML.xml";
+				info("INVALID url: " + url);
+				loadHandler = function(address, dom, error){
+					assertNotNull(address);
+					assertEquals(url, address.toString());
+					assertNotNull(dom);
+					assertNotNull(error);
+				}
+				fetch = new hs.util.XMLFetcher()
+				fetch.load(url, loadHandler);
+				
+				// repeat all tests, but all should be loaded from cache now
+				if(fromCache == false){
+					testFetcher(true);
+				}
+			}
+		</script>
+	</body>
+</html>

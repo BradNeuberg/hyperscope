@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="358"
+   name=""
+   committed-date="2006-09-04T08:40:18.559144Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/hs"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="346"
+   name="address.js"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-04T05:20:03.886087Z"
+   checksum="59bc4f2f4352753368d835a9e9de1b40"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:59.000000Z"/>
+<entry
+   committed-rev="346"
+   name="commands.xml"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-04T05:20:03.886087Z"
+   checksum="a0037a725922bdbc9502ad42ed9bfebe"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:59.000000Z"/>
+<entry
+   committed-rev="346"
+   name="filter.js"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-04T05:20:03.886087Z"
+   checksum="f63c019f29df781b786abd15e46a2e36"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:59.000000Z"/>
+<entry
+   committed-rev="220"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-08-09T02:36:37.221412Z"
+   checksum="4810fb129c499e06244771e4cf33d556"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:59.000000Z"/>
+<entry
+   committed-rev="346"
+   name="ui.js"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-04T05:20:03.886087Z"
+   checksum="ae57040f334629b59199aaa0d236a87c"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:59.000000Z"/>
+<entry
+   committed-rev="346"
+   name="util.js"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-04T05:20:03.886087Z"
+   checksum="be03047b607318225eea7e46f9447b27"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:59.000000Z"/>
+<entry
+   committed-rev="346"
+   name="exception.js"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-04T05:20:03.886087Z"
+   checksum="8cd556b4f98db65d9bb8993a5adb3122"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:59.000000Z"/>
+<entry
+   name="xslt"
+   kind="dir"/>
+<entry
+   committed-rev="346"
+   name="model.js"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-04T05:20:03.886087Z"
+   checksum="b12fffe78968ef9bb13c9fb2f2e6a4f3"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="220"
+   name="profile.js"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-08-09T02:36:37.221412Z"
+   checksum="8f03e369090436cd624d4df8de435e52"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="346"
+   name="commands.js"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-04T05:20:03.886087Z"
+   checksum="1f589a0342a9463e516b5c3f17a0ffe6"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   name="templates"
+   kind="dir"/>
+</wc-entries>

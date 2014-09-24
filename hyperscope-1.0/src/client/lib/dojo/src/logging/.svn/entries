@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/src/logging"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="dc1c6bbb5cd24763911cdbafe49f5530"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Logger.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5258992ac459fb135b5bfe48702cfe4b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+</wc-entries>

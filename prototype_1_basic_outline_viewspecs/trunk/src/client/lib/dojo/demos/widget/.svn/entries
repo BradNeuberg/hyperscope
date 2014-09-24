@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2006-03-06T23:36:47.192473Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/prototype_1_basic_outline_viewspecs/trunk/src/client/lib/dojo/demos/widget"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="11"
+   name="Fisheye.html"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="3a6618a88565c1291e26c5ef8a96acb5"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   name="images"
+   kind="dir"/>
+<entry
+   committed-rev="11"
+   name="Application1.html"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="505b2e0c9db3626f444d909dd2714c8f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+<entry
+   committed-rev="11"
+   name="Editor.html"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="6352324a7a5c03d166faac6f12c4402a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+<entry
+   committed-rev="11"
+   name="Panes.html"
+   text-time="2006-10-14T01:00:25.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="6f370bab5de9baea8f33474506625050"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+</wc-entries>

@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Application facade Demo</title>
+
+<script type="text/javascript">
+
+	var djConfig = {isDebug: true};
+
+	//djConfig.debugAtAllCosts = true;
+
+</script>
+<script type="text/javascript" src="../../dojo.js"></script>
+<script language="JavaScript" type="text/javascript">
+
+	dojo.require("dojo.widget.HtmlLayoutPane");
+	dojo.require("dojo.widget.HtmlSplitPane");
+	dojo.require("dojo.widget.HtmlColorPalette");
+
+	dojo.hostenv.writeIncludes();
+</script>
+  <style>
+    html, body{	
+		width: 100%;	/* make the body expand to fill the visible window */
+		height: 100%;
+		overflow: hidden;	/* erase window level scrollbars */
+		/*border: dotted blue;	/* for debugging */
+		padding: 0 0 0 0;
+		margin: 0 0 0 0;
+    }
+   </style>
+</head>
+<body>
+<div dojoType="LayoutPane"
+	layoutChildPriority='top-bottom'
+	style="border: 2px solid black; width: 100%; height: 100%;">
+	<div dojoType="LayoutPane" layoutAlign="top" style="background-color: #274383; color: white;">
+		top bar
+	</div>
+	<div dojoType="LayoutPane" layoutAlign="bottom" style="background-color: #274383; color: white;">
+		bottom bar
+	</div>
+	<div dojoType="LayoutPane" layoutAlign="client">
+		<div dojoType="SplitPane"
+			orientation="horizontal"
+			sizerWidth="5"
+			activeSizing="0"
+			style="width: 100%; height: 100%;"
+		>
+			<div dojoType="SplitPanePanel" sizeMin="20" sizeShare="20">
+				<div dojoType="ColorPalette"></div>
+			</div>
+			<div dojoType="SplitPanePanel" sizeMin="50" sizeShare="50">
+				<div dojoType="SplitPane"
+					orientation="vertical"
+					sizerWidth="5"
+					activeSizing="0"
+					style="width: 100%; height: 100%;"
+				>
+					<div dojoType="SplitPanePanel" sizeMin="20" sizeShare="50">
+						contents pane
+					</div>
+					<div dojoType="SplitPanePanel" sizeMin="20" sizeShare="50">
+						message pane
+						<div dojoType="ColorPalette"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

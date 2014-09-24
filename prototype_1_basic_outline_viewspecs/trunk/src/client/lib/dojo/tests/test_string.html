@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>dojo.string Tests</title>
+		<script type="text/javascript">
+			// Dojo configuration
+			djConfig = { 
+				isDebug: true
+			};
+		</script>
+		<script type="text/javascript" src="../dojo.js"></script>
+		<script type="text/javascript" src="jsunit_browser.js"></script>
+		<script type="text/javascript" src="test_string.js"></script>
+		<script type="text/javascript">
+			dojo.require("dojo.string");
+
+			function init(){
+				test_string_trim();
+				test_string_paramString();
+				test_string_isBlank();
+				test_string_capitalize();
+				test_string_escape();
+				test_string_summary();
+				dojo.debug("If this is the only message you see, everything worked!");
+			}
+
+			dojo.addOnLoad(init);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+

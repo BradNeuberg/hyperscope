@@ -1,0 +1,41 @@
+<h2 id="dojo.event">dojo.event</h2><h3>Methods</h3><pre>nameAnonFunc (_120, _121)
+createFunctionPair (obj, cb)
+matchSignature (args, _123)
+matchSignatureSets (args)
+connect ()
+connectBefore ()
+connectAround ()
+kwConnect (_133)
+disconnect ()
+kwDisconnect (_134)
+MethodInvocation (_135, obj, args)
+MethodJoinPoint (obj, _138)
+</pre><h3>Properties</h3><pre>Object anon
+Object <a href="#dojo.event.topic">topic</a>
+Object <a href="#dojo.event.browser">browser</a>
+</pre><h2 id="dojo.event.MethodJoinPoint Object">dojo.event.MethodJoinPoint Object</h2><h3>Properties</h3><pre>Object <a href="#dojo.event.MethodJoinPoint%20Object.object">object</a>
+undefined methodname
+undefined methodfunc
+Array before
+Array after
+Array around
+</pre><h2 id="dojo.event.topic">dojo.event.topic</h2><h3>Methods</h3><pre>getTopic (_173)
+registerPublisher (_174, obj, _175)
+subscribe (_176, obj, _177)
+unsubscribe (_178, obj, _179)
+publish (_180, _181)
+TopicImpl (_182)
+</pre><h3>Properties</h3><pre>Object topics
+</pre><h2 id="dojo.event.topic.TopicImpl Object">dojo.event.topic.TopicImpl Object</h2><h3>Methods</h3><pre>subscribe (_184, _185)
+unsubscribe (_186, _187)
+registerPublisher (_188, _189)
+sendMessage (_190)
+</pre><h3>Properties</h3><pre>undefined topicName
+</pre><h2 id="dojo.event.browser">dojo.event.browser</h2><h3>Methods</h3><pre>clean (node)
+addClobberAttr (type)
+addClobberAttrs ()
+addClobberNode (node)
+addListener (node, _201, fp, _202)
+fixEvent (evt)
+stopEvent (ev)
+</pre>

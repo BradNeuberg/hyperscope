@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="129"
+   name=""
+   committed-date="2006-06-22T01:05:18.834950Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/tests/data/non_hyp_opml"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="129"
+   name="opml1_0.opml"
+   text-time="2006-10-14T00:59:50.000000Z"
+   committed-date="2006-06-22T01:05:18.834950Z"
+   checksum="cb0b5aede9b4649c45af4ee492075c91"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:50.000000Z"/>
+<entry
+   committed-rev="129"
+   name="opml2_0.opml"
+   text-time="2006-10-14T00:59:50.000000Z"
+   committed-date="2006-06-22T01:05:18.834950Z"
+   checksum="e8804fe4e5f5f7adf7ca67178c9daa3a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:50.000000Z"/>
+</wc-entries>

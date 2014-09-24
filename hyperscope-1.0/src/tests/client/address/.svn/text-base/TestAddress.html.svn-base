@@ -1,0 +1,1330 @@
+<html>
+	<head>
+		<title>Test Page for hs.address.Address</title>
+		
+		<script language="javascript" src="../lib/jsunit/app/jsUnitCore.js"></script>
+
+		<script type="text/javascript" src="../../../client/lib/sarissa/sarissa.js"></script>
+		<script type="text/javascript" src="../../../client/lib/sarissa/sarissa_ieemu_xpath.js"></script>
+		
+		<script type="text/javascript">
+			var djConfig = { testing: true, isDebug: true, disableFlashStorage: true };
+		</script>
+		<script type="text/javascript" src="../../../client/lib/dojo/dojo.js.uncompressed.js"></script>
+		
+		<script type="text/javascript" src="../../../client/lib/hs/exception.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/filter.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/util.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/address.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/model.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/commands.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/ui.js"></script>
+	</head>
+	<body>
+		<h1>Test Page for hs.address.Address</h1>
+
+		<p>This page contains a suite of tests for testing HyperScope.</p>
+	
+		<script language="javascript">
+			// wait for page to finish loading
+			dojo.event.connect(dojo, "loaded", pageLoaded);
+			
+			function setUpPage(){
+			}
+			
+			function pageLoaded(){
+				debug("page loaded");
+				var addr, fetch, url;
+				
+				// setup our fake testing environment
+				hs.model.testing = true;
+				// get rid of relative dots
+				var currentFile = getDocRoot() 
+						+ "../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml";
+				currentFile = new hs.address.FileInfo(currentFile);
+				currentFile.consolidateRelativeDots();
+				hs.model.testingCurrentURL = currentFile.toString();
+						
+				setUpPageStatus = "complete";	
+			}
+			
+			function getDocRoot(){
+				var url = window.location.href;
+				var endCut = null, hasFilename = false;
+				
+				// chop off any filenames
+				for(var i = url.length; i--; i >= 0){
+					// url[i] not supported on IE, because
+					// underlying window.location.href is not
+					// a String object but something native
+					if(url.charAt(i) == "/"){
+						if(hasFilename){
+							endCut = i + 1;
+						}
+						break;
+					}else if(url.charAt(i) == "."){
+						hasFilename = true;
+					}
+				}
+
+				if(hasFilename){
+					url = url.substring(0, endCut);
+				}
+				return url;
+			}
+			
+			function testAddress(){
+				var url, addr, handler, handlerCalled, doc, correctPath, nodes, docAddrStr;
+				var parentUrl, currentDoc, p, exp = null;
+				var transcludedDoc;
+				var root = getDocRoot();
+				var pageLoc = new hs.address.FileInfo(window.location.href);
+				var pageHost = pageLoc.host;
+				if(pageLoc.port != 80){
+					pageHost += ":" + pageLoc.port;
+				}
+				
+				info("---TestAddress:testAddress()");
+				
+				// simulate resolving the initial page location using a basic URL with
+				// no anchor
+				url = getDocRoot() 
+						+ "../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml";
+				parentUrl = url;
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				assertFalse(addr.isRelative());
+				// get rid of relative dots for testing
+				parentUrl = new hs.address.FileInfo(url);
+				parentUrl.consolidateRelativeDots();
+				parentUrl = parentUrl.toString();
+				handlerCalled = false;
+				// setup the handler
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertFalse(address.isRelative());
+					assertNotNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNull(error);
+					doc = returnDoc;
+					currentDoc = doc;
+					assertTrue(addr.equals(address));
+					
+					// make sure we really have an hs.model.Document and
+					// a correct DOM object
+					assertNotUndefined(returnDoc.jumpOrigin);
+					assertNotNull(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom.selectNodes);
+					
+					handlerCalled = true;
+				};
+				addr.resolve(handler, true, null);
+				// handler called correctly?
+				assertTrue(handlerCalled);
+				assertEquals(parentUrl, hs.model.testingCurrentURL);
+				// make sure resolved document is correct
+				// doc attributes
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals("", doc.currentViewspecs.toString());
+				assertNotNull(doc.dom);
+				assertNotUndefined(doc.dom);
+				assertFalse(doc.address.isRelative());
+				// make sure applied content filters are correct
+				nodes = doc.dom.selectNodes("//outline[@hs-internal:passes-content-filter]");
+				assertEquals(0, nodes.length);
+				// make sure transcluded pieces are correct
+				nodes = doc.dom.selectNodes("//outline[@type = 'link']");
+				assertEquals(0, nodes.length);
+				// make sure address pieces are correct
+				// file info
+				assertNotNull(addr.fileInfo);
+				assertEquals("http", addr.fileInfo.scheme);
+				assertEquals(pageLoc.host, addr.fileInfo.host);
+				assertEquals(pageLoc.port, addr.fileInfo.port);
+				correctPath = getDocRoot() 
+						+ "../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml";
+				correctPath = new hs.address.FileInfo(correctPath);
+				correctPath = correctPath.path;
+				assertEquals(correctPath, addr.fileInfo.path);
+				assertNull(addr.fileInfo.query);
+				// addresses
+				assertNotNull(addr.nodeAddresses);
+				assertEquals(0, addr.nodeAddresses.length);
+				// viewspecs
+				assertNotNull(addr.viewspecs);
+				assertEquals(0, addr.viewspecs.length);
+				// content filter
+				assertNull(addr.contentFilter);
+				// make sure the document's address is correct
+				assertEquals(parentUrl, doc.address.toString());
+				
+				// test with a hanging anchor with no values
+				url = getDocRoot() 
+						+ "../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml#";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				handlerCalled = false;
+				assertFalse(addr.isRelative());
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertFalse(address.isRelative());
+					assertNotNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNull(error);
+					doc = returnDoc;
+					currentDoc = doc;
+					assertTrue(addr.equals(address.toString()));
+					
+					// make sure we really have an hs.model.Document and
+					// a correct DOM object
+					assertNotUndefined(returnDoc.jumpOrigin);
+					assertNotNull(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom.selectNodes);
+					
+					handlerCalled = true;
+				};
+				addr.resolve(handler, true, currentDoc);
+				// handler called correctly?
+				assertTrue(handlerCalled);
+				assertEquals(parentUrl, hs.model.testingCurrentURL);
+				// make sure resolved document is correct
+				// doc attributes
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals("", doc.currentViewspecs.toString());
+				assertNotNull(doc.dom);
+				assertNotUndefined(doc.dom);
+				assertFalse(doc.address.isRelative());
+				// make sure applied content filters are correct
+				nodes = doc.dom.selectNodes("//outline[@hs-internal:passes-content-filter]");
+				assertEquals(0, nodes.length);
+				// make sure transcluded pieces are correct
+				nodes = doc.dom.selectNodes("//outline[@type = 'link']");
+				assertEquals(0, nodes.length);
+				// make sure address pieces are correct
+				// file info
+				assertNotNull(addr.fileInfo);
+				assertEquals("http", addr.fileInfo.scheme);
+				assertEquals(pageLoc.host, addr.fileInfo.host);
+				assertEquals(pageLoc.port, addr.fileInfo.port);
+				correctPath = getDocRoot() 
+						+ "../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml";
+				correctPath = new hs.address.FileInfo(correctPath);
+				assertEquals(correctPath.path, addr.fileInfo.path);
+				assertNull(addr.fileInfo.query);
+				// addresses
+				assertNotNull(addr.nodeAddresses);
+				assertEquals(0, addr.nodeAddresses.length);
+				// viewspecs
+				assertNotNull(addr.viewspecs);
+				assertEquals(0, addr.viewspecs.length);
+				// content filter
+				assertNull(addr.contentFilter);
+				// make sure the document's address is correct
+				assertEquals(parentUrl, doc.address.toString());
+				
+				// now simulate applying new viewspecs, jump positions, and content filters
+				// to this location 
+				
+				// add some viewspecs
+				url = "#:mBwag";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				handlerCalled = false;
+				assertTrue(addr.isRelative());
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertTrue(address.isRelative());
+					assertNotNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNull(error);
+					doc = returnDoc;
+					currentDoc = doc;
+					assertTrue(addr.equals(address));
+					
+					// make sure we really have an hs.model.Document and
+					// a correct DOM object
+					assertNotUndefined(returnDoc.jumpOrigin);
+					assertNotNull(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom.selectNodes);
+					
+					handlerCalled = true;
+				};
+				addr.resolve(handler, true, currentDoc);
+				// handler called correctly?
+				assertTrue(handlerCalled);
+				assertEquals(parentUrl, hs.model.testingCurrentURL);
+				// make sure resolved document is correct
+				// doc attributes
+				docAddrStr = parentUrl + "#:scamB";
+				assertEquals(docAddrStr, doc.address.toString());
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals("scamB", doc.currentViewspecs.toString());
+				assertNotNull(doc.dom);
+				assertNotUndefined(doc.dom);
+				assertFalse(doc.address.isRelative());
+				// make sure applied content filters are correct
+				nodes = doc.dom.selectNodes("//outline[@hs-internal:passes-content-filter]");
+				assertEquals(0, nodes.length);
+				// make sure transcluded pieces are correct
+				nodes = doc.dom.selectNodes("//outline[@type = 'link']");
+				assertEquals(0, nodes.length);
+				// make sure address pieces are correct
+				// file info
+				assertNotNull(addr.fileInfo);
+				assertEquals("./", addr.fileInfo.path);
+				// addresses
+				assertNotNull(addr.nodeAddresses);
+				assertEquals(0, addr.nodeAddresses.length);
+				// viewspecs
+				assertNotNull(addr.viewspecs);
+				assertEquals(5, addr.viewspecs.length);
+				assertEquals("m", addr.viewspecs[0].letter);
+				assertEquals("B", addr.viewspecs[1].letter);
+				assertEquals("w", addr.viewspecs[2].letter);
+				assertEquals("a", addr.viewspecs[3].letter);
+				assertEquals("g", addr.viewspecs[4].letter);
+				// content filter
+				assertNull(addr.contentFilter);
+				// make sure the document's address is correct
+				assertEquals(docAddrStr, doc.address.toString());
+				
+				
+				// add some more, making sure the old one's stay there
+				url = "#:xKO";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				handlerCalled = false;
+				assertTrue(addr.isRelative());
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertTrue(address.isRelative());
+					assertNotNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNull(error);
+					doc = returnDoc;
+					currentDoc = doc;
+					assertTrue(addr.equals(address));
+					
+					// make sure we really have an hs.model.Document and
+					// a correct DOM object
+					assertNotUndefined(returnDoc.jumpOrigin);
+					assertNotNull(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom.selectNodes);
+					
+					handlerCalled = true;
+				};
+				addr.resolve(handler, true, currentDoc);
+				// handler called correctly?
+				assertTrue(handlerCalled);
+				assertEquals(parentUrl, hs.model.testingCurrentURL);
+				// make sure resolved document is correct
+				// doc attributes
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals("mKBO", doc.currentViewspecs.toString());
+				assertNotNull(doc.dom);
+				assertNotUndefined(doc.dom);
+				assertFalse(doc.address.isRelative());
+				// make sure applied content filters are correct
+				nodes = doc.dom.selectNodes("//outline[@hs-internal:passes-content-filter]");
+				assertEquals(0, nodes.length);
+				// make sure transcluded pieces are correct
+				nodes = doc.dom.selectNodes("//outline[@type = 'link']");
+				assertEquals(0, nodes.length);
+				// make sure address pieces are correct
+				// file info
+				assertEquals("./", addr.fileInfo.path);
+				assertNull(addr.fileInfo.host);
+				// addresses
+				assertNotNull(addr.nodeAddresses);
+				assertEquals(0, addr.nodeAddresses.length);
+				// viewspecs
+				assertNotNull(addr.viewspecs);
+				assertEquals(3, addr.viewspecs.length);
+				assertEquals("x", addr.viewspecs[0].letter);
+				assertEquals("K", addr.viewspecs[1].letter);
+				assertEquals("O", addr.viewspecs[2].letter);
+				// content filter
+				assertNull(addr.contentFilter);
+				// make sure the document's address is correct
+				docAddrStr = parentUrl + "#:mKBO";
+				assertEquals(docAddrStr, doc.address.toString());
+				
+				// do some jumping around
+				url = "#2a.od.u2ns \"Client\" /html/i /html/i.usp:eb";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				handlerCalled = false;
+				assertTrue(addr.isRelative());
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertTrue(address.isRelative());
+					assertNotNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNull(error);
+					doc = returnDoc;
+					currentDoc = doc;
+					assertTrue(addr.equals(address.toString()));
+					
+					// make sure we really have an hs.model.Document and
+					// a correct DOM object
+					assertNotUndefined(returnDoc.jumpOrigin);
+					assertNotNull(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom.selectNodes);
+					
+					handlerCalled = true;
+				};
+				addr.resolve(handler, true, currentDoc);
+				// handler called correctly?
+				assertTrue(handlerCalled);
+				assertEquals(parentUrl, hs.model.testingCurrentURL);
+				// make sure resolved document is correct
+				// doc attributes
+				assertEquals("3B1A", doc.nodeCtxt.number);
+				assertEquals("tebmKBO", doc.currentViewspecs.toString());
+				assertNotNull(doc.dom);
+				assertNotUndefined(doc.dom);
+				assertFalse(doc.address.isRelative());
+				// make sure applied content filters are correct
+				nodes = doc.dom.selectNodes("//outline[@hs-internal:passes-content-filter]");
+				assertEquals(0, nodes.length);
+				// make sure transcluded pieces are correct
+				nodes = doc.dom.selectNodes("//outline[@type = 'link']");
+				assertEquals(0, nodes.length);
+				// make sure address pieces are correct
+				// file info
+				assertEquals("./", addr.fileInfo.path);
+				// addresses
+				assertNotNull(addr.nodeAddresses);
+				assertEquals(12, addr.nodeAddresses.length);
+				p = addr.nodeAddresses[0]; // 2a
+				assertTrue(p.isPieceType("hs.address.NodeNumber"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals("2A", p.number);
+				assertFalse(p.isOffset);
+				p = addr.nodeAddresses[1]; // .o
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.Relative.ORIGIN, p.type);
+				assertEquals(1, p.offset);
+				p = addr.nodeAddresses[2]; // d
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.Relative.NODE_DOWN, p.type);
+				assertEquals(1, p.offset);
+				p = addr.nodeAddresses[3]; // .u
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.Relative.NODE_UP, p.type);
+				assertEquals(1, p.offset);
+				p = addr.nodeAddresses[4]; // 2n
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.Relative.NODE_NEXT, p.type);
+				assertEquals(2, p.offset);
+				p = addr.nodeAddresses[5]; // s
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.Relative.NODE_SUCCESSOR, p.type);
+				assertEquals(1, p.offset);
+				p = addr.nodeAddresses[6]; // "Client"
+				assertTrue(p.isPieceType("hs.address.StringSearch"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals("\"Client\"", p.search);
+				p = addr.nodeAddresses[7]; // /html/i
+				assertTrue(p.isPieceType("hs.address.StringSearch"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals("/html/i", p.search);
+				p = addr.nodeAddresses[8]; // /html/i
+				assertTrue(p.isPieceType("hs.address.StringSearch"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals("/html/i", p.search);
+				p = addr.nodeAddresses[9]; // .u
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.Relative.NODE_UP, p.type);
+				assertEquals(1, p.offset);
+				p = addr.nodeAddresses[10]; // s
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.Relative.NODE_SUCCESSOR, p.type);
+				assertEquals(1, p.offset);
+				p = addr.nodeAddresses[11]; // p
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.Relative.NODE_PREDECESSOR, p.type);
+				assertEquals(1, p.offset);
+				// viewspecs
+				assertNotNull(addr.viewspecs);
+				assertEquals(2, addr.viewspecs.length);
+				assertEquals("e", addr.viewspecs[0].letter);
+				assertEquals("b", addr.viewspecs[1].letter);
+				// content filter
+				assertNull(addr.contentFilter);
+				// make sure the document's address is correct
+				docAddrStr = parentUrl + "#015:tebmKBO";
+				assertEquals(docAddrStr, doc.address.toString());
+				
+				// do some more jumping
+				url = "#.4b Module *Module!1A3:lwL";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				handlerCalled = false;
+				assertTrue(addr.isRelative());
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertTrue(address.isRelative());
+					assertNotNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNull(error);
+					doc = returnDoc;
+					currentDoc = doc;
+					assertTrue(addr.equals(address));
+					
+					// make sure we really have an hs.model.Document and
+					// a correct DOM object
+					assertNotUndefined(returnDoc.jumpOrigin);
+					assertNotNull(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom.selectNodes);
+					
+					handlerCalled = true;
+				};
+				addr.resolve(handler, true, currentDoc);
+				// handler called correctly?
+				assertTrue(handlerCalled);
+				assertEquals(parentUrl, hs.model.testingCurrentURL);
+				// make sure resolved document is correct
+				// doc attributes
+				assertEquals("3B2A1C", doc.nodeCtxt.number);
+				assertEquals("wlmBO", doc.currentViewspecs.toString());
+				assertNotNull(doc.dom);
+				assertNotUndefined(doc.dom);
+				assertFalse(doc.address.isRelative());
+				// make sure applied content filters are correct
+				nodes = doc.dom.selectNodes("//outline[@hs-internal:passes-content-filter]");
+				assertEquals(0, nodes.length);
+				// make sure transcluded pieces are correct
+				nodes = doc.dom.selectNodes("//outline[@type = 'link']");
+				assertEquals(0, nodes.length);
+				// make sure address pieces are correct
+				// file info
+				assertEquals("./", addr.fileInfo.path);
+				// addresses
+				assertNotNull(addr.nodeAddresses);
+				assertEquals(4, addr.nodeAddresses.length);
+				p = addr.nodeAddresses[0]; // .4b
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.Relative.NODE_BACK, p.type);
+				assertEquals(4, p.offset);
+				p = addr.nodeAddresses[1]; // Module
+				assertTrue(p.isPieceType("hs.address.NodeLabel"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.NodeLabel.START_AT_FIRST, p.type);
+				assertEquals("Module", p.label);
+				p = addr.nodeAddresses[2]; // *Module
+				assertTrue(p.isPieceType("hs.address.NodeLabel"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.NodeLabel.MOVE_TO_NEXT, p.type);
+				assertEquals("Module", p.label);
+				p = addr.nodeAddresses[3]; // !1A3
+				assertTrue(p.isPieceType("hs.address.NodeNumber"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals("1A3", p.number);
+				assertTrue(p.isOffset);
+				// viewspecs
+				assertNotNull(addr.viewspecs);
+				assertEquals(3, addr.viewspecs.length);
+				assertEquals("l", addr.viewspecs[0].letter);
+				assertEquals("w", addr.viewspecs[1].letter);
+				assertEquals("L", addr.viewspecs[2].letter);
+				// content filter
+				assertNull(addr.contentFilter);
+				// make sure the document's address is correct
+				docAddrStr = parentUrl + "#0147:wlmBO";
+				assertEquals(docAddrStr, doc.address.toString());
+				
+				// do some more jumping
+				url = "#0462.thn!inside .e";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				handlerCalled = false;
+				assertTrue(addr.isRelative());
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertTrue(address.isRelative());
+					assertNotNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNull(error);
+					doc = returnDoc;
+					currentDoc = doc;
+					assertTrue(addr.equals(address));
+					
+					// make sure we really have an hs.model.Document and
+					// a correct DOM object
+					assertNotUndefined(returnDoc.jumpOrigin);
+					assertNotNull(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom.selectNodes);
+					
+					handlerCalled = true;
+				};
+				addr.resolve(handler, true, currentDoc);
+				// handler called correctly?
+				assertTrue(handlerCalled);
+				assertEquals(parentUrl, hs.model.testingCurrentURL);
+				// make sure resolved document is correct
+				// doc attributes
+				assertEquals("0494", doc.nodeCtxt.id);
+				assertEquals("wlmBO", doc.currentViewspecs.toString());
+				assertNotNull(doc.dom);
+				assertNotUndefined(doc.dom);
+				assertFalse(doc.address.isRelative());
+				// make sure applied content filters are correct
+				nodes = doc.dom.selectNodes("//outline[@hs-internal:passes-content-filter]");
+				assertEquals(0, nodes.length);
+				// make sure transcluded pieces are correct
+				nodes = doc.dom.selectNodes("//outline[@type = 'link']");
+				assertEquals(0, nodes.length);
+				// make sure address pieces are correct
+				// file info
+				assertEquals("./", addr.fileInfo.path);
+				// addresses
+				assertNotNull(addr.nodeAddresses);
+				assertEquals(6, addr.nodeAddresses.length);
+				p = addr.nodeAddresses[0]; // 0462
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals("0462", p.id);
+				p = addr.nodeAddresses[1]; // .t
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.Relative.PLEX_TAIL, p.type);
+				assertEquals(1, p.offset);
+				p = addr.nodeAddresses[2]; // h
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.Relative.PLEX_HEAD, p.type);
+				assertEquals(1, p.offset);
+				p = addr.nodeAddresses[3]; // n
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.Relative.NODE_NEXT, p.type);
+				assertEquals(1, p.offset);
+				p = addr.nodeAddresses[4]; // !inside
+				assertTrue(p.isPieceType("hs.address.NodeLabel"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals("inside", p.label);
+				assertEquals(hs.address.NodeLabel.BRANCH_SEARCH, p.type);
+				p = addr.nodeAddresses[5]; // .e
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.Relative.BRANCH_END, p.type);
+				assertEquals(1, p.offset);
+				// viewspecs
+				assertNotNull(addr.viewspecs);
+				assertEquals(0, addr.viewspecs.length);
+				// content filter
+				assertNull(addr.contentFilter);
+				// make sure the document's address is correct
+				docAddrStr = parentUrl + "#0494:wlmBO";
+				assertEquals(docAddrStr, doc.address.toString());
+				
+				// jump to a marker
+				url = "#1@testMarker";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				handlerCalled = false;
+				assertTrue(addr.isRelative());
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertTrue(address.isRelative());
+					assertNotNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNull(error);
+					doc = returnDoc;
+					currentDoc = doc;
+					assertTrue(addr.equals(address));
+					
+					// make sure we really have an hs.model.Document and
+					// a correct DOM object
+					assertNotUndefined(returnDoc.jumpOrigin);
+					assertNotNull(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom.selectNodes);
+					
+					handlerCalled = true;
+				};
+				addr.resolve(handler, true, currentDoc);
+				// handler called correctly?
+				assertTrue(handlerCalled);
+				assertEquals(parentUrl, hs.model.testingCurrentURL);
+				// make sure resolved document is correct
+				// doc attributes
+				assertEquals("027", doc.nodeCtxt.id);
+				assertEquals("wlmBO", doc.currentViewspecs.toString());
+				assertNotNull(doc.dom);
+				assertNotUndefined(doc.dom);
+				assertFalse(doc.address.isRelative());
+				// make sure applied content filters are correct
+				nodes = doc.dom.selectNodes("//outline[@hs-internal:passes-content-filter]");
+				assertEquals(0, nodes.length);
+				// make sure transcluded pieces are correct
+				nodes = doc.dom.selectNodes("//outline[@type = 'link']");
+				assertEquals(0, nodes.length);
+				// make sure address pieces are correct
+				// file info
+				assertEquals("./", addr.fileInfo.path);
+				// addresses
+				assertNotNull(addr.nodeAddresses);
+				assertEquals(2, addr.nodeAddresses.length);
+				p = addr.nodeAddresses[0]; // 1
+				assertTrue(p.isPieceType("hs.address.NodeNumber"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals("1", p.number);
+				p = addr.nodeAddresses[1]; // @testMarker
+				assertTrue(p.isPieceType("hs.address.Marker"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals("testMarker", p.name);
+				// viewspecs
+				assertNotNull(addr.viewspecs);
+				assertEquals(0, addr.viewspecs.length);
+				// content filter
+				assertNull(addr.contentFilter);
+				// make sure the document's address is correct
+				docAddrStr = parentUrl + "#027:wlmBO";
+				assertEquals(docAddrStr, doc.address.toString());
+				
+				// test getting relative URL with replacePage = false
+				// (used for transclusion)
+				url = "#3B1A.4b Module *Module!1A3:lwLP";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				handlerCalled = false;
+				assertTrue(addr.isRelative());
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertTrue(address.isRelative());
+					assertNotNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNull(error);
+					transcludedDoc = returnDoc;
+					assertTrue(addr.equals(address.toString()));
+					
+					// make sure we really have an hs.model.Document and
+					// a correct DOM object
+					assertNotUndefined(returnDoc.jumpOrigin);
+					assertNotNull(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom.selectNodes);
+					
+					handlerCalled = true;
+				};
+				addr.resolve(handler, false, currentDoc);
+				// handler called correctly?
+				assertTrue(handlerCalled);
+				assertEquals(parentUrl, hs.model.testingCurrentURL);
+				// make sure resolved document is correct
+				// doc attributes
+				assertEquals("3B2A1C", transcludedDoc.nodeCtxt.number);
+				assertEquals("wlmB", transcludedDoc.currentViewspecs.toString());
+				assertNotNull(transcludedDoc.dom);
+				assertNotUndefined(transcludedDoc.dom);
+				assertFalse(transcludedDoc.address.isRelative());
+				// make sure applied content filters are correct
+				nodes = transcludedDoc.dom.selectNodes("//outline[@hs-internal:passes-content-filter]");
+				assertEquals(0, nodes.length);
+				// make sure transcluded pieces are correct
+				nodes = transcludedDoc.dom.selectNodes("//outline[@type = 'link']");
+				assertEquals(0, nodes.length);
+				// make sure address pieces are correct
+				// file info
+				assertEquals("./", addr.fileInfo.path);
+				// addresses
+				assertNotNull(addr.nodeAddresses);
+				assertEquals(5, addr.nodeAddresses.length);
+				p = addr.nodeAddresses[0]; // 3B1A
+				assertTrue(p.isPieceType("hs.address.NodeNumber"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals("3B1A", p.number);
+				assertFalse(p.isOffset);
+				p = addr.nodeAddresses[1]; // .4b
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.Relative.NODE_BACK, p.type);
+				assertEquals(4, p.offset);
+				p = addr.nodeAddresses[2]; // Module
+				assertTrue(p.isPieceType("hs.address.NodeLabel"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.NodeLabel.START_AT_FIRST, p.type);
+				assertEquals("Module", p.label);
+				p = addr.nodeAddresses[3]; // *Module
+				assertTrue(p.isPieceType("hs.address.NodeLabel"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.NodeLabel.MOVE_TO_NEXT, p.type);
+				assertEquals("Module", p.label);
+				p = addr.nodeAddresses[4]; // !1A3
+				assertTrue(p.isPieceType("hs.address.NodeNumber"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals("1A3", p.number);
+				assertTrue(p.isOffset);
+				// viewspecs
+				assertNotNull(addr.viewspecs);
+				assertEquals(4, addr.viewspecs.length);
+				assertEquals("l", addr.viewspecs[0].letter);
+				assertEquals("w", addr.viewspecs[1].letter);
+				assertEquals("L", addr.viewspecs[2].letter);
+				assertEquals("P", addr.viewspecs[3].letter);
+				// content filter
+				assertNull(addr.contentFilter);
+				// make sure the document's address is correct
+				docAddrStr = parentUrl + "#0147:wlmB";
+				assertEquals(docAddrStr, transcludedDoc.address.toString());
+				// make sure the original displayed document is still intact
+				// transcluded doc should not have effected this address
+				docAddrStr = docAddrStr = parentUrl + "#027:wlmBO";
+				assertEquals(docAddrStr, doc.address.toString());
+				
+				// tets getting relative URL with replacePage = false
+				// (used for transclusion)
+				url = "../../../non_hyp_opml/opml1_0.opml#:w";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				handlerCalled = false;
+				assertTrue(addr.isRelative());
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertTrue(address.isRelative());
+					assertNotNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNull(error);
+					transcludedDoc = returnDoc;
+					assertTrue(addr.equals(address));
+					
+					// make sure we really have an hs.model.Document and
+					// a correct DOM object
+					assertNotUndefined(returnDoc.jumpOrigin);
+					assertNotNull(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom.selectNodes);
+					
+					handlerCalled = true;
+				};
+				addr.resolve(handler, false, currentDoc);
+				assertTrue(handlerCalled);
+				assertEquals(parentUrl, hs.model.testingCurrentURL);
+				// make sure resolved document is correct
+				// doc attributes
+				assertEquals("1", transcludedDoc.nodeCtxt.number);
+				assertEquals("w", transcludedDoc.currentViewspecs.toString());
+				assertNotNull(transcludedDoc.dom);
+				assertNotUndefined(transcludedDoc.dom);
+				assertFalse(transcludedDoc.address.isRelative());
+				// make sure applied content filters are correct
+				nodes = transcludedDoc.dom.selectNodes("//outline[@hs-internal:passes-content-filter]");
+				assertEquals(0, nodes.length);
+				// make sure transcluded pieces are correct
+				nodes = transcludedDoc.dom.selectNodes("//outline[@type = 'link']");
+				assertEquals(0, nodes.length);
+				// make sure address pieces are correct
+				// file info
+				assertNotNull(addr.fileInfo);
+				assertEquals("http", addr.fileInfo.scheme);
+				assertNull(addr.fileInfo.host);
+				assertEquals(80, addr.fileInfo.port);
+				assertEquals("../../../non_hyp_opml/opml1_0.opml", addr.fileInfo.path);
+				assertNull(addr.fileInfo.query);
+				// addresses
+				assertNotNull(addr.nodeAddresses);
+				assertEquals(0, addr.nodeAddresses.length);
+				// viewspecs
+				assertNotNull(addr.viewspecs);
+				assertEquals(1, addr.viewspecs.length);
+				assertEquals("w", addr.viewspecs[0].letter);
+				// content filter
+				assertNull(addr.contentFilter);
+				// make sure the document's address is correct
+				docAddrStr = getDocRoot() + "../../data/user2/neuberg/HYARCH.AUG.66.DIR/../../../non_hyp_opml/opml1_0.opml";
+				docAddrStr = new hs.address.FileInfo(docAddrStr);
+				docAddrStr.consolidateRelativeDots();
+				docAddrStr = docAddrStr.toString() + "#1:w";
+				assertEquals(docAddrStr, transcludedDoc.address.toString());
+				// make sure the original displayed document is still intact
+				docAddrStr = docAddrStr = parentUrl + "#027:wlmBO";
+				assertEquals(docAddrStr, doc.address.toString());
+				
+				// TODO: Apply indirect links
+				
+				// TODO: Apply content positioning
+				
+				// TODO: Apply a content filter and turn it on with a viewspec
+				
+				// TODO: Make sure turning on and off transclusion works
+				
+				// pass in full URL that is the same as current URL
+				url = getDocRoot() 
+						+ "../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml#:K";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				handlerCalled = false;
+				assertFalse(addr.isRelative());
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertFalse(address.isRelative());
+					assertNotNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNull(error);
+					doc = returnDoc;
+					currentDoc = doc;
+					assertTrue(addr.equals(address));
+					
+					// make sure we really have an hs.model.Document and
+					// a correct DOM object
+					assertNotUndefined(returnDoc.jumpOrigin);
+					assertNotNull(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom.selectNodes);
+					
+					handlerCalled = true;
+				};
+				addr.resolve(handler, true, currentDoc);
+				// handler called correctly?
+				assertTrue(handlerCalled);
+				assertEquals(parentUrl, hs.model.testingCurrentURL);
+				// make sure resolved document is correct
+				// doc attributes
+				assertEquals("027", doc.nodeCtxt.id);
+				assertEquals("wlmKBO", doc.currentViewspecs.toString());
+				assertNotNull(doc.dom);
+				assertNotUndefined(doc.dom);
+				assertFalse(doc.address.isRelative());
+				// make sure applied content filters are correct
+				nodes = doc.dom.selectNodes("//outline[@hs-internal:passes-content-filter]");
+				assertEquals(0, nodes.length);
+				// make sure transcluded pieces are correct
+				nodes = doc.dom.selectNodes("//outline[@type = 'link']");
+				assertEquals(0, nodes.length);
+				// make sure address pieces are correct
+				// file info
+				assertNotNull(addr.fileInfo);
+				assertEquals("http", addr.fileInfo.scheme);
+				assertEquals(pageLoc.host, addr.fileInfo.host);
+				assertEquals(pageLoc.port, addr.fileInfo.port);
+				correctPath = getDocRoot() 
+						+ "../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml";
+				correctPath = new hs.address.FileInfo(correctPath);
+				correctPath = correctPath.path;
+				assertEquals(correctPath, addr.fileInfo.path);
+				assertNull(addr.fileInfo.query);
+				// addresses
+				assertNotNull(addr.nodeAddresses);
+				assertEquals(0, addr.nodeAddresses.length);
+				// viewspecs
+				assertNotNull(addr.viewspecs);
+				assertEquals(1, addr.viewspecs.length);
+				assertEquals("K", addr.viewspecs[0].letter);
+				// content filter
+				assertNull(addr.contentFilter);
+				// make sure the document's address is correct
+				docAddrStr = parentUrl + "#027:wlmKBO";
+				assertEquals(docAddrStr, doc.address.toString());
+				
+				// give relative file name to OPML 1.0 document
+				url = "../../../non_hyp_opml/opml1_0.opml#:w";
+				parentUrl = getDocRoot() + "../../data/non_hyp_opml/opml1_0.opml";
+				parentUrl = new hs.address.FileInfo(parentUrl);
+				parentUrl.consolidateRelativeDots();
+				parentUrl = parentUrl.toString();
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				handlerCalled = false;
+				assertTrue(addr.isRelative());
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertTrue(address.isRelative());
+					assertNotNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNull(error);
+					doc = returnDoc;
+					currentDoc = doc;
+					assertTrue(addr.equals(address));
+					
+					// make sure we really have an hs.model.Document and
+					// a correct DOM object
+					assertNotUndefined(returnDoc.jumpOrigin);
+					assertNotNull(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom.selectNodes);
+					
+					handlerCalled = true;
+				};
+				addr.resolve(handler, true, currentDoc);
+				assertTrue(handlerCalled);
+				assertEquals(parentUrl + "#:w", hs.model.testingCurrentURL);
+				// make sure resolved document is correct
+				// doc attributes
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals("w", doc.currentViewspecs.toString());
+				assertNotNull(doc.dom);
+				assertNotUndefined(doc.dom);
+				assertFalse(doc.address.isRelative());
+				// make sure applied content filters are correct
+				nodes = doc.dom.selectNodes("//outline[@hs-internal:passes-content-filter]");
+				assertEquals(0, nodes.length);
+				// make sure transcluded pieces are correct
+				nodes = doc.dom.selectNodes("//outline[@type = 'link']");
+				assertEquals(0, nodes.length);
+				// make sure address pieces are correct
+				// file info
+				assertNotNull(addr.fileInfo);
+				assertEquals("http", addr.fileInfo.scheme);
+				assertNull(addr.fileInfo.host);
+				assertEquals(80, addr.fileInfo.port);
+				assertEquals("../../../non_hyp_opml/opml1_0.opml", addr.fileInfo.path);
+				assertNull(addr.fileInfo.query);
+				// addresses
+				assertNotNull(addr.nodeAddresses);
+				assertEquals(0, addr.nodeAddresses.length);
+				// viewspecs
+				assertNotNull(addr.viewspecs);
+				assertEquals(1, addr.viewspecs.length);
+				assertEquals("w", addr.viewspecs[0].letter);
+				// content filter
+				assertNull(addr.contentFilter);
+				// make sure the document's address is correct
+				docAddrStr = parentUrl + "#1:w";
+				assertEquals(docAddrStr, doc.address.toString());
+				
+				// do some jumping
+				url = "#2C.o!2";
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				handlerCalled = false;
+				assertTrue(addr.isRelative());
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertTrue(address.isRelative());
+					assertNotNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNull(error);
+					doc = returnDoc;
+					assertTrue(addr.equals(address));
+					
+					// make sure we really have an hs.model.Document and
+					// a correct DOM object
+					assertNotUndefined(returnDoc.jumpOrigin);
+					assertNotNull(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom.selectNodes);
+					
+					handlerCalled = true;
+				};
+				addr.resolve(handler, true, currentDoc);
+				// handler called correctly?
+				assertTrue(handlerCalled);
+				assertEquals(parentUrl + "#:w", hs.model.testingCurrentURL);
+				// make sure resolved document is correct
+				// doc attributes
+				assertEquals("1B", doc.nodeCtxt.number);
+				assertEquals("w", doc.currentViewspecs.toString());
+				assertNotNull(doc.dom);
+				assertNotUndefined(doc.dom);
+				assertFalse(doc.address.isRelative());
+				// make sure applied content filters are correct
+				nodes = doc.dom.selectNodes("//outline[@hs-internal:passes-content-filter]");
+				assertEquals(0, nodes.length);
+				// make sure transcluded pieces are correct
+				nodes = doc.dom.selectNodes("//outline[@type = 'link']");
+				assertEquals(0, nodes.length);
+				// make sure address pieces are correct
+				// file info
+				assertNotNull(addr.fileInfo);
+				assertEquals("http", addr.fileInfo.scheme);
+				assertNull(addr.fileInfo.host);
+				assertEquals(80, addr.fileInfo.port);
+				assertEquals("./", addr.fileInfo.path);
+				assertNull(addr.fileInfo.query);
+				// addresses
+				assertNotNull(addr.nodeAddresses);
+				assertEquals(3, addr.nodeAddresses.length);
+				p = addr.nodeAddresses[0]; // 2C
+				assertTrue(p.isPieceType("hs.address.NodeNumber"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals("2C", p.number);
+				assertFalse(p.isOffset);
+				p = addr.nodeAddresses[1]; // .o
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals(hs.address.Relative.ORIGIN, p.type);
+				assertEquals(1, p.offset);
+				p = addr.nodeAddresses[2]; // !2
+				assertTrue(p.isPieceType("hs.address.NodeNumber"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals("2", p.number);
+				assertTrue(p.isOffset);
+				// viewspecs
+				assertNotNull(addr.viewspecs);
+				assertEquals(0, addr.viewspecs.length);
+				// content filter
+				assertNull(addr.contentFilter);
+				// make sure the document's address is correct
+				// should have node numbers for non-HyperScope docs
+				docAddrStr = parentUrl + "#1B:w"; 
+				assertEquals(docAddrStr, doc.address.toString());
+				
+				// go to a full URL that is not this one, with a query param as well
+				url = getDocRoot() + "../../data/non_hyp_opml/opml2_0.opml?uselessparam=true#5:r";
+				parentUrl = getDocRoot() + "../../data/non_hyp_opml/opml2_0.opml?uselessparam=true";
+				parentUrl = new hs.address.FileInfo(parentUrl);
+				parentUrl.consolidateRelativeDots();
+				parentUrl = parentUrl.toString();
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				handlerCalled = false;
+				assertFalse(addr.isRelative());
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertFalse(addr.isRelative());
+					assertNotNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNull(error);
+					doc = returnDoc;
+					currentDoc = doc;
+					assertTrue(addr.equals(address));
+					
+					// make sure we really have an hs.model.Document and
+					// a correct DOM object
+					assertNotUndefined(returnDoc.jumpOrigin);
+					assertNotNull(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom.selectNodes);
+					
+					handlerCalled = true;
+				};
+				addr.resolve(handler, true, currentDoc);
+				assertTrue(handlerCalled);
+				assertEquals(parentUrl + "#5:r", hs.model.testingCurrentURL);
+				// make sure resolved document is correct
+				// doc attributes
+				assertEquals("5", doc.nodeCtxt.number);
+				assertEquals("trd", doc.currentViewspecs.toString());
+				assertNotNull(doc.dom);
+				assertNotUndefined(doc.dom);
+				assertFalse(doc.address.isRelative());
+				// make sure applied content filters are correct
+				nodes = doc.dom.selectNodes("//outline[@hs-internal:passes-content-filter]");
+				assertEquals(0, nodes.length);
+				// make sure transcluded pieces are correct
+				nodes = doc.dom.selectNodes("//outline[@type = 'link']");
+				assertEquals(0, nodes.length);
+				// make sure address pieces are correct
+				// file info
+				assertNotNull(addr.fileInfo);
+				assertEquals("http", addr.fileInfo.scheme);
+				assertEquals(pageLoc.host, addr.fileInfo.host);
+				assertEquals(pageLoc.port, addr.fileInfo.port);
+				assertEquals("?uselessparam=true", addr.fileInfo.query);
+				// addresses
+				assertNotNull(addr.nodeAddresses);
+				assertEquals(1, addr.nodeAddresses.length);
+				p = addr.nodeAddresses[0]; // 5
+				assertTrue(p.isPieceType("hs.address.NodeNumber"));
+				assertFalse(p.isPieceType("hs.address.Piece"));
+				assertEquals("5", p.number);
+				assertFalse(p.isOffset);
+				// viewspecs
+				assertNotNull(addr.viewspecs);
+				assertEquals(1, addr.viewspecs.length);
+				assertEquals("r", addr.viewspecs[0].letter);
+				// content filter
+				assertNull(addr.contentFilter);
+				// make sure the document's address is correct
+				docAddrStr = parentUrl + "#5:trd";
+				assertEquals(docAddrStr, doc.address.toString());
+				
+				// do a relative URL with just a filename
+				url = "opml1_0.opml";
+				parentUrl = parentUrl.replace("opml2_0.opml", "opml1_0.opml");
+				info("url: " + url);
+				addr = new hs.address.Address(url);
+				handlerCalled = false;
+				assertTrue(addr.isRelative());
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertTrue(address.isRelative());
+					assertNotNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNull(error);
+					doc = returnDoc;
+					currentDoc = doc;
+					assertTrue(addr.equals(address));
+					
+					// make sure we really have an hs.model.Document and
+					// a correct DOM object
+					assertNotUndefined(returnDoc.jumpOrigin);
+					assertNotNull(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom);
+					assertNotUndefined(returnDoc.dom.selectNodes);
+					
+					handlerCalled = true;
+				};
+				addr.resolve(handler, true, currentDoc);
+				assertTrue(handlerCalled);
+				assertEquals(parentUrl, hs.model.testingCurrentURL);
+				// make sure resolved document is correct
+				// doc attributes
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals("", doc.currentViewspecs.toString());
+				assertNotNull(doc.dom);
+				assertNotUndefined(doc.dom);
+				assertFalse(doc.address.isRelative());
+				// make sure applied content filters are correct
+				nodes = doc.dom.selectNodes("//outline[@hs-internal:passes-content-filter]");
+				assertEquals(0, nodes.length);
+				// make sure transcluded pieces are correct
+				nodes = doc.dom.selectNodes("//outline[@type = 'link']");
+				assertEquals(0, nodes.length);
+				// make sure address pieces are correct
+				// file info
+				assertNotNull(addr.fileInfo);
+				assertEquals("http", addr.fileInfo.scheme);
+				assertNull(addr.fileInfo.host);
+				assertEquals(80, addr.fileInfo.port);
+				assertEquals("opml1_0.opml", addr.fileInfo.path);
+				assertNull(addr.fileInfo.query);
+				// addresses
+				assertNotNull(addr.nodeAddresses);
+				assertEquals(0, addr.nodeAddresses.length);
+				// viewspecs
+				assertNotNull(addr.viewspecs);
+				assertEquals(0, addr.viewspecs.length);
+				// content filter
+				assertNull(addr.contentFilter);
+				// make sure the document's address is correct
+				docAddrStr = parentUrl + "#1";
+				assertEquals(docAddrStr, doc.address.toString());
+				
+				// do a sequence of jumps that was found to break
+				// simulate resolving the initial page location using a basic URL with
+				// no anchor
+				info("Running the following URLs one after the other:");
+				info(getDocRoot() 
+						+ "../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml");
+				info("#:m");
+				info("#5");
+				info("#.u");
+				url = getDocRoot() 
+						+ "../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml";
+				parentUrl = url;
+				addr = new hs.address.Address(url);
+				// get rid of relative dots for testing
+				parentUrl = new hs.address.FileInfo(url);
+				parentUrl.consolidateRelativeDots();
+				parentUrl = parentUrl.toString();
+				handlerCalled = false;
+				// setup the handler
+				handler = function(address, returnDoc, error){
+					currentDoc = returnDoc;
+				};
+				// resolve
+				addr.resolve(handler, true, null);
+				// next jump to item
+				url = "#:m";
+				addr = new hs.address.Address(url);
+				// setup the handler
+				handler = function(address, returnDoc, error){
+					currentDoc = returnDoc;
+				};
+				// resolve
+				addr.resolve(handler, true, currentDoc);
+				// next jump to item
+				url = "#5";
+				addr = new hs.address.Address(url);
+				// setup the handler
+				handler = function(address, returnDoc, error){
+					currentDoc = returnDoc;
+				};
+				// resolve
+				addr.resolve(handler, true, currentDoc);
+				// next jump to item
+				url = "#.n";
+				addr = new hs.address.Address(url);
+				// setup the handler
+				handler = function(address, returnDoc, error){
+					currentDoc = returnDoc;
+				};
+				// resolve
+				addr.resolve(handler, true, currentDoc);
+				// make sure the document's address is correct
+				assertEquals(parentUrl + "#0609:m", currentDoc.address.toString());
+				 
+				 
+				// test invalid values
+				
+				// 404
+				url = "badfile.opml";
+				info('INVALID: url:' + url);
+				addr = new hs.address.Address(url);
+				handlerCalled = false;
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNotNull(error);
+					assertNotUndefined(error);
+					assertTrue(addr.equals(address));
+					handlerCalled = true;
+				};
+				addr.resolve(handler, true, currentDoc);
+				// handler called correctly?
+				assertTrue(handlerCalled);
+				
+				// relative address given with null document
+				url = "../../data/non_hyp_opml/opml1_0.opml";
+				info('INVALID: url:' + url);
+				addr = new hs.address.Address(url);
+				handlerCalled = false;
+				handler = function(address, returnDoc, error){
+					assertNotNull(address);
+					assertNotUndefined(address);
+					assertNull(returnDoc);
+					assertNotUndefined(returnDoc);
+					assertNotNull(error);
+					assertNotUndefined(error);
+					assertTrue(addr.equals(address));
+					handlerCalled = true;
+				};
+				exp = null;
+				try{
+					addr.resolve(handler, true, null);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				// handler called correctly?
+				assertFalse(handlerCalled);
+			}
+		</script>
+	</body>
+</html>

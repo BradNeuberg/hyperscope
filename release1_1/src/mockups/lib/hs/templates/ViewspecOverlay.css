@@ -1,0 +1,143 @@
+.viewspecOverlay{
+	width: 35em;
+	z-index: 2;
+	position: absolute;
+	font-size: 9pt;
+}
+
+/**
+	Our floating pane's nifty drop shadow depends
+	on being displayed in order to calculate
+	it's shadow; however, when we combine this
+	with not being displayed on page load and our
+	nifty fade in animation to display the overlay,
+	the shadow gets messed up. This is a trick below
+	to 'hide' the jump overlay offscreen but 'visible'
+	so the shadow can be calculated.
+*/
+.initial-overlay-state{
+	left: -1000px !important;
+	top: -1000px !important;
+}
+
+.lessMode .advanced{
+	display: none;
+}
+
+.line-right-show{
+	padding-right: 15px;
+}
+
+.viewspecOverlay table{
+	border: 0px;
+	font-size: 9pt;
+}
+
+.viewspecOverlay input{
+	display: inline;
+	padding-right: 2px;
+}
+
+.viewspecLetter{
+	color: #778BBB; /* slate blue */
+	padding-right: 2px;
+	font-size: 9pt;
+	text-align: center;
+}
+
+.outlineTable,
+.outlineTable .viewspecLetter,
+.placementTable,
+.placementTable .viewspecLetter{
+	font-size: 7pt;
+}
+
+.outlineTable button{
+	font-size: 7pt;
+	padding: 0px;
+	
+	/** 
+		Prevents content from wobbling
+		on Firefox when button toggles
+		between disabled and non-disabled
+		mode.
+	*/
+	height: 2em;
+}
+
+.outlineTable .header{
+	text-align: center;
+}
+
+.outlineTable input{
+	width: 2em;
+	margin-right: 2px;
+}
+
+
+/** 
+	Using the rule .placementTable {}
+	doesn't work on Internet Explorer,
+	so we have to push the padding over
+	on each of the 'first columns'
+	using a class. 
+*/
+.placementTable .first-column,
+.outlineTable .first-column{
+	padding-left: 35px;
+}
+
+.letter-w,
+.letter-x{
+	text-align: right;
+}
+
+.letter-x{
+	padding-right: 4px;
+}
+
+.letter-r,
+.letter-q{
+	text-align: left;
+	padding-left: 3px;
+}
+
+.filterInput{
+	width: 60%;
+	height: 2em;
+	margin-left: 35px;
+}
+
+.lineInput{
+	text-align: right;
+}
+
+.selected-viewspecs-input{
+	width: 8em;
+}
+
+.selected-viewspecs-error{
+	color: red;
+	margin-left: 5px;
+}
+
+.viewHelpButton{
+	width: 3em;
+}
+
+.viewHelpButton,
+.viewToggleAdvancedButton{
+	float: left;
+	margin-right: 4px;
+}
+
+.viewApplyButton,
+.viewCancelButton,
+.viewResetButton{
+	float: right;
+	margin-left: 4px;
+}
+
+.viewButtons{
+	padding-top: 0.8em;
+}			

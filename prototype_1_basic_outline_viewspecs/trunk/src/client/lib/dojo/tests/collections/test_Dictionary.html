@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>Dictionary Test</title>
+		<style type="text/css">
+			#Mover {
+				position : absolute;
+				background : #ccc;
+				left : 200px;
+				top : 200px;
+			}
+		</style>
+		<script language="JavaScript" type="text/javascript">
+			// Dojo configuration
+			djConfig = { 
+				isDebug: true
+			};
+		</script>
+		<script language="JavaScript" type="text/javascript" src="../../dojo.js"></script>
+		<script language="JavaScript" type="text/javascript" src="../jsunit_browser.js"></script>
+		<script language="JavaScript" type="text/javascript">
+			dojo.require("dojo.collections.Dictionary");
+			function init(){
+				var d = new dojo.collections.Dictionary();
+
+				//	add and item
+				d.add("foo","bar");
+				jum.assertEquals("Dictionary.add", "bar" , d.item("foo").valueOf());
+
+				//	clear
+				d.clear();
+				jum.assertEquals("Dictionary.clear", 0, d.count);
+
+				//	set up for other tests.
+				d.add("foo","bar");
+				d.add("baz","fab");
+				d.add("buck","shot");
+				d.add("apple","orange");
+				var d2 = d.clone();
+
+				//	clone, contains, containsKey
+				jum.assertEquals("Dictionary.contains", true, d.contains("baz"));
+				jum.assertEquals("Dictionary.clone", true, d2.contains("baz"));
+				jum.assertEquals("Dictionary.containsKey", true, d.containsKey("buck"));
+
+				//	contains value
+				jum.assertEquals("Dictionary.containsValue", true, d.containsValue("shot"));
+
+				//	note that the following two tests also test .getIterator()
+				//	getKeyList
+				var keys = d.getKeyList();
+				jum.assertEquals("Dictionary.getKeyList", "foo,baz,buck,apple", keys.join(","));
+
+				//	getValueList
+				var values = d.getValueList();
+				jum.assertEquals("Dictionary.getValueList", "bar,fab,shot,orange", values.join(","));
+
+				//	remove
+				d.remove("baz");
+				jum.assertEquals("Dictionary.remove test1", 3, d.count);
+				jum.assertEquals("Dictionary.remove test2", "undefined", d.item("baz"));
+			}
+			dojo.hostenv.modulesLoadedListeners.push(init);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

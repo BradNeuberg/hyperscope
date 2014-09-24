@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2006-03-06T23:36:47.192473Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/prototype_1_basic_outline_viewspecs/trunk/src/client/lib/dojo/tests/collections"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="11"
+   name="test_ArrayList.js"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="89fba3c3223e6f0304fe42801ddeca88"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_Queue.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="4536c951522b5982030515127933803a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_Dictionary.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="3510747543e372dd8b379fc252d6e376"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_Stack.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="6bb056161c5b5e7b8736ed8d6509a3f2"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_DictionaryEntry.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="ca349210869af9dce80595095bba77cd"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_Set.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="921c6d154d11464f14d424cd83a9dde4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="test_SortedList.html"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="d4b31acb925f163b20cd1aed442c5bdf"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+</wc-entries>

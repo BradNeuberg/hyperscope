@@ -1,0 +1,21 @@
+This file records the third-party libraries and frameworks that HyperScope uses, their licenses, and websites.
+
+HyperScope
+----------
+TBD
+
+XHTML Transformer
+-----------------
+Name: JTidy
+What it Does: Converts badly formed HTML into correctly formed XHTML for XML processing
+Website: http://jtidy.sourceforge.net
+License: MIT License (BSD variant)
+Version Info: Custom build from SVN from Nov. 27th, 2006 - needed for newest version of Tidy.parse() method that takes a Reader
+File: src/server/xhtml_transformer/lib/tidy.jar
+
+Name: Sarissa
+
+Name: Saxon
+
+
+

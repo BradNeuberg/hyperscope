@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/demos/screenshots"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="test_LayoutThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="8267aaac26929bb6448f0d156e6f87c6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_YahooMapThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3cefe4aedc06f6d3b4ab41b16352c6d2"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_JSONRPCThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="964a8ff8357bcfe7ccfceffad5ee6044"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ContentPaneThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="680a12a4704b987cc09d3ba66eaf3614"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_EffectsThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="1188c772d3bf5e1d86f965af212966b1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_LayoutContainerThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="7457bbc57d3f6f91c61c3654c4dc051a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_TitlePaneThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="447628fb4266a834629381fcbd1221d6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_CheckboxThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2ef4b249d3367dc05834fbcd250269f1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_DatePickerThumb.png"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="11e14aabd4f41a6efd6832909bcad0bb"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ValidationThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="90600ca0a6a1589870ea9a7e315527b3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_FisheyeThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="50f59d1dbb916c9675069d002f4b2257"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_SplitContainerThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3ef9d9256a95d2b0acefbcda5d2e35ca"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_DialogThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d0d82b2c94047584c59eb388e1801006"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_RoundedThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="62be4ecac8b7309279a8eb7880076966"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ChartThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="04ae41d8f663b93b36cae412131ceeff"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_AccordionThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="6e397bbfc8c7c6a6768bdb4ccbe9fce1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_MenuThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="f5e374130b2cf1da1c54f4780827b486"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_CiviCrmDateTimePickerThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="691f665599894e4777cb9d36c87cbf12"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_TabContainerThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="4b4b9c92477c2ea1ea480fd32b8c4991"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_DatePickerThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="1958ece6ee0e2d3cdbce909978a2ac84"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ButtonThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b1c5ea4db0fd92bf784691e3e54f4b63"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_FormTourThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b015be42efc5e648aecd709678f5043c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_MoxieThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="964a8ff8357bcfe7ccfceffad5ee6044"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_MailThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="f133f718346a9f259a1419aff7217e23"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_SortableTableThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="00627188f74768906c4c5e48819bcbef"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_InlineEditThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="255b5ae267fe3da151919130565ca67e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_EditorThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="484a516475bf91bf31d32bce424d5846"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_DragHandleThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="7f0839fccd145d9134c963350dc65f18"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_TooltipThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="9e50feac07aaa4bc4ec0f0594886fde6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_TimePickerThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="9811b500439dd4410ac8cead9e858395"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ColorPaletteThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a686c4eaaf54b5fd6464657bf7842001"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_TreeThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="93c59935d091bf00132057ed7db54b7c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_FormBindThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="8b1ba07b3e4dad80725525a29569fa54"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_WizardThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="ba91aba3dea520046abf1db58c67f4b9"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_SlideShowThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="cf370ff2bc2f9cf3932e5bbb624889c3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_DragDropThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="c513d5763c5b45413a81e3bbf267ed14"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_DragMoveThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="c8f30c41f7f28897f743b0a1ece641ef"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_WindowThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d73a7880f98e29eeadbc77c28a61fde6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ComboBoxThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="ea660aa3bfcb2f7799f7ea93db13ee52"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_GoogleMapThumb.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="36805ed0b421ab6c05ad6db4a900f8ea"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+</wc-entries>

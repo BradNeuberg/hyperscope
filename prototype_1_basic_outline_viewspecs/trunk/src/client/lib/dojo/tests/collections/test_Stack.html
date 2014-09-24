@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>Stack Test</title>
+		<style type="text/css">
+			#Mover {
+				position : absolute;
+				background : #ccc;
+				left : 200px;
+				top : 200px;
+			}
+		</style>
+		<script language="JavaScript" type="text/javascript">
+			// Dojo configuration
+			djConfig = { 
+				isDebug: true
+			};
+		</script>
+		<script language="JavaScript" type="text/javascript" src="../../dojo.js"></script>
+		<script language="JavaScript" type="text/javascript" src="../jsunit_browser.js"></script>
+		<script language="JavaScript" type="text/javascript">
+			dojo.require("dojo.collections.Stack");
+			function init(){
+				var a = ["foo","bar","test","bull"];
+				var stack = new dojo.collections.Stack(a);
+
+				//	test the constructor
+				jum.assertEquals("test10", 4, stack.count);
+
+				//	clear
+				var a = ["foo","bar","test","bull"];
+				var stack = new dojo.collections.Stack(a);
+				stack.clear();
+				jum.assertEquals("test60", 0, stack.count);
+
+				//	clone
+				var a = ["foo","bar","test","bull"];
+				var stack = new dojo.collections.Stack(a);
+				var cloned = stack.clone();
+				jum.assertEquals("Stack.clone()", stack.count, cloned.count);
+
+				//	contains
+				jum.assertEquals("Stack.contains() 1", true, stack.contains("bar"));
+				jum.assertEquals("Stack.contains() 2", false, stack.contains("faz"));
+
+				//	iterator test
+				var e = stack.getIterator();
+				while (!e.atEnd) e.moveNext();
+				jum.assertEquals("Stack.getIterator()", "bull", e.current);
+
+				//	peek, pop and push
+				jum.assertEquals("Stack.peek()", "bull", stack.peek());
+
+				jum.assertEquals("Stack.pop() 1", "bull", stack.pop());
+				jum.assertEquals("Stack.pop() 2", "test", stack.pop());
+
+				stack.push("bull");
+				jum.assertEquals("Stack.push()", "bull", stack.peek());
+				
+				//	toArray
+				var a = ["foo","bar","test","bull"];
+				var stack = new dojo.collections.Stack(a);
+				var arr = stack.toArray();
+				jum.assertEquals("Stack.toArray()", "foo,bar,test,bull" , arr.join(","));
+			}
+			dojo.hostenv.modulesLoadedListeners.push(init);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="359"
+   name=""
+   committed-date="2006-09-04T09:51:44.716880Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src"
+   last-author="eekim"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   name="mockups"
+   kind="dir"/>
+<entry
+   name="tests"
+   kind="dir"/>
+<entry
+   name="server"
+   kind="dir"/>
+<entry
+   name="demos"
+   kind="dir"/>
+<entry
+   name="etc"
+   kind="dir"/>
+<entry
+   name="client"
+   kind="dir"/>
+</wc-entries>

@@ -1,0 +1,160 @@
+<html>
+	<head>
+		<title>Test Page for hs.util.XSLTLoader</title>
+		
+		<script language="javascript" src="../lib/jsunit/app/jsUnitCore.js"></script>
+
+		<script type="text/javascript" src="../../../client/lib/sarissa/sarissa.js"></script>
+		<script type="text/javascript" src="../../../client/lib/sarissa/sarissa_ieemu_xpath.js"></script>
+		
+		<script type="text/javascript">
+			var djConfig = { testing: true, isDebug: true, disableFlashStorage: true };
+		</script>
+		<script type="text/javascript" src="../../../client/lib/dojo/dojo.js.uncompressed.js"></script>
+		
+		<script type="text/javascript" src="../../../client/lib/hs/exception.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/filter.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/util.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/address.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/model.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/commands.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/ui.js"></script> 
+	</head>
+	<body>
+		<h1>Test Page for hs.util.XSLTLoader</h1>
+
+		<p>This page contains a suite of tests for testing HyperScope.</p>
+	
+		<script language="javascript">
+			// wait for page to finish loading
+			dojo.event.connect(dojo, "loaded", pageLoaded);
+			
+			var testDoc = null;
+			
+			function setUpPage(){
+			}
+			
+			function pageLoaded(){
+				debug("page loaded");
+				
+				hs.model.testing = true;
+				hs.model.testingCurrentURL = getDocRoot() 
+						+ "../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml";
+						
+				// load a testing document
+				debug("Loading test document...");
+				var root = getDocRoot();
+				var url = root + 
+						"../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml";
+				loadHandler = function(address, dom, error){
+					debug("Test document loaded");
+					testDoc = dom;
+				}
+				fetch = new hs.util.XMLFetcher()
+				fetch.load(url, loadHandler);
+						
+				setUpPageStatus = "complete";
+			}
+			
+			function getDocRoot(){
+				var url = window.location.href;
+				var endCut = null, hasFilename = false;
+				
+				// chop off any filenames
+				for(var i = url.length; i--; i >= 0){
+					// url[i] not supported on IE, because
+					// underlying window.location.href is not
+					// a String object but something native
+					if(url.charAt(i) == "/"){
+						if(hasFilename){
+							endCut = i + 1;
+						}
+						break;
+					}else if(url.charAt(i) == "."){
+						hasFilename = true;
+					}
+				}
+
+				if(hasFilename){
+					url = url.substring(0, endCut);
+				}
+				return url;
+			}
+			
+			function testLoader(){
+				var root = getDocRoot();
+				var url, xslt, loader, files, handler, handlerCalled, xmlDoc, html,
+					newDoc;
+				
+				info("---TestXSLTLoader:testLoader()");
+				
+				// tests
+				
+				// valid
+				info("Testing loading of render.xsl and hyperxsl.xsl");
+				handlerCalled = false;
+				files = [
+							{name: "render", 
+							 url: djConfig.baseRelativePath 
+							 		+ "../hs/xslt/render.xsl"},
+							{name: "hyperscope", 
+							 url: djConfig.baseRelativePath 
+							 		+ "../hs/xslt/hyperscope.xsl"}
+						];
+				handler = function(success, error){
+					assertNull(error);
+					assertTrue(success);
+					handlerCalled = true;
+				};
+				loader = new hs.util.XSLTLoader(files, handler);
+				loader.load();
+				assertNotNull(testDoc); // global variable with test document loaded in setUpPage()
+				assertTrue(handlerCalled);
+				// render.xsl
+				xslt = loader.getXSLT("render");
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				// set a stylesheet parameter
+				xslt.setParameter(null, "title", "hello world");
+			    // transform the document 
+			    newDoc = xslt.transformToDocument(testDoc);
+			    // show transformation results
+			    html = dojo.dom.innerXML(newDoc);
+				assertNotNull(html);
+				assertNotUndefined(html);
+				// hyperscope.xsl
+				xslt = loader.getXSLT("hyperscope");
+				assertNotNull(xslt);
+				assertNotUndefined(xslt);
+				// set a stylesheet parameter
+				xslt.setParameter(null, "title", "hello world");
+			    // transform the document 
+			    newDoc = xslt.transformToDocument(testDoc);
+			    // show transformation results
+			    html = dojo.dom.innerXML(newDoc);
+				assertNotNull(html);
+				assertNotUndefined(html);
+				// bad
+				xslt = loader.getXSLT("bad");
+				assertNull(xslt);
+				
+				// invalid
+				info("INVALID: bad.xsl");
+				handlerCalled = false;
+				files = [
+							{name: "bad", 
+							 url: root + "/bad.xsl"}
+						];
+				handler = function(success, error){
+					assertNotNull(error);
+					assertNotUndefined(error);
+					assertFalse(success);
+					handlerCalled = true;
+				};
+				loader = new hs.util.XSLTLoader(files, handler);
+				loader.load();
+				assertTrue(handlerCalled);
+			}
+		</script>
+	</body>
+</html>

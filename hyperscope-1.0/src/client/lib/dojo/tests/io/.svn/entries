@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/tests/io"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="test_BrowserIO.cache.html"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="12ec4b575d22e87e34e25bb6b6cc7515"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_IframeIO.text.html"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="67c74ae9eda4032adceafac5e7a79b82"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_postResponse.txt"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2a470627bdb68dc504b8607de76ede70"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_BrowserIO_data.txt"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3d892386e885047df6d3365563a2026a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_BrowserIO.javascript.html"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="6a7a84e19f650a05b75fd5b4ce30c99d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_BrowserIO_cacheData2.js"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="6955ebb292839398774c2cf36ba693da"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="data.js"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5065df400aab35fdf766cd164faed240"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="upload.cgi"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2ac0969e48c26aef3641437bf5bfa554"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_BrowserIO.formNode.html"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="e187ec6171d5d3a806e518fe90ac58aa"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_BrowserIO.json.html"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="374886d224e8840605624e4db6b75e7c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="reflector.cgi"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b55705473e05a4751a4e4b8501bd7280"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="timeout.cgi"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3a8f9cfafafbf33e5c6d30d0193d8877"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="data-json.js"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="c014309ecbc2bcef1982ed46aa27d7f5"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_BrowserIO.frag.html"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="1a1a3644559f9dd0e70a24ba4093b728"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_BrowserIO.method.html"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b9e95e6f9aee26de15a9af5973cedb20"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_IframeIO.html"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="c1be94699acbf19fdd7777902e95297a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="button.png"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a058557d22f4ed375e6e7e9e7daa5b20"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Cookies.html"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="6223306a1372d7f3758a8779c210c790"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="IframeIOResponse.text.html"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="f40c9ee898b9791397d4390c9c628778"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_IframeIO.html.html"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5559ced7a259b7c2ac3857f26eabddef"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_BrowserIO.timeout.html"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="c9c7ccdac0dab6aeb473f070e61ec463"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_BrowserIO_cacheData.js"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="fef3e9fcdb5115e6ab58b66d13f842e0"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ScriptSrcIO.html"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5569cce974c2fd752601cb0a17d0617a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   name="scriptsrc"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="test_BrowserIO.html"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="58c20bc79ea5c3c3d7a853cee3a34000"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="IframeIOResponse.html"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="fdaf74b0edd1df9a7c0242441b7e7b6c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+<entry
+   committed-rev="203"
+   name="frag.xml"
+   text-time="2006-10-14T01:00:09.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="c5b0307800c085fb3c9ff8b0035ccb81"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:09.000000Z"/>
+</wc-entries>

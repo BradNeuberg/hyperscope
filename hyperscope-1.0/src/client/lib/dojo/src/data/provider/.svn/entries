@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/src/data/provider"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="MySql.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="f30a08a3eac0b9576626e1753c8b1db8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="FlatFile.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5303e008819756610ca9fc0be0e20452"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Base.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="cdf6758e8466ed7c9b9e1735ef8b0e5a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Delicious.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3e8fea949a826f03e9c19c6e2d6f5aaa"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="JotSpot.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="aef8e61d934e1a04321462d161542dc2"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+</wc-entries>

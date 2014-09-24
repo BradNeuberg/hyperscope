@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/tests/animation"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="test_animation.html"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="bfbdae27fa4aa88ac880d9f06f294d38"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_wipe.html"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="1fe13e8b108781e8b04f9508c16933fc"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_accelleration_demo.html"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="e4d47bc968debf69fb83d0e865b658cb"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+</wc-entries>

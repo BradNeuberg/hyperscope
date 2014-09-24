@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/demos"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   name="screenshots"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="demoEngine.css"
+   text-time="2006-10-14T01:00:11.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="301774b6452b2d76486d5971d721c487"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="viewDemo.png"
+   text-time="2006-10-14T01:00:11.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2f06891dadd21c0bf357da600c38c1c7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   name="widget"
+   kind="dir"/>
+<entry
+   name="storage"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="demoRegistry.json"
+   text-time="2006-10-14T01:00:11.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="0e2f585d9ab3e69ae320eb4b7f35ebbe"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:11.000000Z"/>
+<entry
+   committed-rev="203"
+   name="dojoDemos.gif"
+   text-time="2006-10-14T01:00:11.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3de1ea0a3e4078667be87122c1b90550"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:11.000000Z"/>
+<entry
+   committed-rev="203"
+   name="de2.html"
+   text-time="2006-10-14T01:00:11.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a87b21ee22176a1d44f1662635829e49"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:11.000000Z"/>
+<entry
+   committed-rev="203"
+   name="demoEngine.html"
+   text-time="2006-10-14T01:00:11.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="6e2f68f8975ece58fa2237ae2f4c5c8e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:11.000000Z"/>
+</wc-entries>

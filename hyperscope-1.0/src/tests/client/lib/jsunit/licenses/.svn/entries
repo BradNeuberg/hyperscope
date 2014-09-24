@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="31"
+   name=""
+   committed-date="2006-05-17T19:35:45.566621Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/tests/client/lib/jsunit/licenses"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="31"
+   name="gpl-2.txt"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="fdafc691aa5fb7f8e2a9e9521fef771b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="mpl-tri-license-c.txt"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="521097fbe8045d8280c3021b515b7f77"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="MPL-1.1.txt"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="1b8b981cbb6b2b3f93c43b1915bdf812"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="Jetty_license.html"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="095ec9f271e2311b03ed0a1f9aeb6510"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="mpl-tri-license-html.txt"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="569a9caf2e54a99eb86c0155de704822"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="JDOM_license.txt"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="a1c6c9e7fea2abc2e1cb06fa178f412f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="index.html"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="fb3557eaa174885341b9677ab07f5aca"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="lgpl-2.1.txt"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="f14599a2f089f6ff8c97e2baa4e3d575"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+</wc-entries>

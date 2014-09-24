@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/src/rpc"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="RpcService.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="af62fc95f2c5397ed0eda0b1226c902c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="yahoo.smd"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3c60616924775dac8ab991372a144272"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="e04fbad8626de521a522df317fcba897"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="JsonService.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b90f3684c2c42e8e4d4253504c39f702"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="JotService.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="ea0c2c4c142f303aa475cf7700069cd9"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Deferred.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="09924d74c98228e9da338d68c160f733"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="YahooService.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2dc4497511ec81f2046a1f7243db48d6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+</wc-entries>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/tests/widget/tree"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="test_Tree_0.html"
+   text-time="2006-10-14T01:00:02.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="876b5e7d3ba3061d3b36e6cea23701b8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Tree_1.html"
+   text-time="2006-10-14T01:00:02.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="4d3ed3c2f783b54eea10becad9677397"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Tree_2.html"
+   text-time="2006-10-14T01:00:02.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d9a6a0fe9592d7b7d2e3b641130603a1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Tree_3.html"
+   text-time="2006-10-14T01:00:02.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="1f3c6ef18d0ee7bb28a8013780456aaa"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Tree_4.html"
+   text-time="2006-10-14T01:00:02.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="cdfb2b14482a78bc3540c12d2879e812"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Tree_5.html"
+   text-time="2006-10-14T01:00:02.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="e9c4c3c00092498d3d05d2ef4c7b61a6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Tree_6.html"
+   text-time="2006-10-14T01:00:02.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="167709b02165c0162e2b62e87108cdff"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Tree_7.html"
+   text-time="2006-10-14T01:00:02.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="797aa28c3ef0b54a44b868f265423561"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="getChildren"
+   text-time="2006-10-14T01:00:02.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3466de4fcc434a53d917cf60c3b86d81"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Tree_8.html"
+   text-time="2006-10-14T01:00:02.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="853848f571ec66efadcc040571383b91"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Tree_9.html"
+   text-time="2006-10-14T01:00:02.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5ca2a1f7e71730bf3fce4f72b7a1bbcd"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_tree_10.html"
+   text-time="2006-10-14T01:00:02.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="aaa812b695ecebeca242d4a0324fcb69"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="removeNode"
+   text-time="2006-10-14T01:00:02.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b326b5062b2f0e69046810717534cb09"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Tree_5_1.html"
+   text-time="2006-10-14T01:00:02.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="058ecf52ad7d4ddde838dafa05ec668f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="move"
+   text-time="2006-10-14T01:00:02.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b326b5062b2f0e69046810717534cb09"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="createChild"
+   text-time="2006-10-14T01:00:02.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="e2ce9f444b6f8c0fa8df1660a8f17ed4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+</wc-entries>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="30"
+   name=""
+   committed-date="2006-05-17T19:31:50.682190Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/sarissa/build_tools/ecmaunit"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="30"
+   name="LICENSE.txt"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="d0f95200752e8da7e024132ea7368bf2"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="ecmaunit.js"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="c7df5de604b16b610a12c1fba7154a35"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="testecmaunit.js"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="13b0b81a63e30c5a1a2923e2aaf7fc0b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="runtests.js"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="d0ba339a1485761c0a9dc3c44232eec1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="version.txt"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="ba50e7272a038f92861e973b5ebbf5cb"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="CHANGES.txt"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="b7f6efa9dc56054e9799ed2ef0d7b583"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="testecmaunit.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="2e574f55857cbc37cd2ae2bb364026e3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="CREDITS.txt"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="7ded0fe6a2eed0ae27ae5d5e78ec56c7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="README.txt"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="fdc9d2b4821fad4cb20c713a4f548624"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+</wc-entries>

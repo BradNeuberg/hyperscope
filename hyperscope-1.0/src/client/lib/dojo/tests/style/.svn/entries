@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/tests/style"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="test_style_showHideDisplayVisible.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="ee52f662e76c40a10823afad45305159"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_absolutePosition.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="c14c52f1e7762e3ba8e0555dbc778ac5"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_sizing.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="392c82b31b9b6694486670f992577105"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_style_setBox.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2aa443bdcc76bd23453ad6be919ea99a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_style_metrics.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b44a96c23e1319263c78fc1e0b2a573a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_style_getBox.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="9f7204cd70c5898fae8938865a82f195"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_style_css_insert.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a3fe6da7cf3e393900cee04b870ae005"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+</wc-entries>

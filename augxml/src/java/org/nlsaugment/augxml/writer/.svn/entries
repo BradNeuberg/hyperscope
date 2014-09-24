@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="366"
+   name=""
+   committed-date="2006-09-11T03:15:41.785512Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/trunk/augxml/src/java/org/nlsaugment/augxml/writer"
+   last-author="jcheyer"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="126"
+   name="TextFileWriter.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-15T23:46:39.661044Z"
+   checksum="0daa4a2416e7a592cda857b65254cbe8"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="354"
+   name="LosslessFileWriter.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-09-04T07:11:34.984977Z"
+   checksum="36f079f0b58210a76478605ee9aa35d8"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="115"
+   name="IAugmentWriter.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-12T14:59:23.111567Z"
+   checksum="17e6de2b35098ad97c0ccf85a580327f"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="117"
+   name="AugmentFileWriter.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-13T22:18:12.643972Z"
+   checksum="49dfa787e7bc673d22a0ace7cf43ec40"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="356"
+   name="XmlFileWriter.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-09-04T07:41:01.819740Z"
+   checksum="95c9dd284526159f718ce04df29ee608"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="366"
+   name="HyperscopeFileWriter.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-09-11T03:15:41.785512Z"
+   checksum="c8187ae63a2b2149bee17b37a0bfcf5e"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+</wc-entries>

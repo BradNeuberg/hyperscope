@@ -1,0 +1,756 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<HTML>
+<HEAD>
+<TITLE>
+sarissa Overview
+</TITLE>
+<LINK REL ="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<SCRIPT>
+function asd()
+{
+parent.document.title=" Overview";
+}
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#eeeeee" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<A NAME="navbar_top"><!-- --></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#b8cade" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3">
+  <TR ALIGN="center" VALIGN="top">
+  
+  
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-summary.html"><FONT CLASS="NavBarFont1"><b>Overview</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev">	&nbsp;<FONT CLASS="NavBarFont1Rev"><b>File</b></FONT>&nbsp;</TD>
+  
+
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"> 	<FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-tree.html"><FONT CLASS="NavBarFont1"><b>Tree</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="index-all.html"--><FONT CLASS="NavBarFont1"><b>Index</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="help-doc.html"><FONT CLASS="NavBarFont1"><b>Help</b></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD BGCOLOR="#b8cade" ALIGN="right" VALIGN="top">
+<EM>
+<b>sarissa</b></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="index.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="overview-summary.html" TARGET="_top"><B>NO FRAMES</B></A>
+&nbsp;&nbsp;
+<SCRIPT>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+</TABLE>
+<!-- =========== END OF NAVBAR =========== -->
+
+<HR>
+<CENTER>
+
+   <H2>sarissa.js</H2>
+
+</CENTER>
+        
+            
+        
+        
+        <h4>Summary</h4>
+        <p>
+        
+           No overview generated for 'sarissa.js'<BR/><BR/>
+           
+        </p>
+
+<HR>
+
+
+    <TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+    <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+    <TD COLSPAN=2><FONT SIZE="+2">
+    
+        <B>Class Summary</B>
+    
+    </FONT></TD>
+    </TR>
+    
+    <TR BGCOLOR="#eeeeee" CLASS="TableRowColor">
+    <TD WIDTH="15%"><B><A HREF="XMLHttpRequest.html">XMLHttpRequest</A></B></TD>
+    <TD>&nbsp;</TD>
+    </TR>
+    
+    <TR BGCOLOR="#eeeeee" CLASS="TableRowColor">
+    <TD WIDTH="15%"><B><A HREF="Sarissa.html">Sarissa</A></B></TD>
+    <TD>&nbsp;</TD>
+    </TR>
+    
+    <TR BGCOLOR="#eeeeee" CLASS="TableRowColor">
+    <TD WIDTH="15%"><B><A HREF="XSLTProcessor.html">XSLTProcessor</A></B></TD>
+    <TD>&nbsp;</TD>
+    </TR>
+    
+    <TR BGCOLOR="#eeeeee" CLASS="TableRowColor">
+    <TD WIDTH="15%"><B><A HREF="XMLSerializer.html">XMLSerializer</A></B></TD>
+    <TD>&nbsp;</TD>
+    </TR>
+    
+    </TABLE>
+    <HR/> 
+
+
+
+
+
+<!-- START SOURCECODE -->
+<pre class="sourceview">
+<span class="comment">/**
+ * ====================================================================
+ * About
+ * ====================================================================
+ * Sarissa is an ECMAScript library acting as a cross-browser wrapper for native XML APIs.
+ * The library supports Gecko based browsers like Mozilla and Firefox,
+ * Internet Explorer (5.5+ with MSXML3.0+), Konqueror, Safari and a little of Opera
+ * <span class="attrib">@version</span> 0.9.7
+ * <span class="attrib">@author</span>: Manos Batsis, mailto: mbatsis at users full stop sourceforge full stop net
+ * ====================================================================
+ * Licence
+ * ====================================================================
+ * Sarissa is free software distributed under the GNU GPL version 2 (see &lt;a href="gpl.txt"&gt;gpl.txt&lt;/a&gt;) or higher, 
+ * GNU LGPL version 2.1 (see &lt;a href="lgpl.txt"&gt;lgpl.txt&lt;/a&gt;) or higher and Apache Software License 2.0 or higher 
+ * (see &lt;a href="asl.txt"&gt;asl.txt&lt;/a&gt;). This means you can choose one of the three and use that if you like. If 
+ * you make modifications under the ASL, i would appreciate it if you submitted those.
+ * In case your copy of Sarissa does not include the license texts, you may find
+ * them online in various formats at &lt;a href="http://www.gnu.org"&gt;http://www.gnu.org&lt;/a&gt; and 
+ * &lt;a href="http://www.apache.org"&gt;http://www.apache.org&lt;/a&gt;.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+ */</span>
+<span class="comment">/**
+ * &lt;p&gt;Sarissa is a utility class. Provides "static" methods for DOMDocument and 
+ * XMLHTTP objects, DOM Node serializatrion to XML strings and other goodies.&lt;/p&gt;
+ * <span class="attrib">@constructor</span>
+ */</span>
+<span class="reserved">function</span> Sarissa(){};
+Sarissa.PARSED_OK = <span class="literal">"Document contains no parsing errors"</span>;
+Sarissa.PARSED_EMPTY = <span class="literal">"Document is empty"</span>
+Sarissa.PARSED_UNKNOWN_ERROR = <span class="literal">"Not well-formed or other error"</span>;
+var _sarissa_iNsCounter = 0;
+var _SARISSA_IEPREFIX4XSLPARAM = <span class="literal">""</span>;
+var _SARISSA_HAS_DOM_IMPLEMENTATION = document.implementation &amp;&amp; true;
+var _SARISSA_HAS_DOM_CREATE_DOCUMENT = _SARISSA_HAS_DOM_IMPLEMENTATION &amp;&amp; document.implementation.createDocument;
+var _SARISSA_HAS_DOM_FEATURE = _SARISSA_HAS_DOM_IMPLEMENTATION &amp;&amp; document.implementation.hasFeature;
+var _SARISSA_IS_MOZ = _SARISSA_HAS_DOM_CREATE_DOCUMENT &amp;&amp; _SARISSA_HAS_DOM_FEATURE;
+var _SARISSA_IS_SAFARI = (navigator.userAgent &amp;&amp; navigator.vendor &amp;&amp; (navigator.userAgent.toLowerCase().indexOf(<span class="literal">"applewebkit"</span>) != -1 || navigator.vendor.indexOf(<span class="literal">"Apple"</span>) != -1));
+var _SARISSA_IS_IE = document.all &amp;&amp; window.ActiveXObject &amp;&amp; navigator.userAgent.toLowerCase().indexOf(<span class="literal">"msie"</span>) &gt; -1  &amp;&amp; navigator.userAgent.toLowerCase().indexOf(<span class="literal">"opera"</span>) == -1;
+<span class="reserved">if</span>(window &amp;&amp; (!window.Node || !window.Node.ELEMENT_NODE)){
+    window.Node = {ELEMENT_NODE: 1, ATTRIBUTE_NODE: 2, TEXT_NODE: 3, CDATA_SECTION_NODE: 4, ENTITY_REFERENCE_NODE: 5,  ENTITY_NODE: 6, PROCESSING_INSTRUCTION_NODE: 7, COMMENT_NODE: 8, DOCUMENT_NODE: 9, DOCUMENT_TYPE_NODE: 10, DOCUMENT_FRAGMENT_NODE: 11, NOTATION_NODE: 12};
+};
+<span class="comment">
+// IE initialization</span>
+<span class="reserved">if</span>(_SARISSA_IS_IE){
+<span class="comment">    // for XSLT parameter names, prefix needed by IE</span>
+    _SARISSA_IEPREFIX4XSLPARAM = <span class="literal">"xsl:"</span>;
+<span class="comment">    // used to store the most recent ProgID available out of the above</span>
+    var _SARISSA_DOM_PROGID = <span class="literal">""</span>;
+    var _SARISSA_XMLHTTP_PROGID = <span class="literal">""</span>;
+    var _SARISSA_DOM_XMLWRITER = <span class="literal">""</span>;
+    <span class="comment">/**
+     * Called when the Sarissa_xx.js file is parsed, to pick most recent
+     * ProgIDs for IE, then gets destroyed.
+     * <span class="attrib">@private</span>
+     * <span class="attrib">@param</span> idList an array of MSXML PROGIDs from which the most recent will be picked for a given object
+     * <span class="attrib">@param</span> enabledList an array of arrays where each array has two items; the index of the PROGID for which a certain feature is enabled
+     */</span>
+    Sarissa.pickRecentProgID = <span class="reserved">function</span> (idList){
+<span class="comment">        // found progID flag</span>
+        var bFound = false;
+        <span class="reserved">for</span>(var i=0; i &lt; idList.length &amp;&amp; !bFound; i++){
+            try{
+                var oDoc = new ActiveXObject(idList[i]);
+                o2Store = idList[i];
+                bFound = true;
+            }catch (objException){
+<span class="comment">                // trap; try next progID</span>
+            };
+        };
+        <span class="reserved">if</span> (!bFound)
+            throw <span class="literal">"Could not retreive a valid progID of Class: "</span> + idList[idList.length-1]+<span class="literal">". (original exception: "</span>+e+<span class="literal">")"</span>;
+        idList = null;
+        <span class="reserved">return</span> o2Store;
+    };
+<span class="comment">    // pick best available MSXML progIDs</span>
+    _SARISSA_DOM_PROGID = null;
+    _SARISSA_THREADEDDOM_PROGID = null;
+    _SARISSA_XSLTEMPLATE_PROGID = null;
+    _SARISSA_XMLHTTP_PROGID = null;
+    <span class="reserved">if</span>(!window.XMLHttpRequest){
+         
+        <span class="comment">/**
+         * Emulate XMLHttpRequest
+         * <span class="attrib">@constructor</span>
+         */</span>
+        XMLHttpRequest = <span class="reserved">function</span>() {
+            <span class="reserved">if</span>(!_SARISSA_XMLHTTP_PROGID){
+                _SARISSA_XMLHTTP_PROGID = Sarissa.pickRecentProgID([<span class="literal">"Msxml2.XMLHTTP.5.0"</span>, <span class="literal">"Msxml2.XMLHTTP.4.0"</span>, <span class="literal">"MSXML2.XMLHTTP.3.0"</span>, <span class="literal">"MSXML2.XMLHTTP"</span>, <span class="literal">"Microsoft.XMLHTTP"</span>]);
+            };
+            <span class="reserved">return</span> new ActiveXObject(_SARISSA_XMLHTTP_PROGID);
+        };
+    };
+<span class="comment">    // we dont need this anymore</span>
+<span class="comment">    //============================================</span>
+<span class="comment">    // Factory methods (IE)</span>
+<span class="comment">    //============================================</span>
+<span class="comment">    // see non-IE version</span>
+    Sarissa.getDomDocument = <span class="reserved">function</span>(sUri, sName){
+        <span class="reserved">if</span>(!_SARISSA_DOM_PROGID){
+            _SARISSA_DOM_PROGID = Sarissa.pickRecentProgID([<span class="literal">"Msxml2.DOMDocument.5.0"</span>, <span class="literal">"Msxml2.DOMDocument.4.0"</span>, <span class="literal">"Msxml2.DOMDocument.3.0"</span>, <span class="literal">"MSXML2.DOMDocument"</span>, <span class="literal">"MSXML.DOMDocument"</span>, <span class="literal">"Microsoft.XMLDOM"</span>]);
+        };
+        var oDoc = new ActiveXObject(_SARISSA_DOM_PROGID);
+<span class="comment">        // if a root tag name was provided, we need to load it in the DOM object</span>
+        <span class="reserved">if</span> (sName){
+<span class="comment">            // create an artifical namespace prefix </span>
+<span class="comment">            // or reuse existing prefix if applicable</span>
+            var prefix = <span class="literal">""</span>;
+            <span class="reserved">if</span>(sUri){
+                <span class="reserved">if</span>(sName.indexOf(<span class="literal">":"</span>) &gt; 1){
+                    prefix = sName.substring(0, sName.indexOf(<span class="literal">":"</span>));
+                    sName = sName.substring(sName.indexOf(<span class="literal">":"</span>)+1); 
+                }<span class="reserved">else</span>{
+                    prefix = <span class="literal">"a"</span> + (_sarissa_iNsCounter++);
+                };
+            };
+<span class="comment">            // use namespaces if a namespace URI exists</span>
+            <span class="reserved">if</span>(sUri){
+                oDoc.loadXML(<span class="literal">'&lt;'</span> + prefix+<span class="literal">':'</span>+sName + <span class="literal">" xmlns:"</span> + prefix + <span class="literal">"=\"</span><span class="literal">" + sUri + "</span>\<span class="literal">""</span> + <span class="literal">" /&gt;"</span>);
+            } <span class="reserved">else</span> {
+                oDoc.loadXML(<span class="literal">'&lt;'</span> + sName + <span class="literal">" /&gt;"</span>);
+            };
+        };
+        <span class="reserved">return</span> oDoc;
+    };
+<span class="comment">    // see non-IE version   </span>
+    Sarissa.getParseErrorText = <span class="reserved">function</span> (oDoc) {
+        var parseErrorText = Sarissa.PARSED_OK;
+        <span class="reserved">if</span>(oDoc.parseError.errorCode != 0){
+            parseErrorText = <span class="literal">"XML Parsing Error: "</span> + oDoc.parseError.reason + 
+                <span class="literal">"\nLocation: "</span> + oDoc.parseError.url + 
+                <span class="literal">"\nLine Number "</span> + oDoc.parseError.line + <span class="literal">", Column "</span> + 
+                oDoc.parseError.linepos + 
+                <span class="literal">":\n"</span> + oDoc.parseError.srcText +
+                <span class="literal">"\n"</span>;
+            <span class="reserved">for</span>(var i = 0;  i &lt; oDoc.parseError.linepos;i++){
+                parseErrorText += <span class="literal">"-"</span>;
+            };
+            parseErrorText +=  <span class="literal">"^\n"</span>;
+        }
+        <span class="reserved">else</span> <span class="reserved">if</span>(oDoc.documentElement == null){
+            parseErrorText = Sarissa.PARSED_EMPTY;
+        };
+        <span class="reserved">return</span> parseErrorText;
+    };
+<span class="comment">    // see non-IE version</span>
+    Sarissa.setXpathNamespaces = <span class="reserved">function</span>(oDoc, sNsSet) {
+        oDoc.setProperty(<span class="literal">"SelectionLanguage"</span>, <span class="literal">"XPath"</span>);
+        oDoc.setProperty(<span class="literal">"SelectionNamespaces"</span>, sNsSet);
+    };   
+    <span class="comment">/**
+     * Basic implementation of Mozilla's XSLTProcessor for IE. 
+     * Reuses the same XSLT stylesheet for multiple transforms
+     * <span class="attrib">@constructor</span>
+     */</span>
+    XSLTProcessor = <span class="reserved">function</span>(){
+        <span class="reserved">if</span>(!_SARISSA_XSLTEMPLATE_PROGID){
+            _SARISSA_XSLTEMPLATE_PROGID = Sarissa.pickRecentProgID([<span class="literal">"Msxml2.XSLTemplate.5.0"</span>, <span class="literal">"Msxml2.XSLTemplate.4.0"</span>, <span class="literal">"MSXML2.XSLTemplate.3.0"</span>]);
+        };
+        <span class="reserved">this</span>.template = new ActiveXObject(_SARISSA_XSLTEMPLATE_PROGID);
+        <span class="reserved">this</span>.processor = null;
+    };
+    <span class="comment">/**
+     * Impoprts the given XSLT DOM and compiles it to a reusable transform
+     * <span class="attrib">@argument</span> xslDoc The XSLT DOMDocument to import
+     */</span>
+    XSLTProcessor.<span class="reserved">prototype</span>.importStylesheet = <span class="reserved">function</span>(xslDoc){
+        <span class="reserved">if</span>(!_SARISSA_THREADEDDOM_PROGID){
+            _SARISSA_THREADEDDOM_PROGID = Sarissa.pickRecentProgID([<span class="literal">"Msxml2.FreeThreadedDOMDocument.5.0"</span>, <span class="literal">"MSXML2.FreeThreadedDOMDocument.4.0"</span>, <span class="literal">"MSXML2.FreeThreadedDOMDocument.3.0"</span>]);
+            _SARISSA_DOM_XMLWRITER = Sarissa.pickRecentProgID([<span class="literal">"Msxml2.MXXMLWriter.5.0"</span>, <span class="literal">"Msxml2.MXXMLWriter.4.0"</span>, <span class="literal">"Msxml2.MXXMLWriter.3.0"</span>, <span class="literal">"MSXML2.MXXMLWriter"</span>, <span class="literal">"MSXML.MXXMLWriter"</span>, <span class="literal">"Microsoft.XMLDOM"</span>]);
+        };
+<span class="comment">        // convert stylesheet to free threaded</span>
+        var converted = new ActiveXObject(_SARISSA_THREADEDDOM_PROGID); 
+        converted.loadXML(xslDoc.xml);
+        <span class="reserved">this</span>.template.stylesheet = converted;
+        <span class="reserved">this</span>.processor = <span class="reserved">this</span>.template.createProcessor();
+<span class="comment">        // (re)set default param values</span>
+        <span class="reserved">this</span>.paramsSet = new Array();
+    };
+    <span class="comment">/**
+     * Transform the given XML DOM
+     * <span class="attrib">@argument</span> sourceDoc The XML DOMDocument to transform
+     * <span class="attrib">@return</span> The transformation result as a DOM Document
+     */</span>
+    XSLTProcessor.<span class="reserved">prototype</span>.transformToDocument = <span class="reserved">function</span>(sourceDoc){
+        <span class="reserved">this</span>.processor.input = sourceDoc;
+        var outDoc = new ActiveXObject(_SARISSA_DOM_XMLWRITER);
+        <span class="reserved">this</span>.processor.output = outDoc; 
+        <span class="reserved">this</span>.processor.transform();
+        var oDoc = new ActiveXObject(_SARISSA_DOM_PROGID);
+        oDoc.loadXML(outDoc.output+<span class="literal">""</span>);
+        <span class="reserved">return</span> oDoc;
+        <span class="comment">/*
+        this.processor.input = sourceDoc;
+        var outDoc = Sarissa.getDomDocument();
+        this.processor.output = outDoc; 
+        this.processor.transform();
+        return outDoc;*/</span>
+    };
+    <span class="comment">/**
+     * Set global XSLT parameter of the imported stylesheet
+     * <span class="attrib">@argument</span> nsURI The parameter namespace URI
+     * <span class="attrib">@argument</span> name The parameter base name
+     * <span class="attrib">@argument</span> value The new parameter value
+     */</span>
+    XSLTProcessor.<span class="reserved">prototype</span>.setParameter = <span class="reserved">function</span>(nsURI, name, value){
+            <span class="comment">/* nsURI is optional but cannot be null */</span>
+        <span class="reserved">if</span>(nsURI){
+            <span class="reserved">this</span>.processor.addParameter(name, value, nsURI);
+        }<span class="reserved">else</span>{
+            <span class="reserved">this</span>.processor.addParameter(name, value);
+        };
+        <span class="comment">/* update updated params for getParameter */</span>
+        <span class="reserved">if</span>(!<span class="reserved">this</span>.paramsSet[<span class="literal">""</span>+nsURI]){
+            <span class="reserved">this</span>.paramsSet[<span class="literal">""</span>+nsURI] = new Array();
+        };
+        <span class="reserved">this</span>.paramsSet[<span class="literal">""</span>+nsURI][name] = value;
+    };
+    <span class="comment">/**
+     * Gets a parameter if previously set by setParameter. Returns null
+     * otherwise
+     * <span class="attrib">@argument</span> name The parameter base name
+     * <span class="attrib">@argument</span> value The new parameter value
+     * <span class="attrib">@return</span> The parameter value if reviously set by setParameter, null otherwise
+     */</span>
+    XSLTProcessor.<span class="reserved">prototype</span>.getParameter = <span class="reserved">function</span>(nsURI, name){
+        nsURI = nsURI || <span class="literal">""</span>;
+        <span class="reserved">if</span>(<span class="reserved">this</span>.paramsSet[nsURI] &amp;&amp; <span class="reserved">this</span>.paramsSet[nsURI][name]){
+            <span class="reserved">return</span> <span class="reserved">this</span>.paramsSet[nsURI][name];
+        }<span class="reserved">else</span>{
+            <span class="reserved">return</span> null;
+        };
+    };
+}<span class="reserved">else</span>{ <span class="comment">/* end IE initialization, try to deal with real browsers now ;-) */</span>
+    <span class="reserved">if</span>(_SARISSA_HAS_DOM_CREATE_DOCUMENT){
+        <span class="comment">/**
+         * &lt;p&gt;Ensures the document was loaded correctly, otherwise sets the
+         * parseError to -1 to indicate something went wrong. Internal use&lt;/p&gt;
+         * <span class="attrib">@private</span>
+         */</span>
+        Sarissa.__handleLoad__ = <span class="reserved">function</span>(oDoc){
+            Sarissa.__setReadyState__(oDoc, 4);
+        };
+        <span class="comment">/**
+        * &lt;p&gt;Attached by an event handler to the load event. Internal use.&lt;/p&gt;
+        * <span class="attrib">@private</span>
+        */</span>
+        _sarissa_XMLDocument_onload = <span class="reserved">function</span>(){
+            Sarissa.__handleLoad__(<span class="reserved">this</span>);
+        };
+        <span class="comment">/**
+         * &lt;p&gt;Sets the readyState property of the given DOM Document object.
+         * Internal use.&lt;/p&gt;
+         * <span class="attrib">@private</span>
+         * <span class="attrib">@argument</span> oDoc the DOM Document object to fire the
+         *          readystatechange event
+         * <span class="attrib">@argument</span> iReadyState the number to change the readystate property to
+         */</span>
+        Sarissa.__setReadyState__ = <span class="reserved">function</span>(oDoc, iReadyState){
+            oDoc.readyState = iReadyState;
+            oDoc.readystate = iReadyState;
+            <span class="reserved">if</span> (oDoc.onreadystatechange != null &amp;&amp; typeof oDoc.onreadystatechange == <span class="literal">"function"</span>)
+                oDoc.onreadystatechange();
+        };
+        Sarissa.getDomDocument = <span class="reserved">function</span>(sUri, sName){
+            var oDoc = document.implementation.createDocument(sUri?sUri:null, sName?sName:null, null);
+            <span class="reserved">if</span>(!oDoc.onreadystatechange){
+            
+                <span class="comment">/**
+                * &lt;p&gt;Emulate IE's onreadystatechange attribute&lt;/p&gt;
+                */</span>
+                oDoc.onreadystatechange = null;
+            };
+            <span class="reserved">if</span>(!oDoc.readyState){
+                <span class="comment">/**
+                * &lt;p&gt;Emulates IE's readyState property, which always gives an integer from 0 to 4:&lt;/p&gt;
+                * &lt;ul&gt;&lt;li&gt;1 == LOADING,&lt;/li&gt;
+                * &lt;li&gt;2 == LOADED,&lt;/li&gt;
+                * &lt;li&gt;3 == INTERACTIVE,&lt;/li&gt;
+                * &lt;li&gt;4 == COMPLETED&lt;/li&gt;&lt;/ul&gt;
+                */</span>
+                oDoc.readyState = 0;
+            };
+            oDoc.addEventListener(<span class="literal">"load"</span>, _sarissa_XMLDocument_onload, false);
+            <span class="reserved">return</span> oDoc;
+        };
+        <span class="reserved">if</span>(window.XMLDocument){
+<span class="comment">        
+        //if(window.XMLDocument) , now mainly for opera  </span>
+        }// TODO: check <span class="reserved">if</span> the new document has content before trying to copynodes, check  <span class="reserved">for</span> error handling in DOM 3 LS
+        <span class="reserved">else</span> <span class="reserved">if</span>(document.implementation &amp;&amp; document.implementation.hasFeature &amp;&amp; document.implementation.hasFeature(<span class="literal">'LS'</span>, <span class="literal">'3.0'</span>)){
+        
+            <span class="comment">/**
+            * &lt;p&gt;Factory method to obtain a new DOM Document object&lt;/p&gt;
+            * <span class="attrib">@argument</span> sUri the namespace of the root node (if any)
+            * <span class="attrib">@argument</span> sUri the local name of the root node (if any)
+            * <span class="attrib">@returns</span> a new DOM Document
+            */</span>
+            Sarissa.getDomDocument = <span class="reserved">function</span>(sUri, sName){
+                var oDoc = document.implementation.createDocument(sUri?sUri:null, sName?sName:null, null);
+                <span class="reserved">return</span> oDoc;
+            };
+        }
+        <span class="reserved">else</span> {
+            Sarissa.getDomDocument = <span class="reserved">function</span>(sUri, sName){
+                var oDoc = document.implementation.createDocument(sUri?sUri:null, sName?sName:null, null);
+<span class="comment">                // looks like safari does not create the root element for some unknown reason</span>
+                <span class="reserved">if</span>(oDoc &amp;&amp; (sUri || sName) &amp;&amp; !oDoc.documentElement){
+                    oDoc.appendChild(oDoc.createElementNS(sUri, sName));
+                };
+                <span class="reserved">return</span> oDoc;
+            };
+        };
+    };//<span class="reserved">if</span>(_SARISSA_HAS_DOM_CREATE_DOCUMENT)
+};
+<span class="comment">//==========================================</span>
+<span class="comment">// Common stuff</span>
+<span class="comment">//==========================================</span>
+<span class="reserved">if</span>(!window.DOMParser){
+    <span class="reserved">if</span>(_SARISSA_IS_SAFARI){
+        <span class="comment">/*
+            * DOMParser is a utility class, used to construct DOMDocuments from XML strings
+        * <span class="attrib">@constructor</span>
+            */</span>
+            DOMParser = <span class="reserved">function</span>() {
+            };
+        <span class="comment">/** 
+        * Construct a new DOM Document from the given XMLstring
+        * <span class="attrib">@param</span> sXml the given XML string
+        * <span class="attrib">@param</span> contentType the content type of the document the given string represents (one of text/xml, application/xml, application/xhtml+xml). 
+        * <span class="attrib">@return</span> a new DOM Document from the given XML string
+        */</span>
+        DOMParser.<span class="reserved">prototype</span>.parseFromString = <span class="reserved">function</span>(sXml, contentType){
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open(<span class="literal">"GET"</span>, <span class="literal">"data:text/xml;charset=utf-8,"</span> + encodeURIComponent(sXml), false);
+            xmlhttp.send(null);
+            <span class="reserved">return</span> xmlhttp.responseXML;
+        };
+    }<span class="reserved">else</span> <span class="reserved">if</span>(Sarissa.getDomDocument &amp;&amp; Sarissa.getDomDocument() &amp;&amp; Sarissa.getDomDocument(null, <span class="literal">"bar"</span>).xml){
+        DOMParser = <span class="reserved">function</span>() {
+            };
+        DOMParser.<span class="reserved">prototype</span>.parseFromString = <span class="reserved">function</span>(sXml, contentType){
+            var doc = Sarissa.getDomDocument();
+            doc.loadXML(sXml);
+            <span class="reserved">return</span> doc;
+        };
+    };
+};
+
+<span class="reserved">if</span>(!window.document.importNode &amp;&amp; _SARISSA_IS_IE){
+    try{
+        <span class="comment">/**
+        * Implements importNode for the current window document in IE using innerHTML.
+        * Testing showed that DOM was multiple times slower than innerHTML for this,
+        * sorry folks. If you encounter trouble (who knows what IE does behind innerHTML)
+        * please gimme a call.
+        * <span class="attrib">@param</span> oNode the Node to import
+        * <span class="attrib">@param</span> bChildren whether to include the children of oNode
+        * <span class="attrib">@returns</span> the imported node for further use
+        */</span>
+        window.document.importNode = <span class="reserved">function</span>(oNode, bChildren){
+            var importNode = document.createElement(<span class="literal">"div"</span>);
+            <span class="reserved">if</span>(bChildren){
+                importNode.innerHTML = new XMLSerializer().serializeToString(oNode);
+            }<span class="reserved">else</span>{
+                importNode.innerHTML = new XMLSerializer().serializeToString(oNode.cloneNode(false));
+            };
+            <span class="reserved">return</span> importNode.getElementsByTagName(<span class="literal">"*"</span>)[0];
+        };
+        }catch(e){};
+};
+<span class="reserved">if</span>(!window.Sarissa.getParseErrorText){
+    <span class="comment">/**
+     * &lt;p&gt;Returns a human readable description of the parsing error. Usefull
+     * for debugging. Tip: append the returned error string in a &amp;lt;pre&amp;gt;
+     * element if you want to render it.&lt;/p&gt;
+     * &lt;p&gt;Many thanks to Christian Stocker for the initial patch.&lt;/p&gt;
+     * <span class="attrib">@argument</span> oDoc The target DOM document
+     * <span class="attrib">@returns</span> The parsing error description of the target Document in
+     *          human readable form (preformated text)
+     */</span>
+    Sarissa.getParseErrorText = <span class="reserved">function</span> (oDoc){
+        var parseErrorText = Sarissa.PARSED_OK;
+        <span class="reserved">if</span>(!oDoc.documentElement){
+            parseErrorText = Sarissa.PARSED_EMPTY;
+        }
+        <span class="reserved">else</span> <span class="reserved">if</span>(oDoc.documentElement.tagName == <span class="literal">"parsererror"</span>){
+            parseErrorText = oDoc.documentElement.firstChild.data;
+            parseErrorText += <span class="literal">"\n"</span> +  oDoc.documentElement.firstChild.nextSibling.firstChild.data;
+        }
+        <span class="reserved">else</span> <span class="reserved">if</span>(oDoc.getElementsByTagName(<span class="literal">"parsererror"</span>).length &gt; 0){
+            var parsererror = oDoc.getElementsByTagName(<span class="literal">"parsererror"</span>)[0];
+            parseErrorText = Sarissa.getText(parsererror, true)+<span class="literal">"\n"</span>;
+        }<span class="reserved">else</span> <span class="reserved">if</span>(oDoc.parseError &amp;&amp; oDoc.parseError.errorCode != 0){
+            parseErrorText = Sarissa.PARSED_UNKNOWN_ERROR;
+        };
+        <span class="reserved">return</span> parseErrorText;
+    };
+};
+Sarissa.getText = <span class="reserved">function</span>(oNode, deep){
+    var s = <span class="literal">""</span>;
+    var nodes = oNode.childNodes;
+    <span class="reserved">for</span>(var i=0; i &lt; nodes.length; i++){
+        var node = nodes[i];
+        var nodeType = node.nodeType;
+        <span class="reserved">if</span>(nodeType == Node.TEXT_NODE || nodeType == Node.CDATA_SECTION_NODE){
+            s += node.data;
+        }<span class="reserved">else</span> <span class="reserved">if</span>(deep == true
+                    &amp;&amp; (nodeType == Node.ELEMENT_NODE
+                        || nodeType == Node.DOCUMENT_NODE
+                        || nodeType == Node.DOCUMENT_FRAGMENT_NODE)){
+            s += Sarissa.getText(node, true);
+        };
+    };
+    <span class="reserved">return</span> s;
+};
+<span class="reserved">if</span>(!window.XMLSerializer 
+    &amp;&amp; Sarissa.getDomDocument 
+    &amp;&amp; Sarissa.getDomDocument(<span class="literal">""</span>,<span class="literal">"foo"</span>, null).xml){
+    <span class="comment">/**
+     * Utility class to serialize DOM Node objects to XML strings
+     * <span class="attrib">@constructor</span>
+     */</span>
+    XMLSerializer = <span class="reserved">function</span>(){};
+    <span class="comment">/**
+     * Serialize the given DOM Node to an XML string
+     * <span class="attrib">@param</span> oNode the DOM Node to serialize
+     */</span>
+    XMLSerializer.<span class="reserved">prototype</span>.serializeToString = <span class="reserved">function</span>(oNode) {
+        <span class="reserved">return</span> oNode.xml;
+    };
+};
+
+<span class="comment">/**
+ * strips tags from a markup string
+ */</span>
+Sarissa.stripTags = <span class="reserved">function</span> (s) {
+    <span class="reserved">return</span> s.replace(/&lt;[^&gt;]+&gt;/g,<span class="literal">""</span>);
+};
+<span class="comment">/**
+ * &lt;p&gt;Deletes all child nodes of the given node&lt;/p&gt;
+ * <span class="attrib">@argument</span> oNode the Node to empty
+ */</span>
+Sarissa.clearChildNodes = <span class="reserved">function</span>(oNode) {
+<span class="comment">    // need to check for firstChild due to opera 8 bug with hasChildNodes</span>
+    <span class="reserved">while</span>(oNode.firstChild){
+        oNode.removeChild(oNode.firstChild);
+    };
+};
+<span class="comment">/**
+ * &lt;p&gt; Copies the childNodes of nodeFrom to nodeTo&lt;/p&gt;
+ * &lt;p&gt; &lt;b&gt;Note:&lt;/b&gt; The second object's original content is deleted before 
+ * the copy operation, unless you supply a true third parameter&lt;/p&gt;
+ * <span class="attrib">@argument</span> nodeFrom the Node to copy the childNodes from
+ * <span class="attrib">@argument</span> nodeTo the Node to copy the childNodes to
+ * <span class="attrib">@argument</span> bPreserveExisting whether to preserve the original content of nodeTo, default is false
+ */</span>
+Sarissa.copyChildNodes = <span class="reserved">function</span>(nodeFrom, nodeTo, bPreserveExisting) {
+    <span class="reserved">if</span>((!nodeFrom) || (!nodeTo)){
+        throw <span class="literal">"Both source and destination nodes must be provided"</span>;
+    };
+    <span class="reserved">if</span>(!bPreserveExisting){
+        Sarissa.clearChildNodes(nodeTo);
+    };
+    var ownerDoc = nodeTo.nodeType == Node.DOCUMENT_NODE ? nodeTo : nodeTo.ownerDocument;
+    var nodes = nodeFrom.childNodes;
+    <span class="reserved">if</span>(<span class="comment">/*(!_SARISSA_IS_IE) &amp;&amp; */</span>ownerDoc.importNode)  {
+        <span class="reserved">for</span>(var i=0;i &lt; nodes.length;i++) {
+            nodeTo.appendChild(ownerDoc.importNode(nodes[i], true));
+        };
+    }<span class="reserved">else</span>{
+        <span class="reserved">for</span>(var i=0;i &lt; nodes.length;i++) {
+            nodeTo.appendChild(nodes[i].cloneNode(true));
+        };
+    };
+};
+
+<span class="comment">/**
+ * &lt;p&gt; Moves the childNodes of nodeFrom to nodeTo&lt;/p&gt;
+ * &lt;p&gt; &lt;b&gt;Note:&lt;/b&gt; The second object's original content is deleted before 
+ * the move operation, unless you supply a true third parameter&lt;/p&gt;
+ * <span class="attrib">@argument</span> nodeFrom the Node to copy the childNodes from
+ * <span class="attrib">@argument</span> nodeTo the Node to copy the childNodes to
+ * <span class="attrib">@argument</span> bPreserveExisting whether to preserve the original content of nodeTo, default is
+ */</span> 
+Sarissa.moveChildNodes = <span class="reserved">function</span>(nodeFrom, nodeTo, bPreserveExisting) {
+    <span class="reserved">if</span>((!nodeFrom) || (!nodeTo)){
+        throw <span class="literal">"Both source and destination nodes must be provided"</span>;
+    };
+    <span class="reserved">if</span>(!bPreserveExisting){
+        Sarissa.clearChildNodes(nodeTo);
+    };
+    var nodes = nodeFrom.childNodes;
+<span class="comment">    // if within the same doc, just move, else copy and delete</span>
+    <span class="reserved">if</span>(nodeFrom.ownerDocument == nodeTo.ownerDocument){
+        <span class="reserved">while</span>(nodeFrom.firstChild){
+            nodeTo.appendChild(nodeFrom.firstChild);
+        };
+    }<span class="reserved">else</span>{
+        var ownerDoc = nodeTo.nodeType == Node.DOCUMENT_NODE ? nodeTo : nodeTo.ownerDocument;
+        <span class="reserved">if</span>(ownerDoc.importNode <span class="comment">/*&amp;&amp; (!_SARISSA_IS_IE)*/</span>) {
+           <span class="reserved">for</span>(var i=0;i &lt; nodes.length;i++) {
+               nodeTo.appendChild(ownerDoc.importNode(nodes[i], true));
+           };
+        }<span class="reserved">else</span>{
+           <span class="reserved">for</span>(var i=0;i &lt; nodes.length;i++) {
+               nodeTo.appendChild(nodes[i].cloneNode(true));
+           };
+        };
+        Sarissa.clearChildNodes(nodeFrom);
+    };
+};
+
+<span class="comment">/** 
+ * &lt;p&gt;Serialize any object to an XML string. All properties are serialized using the property name
+ * as the XML element name. Array elements are rendered as &lt;code&gt;array-item&lt;/code&gt; elements, 
+ * using their index/key as the value of the &lt;code&gt;key&lt;/code&gt; attribute.&lt;/p&gt;
+ * <span class="attrib">@argument</span> anyObject the object to serialize
+ * <span class="attrib">@argument</span> objectName a name for that object
+ * <span class="attrib">@return</span> the XML serializationj of the given object as a string
+ */</span>
+Sarissa.xmlize = <span class="reserved">function</span>(anyObject, objectName, indentSpace){
+    indentSpace = indentSpace?indentSpace:<span class="literal">''</span>;
+    var s = indentSpace  + <span class="literal">'&lt;'</span> + objectName + <span class="literal">'&gt;'</span>;
+    var isLeaf = false;
+    <span class="reserved">if</span>(!(anyObject instanceof Object) || anyObject instanceof Number || anyObject instanceof String 
+        || anyObject instanceof Boolean || anyObject instanceof Date){
+        s += Sarissa.escape(<span class="literal">""</span>+anyObject);
+        isLeaf = true;
+    }<span class="reserved">else</span>{
+        s += <span class="literal">"\n"</span>;
+        var itemKey = <span class="literal">''</span>;
+        var isArrayItem = anyObject instanceof Array;
+        <span class="reserved">for</span>(var name in anyObject){
+            s += Sarissa.xmlize(anyObject[name], (isArrayItem?<span class="literal">"array-item key=\"</span><span class="literal">"+name+"</span>\<span class="literal">""</span>:name), indentSpace + <span class="literal">"   "</span>);
+        };
+        s += indentSpace;
+    };
+    <span class="reserved">return</span> s += (objectName.indexOf(<span class="literal">' '</span>)!=-1?<span class="literal">"&lt;/array-item&gt;\n"</span>:<span class="literal">"&lt;/"</span> + objectName + <span class="literal">"&gt;\n"</span>);
+};
+
+<span class="comment">/** 
+ * Escape the given string chacters that correspond to the five predefined XML entities
+ * <span class="attrib">@param</span> sXml the string to escape
+ */</span>
+Sarissa.escape = <span class="reserved">function</span>(sXml){
+    <span class="reserved">return</span> sXml.replace(/&amp;/g, <span class="literal">"&amp;amp;"</span>)
+        .replace(/&lt;/g, <span class="literal">"&amp;lt;"</span>)
+        .replace(/&gt;/g, <span class="literal">"&amp;gt;"</span>)
+        .replace(/<span class="literal">"/g, "</span>&amp;quot;<span class="literal">")
+        .replace(/'/g, "</span>&amp;apos;<span class="literal">");
+};
+
+/** 
+ * Unescape the given string. This turns the occurences of the predefined XML 
+ * entities to become the characters they represent correspond to the five predefined XML entities
+ * @param sXml the string to unescape
+ */
+Sarissa.unescape = function(sXml){
+    return sXml.replace(/&amp;apos;/g,"</span>'<span class="literal">")
+        .replace(/&amp;quot;/g,"</span>\<span class="literal">""</span>)
+        .replace(/&amp;gt;/g,<span class="literal">"&gt;"</span>)
+        .replace(/&amp;lt;/g,<span class="literal">"&lt;"</span>)
+        .replace(/&amp;amp;/g,<span class="literal">"&amp;"</span>);
+};
+<span class="comment">//   EOF</span>
+
+</pre>
+<!-- END SOURCECODE -->
+<HR>
+
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<A NAME="navbar_top"><!-- --></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#b8cade" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3">
+  <TR ALIGN="center" VALIGN="top">
+  
+  
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-summary.html"><FONT CLASS="NavBarFont1"><b>Overview</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev">	&nbsp;<FONT CLASS="NavBarFont1Rev"><b>File</b></FONT>&nbsp;</TD>
+  
+
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"> <FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-tree.html"><FONT CLASS="NavBarFont1"><b>Tree</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="index-all.html"--><FONT CLASS="NavBarFont1"><b>Index</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="help-doc.html"><FONT CLASS="NavBarFont1"><b>Help</b></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD BGCOLOR="#b8cade" ALIGN="right" VALIGN="top"><EM>
+<b>sarissa</b></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="index.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="overview-summary.html" TARGET="_top"><B>NO FRAMES</B></A>
+&nbsp;&nbsp;
+<SCRIPT>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+</TABLE>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<FONT SIZE="-1">
+
+</FONT>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Tue May  9 22:30:39 2006</div>
+</BODY>
+</HTML>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/src/widget/demoEngine/templates"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="DemoPane.css"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="7e9e93bb5448a276be1649d284d45459"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="DemoNavigator.html"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2451bd49aa15f0d23a33f0d899bfdbb0"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="general.css"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="7d19b1f4edb096bd64b48a897c28a379"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   name="images"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="DemoItem.html"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="52a164f33fe13f34a115e1953478a412"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="DemoNavigator.css"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="34159d16684ba19a2fba8e5b3311cac8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="SourcePane.html"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="7261504d0db3445a5a8109e69c768adf"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="DemoContainer.html"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="728476359ee21f26ddf0555c611aa3b3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="DemoItem.css"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b91252232e6e60b86659e72d5cc7ee0b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="DemoPane.html"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="43f544645705fc99e1162760df811243"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="SourcePane.css"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b44495cc151f95f2b88babd08d6bfe64"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="DemoContainer.css"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="420e7d0eea9f689249faf770d69df414"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+</wc-entries>

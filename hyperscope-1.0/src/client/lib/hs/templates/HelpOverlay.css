@@ -1,0 +1,21 @@
+.helpOverlay{
+	width: 40em;
+	height: 80%;
+	z-index: 3;
+	position: absolute;
+}
+
+/**
+	Our floating pane's nifty drop shadow depends
+	on being displayed in order to calculate
+	it's shadow; however, when we combine this
+	with not being displayed on page load and our
+	nifty fade in animation to display the overlay,
+	the shadow gets messed up. This is a trick below
+	to 'hide' the jump overlay offscreen but 'visible'
+	so the shadow can be calculated.
+*/
+.initial-overlay-state{
+	left: -1000px !important;
+	top: -1000px !important;
+}

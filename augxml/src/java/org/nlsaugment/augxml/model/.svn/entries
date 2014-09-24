@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="354"
+   name=""
+   committed-date="2006-09-04T07:11:34.984977Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/trunk/augxml/src/java/org/nlsaugment/augxml/model"
+   last-author="jcheyer"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="327"
+   name="AugmentFile.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-09-02T19:53:22.460695Z"
+   checksum="d6db2a78c55372f5f8cf50177e05cdc1"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="114"
+   name="DataBlockStatusTable.java"
+   text-time="2006-10-14T00:59:46.000000Z"
+   committed-date="2006-06-12T14:54:17.309001Z"
+   checksum="9a9e7179e0a1e68ab07851378d7cefb5"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="128"
+   name="BlockHeader.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-20T14:41:13.419970Z"
+   checksum="26beae923c2eec5b01f062a8fbe1903d"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="327"
+   name="FileHeaderBlock.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-09-02T19:53:22.460695Z"
+   checksum="f2c4a43a59593e26ea0b1ba459541504"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="114"
+   name="BlockStatusTable.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-12T14:54:17.309001Z"
+   checksum="35e0f6c34ba4bc94491dee6c4590ae84"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="126"
+   name="RingElement.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-15T23:46:39.661044Z"
+   checksum="766c0c7b52b32de719101703f871ee35"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="200"
+   name="StatementDataBlock.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-07-31T00:22:35.041684Z"
+   checksum="e58da73b8aa014dfed73bd6b1885470e"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="122"
+   name="StructureBlock.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-14T16:23:22.925076Z"
+   checksum="8a567e153cb59c1cf49a4683cf3d2584"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="117"
+   name="MarkerRecord.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-13T22:18:12.643972Z"
+   checksum="315d353eb5bfb6cf6d9bf01feb538927"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="200"
+   name="StatementDataBlockHeader.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-07-31T00:22:35.041684Z"
+   checksum="c73f29917eda809d0ecc365c988a6f88"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="23"
+   name="DataElement.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-05-02T16:54:06.197732Z"
+   checksum="de860a01823e55dfd47f2ce8d8efe670"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="354"
+   name="DataBlock.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-09-04T07:11:34.984977Z"
+   checksum="6954afd9dd0d955c79b8fbb786fa3a8c"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="114"
+   name="RingBlockStatusTable.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-12T14:54:17.309001Z"
+   checksum="1252afa59d312e597101b477d1ac9a29"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="117"
+   name="ModelObject.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-13T22:18:12.643972Z"
+   checksum="d7bfed37d98456576c1f320c31c0dd87"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="114"
+   name="MarkerTable.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-12T14:54:17.309001Z"
+   checksum="84387b381f906b494d2f0da766756cf4"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="327"
+   name="Block.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-09-02T19:53:22.460695Z"
+   checksum="438f746233f3d9ed0174d084b5b4539b"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="128"
+   name="BlockStatusRecord.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-20T14:41:13.419970Z"
+   checksum="1103738353540ec07b01ea39cd1015ad"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+</wc-entries>

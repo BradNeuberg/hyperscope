@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Linux)">
+	<META NAME="CREATED" CONTENT="20060524;17454900">
+	<META NAME="CHANGED" CONTENT="20060524;17484300">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>FAQ</H1>
+<H2>Building</H2>
+<P>Q: When I try to build AugXml, the build fails with this error:
+“Could not create task or type of type: junit”.</P>
+<P>A: You are using an old version of Ant. You must use Ant 1.7 or
+newer (not yet released). The latest stable release of Ant (1.6.5)
+does not have support for JUnit 4.</P>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

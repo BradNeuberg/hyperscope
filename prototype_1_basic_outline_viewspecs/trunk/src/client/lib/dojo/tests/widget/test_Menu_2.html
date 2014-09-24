@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Menu System Test</title>
+<script type="text/javascript">
+
+	var djConfig = {
+		debugAtAllCosts: true,
+		isDebug: true
+	};
+
+</script>
+<script type="text/javascript" src="../../dojo.js"></script>
+<script type="text/javascript">
+
+	dojo.require("dojo.widget.HtmlMenu2");
+	dojo.require("dojo.fx.html");
+	dojo.hostenv.writeIncludes();
+</script>
+</head>
+<body style="background-color: #3A6EA5;">
+
+<div dojoType="PopupMenu2" contextMenuForWindow="true" toggle="explode">
+	<div dojoType="MenuItem2" caption="Select All" isDisabled="true"></div>
+	<div dojoType="MenuItem2" iconSrc="images/tango-actions-edit-copy.png" caption="Cut" accelKey="Ctrl+C"
+		onClick="alert('not actually cutting anything, just a test!')"></div>
+	<div dojoType="MenuItem2" iconSrc="images/tango-actions-edit-cut.png" caption="Copy" accelKey="Ctrl+X"
+		onClick="alert('not actually copying anything, just a test!')"></div>
+	<div dojoType="MenuItem2" iconSrc="images/tango-actions-edit-paste.png" caption="Paste" accelKey="Ctrl+V"
+		onClick="alert('not actually pasting anything, just a test!')"></div>
+	<div dojoType="MenuSeparator2"></div>
+	<div dojoType="MenuItem2" caption="Do more stuff" submenuId="submenu1"></div>
+</div>
+
+<div dojoType="PopupMenu2" widgetId="submenu1" toggle="explode">
+	<div dojoType="MenuItem2" caption="One" submenuId="submenu2" isDisabled="true"></div>
+	<div dojoType="MenuItem2" caption="Two" submenuId="submenu2"></div>
+</div>
+
+<div dojoType="PopupMenu2" widgetId="submenu2" toggle="explode">
+	<div dojoType="MenuItem2" caption="Three" onClick="alert('Three!')"></div>
+	<div dojoType="MenuItem2" caption="Four" onClick="alert('Four!')"></div>
+</div>
+
+
+<p>This page has a simple context menu.</p>
+
+</body>
+</html>

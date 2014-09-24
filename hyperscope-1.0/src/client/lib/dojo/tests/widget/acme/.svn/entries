@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/tests/widget/acme"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="test_RemotePaths.css"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5f90680b2e2ceb560e8966987e74f139"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:03.000000Z"/>
+<entry
+   committed-rev="203"
+   name="user-r.gif"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2c9970a1d91b10fb0e77b16774eb1a56"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:03.000000Z"/>
+<entry
+   committed-rev="203"
+   name="UserButton.js"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="eedc044dbc6a1b57621ac9f589246cde"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:03.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_RemoteUserButton.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="51bb6d03383a3d1227a3a6478c6dc019"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:03.000000Z"/>
+<entry
+   committed-rev="203"
+   name="userPressed-c.gif"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="375e98ed73162b2d4466308dc257bfe6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:03.000000Z"/>
+<entry
+   committed-rev="203"
+   name="README"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="7301e088b8c40424a6d92290de43a6c9"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:03.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_RemotePaths.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="012c281f43aeac82b0bdaa1392ba6940"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:03.000000Z"/>
+<entry
+   committed-rev="203"
+   name="userActive-c.gif"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="adba304426cbacca3d75a3a30e76e5e8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:03.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ExecError.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="480e161b050c5866c32ae4c9fad8568d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="userPressed-l.gif"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="244f88af9af06eb24b5abbedbcf60def"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="799dad392785cb84742ec521d5d808f6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="user-c.gif"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="55cd605a35ba4ede825a7967ec6cd116"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="RemotePaths_test.js"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a11e318c8cda7eda6da76451829b67fc"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="userPressed-r.gif"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3e9de0b4034967c09de6cbe874eadfd5"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="userActive-l.gif"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b17bfaa1f379ae8c5bf87962a18199fa"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="user-l.gif"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3fea84ba63bd050cd1d0333e2fc162b7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="userActive-r.gif"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="780113f0336127f88adbf0ad8a20442a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+</wc-entries>

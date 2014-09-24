@@ -1,0 +1,671 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<HTML>
+<HEAD>
+<TITLE>
+sarissa Overview
+</TITLE>
+<LINK REL ="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<SCRIPT>
+function asd()
+{
+parent.document.title=" Overview";
+}
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#eeeeee" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<A NAME="navbar_top"><!-- --></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#b8cade" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3">
+  <TR ALIGN="center" VALIGN="top">
+  
+  
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev">	&nbsp;<FONT CLASS="NavBarFont1Rev"><b>Overview</b></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1"> <FONT CLASS="NavBarFont1">File</FONT>&nbsp;</TD>
+  
+
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"> 	<FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-tree.html"><FONT CLASS="NavBarFont1"><b>Tree</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="index-all.html"--><FONT CLASS="NavBarFont1"><b>Index</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="help-doc.html"><FONT CLASS="NavBarFont1"><b>Help</b></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD BGCOLOR="#b8cade" ALIGN="right" VALIGN="top">
+<EM>
+<b>sarissa</b></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="index.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="overview-summary.html" TARGET="_top"><B>NO FRAMES</B></A>
+&nbsp;&nbsp;
+<SCRIPT>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+</TABLE>
+<!-- =========== END OF NAVBAR =========== -->
+
+<HR>
+<CENTER>
+
+   <H2>sarissa</H2>
+
+</CENTER>
+        
+            
+           <p>
+           This document is the API Specification for 
+           sarissa.
+           </p>
+           
+        
+        
+        <h4>Summary</h4>
+        <p>
+        
+           
+	  <div class="section">
+	<h3>TOC</h3>
+    <ul>
+      <li>
+        <a href="#overview">Overview</a>
+      </li>
+      <li>
+        <a href="#license">License(s)</a>
+      </li>
+      <li>
+      	<a href="#greditspeople">Gredits (People)</a>
+      </li>
+      <li>
+      	<a href="#greditssoftware">Gredits (Software)</a>
+      </li>
+      <li>
+        <a href="#ecmaunit">How to test Sarissa in your browser with ECMAUnit</a>
+      </li>
+      <li>
+        <a href="#getxmldom">How to obtain a DOM Document Object</a>
+      </li>
+      <li>
+        <a href="#getxmlhttp">How to obtain a XMLHTTP Request Object</a>
+      </li>
+      <li>
+        <a href="#loadstring">How to load an XML Document Object from an
+            XML String</a>
+      </li>
+      <li>
+        <a href="#parseerror">How to check for parsing errors</a>
+      </li>
+      <li>
+        <a href="#transform">
+        	How to transform an XML Document Object with XSLT
+        </a>
+      </li>
+      <li>
+        <a href="#xpath">How to use XPath from JavaScript to select Nodes from an XML Document</a>
+      </li>
+      <li>
+        <a href="#nondom2xml">How to serialize non-DOM objects to XML.</a>
+      </li>
+    </ul>
+	</div>
+    <div class="section">
+      <h3>
+        <a id="overview">Overview</a>
+      </h3>
+      <p>
+           Sarissa is an ECMAScript library acting as a cross-browser wrapper for native XML APIs. It offers various  
+           XML related goodies like Document instantiation, XML loading from URLs or strings, XSLT 
+           transformations, XPath queries etc and comes especially handy for people doing what is lately 
+           known as "AJAX" development. 
+    </p>
+    <p>
+		Supported browsers are Mozilla - Firefox and family, Internet Explorer with MSXML3.0 and up,  
+		Konqueror (KDE 3.3+ for sure), Safari and Opera.
+		Konq, Safari and Opera offer no XSLT/XPath scripting support AFAIK.
+    </p>
+    <p>
+	    	This document provides an overview of Sarissa along with examples of common tasks. 
+	    	The API documentation follows (thanks to <a href="http://jsdoc.sourceforge.net" title="Link to JSDoc project at SourceForge">JSDoc</a>).
+	    	This documentation is distributed under the GNU Free Documentation License (<a href="fdl.txt">fdl.txt</a>).
+    </p>
+    <p>
+        The latest version of Sarissa can always be found on 
+		<a href="https://sourceforge.net/projects/sarissa/" title="Link to Sarissa project at SourceForge">
+		the Sourceforge project page.</a> Please send comments, corrections etc via email or the 
+		<a href="https://sourceforge.net/forum/forum.php?forum_id=256492" title="Link to Sarissa forum at SourceForge.net">Sarissa forum.</a>. 
+      </p>
+    </div>
+    <div class="section">
+      <h3>
+        <a id="license">License(s)</a>
+      </h3>
+      <p>
+        Sarissa is distributed under the GNU GPL version 2 (see <a href="gpl.txt">gpl.txt</a>) or higher, 
+        GNU LGPL version 2.1 (see <a href="lgpl.txt">lgpl.txt</a>) or higher and Apache Software License 2.0 or higher 
+         (see <a href="asl.txt">asl.txt</a>). This means you can choose one of the three and use that if you like. If 
+         you make modifications under the ASL, i would appreciate it if you submitted those.
+         In case your copy of Sarissa does not include the license texts, you may find
+		them online in various formats at <a href="http://www.gnu.org">http://www.gnu.org</a> and 
+		<a href="http://www.apache.org">http://www.apache.org</a>.
+      </p>
+     </div>
+     <div class="section">
+      <h3>
+        <a id="#greditspeople">Gredits (People)</a>
+      </h3>
+     
+      <p>
+	  See <a href="../CHANGELOG.txt">CHANGELOG.txt</a>.	  
+	  My deepest apologies to anyone I fail to mention; please send over an email and I will fix it :-)
+	  </p>
+	</div>
+	
+	<div class="section">
+      <h3>
+        <a id="#greditssoftware">Gredits (Software)</a>
+      </h3>
+	  <p>
+	  Sarissa is documented with <a href="http://jsdoc.sourceforge.net" title="Link to JSDoc project at SourceForge">JSDoc</a>, 
+	  tested with <a href="http://kupu.oscom.org/download/">ECMAUnit</a> and built using <a href="http://ant.apache.org/">Apache Ant</a>. 
+	  </p>
+	  <p>
+		  Sarissa was inspired by articles and code available on the web, most notably the 
+		  <a href="http://webfx.eae.net/dhtml/ieemu/">IE Emu Series</a> [webfx.eae.net] at webfx and  
+		  <a href="http://www.webreference.com/programming/javascript/domwrapper/">Cross-Browser DOM Wrapper article</a> [webreference.com]. 
+		  
+	  </p>
+	  <p>Here are some projects using Sarissa, please let me know of others:</p>
+	  <ul>
+	  	<li>Oscom's really cool <a href="http://kupu.oscom.org/">Kupu WYSIWYG Editor</a></li>
+	  	<li><a href="http://communitymapbuilder.org/">MapBuilder</a> is a modern standards-based web mapping client</li>
+	  	<li><a href="http://plone.org/">Plone</a> is a user-friendly and powerful open source Content Management System</li>
+	  	<li><a href="http://anyterm.org/">Anyterm</a>, a web based terminal interface for your servers (it sounds crazy at first but you quickly find yourself wondering "how come i never thought of that")</li>
+		<li>The Minesweeper game featured as a sample application was written by Sean Whalen, who is also the maintainer.</li>
+		<li>Jay Kimble's <a href="http://codebetter.com/blogs/jay.kimble/archive/2005/08/16/130777.aspx">JAAJAX Lib for .Net</a></li>
+		<li>Jason Diamond's <a href="http://jason.diamond.name/weblog/category/my-ajax-dot-net">My Ajax.NET library</a></li>
+		<li><a href="http://www.mojoportal.com/">MojoPortal</a>, an Object Oriented web site framework written in C# that runs under ASP.NET on Windows or under Mono on Linux or Mac OS X</li>
+	  </ul>
+	  <p>
+	  	Nearby, Dimitri Glazkov's XPath over HTML for MSIE (html-xpath) project at 
+	  	<a href="http://sourceforge.net/projects/html-xpath">http://sourceforge.net/projects/html-xpath</a> 
+	  	can be used as a complement to Sarissa. Moz already has DOM3 like HTML XPath support. 
+	  </p>
+    </div>
+    <div class="section">
+      <h3>
+        <a id="ecmaunit">How to test Sarissa in your browser with ECMAUnit</a>
+      </h3>
+      <p>
+       Sarissa tests are written using <a href="http://kupu.oscom.org/download/">ECMAUnit</a>, a unit testing framework for ECMAScript (a.k.a. JavaScript). You can test Sarissa against your browser <a href="../testsarissa.html">here</a>.
+         </p>
+    </div>
+    <div class="section">
+      <h3>
+        <a id="getxmldom">How to obtain a DOM Document object</a>
+      </h3>
+      <p>
+            Obtaining a DOM Document object is as easy as calling a factory
+            method:
+         </p>
+      <pre xml:space="preserve">
+// Get a browser-specific DOM Document object
+var oDomDoc = Sarissa.getDomDocument();
+</pre>
+      <p>
+            Additionally, you can also pass two string parameters to that
+            factory method. These parameters are a namespace and a local name
+            respectively. Their combination builds the Document Element thus:
+         </p>
+      <pre xml:space="preserve">
+var oDomDoc = Sarissa.getDomDocument("http://foo.org/ns/uri","foo");
+</pre>
+      <p>
+          will build a representation of the following into memory:
+	  </p>
+      <pre xml:space="preserve">
+&lt;foo xmlns="http://foo.org/ns/uri"&gt;&lt;/foo&gt;
+</pre>
+      <p>
+            In Mozilla, calling the <code>Sarissa.getDomDocument</code> method
+            as above is equivalent to:
+      </p>
+      <pre xml:space="preserve">
+var oDomDoc = document.implementation.createDocument("http://foo.org/ns/uri","foo", null);
+</pre>
+      <p>
+            In the case you are using Internet Explorer, the
+            <code>Sarissa.getDomDocument</code> method returns a DOM Document
+            object, using the most recent MSXML ProgID available in your system
+            for that Class. So supposing MSXML4.0 is available, the equivalent statement for IE is:
+         </p>
+      <pre xml:space="preserve">
+var oDomDoc = new ActiveXObject("Msxml2.DOMDocument.4.0");
+</pre>
+      <p>
+        <span class="bold">If</span> the arguments to the factory method
+            include a namespace URI and node name, the proper DocumentElement
+            is built and inserted in the Document object in IE as well.
+         </p>
+    </div>
+    <div class="section">
+      <h3>
+        <a id="getxmlhttp">How to obtain an XMLHTTP Request object</a>
+      </h3>
+      <p>
+            Creating an XMLHTTP/XMLHttpRequest is as easy as 
+         </p>
+      <pre xml:space="preserve">
+var xmlhttp = new XMLHttpRequest();
+</pre>
+      <p>
+            In IE 7 this works asis. For users under IE prior to version 7, 
+            an XMLHTTP object is returned using the most
+            recent MSXML ProgID found in the client system. So, supposing that
+            the user has MSXML4.0 installed, the above is equal to:
+         </p>
+      <pre xml:space="preserve">
+var xmlhttp = new ActiveXObject("Msxml2.XMLHTTP.4.0");
+</pre>
+      <p>
+            Further coding on XMLHTTP objects is the same for both browsers,
+            so:
+         </p>
+      <pre xml:space="preserve">
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET", "http://foo.org/someDocument.xml", false);
+// if needed set header information 
+// using the setRequestHeader method
+xmlhttp.send('');
+alert(Sarissa.serialize(xmlhttp.responseXML));
+</pre>
+      <p>
+            will load the document from the server and then throw an alertbox
+            with the contents of the file to your screen. XMLHTTP objects
+            support both synchronous and asynchronous loading of remote XML
+            documents (note the third parameter of the
+            <code>xmlhttp.open</code> method above). In asynchronous loading,
+            you will probably want to call a function to handle the object readystatechange 
+			events, see if loading is completed and then do whatever. To do that, add your 
+            onreadystatechange handler function before calling the <code>send</code> method. Something
+            like:
+         </p>
+      <pre xml:space="preserve">
+xmlhttp.onreadystatechange = function()
+{
+	if(xmlhttp.readyState == 4)
+		alert("Finished loading!");
+};
+</pre>
+    </div>
+        <div class="section">
+      <h3>
+        <a id="loadstring">How to load an XML Document Object from an XML String</a>
+      </h3>
+      <p>
+            You can also make a DOM Document "load" using an String
+            variable with XML content. It's pretty simple using the
+            <code>DOMParser</code> object:
+         </p>
+      <pre xml:space="preserve">
+var oDomDoc = Sarissa.getDomDocument();
+var xmlString = "&lt;root&gt;my xml!&lt;/root&gt;";
+oDomDoc = (new DOMParser()).parseFromString(xmlString, "text/xml");
+alert(Sarissa.serialize(oDomDoc));
+</pre>  
+    </div>
+    <div class="section">
+      <h3>
+        <a id="parseerror">How to check for parsing errors</a>
+      </h3>
+      	<p>
+			You can chack for and get a human-readable description of the error using 
+			the Sarissa getParseErrorText method, passing the document as the argument: 
+		</p>
+		<pre>
+if(Sarissa.getParseErrorText(oDomDoc) == Sarissa.PARSED_OK){
+	// The document was parsed/loaded just fine, go on
+	doSomething(oDomDoc);
+} 
+else{
+	// The document was not loaded correctly! Inform the user:
+	alert(Sarissa.getParseErrorText(oDomDoc));
+};
+</pre>
+		<p>
+			Sarissa.getParseErrorText will return one of:
+		</p>
+		<ul>
+			<li><code>Sarissa.PARSED_OK</code> if the document was parsed with no errors</li>
+			<li><code>Sarissa.PARSED_EMPTY</code> if the document is empty (this may occur instead of an error using XmlHttpRequest)</li>
+			<li><code>Sarissa.PARSED_UNKNOWN_ERROR</code> if the document was not loaded for an unknown reason</li>
+			<li>A human readable description of the parsing error</li>
+		</ul> 
+		<p>
+			<span class="bold">Tip</span>: Wrap the result of Sarissa.getParseErrorText
+			in a <code>&quot;pre&quot;</code> element if you want to render it.
+		</p>
+      <p>
+            If you have used the deprecated .load methods, you can also use
+            the <code>parseError</code> property. The property always gives an
+            integer, anything other than zero signals an error.
+         </p>
+      <pre xml:space="preserve">
+// ...
+oDomDoc.async = false;
+oDomDoc.load("someDocument.xml");
+if(oDomDoc.parseError.errorCode != 0)
+   alert("not well formed or other error!");
+else
+   alert("loaded ok");
+</pre>
+    </div>
+    <div class="section">
+      <h3>
+        <a id="transform">How to transform a DOM Document Object with XSLT</a>
+      </h3>
+      
+      <p>
+            Both Mozilla and IE provide JavaScript interfaces to control XSLT
+            transformations thanks to Transformiix and MSXML3 (or above)
+            respectively. MSXML3+ is available with IE6 or as a seperate
+            instalation.
+         </p>
+        <p>
+        	Sarissa emulates Mozilla's XSLTProcessor for Internet Explorer.
+        	This object allows reusability of stylsheets; with it you can use the same stylesheet 
+        	on more than one source file. You use the XSLTProcessor to control transformations and 
+        	set / get stylesheet parameters as in the following example:
+        </p>
+        <pre xml:space="preserve">
+// create an instance of XSLTProcessor
+var processor = new XSLTProcessor();
+
+// create a DOM Document containing an XSLT stylesheet
+var xslDoc = Sarissa.getDomDocument();
+var xslStr = "&lt;?xml version='1.0' encoding='UTF-8'?&gt;"+
+  	"&lt;xsl:stylesheet version='1.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform' &gt;"+
+    	"&lt;xsl:output method='html' version='1.0' encoding='UTF-8' indent='yes'/&gt;"+
+	"&lt;xsl:param name='title'&gt;&lt;xsl:value-of select=\"'default title'\"/&gt;&lt;/xsl:param&gt;"+
+    	"&lt;xsl:template match='/'&gt;&lt;p class='test' title='{$title}'&gt;test&lt;/p&gt;"+
+        "&lt;/xsl:template&gt;&lt;xsl:template match='@*'&gt;"+
+    	"&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;";
+xslDoc = (new DOMParser()).parseFromString(xslStr, "text/xml");
+
+// make the stylesheet reusable by importing it in the 
+// XSLTProcessor
+processor.importStylesheet(xslDoc);
+
+
+// now XSLTProcessor is the 'proxy' for our stylesheet,
+// the function below demonstrates usage
+function test(paramValue) {
+	// set a stylesheet parameter
+	processor.setParameter(null, "title", paramValue);
+    // create source document
+    var xmlDoc = Sarissa.getDomDocument("http://foo.org/ns/uri","foo", null);
+    // transform the document 
+    var newDocument = processor.transformToDocument(xmlDoc);
+    // show transformation results
+    alert(Sarissa.serialize(newDocument));
+}
+
+
+// test the above function
+test("test 1");
+</pre>
+      </div>
+
+    <div class="section">
+      <h3>
+        <a id="xpath">How to use XPath from JavaScript to select Nodes from an XML Document</a>
+      </h3>
+      <p>
+            Mozilla fully implements <a href="http://www.w3.org/TR/DOM-Level-3-XPath">DOM Level 3 XPath</a> so it was pretty trivial to implement IE's basic 
+			<code>selectNodes</code> and <code>selectSingleNode</code> methods, with full namespaces support. This is available in sarissa_ieemu_xpath.js.
+			Actually IE also needs the proprietary <code>setProperty</code> method for it's XPath implementation to work. 
+			<code>setProperty</code> is used for a number of things in IE. First you'll have to use it to make XPath available
+			for a certain document:
+         </p>
+      <pre xml:space="preserve">
+oDomDoc.setProperty("SelectionLanguage", "XPath");
+</pre>
+      <p>In IE, using <code>selectNodes</code> or <code>selectSingleNode</code> without the above first will give an error. 
+		Also, the same method with different parameters is used to allow IE to resolve namespace prefixes, for example:</p>
+      <pre xml:space="preserve">
+oDomDoc.setProperty("SelectionNamespaces", 
+                    "xmlns:xhtml='http://www.w3.org/1999/xhtml'");
+</pre>
+      <p>If you want to allow IE to resolve multiple namespace prefixes, use a space delimited list like:</p>
+      <pre xml:space="preserve">
+oDomDoc.setProperty("SelectionNamespaces", 
+                    "xmlns:xhtml='http://www.w3.org/1999/xhtml' 
+                     xmlns:xsl='http://www.w3.org/1999/XSL/Transform'");
+</pre>
+      <p>Mozilla does not need any of the above. DOM L3 XPath is always available and namespaces are resolved err... automatically. 
+		Below is an example of using <code>selectNodes</code> and <code>selectSingleNode</code> when Sarissa is available to provide 
+		cross browser XPath functionality. For more documentation on these proprietary methods check with the documentation at the MSDN website (<a href="http://msdn.microsoft.com" title="link to Microsoft developer website">http://msdn.microsoft.com</a>).
+		I'm not providing a URL for that as they constantly change their URLs.</p>
+      <pre xml:space="preserve">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;Untitled&lt;/title&gt;
+    &lt;script type="text/javascript" src="sarissa.js"&gt;
+    &lt;/script&gt;
+    &lt;script type="text/javascript" src="sarissa_ieemu_xpath.js"&gt;
+    &lt;/script&gt;
+    &lt;script type="text/javascript"&gt;
+    &lt;!--
+function testXpath()
+{
+    var xmlDoc = Sarissa.getDomDocument();
+    var objNodeList;
+    var xmlStr = "&lt;?xml version='1.0' encoding='UTF-8'?&gt;"+
+        "&lt;xsl:stylesheet version='1.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'&gt;"+
+        "&lt;xsl:output method='xml' version='1.0' encoding='UTF-8' indent='yes'/&gt;"+
+        "&lt;xsl:template match='*'&gt;&lt;/xsl:template&gt;&lt;xsl:template match='@*'&gt;"+
+        "&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;";
+        xmlDoc = (new DomParser()).parseFromString(xmlStr, "text/xml");
+	
+    <span style="bold">// the following two lines are needed for IE</span>
+    xmlDoc.setProperty("SelectionNamespaces", "xmlns:xsl='http://www.w3.org/1999/XSL/Transform'");
+    xmlDoc.setProperty("SelectionLanguage", "XPath");
+	
+    testSelectNodesOn(xmlDoc, "//xsl:template");
+    testSelectNodesOn(xmlDoc.documentElement, "//xsl:template");
+    testSelectNodesOn((xmlDoc.documentElement.getElementsByTagName("*"))[0], "//xsl:template");
+}
+function testSelectNodesOn(domNode, sXpath)
+{
+    alert("testing selectNodes("+sXpath+") on a "+domNode);
+    var objNodeList = domNode.selectNodes(sXpath);
+    for(i=0;i&lt;objNodeList.length;i++)
+        alert(Sarissa.serialize(objNodeList[i]));
+    alert("testing selectSingleNode("+sXpath+") on a "+domNode);
+    var oElem = domNode.selectSingleNode(sXpath);
+    alert(oElem+"\n"+Sarissa.serialize(oElem));
+};
+    //--&gt;
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;button onclick="testXpath()"&gt;test xpath&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+    </div>
+    <div class="section">
+      <h3>
+        <a id="nondom2xml">How to serialize non-DOM objects to XML </a>
+      </h3>
+      <p>
+      You can easily convert any non DOM object to XML using the <code>Sarissa.xmlize</code> 
+      method. Sarissa will preserve the structure and naming of the object graph, translating it to an XML tree. 
+      Collection items are translated to <code>array-item</code> elements. For an example, the following lines:
+      </p>
+      <pre xml:space="preserve">
+// create an object hierarchy       	
+book.chapters = new Array();
+book.chapters[0] = "Kingdom of Tags";
+book.chapters[1] = "Fall";
+book.chapters[2] = "Final battle";
+book.chapters[3] = "Characters that need to be escaped: << << \"' \"\"\"&&'' < > & ' \" ";
+book.chapters[4] = "Epilogue";
+book.editor = "Manos Batsis";
+var publisher = new Object();
+publisher.name = "Some Publisher";
+book.publisher = publisher;
+
+// serialize to an XML string
+var s = Sarissa.xmlize(book, "book");
+alert("Generated XML:\n"+s)
+</pre>
+		<p>will generate the markup below:</p>
+		<pre xml:space="preserve">
+&lt;book&gt;
+   &lt;chapters&gt;
+      &lt;array-item key="0"&gt;Kingdom of fools&lt;/array-item&gt;
+      &lt;array-item key="1"&gt;Fall&lt;/array-item&gt;
+      &lt;array-item key="2"&gt;Final battle&lt;/array-item&gt;
+      &lt;array-item key="3"&gt;
+         Characters that need to be escaped: &amp;lt;&amp;lt; &amp;lt;&amp;lt; 
+         &amp;quot;&amp;apos; 
+         &amp;quot;&amp;quot;&amp;quot;&amp;amp;&amp;amp;&amp;apos;&amp;apos; 
+         &amp;lt; &amp;gt; &amp;amp; &amp;apos; &amp;quot; 
+      &lt;/array-item&gt;
+      &lt;array-item key="4"&gt;Epilogue&lt;/array-item&gt;
+   &lt;/chapters&gt;
+   &lt;editor&gt;Manos Batsis&lt;/editor&gt;
+   &lt;publisher&gt;
+      &lt;name&gt;Some Publisher&lt;/name&gt;
+   &lt;/publisher&gt;
+&lt;/book&gt;
+</pre>
+    </div>
+    
+	<p>
+	<a href="http://sourceforge.net">
+		<img src="http://sourceforge.net/sflogo.php?group_id=75155&amp;type=1" width="88" height="31" alt="SourceForge.net Logo" />
+	</a>
+	</p>
+           
+        </p>
+
+<HR>
+
+
+    <TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+    <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+    <TD COLSPAN=2><FONT SIZE="+2">
+    
+        <B>File Summary</B>
+    
+    </FONT></TD>
+    </TR>
+    
+    <TR BGCOLOR="#eeeeee" CLASS="TableRowColor">
+    <TD WIDTH="15%"><B><A HREF="overview-summary-sarissa.js.html">sarissa.js</A></B></TD>
+    <TD>&nbsp;</TD>
+    </TR>
+    
+    <TR BGCOLOR="#eeeeee" CLASS="TableRowColor">
+    <TD WIDTH="15%"><B><A HREF="overview-summary-sarissa_dhtml.js.html">sarissa_dhtml.js</A></B></TD>
+    <TD>&nbsp;</TD>
+    </TR>
+    
+    <TR BGCOLOR="#eeeeee" CLASS="TableRowColor">
+    <TD WIDTH="15%"><B><A HREF="overview-summary-sarissa_ieemu_xpath.js.html">sarissa_ieemu_xpath.js</A></B></TD>
+    <TD>&nbsp;</TD>
+    </TR>
+    
+    <TR BGCOLOR="#eeeeee" CLASS="TableRowColor">
+    <TD WIDTH="15%"><B><A HREF="overview-summary-sarissa_ieemu_xslt.js.html">sarissa_ieemu_xslt.js</A></B></TD>
+    <TD>&nbsp;</TD>
+    </TR>
+    
+    </TABLE>
+    <HR/> 
+
+
+
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<A NAME="navbar_top"><!-- --></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#b8cade" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3">
+  <TR ALIGN="center" VALIGN="top">
+  
+  
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><b>Overview</b></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1"> <FONT CLASS="NavBarFont1">File</FONT>&nbsp;</TD>
+  
+
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"> <FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-tree.html"><FONT CLASS="NavBarFont1"><b>Tree</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="index-all.html"--><FONT CLASS="NavBarFont1"><b>Index</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="help-doc.html"><FONT CLASS="NavBarFont1"><b>Help</b></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD BGCOLOR="#b8cade" ALIGN="right" VALIGN="top"><EM>
+<b>sarissa</b></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="index.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="overview-summary.html" TARGET="_top"><B>NO FRAMES</B></A>
+&nbsp;&nbsp;
+<SCRIPT>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+</TABLE>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<FONT SIZE="-1">
+
+</FONT>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Tue May  9 22:30:39 2006</div>
+</BODY>
+</HTML>

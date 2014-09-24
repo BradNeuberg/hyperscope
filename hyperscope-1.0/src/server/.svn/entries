@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="267"
+   name=""
+   committed-date="2006-08-26T22:15:23.715527Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/server"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="267"
+   name="proxy.php"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-08-26T22:15:23.715527Z"
+   checksum="55677387117e954701c94bdd69310798"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+</wc-entries>

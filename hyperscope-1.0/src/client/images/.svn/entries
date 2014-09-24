@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="344"
+   name=""
+   committed-date="2006-09-04T04:29:10.115502Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/images"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="344"
+   name="browsermode_rollover.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-09-04T04:29:10.115502Z"
+   checksum="fbf282c3aebb5f9233b00253400cf091"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="arrow_up.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="727a440ed4ed404d0eac4a57553481fb"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="viewspecs_down.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="427a2b8052d943d02f246db6f9c62c54"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="logo.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="1b2d6150fa044e8df0bfd5fb82799295"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="help_down.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="27da777c11f49855a6ccc7d9482607d3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="help_normal.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="5e4511645148eb1a5747dd559124453b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="jump_down.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="bab36faae1439bcd16ffef356e359be0"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="344"
+   name="turbomode_rollover.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-09-04T04:29:10.115502Z"
+   checksum="9d147dac8051cff7ff3004fd8db3e146"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="lines.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="c0d951842edcdd069adf2d05d9eb38c8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="help_rollover.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="934b79cecc700b9f02dc6e69958e7f59"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="arrow_down.jpg"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="1c3b26df53fad3de9b1284bacd060b08"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="floatingPaneClose.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="17335f9b94d8767b82115d0dfbf905ac"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="344"
+   name="browsermode_down.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-09-04T04:29:10.115502Z"
+   checksum="7d89623c242336fa3a5336edd51dc92a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="viewspecs_down.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="27ecb25e6c7cebe22a2d6c256e8ceda8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="viewspecs_normal.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="533aecba1b1647df50f3023967d81d94"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="help_normal.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="242195594087c3ce6d2d616813dd0481"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="arrow_down.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="1f0978a19a1924ff389bb768b884ca38"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="logo.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="c7b794887837b83f353ca85f44d1035e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="jump_down.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="abeaafb3db72f072660e093d4328c63a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="jump_normal.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="409cb3b1a875a9e02985fc732323cfe0"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="344"
+   name="turbomode_down.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-09-04T04:29:10.115502Z"
+   checksum="db2e7efc004fce39906e23d19040a123"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="shadowB.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="7dd2cc4c1fd37bc7f925ffe70a859035"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="viewspecs_rollover.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="27e1b1eb4f24a3fe3ea689fcf3d7c12c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="help_rollover.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="19477c30dd588485284adde4a1e0e72f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="link.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="edce683553ce66ca07d3042a1c2ad709"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="jump_rollover.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="aba86cc076631e82595f672f608efbe9"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="344"
+   name="browsermode_normal.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-09-04T04:29:10.115502Z"
+   checksum="982320660d0172a19d67e485bd262e4b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="344"
+   name="browsermode_down.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-09-04T04:29:10.115502Z"
+   checksum="7b3eeee148ebe847add333bca4916695"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="viewspecs_normal.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="2961f7a1cbd0c8ae8e449eaf8eff6623"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="shadowL.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="f0575bbff39ab88ccadbd3017630a5f9"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="shadowBL.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="72f2b32835df660ebba821ca6162a38d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="jump_normal.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="00b5f4f0751cc02bbad35a2ee702677a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="shadowR.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="e709c4520b03cbe465c87f47b474cab7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="344"
+   name="turbomode_down.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-09-04T04:29:10.115502Z"
+   checksum="a8fcca531cab161b01cf81dad47cc3a1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="344"
+   name="turbomode_normal.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-09-04T04:29:10.115502Z"
+   checksum="bab717fe074d193003feb887a4b534d8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="shadowBR.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="03f2ebe6a7cb2a57081c979470322903"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="shadowT.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="f43526cd33b8d85db91ff923e1c2a245"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="shadowTR..png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="d947b56a618497c6a49e7ca490a94559"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="344"
+   name="browsermode_rollover.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-09-04T04:29:10.115502Z"
+   checksum="94ea790dfeb5e52b89b5dff046b36e77"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="viewspecs_rollover.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="e95b6e6c09ff94a1d2dc3312686b67a4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="link.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="02b004d7918515dde421f30a8d6ccc83"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="217"
+   name="background.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="c4ae84a1a7103852222dfaa111c249d6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="217"
+   name="help_down.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="2a8695b9f288dc1006eab9cfb8728ca3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="217"
+   name="jump_rollover.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="18be96dc923c56196ac1ddd1169e8606"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="344"
+   name="browsermode_normal.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-09-04T04:29:10.115502Z"
+   checksum="8618c7cd54b76560f7ff9197f3b8c4c8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="344"
+   name="turbomode_rollover.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-09-04T04:29:10.115502Z"
+   checksum="88eff5dd7b2eb9aa27bd1d8118485d71"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="217"
+   name="shadowTL.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="9825910136a7c2b49eca51f86c8f316a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="344"
+   name="turbomode_normal.gif"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-09-04T04:29:10.115502Z"
+   checksum="8b10533bf6b93b4763553e8eb33a2df4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="217"
+   name="arrow_up.jpg"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="45ea97cb3051855c357033238450323d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="217"
+   name="shadowTR.png"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:19:48.391272Z"
+   checksum="3e78026430b2b5833684d4716d897f93"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+</wc-entries>

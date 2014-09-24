@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/tests/flash"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="unit_tests_comm.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b102c3273abb3df5274811ea9e5a4d8e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="UnitTestsComm.as"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="66e99d79914446e720f2c3e340440b6a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_comm_simple.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="74feddde1dc0f7bf5fc1674f08d1688a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   name="resources"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="HelloWorld.as"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="ead8022c3facef3d1fea5c137cb9c925"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+</wc-entries>

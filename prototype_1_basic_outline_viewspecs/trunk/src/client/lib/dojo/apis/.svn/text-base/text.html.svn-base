@@ -1,0 +1,12 @@
+<h2 id="dojo.text">dojo.text</h2><h3>Methods</h3><pre>trim (_330)
+paramString (str, _332, _333)
+capitalize (str)
+isBlank (str)
+Builder (str)
+</pre><h2 id="dojo.text.Builder Object">dojo.text.Builder Object</h2><h3>Methods</h3><pre>append (s)
+clear ()
+remove (f, l)
+replace (o, n)
+insert (idx, s)
+</pre><h3>Properties</h3><pre>Number length
+</pre>

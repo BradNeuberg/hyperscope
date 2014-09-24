@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="371"
+   name=""
+   committed-date="2006-09-22T05:18:18.204358Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/trunk/augxml"
+   last-author="jcheyer"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   name="doc"
+   kind="dir"/>
+<entry
+   name="lib"
+   kind="dir"/>
+<entry
+   name="src"
+   kind="dir"/>
+<entry
+   committed-rev="63"
+   name="README"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-05-25T15:24:15.334878Z"
+   checksum="b8ee737ba5e69f6aa4c8cf13873d43d5"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="354"
+   name="build.xml"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-09-04T07:11:34.984977Z"
+   checksum="13182168cad3e3d24778285260661c7e"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+</wc-entries>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/tests/widget/deprecated"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="test_Button_lots2.html"
+   text-time="2006-10-14T01:00:01.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="079274e7bf61957ccc0fd7eb47e9b661"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Button_script.html"
+   text-time="2006-10-14T01:00:01.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="6ec9c64c92f5945cbca598fe6262edf8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_PopUpButton.html"
+   text-time="2006-10-14T01:00:01.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="76949d49228eed52f78840a134d11050"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Button.js"
+   text-time="2006-10-14T01:00:01.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="0ee331158777b9089df8bd5979a74956"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Menu.html"
+   text-time="2006-10-14T01:00:01.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b21d22fa05196a3d7899fe54778c9787"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_SimpleDropdownButtons.html"
+   text-time="2006-10-14T01:00:01.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="be59324778317aeadb4963fedba0e5f9"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_DropdownButton.html"
+   text-time="2006-10-14T01:00:01.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b05f63bc1fd1b2d13185265f5338409c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ContextMenu.html"
+   text-time="2006-10-14T01:00:01.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d31f3d5b703390cfbb979a9877ec1f4f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Tabs.html"
+   text-time="2006-10-14T01:00:01.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="bdab79be53df02d92fa85a27841a8529"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ContextMenu_2.html"
+   text-time="2006-10-14T01:00:01.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="626ee39576218756a65bbf056e070308"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Button.html"
+   text-time="2006-10-14T01:00:01.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d1694479a885eb0f5249a6409db5e73e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Button_lots.html"
+   text-time="2006-10-14T01:00:01.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="7798e5848cc6cb7f1685af76b593f61e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+</wc-entries>

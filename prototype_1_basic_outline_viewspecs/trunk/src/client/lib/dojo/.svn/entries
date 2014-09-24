@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2006-03-06T23:36:47.192473Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/prototype_1_basic_outline_viewspecs/trunk/src/client/lib/dojo"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   name="documents"
+   kind="dir"/>
+<entry
+   name="tests"
+   kind="dir"/>
+<entry
+   committed-rev="11"
+   name="LICENSE"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="4010e560c8b5791d4e930025288cddac"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:22.000000Z"/>
+<entry
+   committed-rev="11"
+   name="dojo.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="1dad0de373c948265b61e3d85e90bca6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   name="demos"
+   kind="dir"/>
+<entry
+   name="src"
+   kind="dir"/>
+<entry
+   committed-rev="11"
+   name="CHANGELOG"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="5c71e1892f2efac61beba94b88b6f063"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="dojo.js.uncompressed.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="9e2a50a841beea1ca2e3443c3903a4ef"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+<entry
+   committed-rev="11"
+   name="iframe_history.html"
+   text-time="2006-10-14T01:00:30.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="4e808e8f0fba2447e41a653cc3b53b43"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:25.000000Z"/>
+<entry
+   name="apis"
+   kind="dir"/>
+<entry
+   committed-rev="11"
+   name="build.txt"
+   text-time="2006-10-14T01:00:30.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="1fb1600d49d6f88035228e89a418c490"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+</wc-entries>

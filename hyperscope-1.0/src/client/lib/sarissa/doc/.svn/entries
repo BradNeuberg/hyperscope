@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="30"
+   name=""
+   committed-date="2006-05-17T19:31:50.682190Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/sarissa/doc"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="30"
+   name="index-all.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="0951e9fde6f473bb465a59c3a2e10e4c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="overview-summary-sarissa.js.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="c860cba66a31a80e43ed57ec5f3f0869"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="fdl.txt"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="a88a29e87ef84ea0c5e176225597ea4a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="GLOBALS.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="85c560812f328cf30fee3ef4ce326913"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="XMLSerializer.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="234bebad2d1c429b22b6f2107e8127cf"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="help-doc.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="91cf09d80e92202496f54601f9fc3312"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="gpl.txt"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="393a5ca445f6965873eca0259a17f833"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="XMLDocument.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="0b5685913143bfe4049e189a7a98052e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="XMLHttpRequest.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="e38a58b9103eabc84042a74a8914a66c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="overview-sarissa_dhtml.js.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="7373d392f9da70ad95846626577d81c4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="overview-sarissa_ieemu_xpath.js.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="d09ce5906ae3718cbc8af88e09ef1e13"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="overview-summary-sarissa_ieemu_xslt.js.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="d68d1b876c8a77f3e56735b1898999e1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="stylesheet.css"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="04703ac28cf82b2728d26e013a3974fb"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="allclasses-frame.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="e873e8eeff393b0de864ff8736c92ae7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="Document.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="baa89a4fe35ed0dda8588e73f90a99e8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="overview-sarissa_ieemu_xslt.js.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="eac9c65d9afff59d4700f80748fefb84"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="overview-sarissa.js.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="36331ab8fe21625c5a23061c309d8cf8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="Element.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="bd9ca5bd8537ca34f511012aae74a227"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="asl.txt"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="63342370835cddd610e330f97d82f4a0"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="XSLTProcessor.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="202cab21608e4406f2ef003213334e18"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="DOMParser.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="38a4035c48dc3f04e4dc85e990d030c1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="overview-frame.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="22ced5a63a87126f2660eb28e54c1dc6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="overview-summary.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="4304028e2a7e7adafc070bfb307d8e13"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="overview-tree.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="f9e6f160265d729e0a8564169f66e12c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="Sarissa.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="71c156101a47d0c80940b9cf2df57cb5"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="overview-summary-sarissa_ieemu_xpath.js.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="9e0ebdadf039a1f5550db1045e37c5dd"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="overview-summary-sarissa_dhtml.js.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="1e8d508463c94e9d178f9799ba4a9a4a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="index.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="4c96c892b3d23d307edcc3970d61c71d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="lgpl.txt"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="7fbc338309ac38fefcd64b04bb903e34"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="XMLElement.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="d44155c058430f89f7803722e6aa14a7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="allclasses-noframe.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="0b742835adb2f8017bb9cf540188e4df"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+</wc-entries>

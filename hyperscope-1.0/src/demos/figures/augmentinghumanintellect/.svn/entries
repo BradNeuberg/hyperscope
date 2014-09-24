@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="359"
+   name=""
+   committed-date="2006-09-04T09:51:44.716880Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/demos/figures/augmentinghumanintellect"
+   last-author="eekim"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="359"
+   name="fig1.gif"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="42a44a8a6467f4701926b69b4e6fd28d"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig2.gif"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="370f2ea8589acd8717876c75dace0744"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig3.gif"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="69489e31ca1d161fee26fa4ed27038ef"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig4.gif"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="09fb29fe94ab507a3bf3446355bfa9f4"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig5.gif"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="2529d8dfcac865299d20476ee58d6d8b"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+</wc-entries>

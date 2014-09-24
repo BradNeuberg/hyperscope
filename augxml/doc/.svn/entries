@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="63"
+   name=""
+   committed-date="2006-05-25T15:24:15.334878Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/trunk/augxml/doc"
+   last-author="jcheyer"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="23"
+   name="license.txt"
+   text-time="2006-10-14T00:59:46.000000Z"
+   committed-date="2006-05-02T16:54:06.197732Z"
+   checksum="ebf4e8b49780ab187d51bd26aaa022c6"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="23"
+   name="copyright.txt"
+   text-time="2006-10-14T00:59:46.000000Z"
+   committed-date="2006-05-02T16:54:06.197732Z"
+   checksum="61705e729fd826951975acb1125a2f57"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="63"
+   name="install.html"
+   text-time="2006-10-14T00:59:46.000000Z"
+   committed-date="2006-05-25T15:24:15.334878Z"
+   checksum="4eab680d4f8a6b7f6f5923e719426a9d"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="63"
+   name="faq.html"
+   text-time="2006-10-14T00:59:46.000000Z"
+   committed-date="2006-05-25T15:24:15.334878Z"
+   checksum="66b235b20e7b0464aaf829a699d9ade1"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+</wc-entries>

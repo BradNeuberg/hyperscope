@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="359"
+   name=""
+   committed-date="2006-09-04T09:51:44.716880Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/demos/figures/augment-132082"
+   last-author="eekim"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="359"
+   name="fig06.gif"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="f416c971fac78235636384d8bf11d9ee"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig07.gif"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="8c8bcab64e84026731e590bc2611e192"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig08.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="0dc5e8e7fab46c6f7d05b9bcf82e4c76"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig09.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="76aa59ecfed097a9711599c9033e14cd"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig01.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="84fc3d47ca35e630aa1f01db868c5027"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig10.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="b10843cf418e885ef7b2380d2132f1c4"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig02.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="6bd7d7afccf9e7c545fa4f7884746b0b"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig11.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="76a5843187db2b03a809d2250af11bc6"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig03.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="eca4b29dcf3d62fc09d85472a8af8971"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig12.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="081dfc3dd26a03fc142193960fd5dfd3"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig04.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="94803ab021d8c4aef67d37c4a77d6bc3"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig13.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="b6812a81562d6b6740433449e2d468dd"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig05.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="7bc444e85dac828971e51463ed7ad327"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+</wc-entries>

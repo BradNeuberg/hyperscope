@@ -1,0 +1,39 @@
+HyperScope v1.0
+===============
+
+The HyperScope is a high-performance thought processor that enables
+you to navigate, view, and link to documents in sophisticated
+ways. It's the brainchild of Doug Engelbart, the inventor of hypertext
+and the mouse, and is the first step towards his larger vision for an
+Open Hyperdocument System.
+
+The HyperScope is written in JavaScript using the Dojo toolkit and
+works in Firefox (recommended) and Internet Explorer. It uses OPML as
+its base file format. It is open source and available under the GPL.
+(See LICENSE for more information.)
+
+MORE INFORMATION
+----------------
+
+See the documents in the docs directory for more information on
+installing, configuring, and using the HyperScope.
+
+More information is available on our web site at:
+
+  http://hyperscope.org/
+
+CREDITS
+-------
+
+Brad Neuberg <bkn3@columbia.edu> created the HyperScope code and 
+architecture.  The team responsible for the HyperScope vision, architecture, 
+and overall implementation (including supplementary code) includes:
+
+  * Doug Engelbart <doug@bootstrap.org>
+  * Christina Engelbart <christina@solari.com>
+  * Eugene Eric Kim <eekim@blueoxen.com>
+  * Brad Neuberg <bradneuberg@yahoo.com>
+  * Jonathan Cheyer <jonathan@cheyer.biz>
+
+with many additional contributions from our great community.  We hope
+you'll join us!

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="359"
+   name=""
+   committed-date="2006-09-04T09:51:44.716880Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/demos/figures/augment-132811"
+   last-author="eekim"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="359"
+   name="fig15.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="a5b62501be31abb7fc7fb40a5467bcd1"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:56.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig06.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="daebbe27a6da9e570f984c7a523977dc"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:56.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig07.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="d7d10e39fe1f2f6ae268bc95698da0a8"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:56.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig08.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="e5cd3caa669f0e01e6980d4f5d3a0ed2"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:56.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig09.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="cdb739e48ecaa80f1703366ba857670b"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:56.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig10.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="88bb002dab7a2318b263b7cedfeff328"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:56.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig01.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="0c9402fdbb9034712d0672d647c8a406"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:56.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig11.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="a11404ab21cc9240b45e5712aa563d76"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:56.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig02.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="df3651c71c2a087aa6be59a404f2ba28"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:56.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig12.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="541c87b16c295298501a757c505851d4"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:56.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig03.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="927f8dc7100a4789d3fe41d66e8dac7e"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:56.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig13.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="b3b331f81140d9c70f0ff019f3789c7c"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:56.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig04.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="05c8b55b721e0fde5c89a840b01ec12e"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:56.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig14.gif"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="6b75b67aed0553adcfb2b32b614ca2e6"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:56.000000Z"/>
+<entry
+   committed-rev="359"
+   name="fig05.gif"
+   text-time="2006-10-14T00:59:56.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="8c2a9446430f6a2aa30bf67e614712f1"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:56.000000Z"/>
+</wc-entries>

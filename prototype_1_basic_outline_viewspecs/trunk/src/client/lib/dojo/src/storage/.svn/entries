@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2006-03-06T23:36:47.192473Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/prototype_1_basic_outline_viewspecs/trunk/src/client/lib/dojo/src/storage"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="11"
+   name="Storage.swf"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="57a8ef11cc1fad969c5a0c0feefd066b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="771e61732260bdd54d305072a6c036e0"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="Storage.as"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="1b692dc05b33507c1630b0415feb3565"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="storage.sh"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="4be84f772163c98ca2c9f2e6ff51df03"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="browser.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="5b37ed1be85b1357f2b61e91dcead475"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+</wc-entries>

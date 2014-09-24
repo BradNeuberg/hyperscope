@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2006-03-06T23:36:47.192473Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/prototype_1_basic_outline_viewspecs/trunk/src/client/lib/dojo/tests/jslink"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="11"
+   name="lib.js"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="93a4de9a4db70b2416c7198bf52d63bf"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="program.js"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="a7101c33f3afbedebd1f5d4f653c1ef4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+<entry
+   committed-rev="11"
+   name="link-and-run.sh"
+   text-time="2006-10-14T01:00:24.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="0750f4ed2c5be918a79142723a59971c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:24.000000Z"/>
+</wc-entries>

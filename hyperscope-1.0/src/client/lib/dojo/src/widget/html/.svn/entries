@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/src/widget/html"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="Menu.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="35909f92497e419d147d921e9a9fd39a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="AccordionPane.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="551b4bfb09515f90ce88eef226626b17"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="ComboBox.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5159a5baddd8f5cc714ee8bced5747b1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="ContextMenu.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="e86e6c16e8ed14c54d144408dda26cf8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="DebugConsole.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="58c2dc51a77ed57c42054399d230ecd6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="DocPane.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="48ebd26c7203a3051c8478faedcb61b4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="GoogleMap.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3753d137227c06aec60ad9dc0f0d81c2"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="DatePicker.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="cc3d54400ffd8cfeed8598ff08530f7d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="YahooMap.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a69b794801c4fa4bd1deebc38ee9b096"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Spinner.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="0b22f6b0545a8a5c9cd49e74d1eb7f3c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="ShowAction.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="04f156302532a8caca0b355cb29f2f5c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="ContentPane.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="95945b67dd515f4450316bb3293996bc"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Show.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a00022aef2245d3c9fb08af628c88cab"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Slider.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d2c4059276f43a3e0cba9fcd662efafe"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="MenuItem.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2c7c100d5ce2f6561c16943b16e1e18d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="SortableTable.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="0e6f1e589a3619889211d901680dbf50"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="stabile.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="1a443e535f20da9504e5e285bea48fbc"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="MonthlyCalendar.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="959702ffe2970de53fff110c4ffee4ff"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="TitlePane.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a673d8825f16131a946f6527291a00a3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Checkbox.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="1983436e223721639a1da135ea9912aa"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="TaskBar.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="58430d5cdaeef10708d68c92963963ba"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:15.000000Z"/>
+<entry
+   committed-rev="203"
+   name="DropdownButton.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="fb2a1a181848ce5f95bbe2c23cc401f1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Tooltip.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="4a626f4afb7d99bfbb8a202811b4dd3a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="TimePicker.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d5bc21b5f78f5bc6b29e6d792413cd91"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Button2.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="c16d639bdd154e39c2d421ddafc90f74"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="LinkPane.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="4d6194b0fd094d1461a8678996411705"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="ShowSlide.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="405526c25565b3db86b8d0792d4cfe25"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+</wc-entries>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2006-03-06T23:36:47.192473Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/prototype_1_basic_outline_viewspecs/trunk/src/client/lib/dojo/src/xml"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="11"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="38d2c4d46ad2639db7cb526b73e8c853"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+<entry
+   committed-rev="11"
+   name="Parse.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="bcf6b78560696492f90415a9362a6716"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+<entry
+   committed-rev="11"
+   name="domUtil.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="ef243acf393688cc2aabfe3ff78ebd6f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+<entry
+   committed-rev="11"
+   name="svgUtil.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="b9a3bd240ca7c347c01f76e24adc138d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+<entry
+   committed-rev="11"
+   name="htmlUtil.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="084eee058d5fd0daa229d42a99aab757"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+</wc-entries>

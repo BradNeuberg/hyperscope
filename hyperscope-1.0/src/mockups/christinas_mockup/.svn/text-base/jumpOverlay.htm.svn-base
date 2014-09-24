@@ -1,0 +1,97 @@
+<html><head><title>HyperScope</title>
+
+<style>
+body {
+    margin: 0;
+}
+#header {
+    width: 100%;
+    background-color: blue;
+}
+table.header {
+    background-color: blue;
+    color: white;
+    font-size: small;
+    width: 100%;
+    padding: 3px;
+}
+span.hyperscope {
+    font-size: large;
+    font-weight: bold;
+}
+#explanation {
+    padding: 100px;
+}
+</style></head><body>
+
+<!-- ### BEGIN HYPERSCOPE BANNER AND SCREENS ###-->  
+<table border="0" width="706">
+  <tbody>
+    <tr valign="middle"> 
+      <td colspan="7"> <div align="center"><img src="jumpOverlay_files/hyperScope_banner.jpg"> 
+        </div></td>
+    </tr>
+    <tr valign="top"> 
+      <td width="150">&nbsp;</td>
+      <td colspan="4"><img src="jumpOverlay_files/Jump_basicOverlay.jpg"></td>
+      <td width="63">&nbsp;</td>
+      <td width="23">&nbsp;</td>
+    </tr>
+    <tr valign="middle"> 
+      <td>&nbsp;</td>
+      <td width="63">&nbsp;</td>
+      <td width="109">&nbsp;</td>
+      <td width="75">&nbsp;</td>
+      <td width="193">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr valign="middle"> 
+      <td>For details see:</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr align="center" valign="middle"> 
+      <td><a href="bannerdetail.htm">banner detail</a></td>
+      <td><a href="jump.htm">jump</a></td>
+      <td><a href="views.htm">viewspecs</a></td>
+      <td><a href="help.htm">help</a></td>
+      <td>&nbsp;</td>
+      <td><a href="menu.htm">menu</a></td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<!-- ### END HYPERSCOPE BANNER AND SCREENS ###-->  
+
+<p>&nbsp;</p>
+<blockquote>
+  <h2>Jump Detail:</h2>
+  <ol>
+    <li>Jump button is depressed</li>
+    <li>Overlays vs. dialog boxes? (See <a href="jump.htm">dialog box version</a>
+      of this same prompt window.) I can't remember what we decided about using 
+      overlays vs. dialog boxes but the main requirement I can think of is to 
+      be able to move it if is blocking your view of what you want to click on</li>
+    <li>User can click on a node or enter node address or complete URL with optional 
+      viewspecs in the typein field</li>
+    <li>Button details 
+      <ol type="a">
+        <li>?: gives a popup help window describing Jump Item command and how 
+          to use it</li>
+        <li>More: appends the Beginners Viewspecs window and changes the More 
+          button to a Less button -- this is the provision for user to learn how 
+          to Jump and Set Viewspecs in the same command</li>
+        <li>OK: executes the jump</li>
+        <li>Cancel: aborts the command</li>
+      </ol>
+    </li>
+  </ol>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</blockquote>
+</body></html>

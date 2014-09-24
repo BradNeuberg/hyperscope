@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2006-03-06T23:36:47.192473Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/prototype_1_basic_outline_viewspecs/trunk/src/client/lib/dojo/src/widget/templates/images"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="11"
+   name="treenode_grid_c.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="915a3e77bf59b093539330aa9ce8917d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="treenode_blank.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="f6f2d357109b2218af50419a0bed9d4c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="tab_right_r_curr.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="4cd1435b75f6a5aa03ea1a262551ecd7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="treenode_expand_minus.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="c407464c46423ec75419d07aad9929bb"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="tab_left.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="677259e72608b46375883b4984c18e82"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="tab_right_r.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="d5e6de3b7dfcd03413dbef7c88286e3d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="treenode_grid_l.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="066629e83462bde466b2fe7c4ec13809"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="dropdownButtonsArrow.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="f6b2fd6b57149cb40c68e95ba5eee9a5"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="blank.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="6d22e4f2d2057c6e8d6fab098e76e80f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="toolbar-bg.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="ad31b53298526679c4d5551824e41b26"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="treenode_grid_p.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="f6a761db563f1ff09d36288cd35125d5"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="dropdownButtonsArrow-disabled.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="745cc20e9d0ead2127b3194180345e37"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="tab_left_r_curr.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="aefcceca2b2783392551c7bbbb35f132"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="treenode_grid_t.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="636db883ac23d68354df037cd0503909"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="verticalbar.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="7a2b7b5997ec29a77749c65b67b82b76"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="treenode_grid_v.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="4bcdf144652c26aedb78951795871081"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="combo_box_arrow.png"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="52c4f57bb8d3f1e48bfdc028dae7492f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="transparent.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="949819fc318f64d550f874c9f16a1b2d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="tab_left_r.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="fe732a7303cd4cd108284abb008c911e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="treenode_grid_x.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="f071a812f468b9f7639785eda4ae7bcf"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="treenode_grid_y.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="2fe093f5889fce71b6532fccf3e6bc89"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:27.000000Z"/>
+<entry
+   committed-rev="11"
+   name="tab_right.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="e94a757aa184ff7c8e8d36eeb59a2373"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:27.000000Z"/>
+<entry
+   committed-rev="11"
+   name="treenode_grid_z.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="6f4503b7f025959eff1114b3c80e0f2c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:27.000000Z"/>
+<entry
+   committed-rev="11"
+   name="treenode_expand_plus.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="b75c7d3661715dff329a6079042cf017"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:27.000000Z"/>
+<entry
+   committed-rev="11"
+   name="submenu_off.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="a2214fa7310621fc4699483449911c9b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:27.000000Z"/>
+<entry
+   committed-rev="11"
+   name="submenu_on.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="df2eb74e68deb25db80b8d429ee17098"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:27.000000Z"/>
+<entry
+   committed-rev="11"
+   name="treenode_node.gif"
+   text-time="2006-10-14T01:00:27.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="aa4230dfd3883ce362038d6bd26abd2d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:27.000000Z"/>
+</wc-entries>

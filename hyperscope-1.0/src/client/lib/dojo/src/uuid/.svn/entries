@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/src/uuid"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="TimeBasedGenerator.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="083317feece46a6f1d1b08473ab7fe31"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="LightweightGenerator.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="123859988200f6eed237e8079d7a8cc7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="NameBasedGenerator.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="9c85508cca2c90a5493425c648008116"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Uuid.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="f7d5bc9c97a365cf7a9d3fa9371ab042"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="RandomGenerator.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="edca6768fbf68d39acc2282636ac5917"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="106ccb9002e2358c3de76417c2adcd1e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="NilGenerator.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="1e837860dc0846abf4f28f49d2313067"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+</wc-entries>

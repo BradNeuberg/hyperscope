@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="227"
+   name=""
+   committed-date="2006-08-16T02:41:08.760210Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/sarissa"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   name="build_tools"
+   kind="dir"/>
+<entry
+   committed-rev="218"
+   name="xpath.js"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-08T22:41:28.785473Z"
+   checksum="94ef1f65886cb235747ab6526f18e01a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="testsarissa.js"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="5ac0c5fea79544b8df80f718701b552e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   name="sample-apps"
+   kind="dir"/>
+<entry
+   committed-rev="30"
+   name="test-bad.xml"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="0c13422699ec8e09a345820934ba404b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="227"
+   name="core.js"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-08-16T02:41:08.760210Z"
+   checksum="98fb2a0bb53a79a19941998222b4ecf4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="sarissa_ieemu_load.js"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="41c3c76d69d1f72e492b70165171ebe7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   name="doc"
+   kind="dir"/>
+<entry
+   committed-rev="30"
+   name="CHANGELOG.txt"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="2c4abdc13720ec1f1ee61c02490aa5b1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="sarissa_dhtml.js"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="5b619899ac91eeb010df4f75fa39633d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="testsarissa.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="eed5213f3853a56984915202b60bdcf7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="sarissa_ieemu_xslt.js"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="0e26cd22c674ffd8acb1dbcee3c0f839"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="test.xml"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="f5c66c87970a3c3496d44035a72ad80d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+</wc-entries>

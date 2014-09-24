@@ -1,0 +1,2220 @@
+<html>
+	<head>
+		<title>Test Page for hs.util.AddressTokenizer</title>
+		
+		<script language="javascript" src="../lib/jsunit/app/jsUnitCore.js"></script>
+
+		<script type="text/javascript" src="../../../client/lib/sarissa/sarissa.js"></script>
+		<script type="text/javascript" src="../../../client/lib/sarissa/sarissa_ieemu_xpath.js"></script>
+		
+		<script type="text/javascript">
+			var djConfig = { testing: true, isDebug: true, disableFlashStorage: true };
+		</script>
+		<script type="text/javascript" src="../../../client/lib/dojo/dojo.js.uncompressed.js"></script>
+		
+		<script type="text/javascript" src="../../../client/lib/hs/exception.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/filter.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/util.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/address.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/model.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/commands.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/ui.js"></script>
+	</head>
+	<body>
+		<h1>Test Page for hs.util.AddressTokenizer</h1>
+
+	    <p>This page contains a suite of tests for testing
+	    HyperScope.</p>
+	
+		<script language="javascript">
+			// wait for page to finish loading
+			dojo.event.connect(dojo, "loaded", pageLoaded);
+			
+			function setUpPage(){
+			}
+			
+			function pageLoaded(){
+				debug("page loaded");
+				setUpPageStatus = "complete";
+			}
+			
+			function testTokenizer(){
+				var tk, url, exp = null, p;
+				
+				info("---TestAddressTokenizer:testTokenizer()");
+				
+				// NON-RELATIVE ADDRESSES
+				
+				url = "http://bootstrap.org";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/", p.path);
+				assertNull(p.query);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org:100/someDir/someFile.opml?query1=query2#3A:x";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(100, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertEquals("?query1=query2", p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeNumber"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("3A", p.number);
+				assertFalse(p.isOffset);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("x", p.letter);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#0";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeNumber"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.NodeID"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("0", p.number);
+				assertFalse(p.isOffset);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023+2w";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("023", p.id);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringPosition"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.StringPosition.WORD, p.type);
+				assertEquals(2, p.offset);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023 +c";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("023", p.id);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringPosition"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.StringPosition.CHARACTER, p.type);
+				assertEquals(1, p.offset);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+		
+				url = "http://bootstrap.org/someDir/someFile.opml#023 +e-10v+f+w";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("023", p.id);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringPosition"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.StringPosition.LAST_CHAR, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringPosition"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.StringPosition.VISIBLE, p.type);
+				assertEquals(-10, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringPosition"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.StringPosition.FIRST_CHAR, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringPosition"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.StringPosition.WORD, p.type);
+				assertEquals(1, p.offset);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023%20+e%20-10v%20+f+w";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("023", p.id);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringPosition"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.StringPosition.LAST_CHAR, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringPosition"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.StringPosition.VISIBLE, p.type);
+				assertEquals(-10, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringPosition"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.StringPosition.FIRST_CHAR, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringPosition"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.StringPosition.WORD, p.type);
+				assertEquals(1, p.offset);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023-5i+w";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("023", p.id);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringPosition"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.StringPosition.INVISIBLE, p.type);
+				assertEquals(-5, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringPosition"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.StringPosition.WORD, p.type);
+				assertEquals(1, p.offset);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023.nbudoehtspcrrf5n10u \"test\" :wxbb ;/foobar/;";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("023", p.id);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_NEXT, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_BACK, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_UP, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_DOWN, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.ORIGIN, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.BRANCH_END, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.PLEX_HEAD, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.PLEX_TAIL, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_SUCCESSOR, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_PREDECESSOR, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.CONTENT_SEARCH, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.RETURN_NODE, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.RETURN_FILE, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_NEXT, p.type);
+				assertEquals(5, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_UP, p.type);
+				assertEquals(10, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringSearch"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("\"test\"", p.search);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("w", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("x", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("b", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("b", p.letter);
+				// content filter
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.ContentFilter"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("/foobar/", p.search);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023.nbudoehtspcrrf5n10u /'test?'/ :wxbb ;/foobar/;";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("023", p.id);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_NEXT, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_BACK, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_UP, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_DOWN, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.ORIGIN, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.BRANCH_END, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.PLEX_HEAD, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.PLEX_TAIL, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_SUCCESSOR, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_PREDECESSOR, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.CONTENT_SEARCH, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.RETURN_NODE, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.RETURN_FILE, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_NEXT, p.type);
+				assertEquals(5, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_UP, p.type);
+				assertEquals(10, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringSearch"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("/'test?'/", p.search);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("w", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("x", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("b", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("b", p.letter);
+				// content filter
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.ContentFilter"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("/foobar/", p.search);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023 \"test\\:foo\\;\" :wxbb ;/foobar/;";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("023", p.id);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringSearch"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("\"test\\:foo\\;\"", p.search);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("w", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("x", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("b", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("b", p.letter);
+				// content filter
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.ContentFilter"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("/foobar/", p.search);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023;/foobar/i;";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("023", p.id);
+				// content filter
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.ContentFilter"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("/foobar/i", p.search);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023 /foobar/i";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("023", p.id);
+				// string search
+				debug("1");
+				assertTrue(tk.hasNext());
+				debug("2");
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringSearch"));
+				debug("3");
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				debug("4");
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("/foobar/i", p.search);
+				debug("5");
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023 /f\\.oo\\/ba\\?r*he\\;llo\\;/ig";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("023", p.id);
+				// string search
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringSearch"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("/f\\.oo\\/ba\\?r*he\\;llo\\;/ig", p.search);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#;/foobar/;";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// content filter
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.ContentFilter"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("/foobar/", p.search);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+
+				url = "http://bootstrap.org/someDir/someFile.opml#023.nbudoehtspcrrf5n10u2l 2A5C2.n  \"test\" :wxbb ;/foobar/;";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("023", p.id);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_NEXT, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_BACK, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_UP, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_DOWN, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.ORIGIN, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.BRANCH_END, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.PLEX_HEAD, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.PLEX_TAIL, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_SUCCESSOR, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_PREDECESSOR, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.CONTENT_SEARCH, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.RETURN_NODE, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.RETURN_FILE, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_NEXT, p.type);
+				assertEquals(5, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_UP, p.type);
+				assertEquals(10, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.IndirectLink"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(2, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeNumber"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("2A5C2", p.number);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_NEXT, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringSearch"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("\"test\"", p.search);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("w", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("x", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("b", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("b", p.letter);
+				// content filter
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.ContentFilter"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("/foobar/", p.search);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#023.nbudoehtspcrrf5n10u%20\"test\"%20:wxbb%20;/foobar/;";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("023", p.id);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_NEXT, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_BACK, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_UP, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_DOWN, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.ORIGIN, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.BRANCH_END, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.PLEX_HEAD, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.PLEX_TAIL, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_SUCCESSOR, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_PREDECESSOR, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.CONTENT_SEARCH, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.RETURN_NODE, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.RETURN_FILE, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_NEXT, p.type);
+				assertEquals(5, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_UP, p.type);
+				assertEquals(10, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringSearch"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("\"test\"", p.search);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("w", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("x", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("b", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("b", p.letter);
+				// content filter
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.ContentFilter"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("/foobar/", p.search);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#     023     .nbudoehtspcrrf5n10u \"test\": w x b b   ;/foobar/;    ";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("023", p.id);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_NEXT, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_BACK, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_UP, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_DOWN, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.ORIGIN, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.BRANCH_END, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.PLEX_HEAD, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.PLEX_TAIL, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_SUCCESSOR, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_PREDECESSOR, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.CONTENT_SEARCH, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.RETURN_NODE, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.RETURN_FILE, p.type);
+				assertEquals(1, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_NEXT, p.type);
+				assertEquals(5, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Relative"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.Relative.NODE_UP, p.type);
+				assertEquals(10, p.offset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringSearch"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("\"test\"", p.search);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("w", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("x", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("b", p.letter);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("b", p.letter);
+				// content filter
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.ContentFilter"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("/foobar/", p.search);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+	
+				url = "http://bootstrap.org/someDir/someFile.opml#Foobar!2A5AA20E .10l";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeLabel"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("Foobar", p.label);
+				assertEquals(hs.address.NodeLabel.START_AT_FIRST, p.type);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeNumber"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("2A5AA20E", p.number);
+				assertTrue(p.isOffset);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.IndirectLink"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(10, p.offset);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#2";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeNumber"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("2", p.number);
+				assertFalse(p.isOffset);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#0";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeNumber"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("0", p.number);
+				assertFalse(p.isOffset);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#!2A5AA20";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeNumber"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("2A5AA20", p.number);
+				assertTrue(p.isOffset);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#@someMarker";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Marker"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.NodeID"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("someMarker", p.name);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#$external";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeLabel"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.NodeID"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("external", p.label);
+				assertEquals(hs.address.NodeLabel.EXTERNAL, p.type);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "http://bootstrap.org/someDir/someFile.opml#*foobar!branchSearch";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("/someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeLabel"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.NodeID"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("foobar", p.label);
+				assertEquals(hs.address.NodeLabel.MOVE_TO_NEXT, p.type);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeLabel"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.NodeID"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("branchSearch", p.label);
+				assertEquals(hs.address.NodeLabel.BRANCH_SEARCH, p.type);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				// RELATIVE ADDRESSES
+				
+				url = "#023+2w";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("./", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("023", p.id);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringPosition"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.StringPosition.WORD, p.type);
+				assertEquals(2, p.offset);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "someFile.opml#023+2w";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeID"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("023", p.id);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.StringPosition"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals(hs.address.StringPosition.WORD, p.type);
+				assertEquals(2, p.offset);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "someFile.opml#";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("someFile.opml", p.path);
+				assertNull(p.query);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "../../someDir/someFile.opml#label:x";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("../../someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// node address
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.NodeLabel"));
+				assertTrue(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("label", p.label);
+				assertEquals(hs.address.NodeLabel.START_AT_FIRST, p.type);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("x", p.letter);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				url = "../../someDir/someFile.opml#:x";
+				info("url: " + url);
+				tk = new hs.util.AddressTokenizer(url);
+				// file info
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.FileInfo"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertEquals("http", p.scheme);
+				assertEquals(80, p.port);
+				assertEquals("../../someDir/someFile.opml", p.path);
+				assertNull(p.query);
+				// viewspec
+				assertTrue(tk.hasNext());
+				p = tk.next();
+				assertNotNull(p);
+				assertNotUndefined(p);
+				assertTrue(p.isPieceType("hs.address.Viewspec"));
+				assertFalse(p.isPieceType("hs.address.NodeAddress"));
+				assertFalse(p.isPieceType("hs.address.FileInfo"));
+				assertEquals("x", p.letter);
+				// end
+				assertFalse(tk.hasNext());
+				assertNull(tk.next());
+				
+				// INVALID ADDRESSES
+				url = "INVALID: http://";
+				info("url: " + url);
+				exp = null;
+				try{ 
+					tk = new hs.util.AddressTokenizer(url); 
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				url = "INVALID: http://http://";
+				info("url: " + url);
+				exp = null;
+				try{ 
+					tk = new hs.util.AddressTokenizer(url); 
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				url = "INVALID: #label#marker";
+				info("url: " + url);
+				exp = null;
+				try{ 
+					tk = new hs.util.AddressTokenizer(url); 
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				
+				url = "INVALID: #023+2w:x:x";
+				info("url: " + url);
+				exp = null;
+				try{ 
+					tk = new hs.util.AddressTokenizer(url); 
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+			}
+		</script>
+	</body>
+</html>

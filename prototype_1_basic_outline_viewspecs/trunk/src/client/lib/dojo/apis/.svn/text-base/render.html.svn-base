@@ -1,0 +1,48 @@
+<h2 id="dojo.render">dojo.render</h2><h3>Properties</h3><pre>String name
+Number ver
+Object <a href="#dojo.render.os">os</a>
+Object <a href="#dojo.render.html">html</a>
+Object <a href="#dojo.render.svg">svg</a>
+Object <a href="#dojo.render.swf">swf</a>
+Object <a href="#dojo.render.swt">swt</a>
+</pre><h2 id="dojo.render.os">dojo.render.os</h2><h3>Properties</h3><pre>Boolean win
+Boolean linux
+Boolean osx
+Boolean mac
+</pre><h2 id="dojo.render.html">dojo.render.html</h2><h3>Properties</h3><pre>Boolean capable
+Object <a href="#dojo.render.html.support">support</a>
+Boolean ie
+Boolean opera
+Boolean khtml
+Boolean safari
+Boolean moz
+Array prefixes
+String UA
+String AV
+Boolean mozilla
+Boolean ie50
+Boolean ie55
+Boolean ie60
+</pre><h2 id="dojo.render.html.support">dojo.render.html.support</h2><h3>Properties</h3><pre>Boolean builtin
+Boolean plugin
+</pre><h2 id="dojo.render.svg">dojo.render.svg</h2><h3>Properties</h3><pre>Boolean capable
+Object <a href="#dojo.render.svg.support">support</a>
+Boolean corel
+Boolean adobe
+Boolean batik
+Array prefixes
+</pre><h2 id="dojo.render.svg.support">dojo.render.svg.support</h2><h3>Properties</h3><pre>Boolean builtin
+Boolean plugin
+</pre><h2 id="dojo.render.swf">dojo.render.swf</h2><h3>Properties</h3><pre>Boolean capable
+Object <a href="#dojo.render.swf.support">support</a>
+Boolean mm
+Array prefixes
+</pre><h2 id="dojo.render.swf.support">dojo.render.swf.support</h2><h3>Properties</h3><pre>Boolean builtin
+Boolean plugin
+</pre><h2 id="dojo.render.swt">dojo.render.swt</h2><h3>Properties</h3><pre>Boolean capable
+Object <a href="#dojo.render.swt.support">support</a>
+Boolean ibm
+Array prefixes
+</pre><h2 id="dojo.render.swt.support">dojo.render.swt.support</h2><h3>Properties</h3><pre>Boolean builtin
+Boolean plugin
+</pre>

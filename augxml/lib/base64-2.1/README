@@ -1,0 +1,13 @@
+Jonathan Cheyer
+2006 July 30
+
+This is a Public Domain Java class providing very fast Base64 encoding and decoding in the form of convenience methods and input/output streams. The original implementation was written by Robert Harder and was downloaded from the following URL:
+
+http://iharder.sourceforge.net/base64/
+
+The following files are checked into the augxml repository:
+ * Base64-2.1.zip - the original file downloaded from the URL above
+ * base64.jar - a jar file created by compiling the Base64.java file
+
+The only change made was to add a "package base64;" statement at the top of the Base64.java file before compiling, so that the class was defined within the "base64" package instead of the unnamed package. This allows the augxml to import the class in an easy fashion.
+

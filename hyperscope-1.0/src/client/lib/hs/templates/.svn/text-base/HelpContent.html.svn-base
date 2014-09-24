@@ -1,0 +1,32 @@
+<p><a href="http://hyperscope.org/">HyperScope</a> is a
+high-performance thought processor that enables you to navigate, view,
+and link to documents in sophisticated ways. For the most part, you
+can navigate these documents the way you navigate any other document
+on the web.</p>
+
+<p>However, HyperScope has a number of advanced capabilities as well.
+For example, you can specify how you want to view the document by
+setting "viewspecs."  For example, if you want to view only the first
+line of each top-level paragraph, you can click on the
+<tt>Viewspecs</tt> button, check off "1st line and level" (viewspec
+"x"), and click the <tt>Apply</tt> button.</p>
+
+<p>Every paragraph has a special address that you can use to jump or
+link to that paragraph.  To view these addresses, you can check off
+"Numbering" (viewspec "m") in the <tt>Viewspecs</tt> menu, and the
+addresses will appear on the left-side of your paragraphs as purple
+numbers.</p>
+
+<p>To jump to the second paragraph in your document, you can click on
+the <tt>Jump</tt> button, type "2" and click on "OK," and it will take
+you to the second paragraph of your document.</p>
+
+<p>Not only can you change the view and jump to different paragraphs
+from the HyperScope, you can also link to a particular view of a
+document.  To get the link of a view, copy the URL from the link icon
+on the upper-right corner of the page.</p>
+
+<p>These are the basic HyperScope capabilities.  There are many, many
+more advanced capabilities as well.  To get more information, please
+visit our website at <a
+href="http://hyperscope.org/">http://hyperscope.org/</a>.</p>

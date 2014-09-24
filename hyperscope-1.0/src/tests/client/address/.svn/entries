@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="211"
+   name=""
+   committed-date="2006-08-02T18:00:34.735229Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/tests/client/address"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="211"
+   name="TestAddress.html"
+   text-time="2006-10-14T00:59:51.000000Z"
+   committed-date="2006-08-02T18:00:34.735229Z"
+   checksum="eaa0ed29489b770a3e3ac520449f6527"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:51.000000Z"/>
+<entry
+   committed-rev="202"
+   name="TestPiece.html"
+   text-time="2006-10-14T00:59:51.000000Z"
+   committed-date="2006-08-02T05:29:45.820814Z"
+   checksum="0769b0b9a7bfdaca81f696929dd7b249"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:51.000000Z"/>
+<entry
+   committed-rev="202"
+   name="TestFileInfo.html"
+   text-time="2006-10-14T00:59:51.000000Z"
+   committed-date="2006-08-02T05:29:45.820814Z"
+   checksum="012277155c9b0112a361ec2d71731343"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:51.000000Z"/>
+</wc-entries>

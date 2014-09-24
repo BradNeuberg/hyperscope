@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2006-03-06T23:36:47.192473Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/prototype_1_basic_outline_viewspecs/trunk/src/client/lib/dojo/src/graphics"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="11"
+   name="htmlEffects.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="b3c85a3eed203d21595fdfc8e5386000"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+<entry
+   committed-rev="11"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="cf3e799b746c41b67989640eae189edb"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+<entry
+   committed-rev="11"
+   name="Colorspace.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="46c2c5542d892046366b5320aced452d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+<entry
+   committed-rev="11"
+   name="color.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="895b27604d968d0c5d79f1f823658ef8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+</wc-entries>

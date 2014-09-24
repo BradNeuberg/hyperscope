@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="128"
+   name=""
+   committed-date="2006-06-20T14:41:13.419970Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/trunk/augxml/src/java/org/nlsaugment/augxml/type"
+   last-author="jcheyer"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="117"
+   name="Aug7BitCharacter.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-13T22:18:12.643972Z"
+   checksum="87d4f9c42c210705971d7e6fa57958cd"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="128"
+   name="AugBlockIndex.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-20T14:41:13.419970Z"
+   checksum="0ce9e728adc9df5e153d0fb3cc836763"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="23"
+   name="AugSignedNumber.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-05-02T16:54:06.197732Z"
+   checksum="b7915a681c3b0e9fef8e6d22633be977"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="73"
+   name="AugUnused.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-05-26T09:10:41.897375Z"
+   checksum="1c57e322e5ee3a83e5edc1f3e0ce6ab7"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="128"
+   name="AugAddress.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-20T14:41:13.419970Z"
+   checksum="706ad7f059b7413729d72051aad4db5e"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="23"
+   name="AugUnsignedNumber.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-05-02T16:54:06.197732Z"
+   checksum="53c156c76a42d523896f9d68d7b6fab3"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="63"
+   name="AugObject.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-05-25T15:24:15.334878Z"
+   checksum="3db572928bcd27b70759d658d4bba791"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="113"
+   name="AugString.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-12T14:40:43.347429Z"
+   checksum="b8452eee4bdb380c1e591d08056572fa"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="113"
+   name="Aug5BitString.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-12T14:40:43.347429Z"
+   checksum="c92b810545fbfda578ab7fd37777c4e3"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="113"
+   name="Aug7BitString.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-12T14:40:43.347429Z"
+   checksum="bf7f9e003bf3030ab8ea52b39d5d39be"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="122"
+   name="AugDate.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-14T16:23:22.925076Z"
+   checksum="cfba60d2553c7406d08539f228e4feb0"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="114"
+   name="AugBoolean.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-12T14:54:17.309001Z"
+   checksum="5ef90fe0a72d559c880dda7ffc6e665c"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="128"
+   name="AugType.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-20T14:41:13.419970Z"
+   checksum="2f535ca6d2f9fa1b7f7deb1e60be3b91"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+</wc-entries>

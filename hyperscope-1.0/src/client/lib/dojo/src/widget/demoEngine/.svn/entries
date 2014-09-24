@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/src/widget/demoEngine"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="SourcePane.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="33d9782d32d96dd4fdd8c53573bca46d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="DemoContainer.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="33989d8e6ee978d5c5a81d06fa3c903a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="229a3ebca4020bc268bcb25aeade85cf"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="DemoPane.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="09053da1ff5a3b8e8319969a9c06bf5d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   committed-rev="203"
+   name="DemoNavigator.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2ceb1514bc89ca20a3d1280a2c6d922d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+<entry
+   name="templates"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="DemoItem.js"
+   text-time="2006-10-14T01:00:16.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="42af0b8bc45abcaab7c7a4d1cc6e7aa8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:16.000000Z"/>
+</wc-entries>

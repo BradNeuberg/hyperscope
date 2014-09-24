@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/tests/dnd"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="test_dragmoveparent.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="26ea915d8acc4cd5f2984eb070848ae1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_nested_drop_targets.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="7e39b83743c53da587e5edb542fee547"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_container.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a67621b34a136db0dbce13502fa6e554"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_dragmove.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="fbd60ebf832623f957769a483b08e6dd"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_draghandle.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b2ba3fb6a19e04a76b1c3f6391bf878b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_simple.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="cd186cfca1245ee515371bb187e8fa43"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_draghandle_2.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="517adaa5003c87d283a241cdd25e56d3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_dragdropparent.html"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="8588ff40e52073d8e62e5b5d537fad16"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+</wc-entries>

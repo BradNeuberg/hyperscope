@@ -1,0 +1,361 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<HTML>
+<HEAD>
+<TITLE>
+sarissa Overview
+</TITLE>
+<LINK REL ="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<SCRIPT>
+function asd()
+{
+parent.document.title=" Overview";
+}
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#eeeeee" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<A NAME="navbar_top"><!-- --></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#b8cade" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3">
+  <TR ALIGN="center" VALIGN="top">
+  
+  
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-summary.html"><FONT CLASS="NavBarFont1"><b>Overview</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev">	&nbsp;<FONT CLASS="NavBarFont1Rev"><b>File</b></FONT>&nbsp;</TD>
+  
+
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"> 	<FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-tree.html"><FONT CLASS="NavBarFont1"><b>Tree</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="index-all.html"--><FONT CLASS="NavBarFont1"><b>Index</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="help-doc.html"><FONT CLASS="NavBarFont1"><b>Help</b></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD BGCOLOR="#b8cade" ALIGN="right" VALIGN="top">
+<EM>
+<b>sarissa</b></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="index.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="overview-summary.html" TARGET="_top"><B>NO FRAMES</B></A>
+&nbsp;&nbsp;
+<SCRIPT>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+</TABLE>
+<!-- =========== END OF NAVBAR =========== -->
+
+<HR>
+<CENTER>
+
+   <H2>sarissa_ieemu_xpath.js</H2>
+
+</CENTER>
+        
+            
+        
+        
+        <h4>Summary</h4>
+        <p>
+        
+           No overview generated for 'sarissa_ieemu_xpath.js'<BR/><BR/>
+           
+        </p>
+
+<HR>
+
+
+    <TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+    <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+    <TD COLSPAN=2><FONT SIZE="+2">
+    
+        <B>Class Summary</B>
+    
+    </FONT></TD>
+    </TR>
+    
+    <TR BGCOLOR="#eeeeee" CLASS="TableRowColor">
+    <TD WIDTH="15%"><B><A HREF="SarissaNodeList.html">SarissaNodeList</A></B></TD>
+    <TD>&nbsp;</TD>
+    </TR>
+    
+    </TABLE>
+    <HR/> 
+
+
+
+
+
+<!-- START SOURCECODE -->
+<pre class="sourceview">
+<span class="comment">/**
+ * ====================================================================
+ * About
+ * ====================================================================
+ * Sarissa cross browser XML library - IE XPath Emulation 
+ * <span class="attrib">@version</span> 0.9.7
+ * <span class="attrib">@author</span>: Manos Batsis, mailto: mbatsis at users full stop sourceforge full stop net
+ *
+ * This script emulates Internet Explorer's selectNodes and selectSingleNode
+ * for Mozilla. Associating namespace prefixes with URIs for your XPath queries
+ * is easy with IE's setProperty. 
+ * USers may also map a namespace prefix to a default (unprefixed) namespace in the
+ * source document with Sarissa.setXpathNamespaces
+ *
+ *
+ * ====================================================================
+ * Licence
+ * ====================================================================
+ * Sarissa is free software distributed under the GNU GPL version 2 (see &lt;a href="gpl.txt"&gt;gpl.txt&lt;/a&gt;) or higher, 
+ * GNU LGPL version 2.1 (see &lt;a href="lgpl.txt"&gt;lgpl.txt&lt;/a&gt;) or higher and Apache Software License 2.0 or higher 
+ * (see &lt;a href="asl.txt"&gt;asl.txt&lt;/a&gt;). This means you can choose one of the three and use that if you like. If 
+ * you make modifications under the ASL, i would appreciate it if you submitted those.
+ * In case your copy of Sarissa does not include the license texts, you may find
+ * them online in various formats at &lt;a href="http://www.gnu.org"&gt;http://www.gnu.org&lt;/a&gt; and 
+ * &lt;a href="http://www.apache.org"&gt;http://www.apache.org&lt;/a&gt;.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+ */</span>
+<span class="reserved">if</span>(_SARISSA_HAS_DOM_FEATURE &amp;&amp; document.implementation.hasFeature(<span class="literal">"XPath"</span>, <span class="literal">"3.0"</span>)){
+    <span class="comment">/**
+    * &lt;p&gt;SarissaNodeList behaves as a NodeList but is only used as a result to &lt;code&gt;selectNodes&lt;/code&gt;,
+    * so it also has some properties IEs proprietery object features.&lt;/p&gt;
+    * <span class="attrib">@private</span>
+    * <span class="attrib">@constructor</span>
+    * <span class="attrib">@argument</span> i the (initial) list size
+    */</span>
+    <span class="reserved">function</span> SarissaNodeList(i){
+        <span class="reserved">this</span>.length = i;
+    };
+    <span class="comment">/** &lt;p&gt;Set an Array as the prototype object&lt;/p&gt; */</span>
+    SarissaNodeList.<span class="reserved">prototype</span> = new Array(0);
+    <span class="comment">/** &lt;p&gt;Inherit the Array constructor &lt;/p&gt; */</span>
+    SarissaNodeList.<span class="reserved">prototype</span>.constructor = Array;
+    <span class="comment">/**
+    * &lt;p&gt;Returns the node at the specified index or null if the given index
+    * is greater than the list size or less than zero &lt;/p&gt;
+    * &lt;p&gt;&lt;b&gt;Note&lt;/b&gt; that in ECMAScript you can also use the square-bracket
+    * array notation instead of calling &lt;code&gt;item&lt;/code&gt;
+    * <span class="attrib">@argument</span> i the index of the member to return
+    * <span class="attrib">@returns</span> the member corresponding to the given index
+    */</span>
+    SarissaNodeList.<span class="reserved">prototype</span>.item = <span class="reserved">function</span>(i) {
+        <span class="reserved">return</span> (i &lt; 0 || i &gt;= <span class="reserved">this</span>.length)?null:<span class="reserved">this</span>[i];
+    };
+    <span class="comment">/**
+    * &lt;p&gt;Emulate IE's expr property
+    * (Here the SarissaNodeList object is given as the result of selectNodes).&lt;/p&gt;
+    * <span class="attrib">@returns</span> the XPath expression passed to selectNodes that resulted in
+    *          this SarissaNodeList
+    */</span>
+    SarissaNodeList.<span class="reserved">prototype</span>.expr = <span class="literal">""</span>;
+    <span class="comment">/** dummy, used to accept IE's stuff without throwing errors */</span>
+    XMLDocument.<span class="reserved">prototype</span>.setProperty  = <span class="reserved">function</span>(x,y){};
+    <span class="comment">/**
+    * &lt;p&gt;Programmatically control namespace URI/prefix mappings for XPath
+    * queries.&lt;/p&gt;
+    * &lt;p&gt;This method comes especially handy when used to apply XPath queries
+    * on XML documents with a default namespace, as there is no other way
+    * of mapping that to a prefix.&lt;/p&gt;
+    * &lt;p&gt;Using no namespace prefix in DOM Level 3 XPath queries, implies you
+    * are looking for elements in the null namespace. If you need to look
+    * for nodes in the default namespace, you need to map a prefix to it
+    * first like:&lt;/p&gt;
+    * &lt;pre&gt;Sarissa.setXpathNamespaces(oDoc, &amp;quot;xmlns:myprefix=&amp;amp;aposhttp://mynsURI&amp;amp;apos&amp;quot;);&lt;/pre&gt;
+    * &lt;p&gt;&lt;b&gt;Note 1 &lt;/b&gt;: Use this method only if the source document features
+    * a default namespace (without a prefix), otherwise just use IE's setProperty
+    * (moz will rezolve non-default namespaces by itself). You will need to map that
+    * namespace to a prefix for queries to work.&lt;/p&gt;
+    * &lt;p&gt;&lt;b&gt;Note 2 &lt;/b&gt;: This method calls IE's setProperty method to set the
+    * appropriate namespace-prefix mappings, so you dont have to do that.&lt;/p&gt;
+    * <span class="attrib">@param</span> oDoc The target XMLDocument to set the namespace mappings for.
+    * <span class="attrib">@param</span> sNsSet A whilespace-seperated list of namespace declarations as
+    *            those would appear in an XML document. E.g.:
+    *            &lt;code&gt;&amp;quot;xmlns:xhtml=&amp;apos;http://www.w3.org/1999/xhtml&amp;apos;
+    * xmlns:&amp;apos;http://www.w3.org/1999/XSL/Transform&amp;apos;&amp;quot;&lt;/code&gt;
+    * <span class="attrib">@throws</span> An error if the format of the given namespace declarations is bad.
+    */</span>
+    Sarissa.setXpathNamespaces = <span class="reserved">function</span>(oDoc, sNsSet) {
+<span class="comment">        //oDoc._sarissa_setXpathNamespaces(sNsSet);</span>
+        oDoc._sarissa_useCustomResolver = true;
+        var namespaces = sNsSet.indexOf(<span class="literal">" "</span>)&gt;-1?sNsSet.split(<span class="literal">" "</span>):new Array(sNsSet);
+        oDoc._sarissa_xpathNamespaces = new Array(namespaces.length);
+        <span class="reserved">for</span>(var i=0;i &lt; namespaces.length;i++){
+            var ns = namespaces[i];
+            var colonPos = ns.indexOf(<span class="literal">":"</span>);
+            var assignPos = ns.indexOf(<span class="literal">"="</span>);
+            <span class="reserved">if</span>(colonPos == 5 &amp;&amp; assignPos &gt; colonPos+2){
+                var prefix = ns.substring(colonPos+1, assignPos);
+                var uri = ns.substring(assignPos+2, ns.length-1);
+                oDoc._sarissa_xpathNamespaces[prefix] = uri;
+            }<span class="reserved">else</span>{
+                throw <span class="literal">"Bad format on namespace declaration(s) given"</span>;
+            };
+        };
+    };
+    <span class="comment">/**
+    * <span class="attrib">@private</span> Flag to control whether a custom namespace resolver should
+    *          be used, set to true by Sarissa.setXpathNamespaces
+    */</span>
+    XMLDocument.<span class="reserved">prototype</span>._sarissa_useCustomResolver = false;
+    <span class="comment">/** <span class="attrib">@private</span> */</span>
+    XMLDocument.<span class="reserved">prototype</span>._sarissa_xpathNamespaces = new Array();
+    <span class="comment">/**
+    * &lt;p&gt;Extends the XMLDocument to emulate IE's selectNodes.&lt;/p&gt;
+    * <span class="attrib">@argument</span> sExpr the XPath expression to use
+    * <span class="attrib">@argument</span> contextNode this is for internal use only by the same
+    *           method when called on Elements
+    * <span class="attrib">@returns</span> the result of the XPath search as a SarissaNodeList
+    * <span class="attrib">@throws</span> An error if no namespace URI is found for the given prefix.
+    */</span>
+    XMLDocument.<span class="reserved">prototype</span>.selectNodes = <span class="reserved">function</span>(sExpr, contextNode){
+        var nsDoc = <span class="reserved">this</span>;
+        var nsresolver = <span class="reserved">this</span>._sarissa_useCustomResolver
+        ? <span class="reserved">function</span>(prefix){
+            var s = nsDoc._sarissa_xpathNamespaces[prefix];
+            <span class="reserved">if</span>(s)<span class="reserved">return</span> s;
+            <span class="reserved">else</span> throw <span class="literal">"No namespace URI found for prefix: '"</span> + prefix+<span class="literal">"'"</span>;
+            }
+        : <span class="reserved">this</span>.createNSResolver(<span class="reserved">this</span>.documentElement);
+            var oResult = <span class="reserved">this</span>.evaluate(sExpr,
+                    (contextNode?contextNode:<span class="reserved">this</span>),
+                    nsresolver,
+                    XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+        var nodeList = new SarissaNodeList(oResult.snapshotLength);
+        nodeList.expr = sExpr;
+        <span class="reserved">for</span>(var i=0;i&lt;nodeList.length;i++)
+            nodeList[i] = oResult.snapshotItem(i);
+        <span class="reserved">return</span> nodeList;
+    };
+    <span class="comment">/**
+    * &lt;p&gt;Extends the Element to emulate IE's selectNodes&lt;/p&gt;
+    * <span class="attrib">@argument</span> sExpr the XPath expression to use
+    * <span class="attrib">@returns</span> the result of the XPath search as an (Sarissa)NodeList
+    * <span class="attrib">@throws</span> An
+    *             error if invoked on an HTML Element as this is only be
+    *             available to XML Elements.
+    */</span>
+    Element.<span class="reserved">prototype</span>.selectNodes = <span class="reserved">function</span>(sExpr){
+        var doc = <span class="reserved">this</span>.ownerDocument;
+        <span class="reserved">if</span>(doc.selectNodes)
+            <span class="reserved">return</span> doc.selectNodes(sExpr, <span class="reserved">this</span>);
+        <span class="reserved">else</span>
+            throw <span class="literal">"Method selectNodes is only supported by XML Elements"</span>;
+    };
+    <span class="comment">/**
+    * &lt;p&gt;Extends the XMLDocument to emulate IE's selectSingleNode.&lt;/p&gt;
+    * <span class="attrib">@argument</span> sExpr the XPath expression to use
+    * <span class="attrib">@argument</span> contextNode this is for internal use only by the same
+    *           method when called on Elements
+    * <span class="attrib">@returns</span> the result of the XPath search as an (Sarissa)NodeList
+    */</span>
+    XMLDocument.<span class="reserved">prototype</span>.selectSingleNode = <span class="reserved">function</span>(sExpr, contextNode){
+        var ctx = contextNode?contextNode:null;
+        sExpr = <span class="literal">"("</span>+sExpr+<span class="literal">")[1]"</span>;
+        var nodeList = <span class="reserved">this</span>.selectNodes(sExpr, ctx);
+        <span class="reserved">if</span>(nodeList.length &gt; 0)
+            <span class="reserved">return</span> nodeList.item(0);
+        <span class="reserved">else</span>
+            <span class="reserved">return</span> null;
+    };
+    <span class="comment">/**
+    * &lt;p&gt;Extends the Element to emulate IE's selectSingleNode.&lt;/p&gt;
+    * <span class="attrib">@argument</span> sExpr the XPath expression to use
+    * <span class="attrib">@returns</span> the result of the XPath search as an (Sarissa)NodeList
+    * <span class="attrib">@throws</span> An error if invoked on an HTML Element as this is only be
+    *             available to XML Elements.
+    */</span>
+    Element.<span class="reserved">prototype</span>.selectSingleNode = <span class="reserved">function</span>(sExpr){
+        var doc = <span class="reserved">this</span>.ownerDocument;
+        <span class="reserved">if</span>(doc.selectSingleNode)
+            <span class="reserved">return</span> doc.selectSingleNode(sExpr, <span class="reserved">this</span>);
+        <span class="reserved">else</span>
+            throw <span class="literal">"Method selectNodes is only supported by XML Elements"</span>;
+    };
+    Sarissa.IS_ENABLED_SELECT_NODES = true;
+};
+
+</pre>
+<!-- END SOURCECODE -->
+<HR>
+
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<A NAME="navbar_top"><!-- --></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#b8cade" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3">
+  <TR ALIGN="center" VALIGN="top">
+  
+  
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-summary.html"><FONT CLASS="NavBarFont1"><b>Overview</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev">	&nbsp;<FONT CLASS="NavBarFont1Rev"><b>File</b></FONT>&nbsp;</TD>
+  
+
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"> <FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-tree.html"><FONT CLASS="NavBarFont1"><b>Tree</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="index-all.html"--><FONT CLASS="NavBarFont1"><b>Index</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="help-doc.html"><FONT CLASS="NavBarFont1"><b>Help</b></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD BGCOLOR="#b8cade" ALIGN="right" VALIGN="top"><EM>
+<b>sarissa</b></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="index.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="overview-summary.html" TARGET="_top"><B>NO FRAMES</B></A>
+&nbsp;&nbsp;
+<SCRIPT>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+</TABLE>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<FONT SIZE="-1">
+
+</FONT>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Tue May  9 22:30:39 2006</div>
+</BODY>
+</HTML>

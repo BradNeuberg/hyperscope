@@ -1,0 +1,41 @@
+<h2 id="dojo.logging">dojo.logging</h2><h3>Methods</h3><pre>Logger ()
+Record (lvl, msg)
+LogFilter (_214)
+LogHandler (_224)
+MemoryLogHandler (_230, _231, _232, _233)
+</pre><h3>Properties</h3><pre>Object <a href="#dojo.logging.log">log</a>
+Object <a href="#dojo.logging.logQueueHandler">logQueueHandler</a>
+</pre><h2 id="dojo.logging.Logger Object">dojo.logging.Logger Object</h2><h3>Properties</h3><pre>Number cutOffLevel
+Boolean propagate
+undefined parent
+Array data
+Array filters
+Array handlers
+</pre><h2 id="dojo.logging.Record Object">dojo.logging.Record Object</h2><h3>Properties</h3><pre>undefined level
+undefined message
+Object time
+</pre><h2 id="dojo.logging.LogFilter Object">dojo.logging.LogFilter Object</h2><h3>Methods</h3><pre>filter (_215)
+</pre><h3>Properties</h3><pre>String passChain
+</pre><h2 id="dojo.logging.LogHandler Object">dojo.logging.LogHandler Object</h2><h3>Properties</h3><pre>Number cutOffLevel
+undefined formatter
+Array data
+Array filters
+</pre><h2 id="dojo.logging.MemoryLogHandler Object">dojo.logging.MemoryLogHandler Object</h2><h3>Properties</h3><pre>Number numRecords
+Number postType
+Number postInterval
+</pre><h2 id="dojo.logging.log">dojo.logging.log</h2><h3>Methods</h3><pre>getLogger (name)
+getLevelName (lvl)
+addLevelName (name, lvl)
+getLevel (name)
+</pre><h3>Properties</h3><pre>Number cutOffLevel
+Boolean propagate
+undefined parent
+Array data
+Array filters
+Array handlers
+Array levels
+Object loggers
+</pre><h2 id="dojo.logging.logQueueHandler">dojo.logging.logQueueHandler</h2><h3>Properties</h3><pre>Number numRecords
+Number postType
+Number postInterval
+</pre>

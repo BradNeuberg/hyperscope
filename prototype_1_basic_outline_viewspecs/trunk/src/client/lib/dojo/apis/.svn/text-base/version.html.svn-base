@@ -1,0 +1,5 @@
+<h2 id="dojo.version">dojo.version</h2><h3>Properties</h3><pre>Number major
+Number minor
+Number patch
+Number revision
+</pre>

@@ -1,0 +1,68 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Colors</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+</style>
+<script language="JavaScript" type="text/javascript">
+	// Dojo configuration
+	djConfig = { 
+		isDebug: true
+	};
+</script>
+<script language="JavaScript" type="text/javascript" 
+	src="../../dojo.js"></script>
+<script language="JavaScript" type="text/javascript" 
+	src="../../src/graphics/color.js"></script>
+<script language="JavaScript" type="text/javascript">
+//dojo.require("dojo.graphics.color");
+var c = dojo.graphics.color;
+var hex = ["#003399", "#039", "003399", "039"];
+for(var i = 0; i < hex.length; i++) {
+	var rgb = c.hex2rgb(hex[i]);
+	dj_debug(hex[i], "-> hex2rgb ->", rgb, "-> rgb2hex ->", c.rgb2hex(rgb));
+	dj_debug("extractRGB(" + hex[i] + ")", c.extractRGB(hex[i]));
+}
+
+dj_debug();
+dj_debug("Color object:");
+var color = new dojo.graphics.color.Color("ffc");
+dj_debug("toRgb:", color.toRgb());
+dj_debug("toHex:", color.toHex());
+dj_debug("toCss:", color.toCss());
+dj_debug("toString:", color.toString());
+dj_debug("toHsv:", color.toHsv());
+dj_debug("toHsl:", color.toHsl());
+
+dj_debug();
+dj_debug("Named colors:");
+for(var clr in c.named) {
+	var rgb = c.extractRGB(clr);
+	dj_debug(clr, "->", rgb, "->", c.rgb2hex(rgb));
+}
+
+
+dj_debug();
+dj_debug("Color spaces:");
+
+var a = [255,255,204];
+var b = dojo.graphics.color.rgb2hsv(a);
+var c = dojo.graphics.color.hsv2rgb(b);
+dj_debug("HSV:", a, "->", b, "->", c);
+
+var d = [255,255,204];
+var e = dojo.graphics.color.rgb2hsl(d);
+var f = dojo.graphics.color.hsl2rgb(e);
+dj_debug("HSL:", d, "->", e, "->", f);
+
+</script>
+</head>
+<body>
+	Tests happened in head. This should be moved to a JS-only file.
+</body>
+</html>
+

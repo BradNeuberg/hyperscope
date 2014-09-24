@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/tests/event"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="test_topic.html"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="efc15c3a69dd74b3fc5e62cec3d94758"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="empty.html"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="602a9c1972fe83ba2eee9b3a2a63766b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ie_runtime_usage.html"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2ebeb404e556fed7d438ab24c40f9d0b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_multiconnect.html"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="f59eef8a3e81b147ece76452233af934"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_browserevent.html"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b38bd2141698b83656ede38156e45909"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Topic.js"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5d1d0247799fd00015cd55edcd79d9bf"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_iframes.html"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="348d1c9854ad2cdf8337755c04e5ed82"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_rate_limited_events.html"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d5a30bf2785a0f9bd8eb65cfc07d2ee1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_getEventTarget.html"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a2ce543bacdf9b63768466af969d2482"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Event.js"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="acdeb80dfee03eb74f98e9af5c87be62"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+</wc-entries>

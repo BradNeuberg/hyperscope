@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="200"
+   name=""
+   committed-date="2006-07-31T00:22:35.041684Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/trunk/augxml/lib/base64-2.1"
+   last-author="jcheyer"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="200"
+   name="base64.jar"
+   text-time="2006-10-14T00:59:46.000000Z"
+   committed-date="2006-07-31T00:22:35.041684Z"
+   checksum="ef1f2e0d64f7664bf815ade0a6a8435b"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="200"
+   name="Base64-2.1.zip"
+   text-time="2006-10-14T00:59:46.000000Z"
+   committed-date="2006-07-31T00:22:35.041684Z"
+   checksum="94c7f2a01e1d430b2180c8dc5d6246e6"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="200"
+   name="README"
+   text-time="2006-10-14T00:59:46.000000Z"
+   committed-date="2006-07-31T00:22:35.041684Z"
+   checksum="d5970565656f2a02da0c3a6d7951c7e8"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+</wc-entries>

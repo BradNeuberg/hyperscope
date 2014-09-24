@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/tests/widget"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="test_Button_static.svg"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b273725d4adec5bb4d8ba89a08614c6f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Wizard2.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="87d1cb7a6024a9c0331e80ca5779c8eb"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Slider.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="c9efbf2bb376a5156817c821c7c05668"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_SortableTable.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="054fe8abd21e48cfae6bf7ecfbfda061"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Editor.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="ac87f702c5d85b2b4fd696802a2baf01"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="doc2.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="f24460e63616d77ce24b7f4abd125e96"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="tab2.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="06aef13c885de8b4e487dba7e63b1023"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Tooltip.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="4c204c6c3aefda1d5cb9b801538466e9"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Widget.js"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="426e418884eb2e098df90d2c28cfd5b1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Parser.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="6a5b68e4f1897848e295e76928b945c0"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_TimePicker.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="44a882557c991278a9de4c0301f322f3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_defineWidget.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="38bcb74c569cc0c69e35091c104931fc"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Wizard.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="848518f17958fd34e4b2e94b75a0c327"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_SlideShow.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="e4ea004e085c282f4a6f824a7dc1cc89"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_TabContainer_noLayout.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a121441e9409702c490ece5af245becb"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_searchids.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="068f8faa81dafe5d489a4880c3b868f6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Editor_from_textarea.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="37f5c6f6629a0e54e00b3d319defdf1f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_includes.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a02ec35eb992c357fd381317fabb899e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_getWidgetsByFilter.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="7fd71a76054af1b347bad1f8f1e15a39"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_LayoutCode.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="30d5f0dafde8943b3c9b07a2a46c99b7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_YahooMap.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d66d7e07809bf6630e9645f461c39ef8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ContentPane.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="8e5555dc2164f9a4baac0271721c0c79"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Spinner.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="106e7f9160a2d14c849a72a5bb5f1322"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_LayoutContainer.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d35e6f951d94b90ff4ed98c8d1cb7517"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ComboBox.js"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="1b611f550981d1e10b84231b736b98f3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="googlemaps.api.dojotoolkit.txt"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2c8137475b407b2783b7134a7178abd9"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_remote_ComboBox.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="da6adac44dbfb79104d3d952808a0659"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ResizeableTextarea.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2f6eb75946934ff5b93ff5d9fe464f4e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ComboBox_degrade.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b21ce8edccacd044c9a8490d33415c19"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_TitlePane.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="da7518e57e5da3ad53702a3810c1a956"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Menu2.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b4661dca8d70be2a2f968cdb6ceb56bc"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="remoteComboBoxData.js"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3640a62864c46b9f32e986cc1329d39e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_DropdownDatePicker.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="ebcd46daa4b777b95675723db2391ba7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_DomWidget.js"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="36a6eebeb9b7da58fd07eebd240a5dc2"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_InlineEditBox.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5405e088438066bff784df52f4e88047"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_SplitContainer.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="53dcea8c207ab8d32586422795bbbb35"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   name="deprecated"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="test_RemotePane.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="4b3c2fbb3f09328851bdad486a9718f4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Chart.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a24c56d49d5b53549073f8a6e4d80324"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Accordion.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b83741898c3ee132dd863a82d3f0f302"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="buttonProperties.js"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d01bad2d5f803f29e1b3c8ed4b14b7a1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_LayoutContainer_2.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="adfb07a8aea075f5c8be89a8782aa49b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Toggler.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="e93819eeb42c9a67697094e9b8e247d8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_AccordionPane.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="ebbc4317055d733160210123e1478516"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ComboBox_subclass.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="436141064076605bf99ed1188724d50f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:01.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_TabContainer_lazyLoad.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d4fb02e9ef7db5aa1c9e00416204c454"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Editor2.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="11f35aa808989d4ceeff77ba569e6ec8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_TabContainer.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="fcac6b297f0a3ce53a53fcba676e78a9"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_DebugConsole.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="fe154b89c14a060407b9f0b17a3d2a7b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_keyValue_ComboBox.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="918dcab5b3ceac136a6b2ac068cccd2d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ResizeHandle.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d90b7a1f723893202b2631732919e827"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="dialogContents.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5b7d0b3c0614255ff064c376ee5c5d57"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_SplitContainer_2.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d92cec7581c3f8316178e1053a3c3329"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Select.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="9560beddae5a15b8f141fb9145e4f958"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="comboBoxDataKeyValue.js"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="eb000cdc712d9bb5fa0f7c03a43d9620"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Dialog2.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d376a3af5033f0d780b94b698da1a903"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_MonthlyCalendar.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a8363b585648a21806ad3104d153a42e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Menu2_Node_Code.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="82547c318b2c7545fa2e72542290bef0"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="doc0.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="4ac96959cda397192448e33a4c355a21"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="custom_slideshow_template.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="e693ef469b9faaee5899c495b5e87da8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_TaskBar.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="1bbd8866d5f24fe2c26ea24ded7d4c79"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_RichText.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3a086d416515c48e9d1de33105bcc2ab"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_FloatingPane_events.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="8d272dd6351ccd7cab4f4ef69d1ce4d4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   name="tree"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="test_ColorPalette.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="23cc8ffcd96501c609da0e3baf8d81dd"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="scriptScope.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b6979124463a999919a5c92aeab9ca30"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="tree.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d9839776e1418536d90a3b18daebab17"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_LayoutContainer_3.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="796ef4e98fa3aeb81d82bc1e12dbc24c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:02.000000Z"/>
+<entry
+   name="acme"
+   kind="dir"/>
+<entry
+   name="images"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="test_template_customization.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="96edbdca2b240e3ac0764b68f47959ef"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Button.svg"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="ca80e988a5f9ec05f8d6b037533e6046"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   name="demoEngine"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="test_ContentPane_executeScripts.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="ccaac8973fb0526b66f9ae467d195ae5"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_ComboBox.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="c3c3e6c6c9ecf15a5ccf8f14f07f9a01"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Menu2_Position.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="8e6043f0eff4cf089edfd61657d3fba7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Menu2_Bar.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="61ce16fd02968ad1e161bc01227fa4a5"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_GoogleMap.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="cb6ef76900bb4064d7d9174f847fe3ee"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="comboBoxData.js"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2f16d09e4fbfd9183023b93010d08197"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Parser_propertyset.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b6d1297009eef8589b92aa0f07dbad26"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Layout.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5f1ae78a99dc2888e62365386ee6cc0f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Show.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="95672cf960e38d74b180696a6a40819d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Toolbar_Markup.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="367835206d3da27a03c556b09f971726"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Dialog3.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5127d5ddc5bee683f0f4c433808c9012"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Calendar.ics"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3cf2fadb1152ea5155296ed5c54043bf"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   name="css"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="test_Checkbox.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b7c3f8c589af6a29d049ba4cfcf6e25f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="doc1.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="914f94aedd08f807753fcaccbcda7464"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_AnimatedPng.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="9a33ea3c36be51b4d25d69098ef60bee"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_FisheyeList.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="ef49bc6076d97bd7391d1ded0ab90080"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="tab1.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="0fe6296b9226c28d1a5bc907e31dc4af"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Button2.svg"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a53896b94d998e771f05d17b961ed285"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_validate.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d1732ccc8de13ef1bd5c89ad89eb6919"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Menu2_Node.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="40f3d399acf268720b0ad82afa3f77b3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Editor2Toolbar.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b7bd798029f18a28ef590ffbe5f8d7ed"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_WidgetPackageList.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a71f979239f62ba37f790d8d96b074b8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Dialog.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="cda4dcbef1885c9b605bb211cd000e39"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Toolbar.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="f168e71f27887edcb683210ae1e5c1c6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_FloatingPane.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="f6c6e83d7009f798164515717f8c0f60"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_CiviCrmDateTimePicker.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="9e5998ba5e138e56f38110cdfdf6f865"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_funcArgs.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d30d8b81d17192e155a6ad8fdd8c9a3c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_DialogRemote.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="4c0788c1eee00a216653d3be48871058"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_DatePicker.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="36ea2f7770c4cf765873b4aee7a63e1a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Button.html"
+   text-time="2006-10-14T01:00:04.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="1e86d4f1a81f0fdfa1afabbad19c4f30"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:04.000000Z"/>
+</wc-entries>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2006-03-06T23:36:47.192473Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/prototype_1_basic_outline_viewspecs/trunk/src/client/lib/dojo/src/io"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="11"
+   name="RhinoIO.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="3c0e631f8fa259f0b48dc6893a176db0"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+<entry
+   committed-rev="11"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="9ec5fefb9aaeec963f642a0bc2f82cba"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+<entry
+   committed-rev="11"
+   name="cookie.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="cc50a86851e46be03600e81d0c118f94"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+<entry
+   committed-rev="11"
+   name="BrowserIO.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="9950f7467cef84b8acbb3a5cd8ec1702"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+<entry
+   committed-rev="11"
+   name="IframeIO.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="3f82ed150559148a7a6aa60ad3be1367"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+<entry
+   committed-rev="11"
+   name="cookies.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="b1568249f170b01bc7c3b07869edeba1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+<entry
+   committed-rev="11"
+   name="RepubsubIO.js"
+   text-time="2006-10-14T01:00:29.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="bc58308101ec38052e70f7ffed1f4b3e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:29.000000Z"/>
+</wc-entries>

@@ -1,0 +1,40 @@
+Use the following values to do crypto testing with the Dojo crypto library.
+
+Message/plaintext:
+--------------------------------------------------------------------------
+The rain in Spain falls mainly on the plain.
+
+Key
+--------------------------------------------------------------------------
+foobar
+
+--------------------------------------------------------------------------
+CRYPTO ALGORITHMS
+Values derived from XCrypt test application, C#.
+NB. All encrypted results are Base64 encoded; you MUST use dojo.crypto.fromBase64/toBase64 for comparison.
+--------------------------------------------------------------------------
+MD5
+OUhxbVZ1Mtmu4zx9LzS5cA==
+
+Rijndael/AES
+QHHcLxph2PC89j0l4XueIvqprjgUaTvCooK31/9fS+SgoLfF1Cns3RD5du5BHF6I
+
+SHA
+HvPtEggatVBJuWnrPnDKqpWL36E=
+
+SHA256
+Vt7FG/uDGhzhEE8FFG22iBL4AS5eq3F4agWMFTAEwxE=
+
+Blowfish
+0nFmvmtqbrp9AIOSbn4dWMCKcPnqgCQBDldoXZiiGh+8s7mol7Zp8H/QGrJLmkT9
+
+Twofish
+qKUdEEEY40lXRK3chIzU9hYsckwmylct3O03Xmi0/WO42941GQGkyQst6Nflf2IS
+
+>>>>>>>>>>>>>>>>>>>
+Triple DES
+p2nGIq6efA3PcUGojUbKn0wmfNqD3dINE0VBLSH7YgCTEHf3t1Re5xou3yy1CZ++
+
+DES
+HEnTJP4nt91oV2pAYVRf6yIevMGq9X4qgs4C8vKCb+oWRet5EH4ECTzrkujrRXcU
+

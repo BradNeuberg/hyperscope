@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='/hyperscope/src/client/lib/hs/xslt/hyperscope.xsl'?>
+
+<opml version="2.0">
+   <head xmlns:hs="http://www.hyperscope.org/hyperscope/opml/public/2006/05/09" hs:left-label-delim="" hs:nidCount="916" hs:right-label-delim=":">
+      <title>../../../hyperscope/docs/HYARCH.AUG.112</title>
+      <dateCreated>Tue 9 May 2006 06:44:27 GMT+00:00</dateCreated>
+      <ownerName>BKN</ownerName>
+      <dateModified>Thu 7 Dec 2006 01:54:22 GMT+00:00</dateModified>
+   </head>
+   <body>
+      <outline xmlns:hs="http://www.hyperscope.org/hyperscope/opml/public/2006/05/09" hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:54:22 GMT+00:00" hs:label="" hs:left-label-delim="" hs:nid="01" hs:right-label-delim=":" text="&lt;a href=&quot;#BI5, USER2:NEUBERG, HYARCH.AUG.112,&quot;&gt;&amp;lt;BI5, USER2:NEUBERG, HYARCH.AUG.112,&amp;gt;&lt;/a&gt;, 6-Dec-2006 21:47-PST BKN ;;;;">
+         <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:18:07 GMT+00:00" hs:label="Start" hs:left-label-delim="" hs:nid="0594" hs:right-label-delim="" text="Start:  &lt;a href=&quot;#Overview:gwnBy&quot;&gt;&amp;lt;Overview:gwnBy&amp;gt;&lt;/a&gt; "/>
+         <outline hs:createdBy="BKN" hs:createdOn="Thu 4 May 2006 04:04:12 GMT+00:00" hs:label="Overview" hs:left-label-delim="" hs:nid="0595" hs:right-label-delim="" text="Overview">
+            <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="Use" hs:left-label-delim="" hs:nid="0596" hs:right-label-delim="" text="Use the following links to gain various levels of detail and information about the HyperScope design : ">
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:18:09 GMT+00:00" hs:label="View" hs:left-label-delim="" hs:nid="0598" hs:right-label-delim="" text="View all modules :  &lt;a href=&quot;#04:gebbzA&quot;&gt;&amp;lt;04:gebbzA&amp;gt;&lt;/a&gt;"/>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:18:27 GMT+00:00" hs:label="View" hs:left-label-delim="" hs:nid="0599" hs:right-label-delim="" text="View all classes and files:  &lt;a href=&quot;#04:gebbbbzA&quot;&gt;&amp;lt;04:gebbbbzA&amp;gt;&lt;/a&gt;"/>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:18:26 GMT+00:00" hs:label="View" hs:left-label-delim="" hs:nid="0602" hs:right-label-delim="" text="View indepth class method information:  &lt;a href=&quot;#04:gwzA&quot;&gt;&amp;lt;04:gwzA&amp;gt;&lt;/a&gt;"/>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:18:27 GMT+00:00" hs:label="View" hs:left-label-delim="" hs:nid="0607" hs:right-label-delim="" text="View control flow overview:  &lt;a href=&quot;#05:gnAzeb&quot;&gt;&amp;lt;05:gnAzeb&amp;gt;&lt;/a&gt;"/>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:18:28 GMT+00:00" hs:label="View" hs:left-label-delim="" hs:nid="0612" hs:right-label-delim="" text="View full control flow section:  &lt;a href=&quot;#05:gnAzw&quot;&gt;&amp;lt;05:gnAzw&amp;gt;&lt;/a&gt;"/>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:44:17 GMT+00:00" hs:label="View" hs:left-label-delim="" hs:nid="0613" hs:right-label-delim="" text="View file format information:  &lt;a href=&quot;#06:Anyw&quot;&gt;&amp;lt;06:Anyw&amp;gt;&lt;/a&gt;"/>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:18:29 GMT+00:00" hs:label="View" hs:left-label-delim="" hs:nid="0614" hs:right-label-delim="" text="View third-party library information:  &lt;a href=&quot;#011:Anyw&quot;&gt;&amp;lt;011:Anyw&amp;gt;&lt;/a&gt;"/>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:18:29 GMT+00:00" hs:label="View" hs:left-label-delim="" hs:nid="0611" hs:right-label-delim="" text="View all sections:  &lt;a href=&quot;#1:zAxnh&quot;&gt;&amp;lt;1:zAxnh&amp;gt;&lt;/a&gt;"/>
+            </outline>
+         </outline>
+         <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 06:45:56 GMT+00:00" hs:label="Modules" hs:left-label-delim="" hs:nid="04" hs:right-label-delim=":" text="Modules, Classes, and Files">
+            <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:18:31 GMT+00:00" hs:label="Back" hs:left-label-delim="" hs:nid="0601" hs:right-label-delim=":" text="Back to Overview :  &lt;a href=&quot;#Overview:gwnBy&quot;&gt;&amp;lt;Overview:gwnBy&amp;gt;&lt;/a&gt; "/>
+            <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 01:28:44 GMT+00:00" hs:label="Client" hs:left-label-delim="" hs:nid="0624" hs:right-label-delim=":" text="Client">
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:19:57 GMT+00:00" hs:label="Module" hs:left-label-delim="" hs:nid="013" hs:right-label-delim=":" text="Module: hs.ui">
+                  <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 06:46:00 GMT+00:00" hs:label="index" hs:left-label-delim="" hs:nid="015" hs:right-label-delim=":" text="index.html">
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:08:12 GMT+00:00" hs:label="Our" hs:left-label-delim="" hs:nid="0133" hs:right-label-delim=":" text="Our main HTML file for the UI"/>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 06:48:33 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="016" hs:right-label-delim=":" text="hs.ui">
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 06:55:16 GMT+00:00" hs:label="Main" hs:left-label-delim="" hs:nid="088" hs:right-label-delim=":" text="Main entry point for the UI; initializes system">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:27:53 GMT+00:00" hs:label="Stereotype" hs:left-label-delim="" hs:nid="021" hs:right-label-delim=":" text="Stereotype: static singleton"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="document" hs:left-label-delim="" hs:nid="0135" hs:right-label-delim=":" text="document : hs.model.Document"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="status" hs:left-label-delim="" hs:nid="0136" hs:right-label-delim=":" text="status : hs.ui.StatusArea"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="commandHelper" hs:left-label-delim="" hs:nid="0137" hs:right-label-delim=":" text="commandHelper : hs.ui.CommandHelper"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:29:15 GMT+00:00" hs:label="currentHyDoc" hs:left-label-delim="" hs:nid="0848" hs:right-label-delim=":" text="currentHyDoc : hs.model.Document"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:47:34 GMT+00:00" hs:label="commandBar" hs:left-label-delim="" hs:nid="0897" hs:right-label-delim=":" text="commandBar : hs.ui.CommandBar"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:47:55 GMT+00:00" hs:label="currentRenderedDoc" hs:left-label-delim="" hs:nid="0899" hs:right-label-delim=":" text="currentRenderedDoc : hs.ui.RenderedDocument"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:08:18 GMT+00:00" hs:label="initialize" hs:left-label-delim="" hs:nid="0134" hs:right-label-delim=":" text="initialize()"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:29:21 GMT+00:00" hs:label="printStatus" hs:left-label-delim="" hs:nid="0849" hs:right-label-delim=":" text="printStatus(message : String)"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:29:23 GMT+00:00" hs:label="clearStatus" hs:left-label-delim="" hs:nid="0850" hs:right-label-delim=":" text="clearStatus()"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:29:24 GMT+00:00" hs:label="fadeStatus" hs:left-label-delim="" hs:nid="0851" hs:right-label-delim=":" text="fadeStatus()"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:30:26 GMT+00:00" hs:label="reportError" hs:left-label-delim="" hs:nid="0853" hs:right-label-delim=":" text="reportError(exception : Exception)"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:48:09 GMT+00:00" hs:label="resolveLocation" hs:left-label-delim="" hs:nid="0900" hs:right-label-delim=":" text="resolveLocation(url : String, customMethod : String)">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:48:17 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0901" hs:right-label-delim=":" text="Note: 'customMethod' is a string to eval, such as a call to a specific hs.command to execute"/>
+                        </outline>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:25:08 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="019" hs:right-label-delim=":" text="hs.ui.JumpOverlay">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:26:07 GMT+00:00" hs:label="A" hs:left-label-delim="" hs:nid="024" hs:right-label-delim=":" text="A Dojo Widget that implements our jump overlay window that appears when the user presses the Jump button in the toolbar">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:27:57 GMT+00:00" hs:label="Stereotype" hs:left-label-delim="" hs:nid="091" hs:right-label-delim=":" text="Stereotype: Dojo widget"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:23:41 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0823" hs:right-label-delim=":" text="hs.ui.HyperScopeToolbar">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:26:15 GMT+00:00" hs:label="A" hs:left-label-delim="" hs:nid="0828" hs:right-label-delim=":" text="A Dojo Widget that implements our toolbar">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:53:09 GMT+00:00" hs:label="initializePowerUserSettings" hs:left-label-delim="" hs:nid="0912" hs:right-label-delim=":" text="initializePowerUserSettings()"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:23:47 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0826" hs:right-label-delim=":" text="hs.ui.RenderedDocument">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:24:54 GMT+00:00" hs:label="A" hs:left-label-delim="" hs:nid="0832" hs:right-label-delim=":" text="A class that renders our result hs.model.Document">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:27:18 GMT+00:00" hs:label="focusContextNode" hs:left-label-delim="" hs:nid="0845" hs:right-label-delim=":" text="focusContextNode()"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:27:22 GMT+00:00" hs:label="write" hs:left-label-delim="" hs:nid="0846" hs:right-label-delim=":" text="write(doc : hs.model.Document)"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:27:26 GMT+00:00" hs:label="displayDocument" hs:left-label-delim="" hs:nid="0847" hs:right-label-delim=":" text="displayDocument(iframe : DOMDocument, contextNodeNumber : String)"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:47:42 GMT+00:00" hs:label="clearSelection" hs:left-label-delim="" hs:nid="0898" hs:right-label-delim=":" text="clearSelection()"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:23:44 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0824" hs:right-label-delim=":" text="hs.ui.ResultWriter">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:24:22 GMT+00:00" hs:label="Writes" hs:left-label-delim="" hs:nid="0830" hs:right-label-delim=":" text="Writes our HTML results after XSLT to display to the user in a fast way">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:29:32 GMT+00:00" hs:label="hasScrollBars" hs:left-label-delim="" hs:nid="0852" hs:right-label-delim=":" text="hasScrollBars() : Boolean"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:23:45 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0825" hs:right-label-delim=":" text="hs.ui.Mark">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:24:30 GMT+00:00" hs:label="Dereferences" hs:left-label-delim="" hs:nid="0831" hs:right-label-delim=":" text="Dereferences a mouse mark click into an hs.address.Address that can be worked with">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:27:10 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0844" hs:right-label-delim=":" text="new hs.ui.Mark(evt : DOMEvent)"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:27:01 GMT+00:00" hs:label="row" hs:left-label-delim="" hs:nid="0841" hs:right-label-delim=":" text="row : DOMRow"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:27:02 GMT+00:00" hs:label="address" hs:left-label-delim="" hs:nid="0842" hs:right-label-delim=":" text="address : hs.address.Address"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:27:03 GMT+00:00" hs:label="invalidMark" hs:left-label-delim="" hs:nid="0843" hs:right-label-delim=":" text="invalidMark : Boolean"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:25:14 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="020" hs:right-label-delim=":" text="hs.ui.ViewspecOverlay">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:26:21 GMT+00:00" hs:label="A" hs:left-label-delim="" hs:nid="025" hs:right-label-delim=":" text="A Dojo Widget that implements our viewspec overlay">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:28:05 GMT+00:00" hs:label="Stereotype" hs:left-label-delim="" hs:nid="0839" hs:right-label-delim=":" text="Stereotype: dojo widget"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:53:17 GMT+00:00" hs:label="reset" hs:left-label-delim="" hs:nid="0913" hs:right-label-delim=":" text="reset()"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:25:18 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0833" hs:right-label-delim=":" text="hs.ui.LineClipper">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:25:22 GMT+00:00" hs:label="A" hs:left-label-delim="" hs:nid="0834" hs:right-label-delim=":" text="A class that performs line clipping on a rendered document">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:44:48 GMT+00:00" hs:label="applyChunk" hs:left-label-delim="" hs:nid="0879" hs:right-label-delim=":" text="applyChunk(doc : hs.model.Document, iframeDoc : IFrameDoc, container : DOMElement, rowChunk : TR[])">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:44:57 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0880" hs:right-label-delim=":" text="Note: iframeDoc - The document object for the iframe our results were written into"/>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:45:01 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0881" hs:right-label-delim=":" text="Note: container - The DOM object for our container that has our rendered node rows"/>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:45:05 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0882" hs:right-label-delim=":" text="Note: rowChunk - Array of TR rows - our rows to line clip"/>
+                        </outline>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:25:55 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0837" hs:right-label-delim=":" text="hs.ui.CommandBar">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:25:57 GMT+00:00" hs:label="Implements" hs:left-label-delim="" hs:nid="0838" hs:right-label-delim=":" text="Implements our Augment-style command bar">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:52:55 GMT+00:00" hs:label="visible" hs:left-label-delim="" hs:nid="0908" hs:right-label-delim=":" text="visible : Boolean"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:48:31 GMT+00:00" hs:label="reset" hs:left-label-delim="" hs:nid="0902" hs:right-label-delim=":" text="reset()"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:52:58 GMT+00:00" hs:label="isShowing" hs:left-label-delim="" hs:nid="0909" hs:right-label-delim=":" text="isShowing() : Boolean"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:52:58 GMT+00:00" hs:label="show" hs:left-label-delim="" hs:nid="0910" hs:right-label-delim=":" text="show()"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:52:59 GMT+00:00" hs:label="hide" hs:left-label-delim="" hs:nid="0911" hs:right-label-delim=":" text="hide()"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:47:24 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0896" hs:right-label-delim=":" text="Note: This class is driven by the file commands.xml, which contains a special XML formatted description of our commands that is machine processable"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:25:28 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0835" hs:right-label-delim=":" text="hs.ui.HelpOverlay">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:25:33 GMT+00:00" hs:label="Implements" hs:left-label-delim="" hs:nid="0836" hs:right-label-delim=":" text="Implements the help dialog displayed when the Help button is pressed on the main toolbar">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:28:08 GMT+00:00" hs:label="Stereotype" hs:left-label-delim="" hs:nid="0840" hs:right-label-delim=":" text="Stereotype: dojo widget"/>
+                     </outline>
+                  </outline>
+               </outline>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:19:57 GMT+00:00" hs:label="Module" hs:left-label-delim="" hs:nid="028" hs:right-label-delim=":" text="Module: hs.commands">
+                  <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 06:49:04 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="029" hs:right-label-delim=":" text="hs.commands">
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:12:21 GMT+00:00" hs:label="Singleton" hs:left-label-delim="" hs:nid="095" hs:right-label-delim=":" text="Singleton facade that exposes all of our commands as simple methods">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:28:12 GMT+00:00" hs:label="Stereotype" hs:left-label-delim="" hs:nid="030" hs:right-label-delim=":" text="Stereotype: static singleton"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:49:15 GMT+00:00" hs:label="jumpItem" hs:left-label-delim="" hs:nid="0145" hs:right-label-delim=":" text="jumpItem(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document, viewspecs : String) throws hs.exception.Jump">
+                           <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:39 GMT+00:00" hs:label="Notes" hs:left-label-delim="" hs:nid="0163" hs:right-label-delim=":" text="Notes: ">
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="readyHandler" hs:left-label-delim="" hs:nid="0146" hs:right-label-delim=":" text="readyHandler = function(address : hs.address.Address, document : hs.model.Document, error : InvalidAddressException)"/>
+                              <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:11:15 GMT+00:00" hs:label="All" hs:left-label-delim="" hs:nid="0164" hs:right-label-delim=":" text="All jump methods should filter out the parts of Location they need and throw the rest away"/>
+                           </outline>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:49:35 GMT+00:00" hs:label="jumpFile" hs:left-label-delim="" hs:nid="0147" hs:right-label-delim=":" text="jumpFile(readyHandler : Function, file : hs.address.FileInfo, relativeTo : hs.model.Document, typein : String (URL address), viewspecs : String) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:49:47 GMT+00:00" hs:label="jumpOrigin" hs:left-label-delim="" hs:nid="0149" hs:right-label-delim=":" text="jumpOrigin(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document, viewspecs : String) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:50:22 GMT+00:00" hs:label="jumpEndBranch" hs:left-label-delim="" hs:nid="0689" hs:right-label-delim=":" text="jumpEndBranch(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document, viewspecs : String) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:50:33 GMT+00:00" hs:label="jumpEndPlex" hs:left-label-delim="" hs:nid="0690" hs:right-label-delim=":" text="jumpEndPlex(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:50:47 GMT+00:00" hs:label="jumpNext" hs:left-label-delim="" hs:nid="0151" hs:right-label-delim=":" text="jumpNext(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document, viewspecs : String) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:50:54 GMT+00:00" hs:label="jumpBack" hs:left-label-delim="" hs:nid="0152" hs:right-label-delim=":" text="jumpBack(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document, viewspecs : String) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:50:58 GMT+00:00" hs:label="jumpSuccessor" hs:left-label-delim="" hs:nid="0153" hs:right-label-delim=":" text="jumpSuccessor(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document, viewspecs : String) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:51:07 GMT+00:00" hs:label="jumpPredecessor" hs:left-label-delim="" hs:nid="0154" hs:right-label-delim=":" text="jumpPredecessor(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document, viewspecs : String) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:51:11 GMT+00:00" hs:label="jumpUp" hs:left-label-delim="" hs:nid="0155" hs:right-label-delim=":" text="jumpUp(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document, viewspecs : String) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:51:14 GMT+00:00" hs:label="jumpDown" hs:left-label-delim="" hs:nid="0156" hs:right-label-delim=":" text="jumpDown(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document, viewspecs : String) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:51:16 GMT+00:00" hs:label="jumpHead" hs:left-label-delim="" hs:nid="0157" hs:right-label-delim=":" text="jumpHead(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document, viewspecs : String) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:51:19 GMT+00:00" hs:label="jumpTail" hs:left-label-delim="" hs:nid="0158" hs:right-label-delim=":" text="jumpTail(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document, viewspecs : String) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:51:26 GMT+00:00" hs:label="jumpLink" hs:left-label-delim="" hs:nid="0159" hs:right-label-delim=":" text="jumpLink(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document, typein : String) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:52:32 GMT+00:00" hs:label="jumpLabel" hs:left-label-delim="" hs:nid="0162" hs:right-label-delim=":" text="jumpLabel(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document, typein : String, viewspecs : String, jumpType : hs.commands.JumpConstants) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:51:54 GMT+00:00" hs:label="jumpContent" hs:left-label-delim="" hs:nid="0160" hs:right-label-delim=":" text="jumpContent(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document, jumpType : hs.commands.JumpConstants) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:52:07 GMT+00:00" hs:label="jumpWord" hs:left-label-delim="" hs:nid="0161" hs:right-label-delim=":" text="jumpWord(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document, typein : String, viewspecs : String, jumpType : hs.commands.JumpConstants) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:46:40 GMT+00:00" hs:label="resetViewspecs" hs:left-label-delim="" hs:nid="0892" hs:right-label-delim=":" text="resetViewspecs(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document)"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:52:18 GMT+00:00" hs:label="setViewspecs" hs:left-label-delim="" hs:nid="0894" hs:right-label-delim=":" text="setViewspecs(readyHandler : Function, address : hs.address.Address, relativeTo : hs.model.Document, viewspecs : String)"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:07:58 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="031" hs:right-label-delim=":" text="hs.commands.JumpConstants">
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 06:56:30 GMT+00:00" hs:label="Constants" hs:left-label-delim="" hs:nid="096" hs:right-label-delim=":" text="Constants that can be used with hs.commands to control commands, such as for jumping">
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:12:26 GMT+00:00" hs:label="FIRST" hs:left-label-delim="" hs:nid="0165" hs:right-label-delim=":" text="FIRST"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:12:29 GMT+00:00" hs:label="NEXT" hs:left-label-delim="" hs:nid="0166" hs:right-label-delim=":" text="NEXT"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:12:30 GMT+00:00" hs:label="LAST" hs:left-label-delim="" hs:nid="0167" hs:right-label-delim=":" text="LAST"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:12:30 GMT+00:00" hs:label="ANY" hs:left-label-delim="" hs:nid="0168" hs:right-label-delim=":" text="ANY"/>
+                     </outline>
+                  </outline>
+               </outline>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:19:58 GMT+00:00" hs:label="Module" hs:left-label-delim="" hs:nid="0619" hs:right-label-delim=":" text="Module: hs.model">
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:09:36 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0800" hs:right-label-delim=":" text="hs.model">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:08:58 GMT+00:00" hs:label="Package" hs:left-label-delim="" hs:nid="0797" hs:right-label-delim=":" text="Package level methods">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:09:04 GMT+00:00" hs:label="addOnLoad" hs:left-label-delim="" hs:nid="0798" hs:right-label-delim=":" text="addOnLoad(myListener : Function)"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:06 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="034" hs:right-label-delim=":" text="hs.model.Node">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:13 GMT+00:00" hs:label="Represents" hs:left-label-delim="" hs:nid="099" hs:right-label-delim=":" text="Represents a node in an hs.model.Document">
+                        <outline hs:createdBy="BKN" hs:createdOn="Sat 10 Jun 2006 01:13:54 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0772" hs:right-label-delim=":" text="new hs.model.Node(domNode : DOMNode, doc : hs.model.Document)"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="doc" hs:left-label-delim="" hs:nid="0190" hs:right-label-delim=":" text="doc : hs.model.Document"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="number" hs:left-label-delim="" hs:nid="0191" hs:right-label-delim=":" text="number : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="ID" hs:left-label-delim="" hs:nid="0192" hs:right-label-delim=":" text="ID : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="level" hs:left-label-delim="" hs:nid="0193" hs:right-label-delim=":" text="level : Integer"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="cursor" hs:left-label-delim="" hs:nid="0206" hs:right-label-delim=":" text="cursor : hs.model.NodeCursor"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 15 Jun 2006 07:05:05 GMT+00:00" hs:label="data" hs:left-label-delim="" hs:nid="0778" hs:right-label-delim=":" text="data : Object">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 15 Jun 2006 07:05:10 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0779" hs:right-label-delim=":" text="Note: This is the data of this node; for right now it is always text because that is what we currently support."/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="domNode" hs:left-label-delim="" hs:nid="0195" hs:right-label-delim=":" text="domNode : DOMNode"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="getChildNodes" hs:left-label-delim="" hs:nid="0194" hs:right-label-delim=":" text="getChildNodes() : hs.model.Node[]"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpUp" hs:left-label-delim="" hs:nid="0196" hs:right-label-delim=":" text="jumpUp(offset : Integer) : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpDown" hs:left-label-delim="" hs:nid="0197" hs:right-label-delim=":" text="jumpDown(offset : Integer) : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpBack" hs:left-label-delim="" hs:nid="0198" hs:right-label-delim=":" text="jumpBack(offset : Integer) : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpNext" hs:left-label-delim="" hs:nid="0199" hs:right-label-delim=":" text="jumpNext(offset : Integer) : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpBranchEnd" hs:left-label-delim="" hs:nid="0201" hs:right-label-delim=":" text="jumpBranchEnd() : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpPlexHead" hs:left-label-delim="" hs:nid="0202" hs:right-label-delim=":" text="jumpPlexHead() : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpPlexTail" hs:left-label-delim="" hs:nid="0203" hs:right-label-delim=":" text="jumpPlexTail() : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpSuccessor" hs:left-label-delim="" hs:nid="0204" hs:right-label-delim=":" text="jumpSuccessor(offset : Integer) : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpPredecessor" hs:left-label-delim="" hs:nid="0205" hs:right-label-delim=":" text="jumpPredecessor(offset : Integer) : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:32:44 GMT+00:00" hs:label="jumpBranchSearch" hs:left-label-delim="" hs:nid="0200" hs:right-label-delim=":" text="jumpBranchSearch(label : String) : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:32:34 GMT+00:00" hs:label="jumpOffset" hs:left-label-delim="" hs:nid="0781" hs:right-label-delim=":" text="jumpOffset(number : String) : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:35:42 GMT+00:00" hs:label="test" hs:left-label-delim="" hs:nid="0207" hs:right-label-delim=":" text="test(expression : RegExp or String) : Boolean">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:35:53 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0782" hs:right-label-delim=":" text="Note: 'expression' can be a JavaScript regular expression or a String"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:31:27 GMT+00:00" hs:label="getParent" hs:left-label-delim="" hs:nid="0858" hs:right-label-delim=":" text="getParent() : hs.model.Node"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:13 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="032" hs:right-label-delim=":" text="hs.model.Document">
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 06:56:37 GMT+00:00" hs:label="Represents" hs:left-label-delim="" hs:nid="097" hs:right-label-delim=":" text="Represents a HyperScope outline document that can be interacted with and jumped through">
+                        <outline hs:createdBy="BKN" hs:createdOn="Sat 10 Jun 2006 00:52:07 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0771" hs:right-label-delim=":" text="new hs.model.Document(address, dom)"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 18 May 2006 07:29:05 GMT+00:00" hs:label="DEFAULT" hs:left-label-delim="" hs:nid="0696" hs:right-label-delim=":" text="DEFAULT_FILE_EXTENSION: &quot;opml&quot;">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 18 May 2006 07:29:12 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0697" hs:right-label-delim=":" text="Note: The default file extension for document's of this type"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="address" hs:left-label-delim="" hs:nid="0169" hs:right-label-delim=":" text="address : hs.address.Address">
+                           <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:34 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0170" hs:right-label-delim=":" text="Note: This address is unexpanded"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="dom" hs:left-label-delim="" hs:nid="0171" hs:right-label-delim=":" text="dom : XMLDOM"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="origDom" hs:left-label-delim="" hs:nid="0172" hs:right-label-delim=":" text="origDom : XMLDom"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="nodeCtxt" hs:left-label-delim="" hs:nid="0174" hs:right-label-delim=":" text="nodeCtxt : hs.model.Node"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="currentViewspecs" hs:left-label-delim="" hs:nid="0184" hs:right-label-delim=":" text="currentViewspecs : hs.filter.CurrentViewspecs"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="renderedHtml" hs:left-label-delim="" hs:nid="0186" hs:right-label-delim=":" text="renderedHtml : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:09:59 GMT+00:00" hs:label="renderedHtmlDom" hs:left-label-delim="" hs:nid="0801" hs:right-label-delim=":" text="renderedHtmlDom : DOM"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:07:44 GMT+00:00" hs:label="normalize" hs:left-label-delim="" hs:nid="0173" hs:right-label-delim=":" text="normalize() throws hs.exception.Filter"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpOrigin" hs:left-label-delim="" hs:nid="0175" hs:right-label-delim=":" text="jumpOrigin() : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Wed 21 Jun 2006 06:10:41 GMT+00:00" hs:label="jumpNumber" hs:left-label-delim="" hs:nid="0176" hs:right-label-delim=":" text="jumpNumber(number : String, isOffset : Boolean) : hs.model.Node throws hs.exception.Jump">
+                           <outline hs:createdBy="BKN" hs:createdOn="Wed 21 Jun 2006 06:10:44 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0780" hs:right-label-delim=":" text="Note: isOffset is optional and defaults to false."/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpId" hs:left-label-delim="" hs:nid="0177" hs:right-label-delim=":" text="jumpId(id : String) : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpMarker" hs:left-label-delim="" hs:nid="0178" hs:right-label-delim=":" text="jumpMarker(marker : String) : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpLabel" hs:left-label-delim="" hs:nid="0179" hs:right-label-delim=":" text="jumpLabel(label : String,jumpType : hs.commands.JumpConstants) : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpWord" hs:left-label-delim="" hs:nid="0182" hs:right-label-delim=":" text="jumpWord(word : String, jumpType : hs.commands.JumpConstants) : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpContent" hs:left-label-delim="" hs:nid="0183" hs:right-label-delim=":" text="jumpContent(content : String, jumpType : hs.commands.JumpConstants) : hs.model.Node throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:37:55 GMT+00:00" hs:label="jumpExternal" hs:left-label-delim="" hs:nid="0786" hs:right-label-delim=":" text="jumpExternal(label : String) : hs.model.Node throws hs.exception.Jump">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:37:58 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0788" hs:right-label-delim=":" text="Note: External labels are not supported yet"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:37:39 GMT+00:00" hs:label="render" hs:left-label-delim="" hs:nid="0785" hs:right-label-delim=":" text="render() : String throws hs.exception.Render "/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:15:43 GMT+00:00" hs:label="getRenderXSLT" hs:left-label-delim="" hs:nid="0815" hs:right-label-delim=":" text="getRenderXSLT() : XSLTProcessor">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:15:49 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0816" hs:right-label-delim=":" text="Note: XSLTProcessor is this platform's XSLT processor"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:22:46 GMT+00:00" hs:label="toURL" hs:left-label-delim="" hs:nid="0819" hs:right-label-delim=":" text="toURL() : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:54:08 GMT+00:00" hs:label="getOriginDomNode" hs:left-label-delim="" hs:nid="0915" hs:right-label-delim=":" text="getOriginDomNode() : DOMNode">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:54:22 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0916" hs:right-label-delim=":" text="Note: Returns the DOMNode of the origin; used by some filters"/>
+                        </outline>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:06 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="035" hs:right-label-delim=":" text="hs.model.NodeCursor">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:06 GMT+00:00" hs:label="A" hs:left-label-delim="" hs:nid="0100" hs:right-label-delim=":" text="A 'cursor' in an hs.model.Node that can jump through the textual contents of a node to perform string positioning by character, word, link, etc.">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:36:11 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0875" hs:right-label-delim=":" text="new hs.model.NodeCursor(node : hs.model.Node)">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:36:14 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0876" hs:right-label-delim=":" text="Note: This is the node to apply the cursor to"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="position" hs:left-label-delim="" hs:nid="0208" hs:right-label-delim=":" text="position : Integer">
+                           <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:34 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0209" hs:right-label-delim=":" text="Note: Starts at zero by default"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:19:02 GMT+00:00" hs:label="toEnd" hs:left-label-delim="" hs:nid="0210" hs:right-label-delim=":" text="toEnd()"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:19:03 GMT+00:00" hs:label="toBeginning" hs:left-label-delim="" hs:nid="0211" hs:right-label-delim=":" text="toBeginning()"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpWords" hs:left-label-delim="" hs:nid="0212" hs:right-label-delim=":" text="jumpWords(numWords : Integer) throws hs.exception.Jump">
+                           <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:34 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0213" hs:right-label-delim=":" text="Note: all jump* methods in this class can take either positive or negative values"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpCharacters" hs:left-label-delim="" hs:nid="0214" hs:right-label-delim=":" text="jumpCharacters(numChars : Integer) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpVisible" hs:left-label-delim="" hs:nid="0215" hs:right-label-delim=":" text="jumpVisible(numVisible : Integer) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpInvisible" hs:left-label-delim="" hs:nid="0216" hs:right-label-delim=":" text="jumpInvisible(numInvisible : Integer) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="jumpLink" hs:left-label-delim="" hs:nid="0217" hs:right-label-delim=":" text="jumpLink(numLinks : Integer) throws hs.exception.Jump"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="getCharacter" hs:left-label-delim="" hs:nid="0218" hs:right-label-delim=":" text="getCharacter() : Character">
+                           <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:34 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0219" hs:right-label-delim=":" text="Note: Scans from position until it finds returnable character (i.e. no HTML or XML tags); returns null if none found"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="getRest" hs:left-label-delim="" hs:nid="0220" hs:right-label-delim=":" text="getRest() : String">
+                           <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:34 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0221" hs:right-label-delim=":" text="Note: Returns everything forwards from current position"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="getWord" hs:left-label-delim="" hs:nid="0222" hs:right-label-delim=":" text="getWord() : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="getLink" hs:left-label-delim="" hs:nid="0223" hs:right-label-delim=":" text="getLink() : String">
+                           <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:34 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0224" hs:right-label-delim=":" text="Note: Returns just link text"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="getAnchor" hs:left-label-delim="" hs:nid="0225" hs:right-label-delim=":" text="getAnchor() : String">
+                           <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:34 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0226" hs:right-label-delim=":" text="Note: Returns full A HREF anchor including link text"/>
+                        </outline>
+                     </outline>
+                  </outline>
+               </outline>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:19:58 GMT+00:00" hs:label="Module" hs:left-label-delim="" hs:nid="0622" hs:right-label-delim=":" text="Module: hs.address">
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:23 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="038" hs:right-label-delim=":" text="hs.address.Address">
+                     <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 07:48:03 GMT+00:00" hs:label="A" hs:left-label-delim="" hs:nid="0103" hs:right-label-delim=":" text="A HyperScope address that can be resolved and manipulated">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:49 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0235" hs:right-label-delim=":" text="new hs.address.Address(URL : String) throws hs.exception.InvalidAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="fileInfo" hs:left-label-delim="" hs:nid="0250" hs:right-label-delim=":" text="fileInfo : hs.address.FileInfo"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="nodeAddresses" hs:left-label-delim="" hs:nid="0251" hs:right-label-delim=":" text="nodeAddresses : hs.address.NodeAddress[]"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="viewspecs" hs:left-label-delim="" hs:nid="0252" hs:right-label-delim=":" text="viewspecs : hs.address.Viewspecs[]"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="contentFilter" hs:left-label-delim="" hs:nid="0253" hs:right-label-delim=":" text="contentFilter : hs.address.ContentFilter"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:33:28 GMT+00:00" hs:label="resolve" hs:left-label-delim="" hs:nid="0236" hs:right-label-delim=":" text="resolve(handler : Function, replacePage : Boolean, relativeTo : hs.model.Document, inclusion : Boolean)">
+                           <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:39 GMT+00:00" hs:label="Notes" hs:left-label-delim="" hs:nid="0237" hs:right-label-delim=":" text="Notes: ">
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="handler" hs:left-label-delim="" hs:nid="0238" hs:right-label-delim=":" text="handler = function(address : hs.address.Address, document : hs.model.Document, error : hs.exception.InvalidAddress)"/>
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:33:44 GMT+00:00" hs:label="'inclusion'" hs:left-label-delim="" hs:nid="0865" hs:right-label-delim=":" text="'inclusion' is an optional parameter that indicates that we are doing a resolution for a file that we be included; defaults to false"/>
+                           </outline>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="equals" hs:left-label-delim="" hs:nid="0241" hs:right-label-delim=":" text="equals(address : hs.address.Address) : Boolean"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="equals" hs:left-label-delim="" hs:nid="0242" hs:right-label-delim=":" text="equals(address : String) : Boolean"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:21:42 GMT+00:00" hs:label="toString" hs:left-label-delim="" hs:nid="0245" hs:right-label-delim=":" text="toString()">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:21:49 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0246" hs:right-label-delim=":" text="Note: Our address turned into a string; if relative, returns relative; if a full address, returns the full address as a string"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Wed 7 Jun 2006 00:08:36 GMT+00:00" hs:label="clone" hs:left-label-delim="" hs:nid="0764" hs:right-label-delim=":" text="clone() : hs.address.Address"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:20:51 GMT+00:00" hs:label="isRelative" hs:left-label-delim="" hs:nid="0768" hs:right-label-delim=":" text="isRelative() : Boolean">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:22:01 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0769" hs:right-label-delim=":" text="Note: Whether this address is a full, non-relative address, such as http://foobar.com, or whether it is just relative with no scheme, host, path, etc., such as #2A:x or foobar.com/"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:36:37 GMT+00:00" hs:label="replaceResolution" hs:left-label-delim="" hs:nid="0877" hs:right-label-delim=":" text="replaceResolution(newAddr : hs.address.Address, doc : hs.model.Document)">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:36:47 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0878" hs:right-label-delim=":" text="Note: Causes one address resolution to stop, passing on its callback for the new address which begins its own resolution to take over - needed for indirect links"/>
+                        </outline>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:03:53 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="039" hs:right-label-delim=":" text="hs.address.Piece">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:38 GMT+00:00" hs:label="Abstract" hs:left-label-delim="" hs:nid="0104" hs:right-label-delim=":" text="Abstract superclass for all of the kinds of components that can make up an hs.address.Address, such as file information (hs.address.FileInfo), addressing (hs.address.NodeAddress), etc.">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:28:21 GMT+00:00" hs:label="Stereotype" hs:left-label-delim="" hs:nid="040" hs:right-label-delim=":" text="Stereotype: abstract"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="abstract" hs:left-label-delim="" hs:nid="0254" hs:right-label-delim=":" text="abstract toString() : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="abstract" hs:left-label-delim="" hs:nid="0255" hs:right-label-delim=":" text="abstract isPieceType(className : String) : Boolean"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:30 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="041" hs:right-label-delim=":" text="hs.address.FileInfo">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:08:54 GMT+00:00" hs:label="An" hs:left-label-delim="" hs:nid="0105" hs:right-label-delim=":" text="An hs.address.Piece that holds the file information for this Location, such as the path, port, URL scheme, etc.">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:16 GMT+00:00" hs:label="extends" hs:left-label-delim="" hs:nid="042" hs:right-label-delim=":" text="extends hs.address.Piece"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="scheme" hs:left-label-delim="" hs:nid="0259" hs:right-label-delim=":" text="scheme : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="host" hs:left-label-delim="" hs:nid="0260" hs:right-label-delim=":" text="host : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="port" hs:left-label-delim="" hs:nid="0261" hs:right-label-delim=":" text="port : Integer"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="path" hs:left-label-delim="" hs:nid="0262" hs:right-label-delim=":" text="path : String">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 25 May 2006 07:21:27 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0750" hs:right-label-delim=":" text="Note: Contains both path and file"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="query" hs:left-label-delim="" hs:nid="0264" hs:right-label-delim=":" text="query : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 18 May 2006 07:30:33 GMT+00:00" hs:label="hasFullPath" hs:left-label-delim="" hs:nid="0698" hs:right-label-delim=":" text="hasFullPath() : Boolean">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 18 May 2006 07:30:42 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0699" hs:right-label-delim=":" text="Note: This returns whether there is a full, non-relative path, such as /neuberg/arch.opml, rather than a relative one, such as foobar/arch.opml"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:22:23 GMT+00:00" hs:label="expand" hs:left-label-delim="" hs:nid="0700" hs:right-label-delim=":" text="expand(relativeTo : hs.address.FileInfo)  : hs.address.FileInfo throws hs.exception.InvalidAddress">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 18 May 2006 07:31:03 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0701" hs:right-label-delim=":" text="Note: Expands and makes this FileInfo be non-relative, relative to the given document."/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="toString" hs:left-label-delim="" hs:nid="0271" hs:right-label-delim=":" text="toString() : String">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 18 May 2006 07:33:53 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0702" hs:right-label-delim=":" text="Note: Unexpanded string version of this FileInfo."/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 18 May 2006 07:34:00 GMT+00:00" hs:label="clone" hs:left-label-delim="" hs:nid="0705" hs:right-label-delim=":" text="clone() : hs.address.FileInfo"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:22:15 GMT+00:00" hs:label="isRelative" hs:left-label-delim="" hs:nid="0765" hs:right-label-delim=":" text="isRelative() : Boolean">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:22:30 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0766" hs:right-label-delim=":" text="Note: Returns whether we have a fully non-relative FileInfo, with scheme, port, host, path, etc."/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 8 Jun 2006 01:13:40 GMT+00:00" hs:label="equals" hs:left-label-delim="" hs:nid="0767" hs:right-label-delim=":" text="equals(obj : Object) : Boolean"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:23:08 GMT+00:00" hs:label="consolidateRelativeDots" hs:left-label-delim="" hs:nid="0820" hs:right-label-delim=":" text="consolidateRelativeDots()">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:23:26 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0821" hs:right-label-delim=":" text="Note: Consolidates .. and . dots that might be in the address into their non-relative paths. For example, dir1/dir2/../foobar.html would become dir1/foobar.html"/>
+                        </outline>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:38 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="043" hs:right-label-delim=":" text="hs.address.NodeAddress">
+                     <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 07:52:18 GMT+00:00" hs:label="The" hs:left-label-delim="" hs:nid="0106" hs:right-label-delim=":" text="The abstract superclass of all node addressing types, which can address specific portions of a document either directly or indirectly">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:28:24 GMT+00:00" hs:label="Stereotype" hs:left-label-delim="" hs:nid="0107" hs:right-label-delim=":" text="Stereotype: abstract"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Wed 17 May 2006 07:39:22 GMT+00:00" hs:label="extends" hs:left-label-delim="" hs:nid="044" hs:right-label-delim=":" text="extends hs.address.Piece, mixes in hs.filter.Filter"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:41 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="045" hs:right-label-delim=":" text="hs.address.Viewspec">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:23 GMT+00:00" hs:label="Represents" hs:left-label-delim="" hs:nid="0108" hs:right-label-delim=":" text="Represents a specific viewspec letter in an hs.address.Address">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:16 GMT+00:00" hs:label="extends" hs:left-label-delim="" hs:nid="046" hs:right-label-delim=":" text="extends hs.address.Piece"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="letter" hs:left-label-delim="" hs:nid="0273" hs:right-label-delim=":" text="letter : String"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:53 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="047" hs:right-label-delim=":" text="hs.address.ContentFilter">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:23 GMT+00:00" hs:label="Represents" hs:left-label-delim="" hs:nid="0109" hs:right-label-delim=":" text="Represents a content filter at the end of an hs.address.Address, such as ;&quot;foobar&quot;;">
+                        <outline hs:createdBy="BKN" hs:createdOn="Wed 17 May 2006 07:39:22 GMT+00:00" hs:label="extends" hs:left-label-delim="" hs:nid="048" hs:right-label-delim=":" text="extends hs.address.Piece, mixes in hs.filter.Filter"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:42:28 GMT+00:00" hs:label="search" hs:left-label-delim="" hs:nid="0688" hs:right-label-delim=":" text="search : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="toString" hs:left-label-delim="" hs:nid="0280" hs:right-label-delim=":" text="toString() : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:53:48 GMT+00:00" hs:label="clone" hs:left-label-delim="" hs:nid="0914" hs:right-label-delim=":" text="clone() : hs.address.ContentFilter"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:04:05 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="051" hs:right-label-delim=":" text="hs.address.NodeNumber">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:34 GMT+00:00" hs:label="An" hs:left-label-delim="" hs:nid="0110" hs:right-label-delim=":" text="An hs.address.NodeAddress that is a node number, such as 2A3">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:40 GMT+00:00" hs:label="extends" hs:left-label-delim="" hs:nid="059" hs:right-label-delim=":" text="extends hs.address.NodeAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:27:41 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0286" hs:right-label-delim=":" text="new hs.address.NodeNumber(number : String, isOffset : Boolean) throws hs.exception.InvalidAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="number" hs:left-label-delim="" hs:nid="0287" hs:right-label-delim=":" text="number : String">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="Example" hs:left-label-delim="" hs:nid="0288" hs:right-label-delim=":" text="Example :  2A"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:27:36 GMT+00:00" hs:label="isOffset" hs:left-label-delim="" hs:nid="0706" hs:right-label-delim=":" text="isOffset : Boolean">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="Example" hs:left-label-delim="" hs:nid="0291" hs:right-label-delim=":" text="Example :  !2A"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 13 Jun 2006 07:15:56 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0773" hs:right-label-delim=":" text="static toNodeNumber(parentNodeNumber : String, nodeOffset : Integer)">
+                           <outline hs:createdBy="BKN" hs:createdOn="Tue 13 Jun 2006 07:14:56 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0774" hs:right-label-delim=":" text="Note: Factory method that takes a parent node number, such as &quot;2A5BB2&quot; and a node offset, and returns a NodeNumber initialized to be the correct node number child with this number, such as &quot;2A5BB2C&quot; if the node offset were 3."/>
+                        </outline>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:04:09 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="052" hs:right-label-delim=":" text="hs.address.NodeID">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:34 GMT+00:00" hs:label="An" hs:left-label-delim="" hs:nid="0111" hs:right-label-delim=":" text="An hs.address.NodeAddress that is a node ID, such as 023">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:40 GMT+00:00" hs:label="extends" hs:left-label-delim="" hs:nid="060" hs:right-label-delim=":" text="extends hs.address.NodeAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:59 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0292" hs:right-label-delim=":" text="new hs.address.NodeID(id : String) throws hs.exception.InvalidAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="id" hs:left-label-delim="" hs:nid="0293" hs:right-label-delim=":" text="id : String"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:04:13 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="053" hs:right-label-delim=":" text="hs.address.NodeLabel">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:34 GMT+00:00" hs:label="An" hs:left-label-delim="" hs:nid="0113" hs:right-label-delim=":" text="An hs.address.NodeAddress that is a node label, such as foobar">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:40 GMT+00:00" hs:label="extends" hs:left-label-delim="" hs:nid="061" hs:right-label-delim=":" text="extends hs.address.NodeAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:11:01 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0304" hs:right-label-delim=":" text="new hs.address.NodeLabel(label : String) throws hs.exception.InvalidAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 30 May 2006 07:33:08 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0298" hs:right-label-delim=":" text="static START_AT_FIRST : String">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="Example" hs:left-label-delim="" hs:nid="0299" hs:right-label-delim=":" text="Example :  label"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 30 May 2006 07:33:27 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0295" hs:right-label-delim=":" text="static BRANCH_SEARCH : String">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="Example" hs:left-label-delim="" hs:nid="0296" hs:right-label-delim=":" text="Example :  !label"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 30 May 2006 07:33:31 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0300" hs:right-label-delim=":" text="static MOVE_TO_NEXT : String">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="Example" hs:left-label-delim="" hs:nid="0301" hs:right-label-delim=":" text="Example :  *label"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 30 May 2006 07:33:33 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0302" hs:right-label-delim=":" text="static EXTERNAL : String">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="Example" hs:left-label-delim="" hs:nid="0303" hs:right-label-delim=":" text="Example :  $label"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="label" hs:left-label-delim="" hs:nid="0294" hs:right-label-delim=":" text="label : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 30 May 2006 07:32:42 GMT+00:00" hs:label="type" hs:left-label-delim="" hs:nid="0751" hs:right-label-delim=":" text="type">
+                           <outline hs:createdBy="BKN" hs:createdOn="Tue 30 May 2006 07:32:52 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0752" hs:right-label-delim=":" text="Note: One of the constants defined on hs.address.NodeLabel, such as hs.address.NodeLabel.START_AT_FIRST"/>
+                        </outline>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:03:19 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="054" hs:right-label-delim=":" text="hs.address.Marker">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:34 GMT+00:00" hs:label="An" hs:left-label-delim="" hs:nid="0114" hs:right-label-delim=":" text="An hs.address.NodeAddress that is a marker, such as @someMarker">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:40 GMT+00:00" hs:label="extends" hs:left-label-delim="" hs:nid="062" hs:right-label-delim=":" text="extends hs.address.NodeAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:11:08 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0305" hs:right-label-delim=":" text="new hs.address.NodeMarker(marker : String) throws hs.exception.InvalidAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="name" hs:left-label-delim="" hs:nid="0306" hs:right-label-delim=":" text="name : String">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="Example" hs:left-label-delim="" hs:nid="0307" hs:right-label-delim=":" text="Example :  @marker"/>
+                        </outline>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:03:23 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="055" hs:right-label-delim=":" text="hs.address.Relative">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:34 GMT+00:00" hs:label="An" hs:left-label-delim="" hs:nid="0115" hs:right-label-delim=":" text="An hs.address.NodeAddress that is a single relative address, such as .2u">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:40 GMT+00:00" hs:label="extends" hs:left-label-delim="" hs:nid="063" hs:right-label-delim=":" text="extends hs.address.NodeAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:36:54 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0713" hs:right-label-delim=":" text="new hs.address.Relative(type, offset : Integer)">
+                           <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:36:58 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0714" hs:right-label-delim=":" text="Note: 'type' is one of the constants defined on this class, hs.address.Relative"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:37:03 GMT+00:00" hs:label="NODE" hs:left-label-delim="" hs:nid="0715" hs:right-label-delim=":" text="NODE_NEXT"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:37:04 GMT+00:00" hs:label="NODE" hs:left-label-delim="" hs:nid="0716" hs:right-label-delim=":" text="NODE_BACK"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:37:05 GMT+00:00" hs:label="NODE" hs:left-label-delim="" hs:nid="0717" hs:right-label-delim=":" text="NODE_UP"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:37:06 GMT+00:00" hs:label="NODE" hs:left-label-delim="" hs:nid="0718" hs:right-label-delim=":" text="NODE_DOWN"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:37:07 GMT+00:00" hs:label="ORIGIN" hs:left-label-delim="" hs:nid="0719" hs:right-label-delim=":" text="ORIGIN"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:37:08 GMT+00:00" hs:label="BRANCH" hs:left-label-delim="" hs:nid="0720" hs:right-label-delim=":" text="BRANCH_END"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:37:09 GMT+00:00" hs:label="PLEX" hs:left-label-delim="" hs:nid="0721" hs:right-label-delim=":" text="PLEX_HEAD"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:37:11 GMT+00:00" hs:label="PLEX" hs:left-label-delim="" hs:nid="0722" hs:right-label-delim=":" text="PLEX_TAIL"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:37:11 GMT+00:00" hs:label="NODE" hs:left-label-delim="" hs:nid="0723" hs:right-label-delim=":" text="NODE_SUCCESSOR"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:37:13 GMT+00:00" hs:label="NODE" hs:left-label-delim="" hs:nid="0724" hs:right-label-delim=":" text="NODE_PREDECESSOR"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:37:14 GMT+00:00" hs:label="CONTENT" hs:left-label-delim="" hs:nid="0725" hs:right-label-delim=":" text="CONTENT_SEARCH"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:37:15 GMT+00:00" hs:label="RETURN" hs:left-label-delim="" hs:nid="0726" hs:right-label-delim=":" text="RETURN_NODE"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:37:21 GMT+00:00" hs:label="RETURN" hs:left-label-delim="" hs:nid="0727" hs:right-label-delim=":" text="RETURN_FILE"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:37:23 GMT+00:00" hs:label="type" hs:left-label-delim="" hs:nid="0728" hs:right-label-delim=":" text="type"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="offset" hs:left-label-delim="" hs:nid="0321" hs:right-label-delim=":" text="offset : Integer"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:03:28 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="056" hs:right-label-delim=":" text="hs.address.IndirectLink">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:34 GMT+00:00" hs:label="An" hs:left-label-delim="" hs:nid="0116" hs:right-label-delim=":" text="An hs.address.NodeAddress that is an indirect link, such as .l">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:40 GMT+00:00" hs:label="extends" hs:left-label-delim="" hs:nid="064" hs:right-label-delim=":" text="extends hs.address.NodeAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="offset" hs:left-label-delim="" hs:nid="0337" hs:right-label-delim=":" text="offset : Integer"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:03:39 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="057" hs:right-label-delim=":" text="hs.address.StringSearch">
+                     <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:40:26 GMT+00:00" hs:label="An" hs:left-label-delim="" hs:nid="0117" hs:right-label-delim=":" text="An hs.address.NodeAddress that is a string search forwards from the present location through the following nodes, such as &quot;foobar&quot;">
+                        <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:42:39 GMT+00:00" hs:label="extends" hs:left-label-delim="" hs:nid="0678" hs:right-label-delim=":" text="extends hs.address.NodeAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:42:32 GMT+00:00" hs:label="search" hs:left-label-delim="" hs:nid="0686" hs:right-label-delim=":" text="search : String">
+                           <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:42:03 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0687" hs:right-label-delim=":" text="Note: We have normalized string searches to look like content filters"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="toString" hs:left-label-delim="" hs:nid="0685" hs:right-label-delim=":" text="toString() : String"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:03:45 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="058" hs:right-label-delim=":" text="hs.address.StringPosition">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:34 GMT+00:00" hs:label="An" hs:left-label-delim="" hs:nid="0118" hs:right-label-delim=":" text="An hs.address.NodeAddress that jumps through a single node's textual contents, such as -2w">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:40 GMT+00:00" hs:label="extends" hs:left-label-delim="" hs:nid="066" hs:right-label-delim=":" text="extends hs.address.NodeAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:54 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0737" hs:right-label-delim=":" text="new hs.address.StringPosition(type, offset : Integer) throws hs.exception.InvalidAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="offset" hs:left-label-delim="" hs:nid="0348" hs:right-label-delim=":" text="offset : Integer">
+                           <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:31 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0349" hs:right-label-delim=":" text="Note: Can be negative"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:19 GMT+00:00" hs:label="type" hs:left-label-delim="" hs:nid="0735" hs:right-label-delim=":" text="type">
+                           <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:25 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0736" hs:right-label-delim=":" text="Note: One of the constants defined on hs.address.StringPosition, such as LAST_CHAR"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:10 GMT+00:00" hs:label="LAST" hs:left-label-delim="" hs:nid="0729" hs:right-label-delim=":" text="LAST_CHAR"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:13 GMT+00:00" hs:label="FIRST" hs:left-label-delim="" hs:nid="0730" hs:right-label-delim=":" text="FIRST_CHAR"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:14 GMT+00:00" hs:label="CHARACTER" hs:left-label-delim="" hs:nid="0731" hs:right-label-delim=":" text="CHARACTER"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:15 GMT+00:00" hs:label="WORD" hs:left-label-delim="" hs:nid="0732" hs:right-label-delim=":" text="WORD"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:15 GMT+00:00" hs:label="VISIBLE" hs:left-label-delim="" hs:nid="0733" hs:right-label-delim=":" text="VISIBLE"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:16 GMT+00:00" hs:label="INVISIBLE" hs:left-label-delim="" hs:nid="0734" hs:right-label-delim=":" text="INVISIBLE"/>
+                     </outline>
+                  </outline>
+               </outline>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:19:59 GMT+00:00" hs:label="Module" hs:left-label-delim="" hs:nid="0621" hs:right-label-delim=":" text="Module: hs.filter">
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:04:18 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="067" hs:right-label-delim=":" text="hs.filter.Filter">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:11:20 GMT+00:00" hs:label="A" hs:left-label-delim="" hs:nid="0121" hs:right-label-delim=":" text="A consistent API for applying filters and transformers to an hs.model.Document, changing the underlying hs.model.Document in some filter specific way; many objects are filters, including the hs.address.NodeAddress.">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:28:30 GMT+00:00" hs:label="Stereotype" hs:left-label-delim="" hs:nid="068" hs:right-label-delim=":" text="Stereotype: mixin"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:44:19 GMT+00:00" hs:label="apply" hs:left-label-delim="" hs:nid="0363" hs:right-label-delim=":" text="apply(document : hs.model.Document, readyHandler : Function, address : hs.address.Address) throws hs.exception.Filter">
+                           <outline hs:createdBy="BKN" hs:createdOn="Wed 17 May 2006 07:39:48 GMT+00:00" hs:label="Notes" hs:left-label-delim="" hs:nid="0692" hs:right-label-delim=":" text="Notes">
+                              <outline hs:createdBy="BKN" hs:createdOn="Wed 17 May 2006 07:39:48 GMT+00:00" hs:label="readyHandler" hs:left-label-delim="" hs:nid="0693" hs:right-label-delim=":" text="readyHandler is optional, and only needs to be given if this filter is asychronous (i.e. isAsynch() returns true)"/>
+                              <outline hs:createdBy="BKN" hs:createdOn="Wed 17 May 2006 07:39:59 GMT+00:00" hs:label="readyHandler" hs:left-label-delim="" hs:nid="0694" hs:right-label-delim=":" text="readyHandler = function(document : hs.model.Document, error : hs.exception.Filter)"/>
+                           </outline>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Wed 17 May 2006 07:39:30 GMT+00:00" hs:label="isAsynch" hs:left-label-delim="" hs:nid="0691" hs:right-label-delim=":" text="isAsynch() : Boolean"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:04:21 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="069" hs:right-label-delim=":" text="hs.filter.Normalizer">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:13 GMT+00:00" hs:label="A" hs:left-label-delim="" hs:nid="0122" hs:right-label-delim=":" text="A Filter that normalizes an hs.model.Document into a consistent form before working with it; specifically, the Normalizer strips out everything but DOM Elements from the underlying hs.model.Document, and adds in node number information">
+                        <outline hs:createdBy="BKN" hs:createdOn="Wed 17 May 2006 07:40:12 GMT+00:00" hs:label="mixes" hs:left-label-delim="" hs:nid="070" hs:right-label-delim=":" text="mixes in hs.filter.Filter"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:11:42 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0364" hs:right-label-delim=":" text="new hs.filter.Normalizer()"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:04:31 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="071" hs:right-label-delim=":" text="hs.filter.CurrentViewspecs">
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:07:00 GMT+00:00" hs:label="A" hs:left-label-delim="" hs:nid="0123" hs:right-label-delim=":" text="A Filter that holds our currently applied viewspecs; reduces them into a form that can be worked with; and applies them in the final rendering phase">
+                        <outline hs:createdBy="BKN" hs:createdOn="Wed 17 May 2006 07:39:22 GMT+00:00" hs:label="mixes" hs:left-label-delim="" hs:nid="072" hs:right-label-delim=":" text="mixes in hs.filter.Filter"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:11:39 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0365" hs:right-label-delim=":" text="new hs.filter.CurrentViewspecs(letters : String, docCtxt : hs.model.Document) throws hs.exception.Filter"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:11:39 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0367" hs:right-label-delim=":" text="new hs.filter.CurrentViewspecs(viewspecs : hs.address.Viewspecs[], docCtxt : hs.model.Document) throws hs.exception.Filter"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="toString" hs:left-label-delim="" hs:nid="0366" hs:right-label-delim=":" text="toString() : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="add" hs:left-label-delim="" hs:nid="0368" hs:right-label-delim=":" text="add(view : String) throws hs.exception.Filter"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="add" hs:left-label-delim="" hs:nid="0369" hs:right-label-delim=":" text="add(view : Viewspec) throws hs.exception.Filter"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:14:13 GMT+00:00" hs:label="getLevelClipping" hs:left-label-delim="" hs:nid="0809" hs:right-label-delim=":" text="getLevelClipping() : int">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:13:51 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0810" hs:right-label-delim=":" text="Note: Returns from 0 to hs.filter.ViewspecConstants.MAX_LEVEL_CLIPPING"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:14:13 GMT+00:00" hs:label="getLineClipping" hs:left-label-delim="" hs:nid="0811" hs:right-label-delim=":" text="getLineClipping() : int">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:14:09 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0812" hs:right-label-delim=":" text="Note: Returns from 1 to hs.filter.ViewspecConstants.MAX_LINE_CLIPPING"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:14:27 GMT+00:00" hs:label="getStructuralClippingType" hs:left-label-delim="" hs:nid="0813" hs:right-label-delim=":" text="getStructuralClippingType() : hs.filter.ViewspecConstants"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="showBlankLines" hs:left-label-delim="" hs:nid="0372" hs:right-label-delim=":" text="showBlankLines() : Boolean"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="showNodeAddressing" hs:left-label-delim="" hs:nid="0373" hs:right-label-delim=":" text="showNodeAddressing() : Boolean"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="getNodeAddressingPlacement" hs:left-label-delim="" hs:nid="0374" hs:right-label-delim=":" text="getNodeAddressingPlacement() : hs.filter.ViewspecConstants"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="getNodeAddressingType" hs:left-label-delim="" hs:nid="0375" hs:right-label-delim=":" text="getNodeAddressingType() : hs.filter.ViewspecConstants"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="showNodeLabels" hs:left-label-delim="" hs:nid="0376" hs:right-label-delim=":" text="showNodeLabels() : Boolean"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="getContentFilterType" hs:left-label-delim="" hs:nid="0379" hs:right-label-delim=":" text="getContentFilterType() : hs.filter.ViewspecConstants"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:14:41 GMT+00:00" hs:label="getLevelIndentingType" hs:left-label-delim="" hs:nid="0380" hs:right-label-delim=":" text="getLevelIndentingType() : hs.filter.ViewspecConstants"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="showFrozenNodes" hs:left-label-delim="" hs:nid="0381" hs:right-label-delim=":" text="showFrozenNodes() : Boolean"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="showNodeSignatures" hs:left-label-delim="" hs:nid="0382" hs:right-label-delim=":" text="showNodeSignatures() : Boolean"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="runSequenceGenerators" hs:left-label-delim="" hs:nid="0383" hs:right-label-delim=":" text="runSequenceGenerators() : Boolean"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:04:37 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="073" hs:right-label-delim=":" text="hs.filter.ViewspecConstants">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:04:31 GMT+00:00" hs:label="Viewspec" hs:left-label-delim="" hs:nid="0124" hs:right-label-delim=":" text="Viewspec constants useful for working with hs.filter.CurrentViewspecs">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:28:35 GMT+00:00" hs:label="Stereotype" hs:left-label-delim="" hs:nid="074" hs:right-label-delim=":" text="Stereotype: static"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:12:11 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0804" hs:right-label-delim=":" text="static DEFAULT_VIEWSPECS =&quot;hjmpuwyACHJLP&quot;"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:34:42 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0386" hs:right-label-delim=":" text="static LEFT = &quot;left&quot;"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:34:54 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0387" hs:right-label-delim=":" text="static RIGHT = &quot;right&quot;"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:35:07 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0388" hs:right-label-delim=":" text="static SHOW_NODE_ID = &quot;id&quot;"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:35:21 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0389" hs:right-label-delim=":" text="static SHOW_NODE_NUMBER = &quot;number&quot;"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:35:34 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0390" hs:right-label-delim=":" text="static BRANCH_ONLY = &quot;branch&quot;"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:36:04 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0391" hs:right-label-delim=":" text="static PLEX_ONLY = &quot;plex&quot;"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:15:01 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0814" hs:right-label-delim=":" text="static NO_STRUCTURAL_CLIPPING = &quot;none&quot;"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:36:18 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0392" hs:right-label-delim=":" text="static NO_FILTERING = &quot;none&quot;"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:36:21 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0393" hs:right-label-delim=":" text="static FILTER_ALL = &quot;all&quot;"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:36:24 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0394" hs:right-label-delim=":" text="static NEXT_FILTERED_NODE = &quot;next_node&quot;"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:36:27 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0395" hs:right-label-delim=":" text="static INDENT_ON = &quot;on&quot;"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:36:30 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0396" hs:right-label-delim=":" text="static INDENT_OFF = &quot;off&quot;"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:36:35 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0397" hs:right-label-delim=":" text="static INDENT_TO_CONTENT = &quot;to_context_node&quot;"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:12:33 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0805" hs:right-label-delim=":" text="static MAX_LEVEL_CLIPPING = 63"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:12:37 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0806" hs:right-label-delim=":" text="static MAX_LINE_CLIPPING = 63"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:12:40 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0807" hs:right-label-delim=":" text="static DEFAULT_LEVEL_CLIPPING = 1"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:12:43 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0808" hs:right-label-delim=":" text="static DEFAULT_LINE_CLIPPING = 1"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:31:47 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0859" hs:right-label-delim=":" text="static NO_PLEX_PARENT = &quot;none&quot;">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:31:57 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0860" hs:right-label-delim=":" text="Note: Used for structural plexing"/>
+                        </outline>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:04:44 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="075" hs:right-label-delim=":" text="hs.filter.Transcluder">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:13 GMT+00:00" hs:label="A" hs:left-label-delim="" hs:nid="0125" hs:right-label-delim=":" text="A Filter that walks the hs.model.Document tree, replacing INCLUDE statements with their resolved locations">
+                        <outline hs:createdBy="BKN" hs:createdOn="Wed 17 May 2006 07:39:22 GMT+00:00" hs:label="mixes" hs:left-label-delim="" hs:nid="076" hs:right-label-delim=":" text="mixes in hs.filter.Filter"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:36:45 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0398" hs:right-label-delim=":" text="static INCLUDE_NODE"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:36:47 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0399" hs:right-label-delim=":" text="static INCLUDE_BRANCH"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:36:49 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0400" hs:right-label-delim=":" text="static INCLUDE_PLEX"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:34:42 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0869" hs:right-label-delim=":" text="new hs.filter.Transcluder(parentAddress : hs.address.Address)">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:34:49 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0870" hs:right-label-delim=":" text="Note: 'parentAddress' is the parent address that is running this transclusion; this is the address of the root document that is being displayed to the end user"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="currentNode" hs:left-label-delim="" hs:nid="0401" hs:right-label-delim=":" text="currentNode : hs.model.Node"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="nodeWalker" hs:left-label-delim="" hs:nid="0402" hs:right-label-delim=":" text="nodeWalker : hs.util.NodeWalker"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:34:27 GMT+00:00" hs:label="metadataDirty" hs:left-label-delim="" hs:nid="0867" hs:right-label-delim=":" text="metadataDirty : Boolean">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:34:31 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0868" hs:right-label-delim=":" text="Note: Whether our metadata is dirty; if so, we must renormalize our document"/>
+                        </outline>
+                     </outline>
+                  </outline>
+               </outline>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:19:59 GMT+00:00" hs:label="Module" hs:left-label-delim="" hs:nid="0623" hs:right-label-delim=":" text="Module: hs.exception">
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:05:29 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="078" hs:right-label-delim=":" text="hs.exception.Jump">
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:07:30 GMT+00:00" hs:label="Thrown" hs:left-label-delim="" hs:nid="0127" hs:right-label-delim=":" text="Thrown if an error occurs during jumping; thrown by all jump* commands and methods">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="message" hs:left-label-delim="" hs:nid="0738" hs:right-label-delim=":" text="message : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="document" hs:left-label-delim="" hs:nid="0739" hs:right-label-delim=":" text="document : hs.model.Document"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="address" hs:left-label-delim="" hs:nid="0740" hs:right-label-delim=":" text="address : hs.address.Address"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:05:30 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="080" hs:right-label-delim=":" text="hs.exception.Filter">
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:07:38 GMT+00:00" hs:label="Thrown" hs:left-label-delim="" hs:nid="0128" hs:right-label-delim=":" text="Thrown if an error occurs during a filter process; thrown by all Filter.apply() methods">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="message" hs:left-label-delim="" hs:nid="0741" hs:right-label-delim=":" text="message : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="document" hs:left-label-delim="" hs:nid="0742" hs:right-label-delim=":" text="document : hs.model.Document"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="address" hs:left-label-delim="" hs:nid="0743" hs:right-label-delim=":" text="address : hs.address.Address"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:05:35 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="081" hs:right-label-delim=":" text="hs.exception.InvalidAddress">
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:07:45 GMT+00:00" hs:label="Thrown" hs:left-label-delim="" hs:nid="0129" hs:right-label-delim=":" text="Thrown if an error occurs while Location parsing or resolution">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="message" hs:left-label-delim="" hs:nid="0744" hs:right-label-delim=":" text="message : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="document" hs:left-label-delim="" hs:nid="0745" hs:right-label-delim=":" text="document : hs.model.Document"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="address" hs:left-label-delim="" hs:nid="0746" hs:right-label-delim=":" text="address : hs.address.Address"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:05:31 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="082" hs:right-label-delim=":" text="hs.exception.Render">
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:07:51 GMT+00:00" hs:label="Thrown" hs:left-label-delim="" hs:nid="0130" hs:right-label-delim=":" text="Thrown if an error occurs during the rendering phase">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="message" hs:left-label-delim="" hs:nid="0747" hs:right-label-delim=":" text="message : String"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="document" hs:left-label-delim="" hs:nid="0748" hs:right-label-delim=":" text="document : hs.model.Document"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="address" hs:left-label-delim="" hs:nid="0749" hs:right-label-delim=":" text="address : hs.address.Address"/>
+                     </outline>
+                  </outline>
+               </outline>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:20:00 GMT+00:00" hs:label="Module" hs:left-label-delim="" hs:nid="0620" hs:right-label-delim=":" text="Module: hs.util">
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:05:41 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="049" hs:right-label-delim=":" text="hs.util.AddressSerializer">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:23 GMT+00:00" hs:label="Can" hs:left-label-delim="" hs:nid="0119" hs:right-label-delim=":" text="Can serialize an hs.address.Address into a string or URL">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:12:09 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0281" hs:right-label-delim=":" text="new hs.util.AddressSerializer(address : hs.address.Address) throws hs.exception.InvalidAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="serialize" hs:left-label-delim="" hs:nid="0282" hs:right-label-delim=":" text="serialize() : String"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:05:47 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="050" hs:right-label-delim=":" text="hs.util.AddressTokenizer">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:03:53 GMT+00:00" hs:label="Parses" hs:left-label-delim="" hs:nid="0120" hs:right-label-delim=":" text="Parses a string or URL into a collection of hs.address.Pieces and can return them one by one, left to right">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:12:16 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0283" hs:right-label-delim=":" text="new hs.util.AddressTokenizer(pageURL : String) throws hs.exception.InvalidAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="hasNext" hs:left-label-delim="" hs:nid="0284" hs:right-label-delim=":" text="hasNext() : Boolean"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="next" hs:left-label-delim="" hs:nid="0285" hs:right-label-delim=":" text="next() : hs.address.Piece"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Sat 10 Jun 2006 00:40:07 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="033" hs:right-label-delim=":" text="hs.util.XMLFetcher">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:13 GMT+00:00" hs:label="Returns" hs:left-label-delim="" hs:nid="098" hs:right-label-delim=":" text="Returns an hs.model.Document for the given address, either fetched remotely or from it's local cache">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:34:10 GMT+00:00" hs:label="static" hs:left-label-delim="" hs:nid="0866" hs:right-label-delim=":" text="static PROXY_URL = &quot;/get/&quot;"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Sat 20 May 2006 00:08:45 GMT+00:00" hs:label="load" hs:left-label-delim="" hs:nid="0187" hs:right-label-delim=":" text="load(URL : String or hs.address.Address, handler : Function)">
+                           <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:30 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0188" hs:right-label-delim=":" text="Note: ">
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="handler" hs:left-label-delim="" hs:nid="0189" hs:right-label-delim=":" text="handler = function(address : hs.address.Address, document : hs.model.Document, error : InvalidAddressException"/>
+                           </outline>
+                        </outline>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:05:55 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="036" hs:right-label-delim=":" text="hs.util.NodeWalker">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:13 GMT+00:00" hs:label="Walks" hs:left-label-delim="" hs:nid="0101" hs:right-label-delim=":" text="Walks the tree of hs.model.Nodes in an hs.model.Document, performing some action or test on each node">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:34:03 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0229" hs:right-label-delim=":" text="new hs.util.NodeWalker(ctxtNode : hs.model.Node, includeCtxt : Boolean)"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:36:23 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0783" hs:right-label-delim=":" text="Note: 'includeCtxt' is optional, and controls whether to include the context node in the walk; defaults to true, which means we include the ctxtNode in the walk."/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="hasNext" hs:left-label-delim="" hs:nid="0230" hs:right-label-delim=":" text="hasNext() : Boolean"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="next" hs:left-label-delim="" hs:nid="0231" hs:right-label-delim=":" text="next() : hs.model.Node"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:05:59 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="037" hs:right-label-delim=":" text="hs.util.NodeNumberTokenizer">
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:01:56 GMT+00:00" hs:label="Tokenizes" hs:left-label-delim="" hs:nid="0102" hs:right-label-delim=":" text="Tokenizes a node number, such as 1B22C2A, and returns each level as a single number to easily step through a hierarchical node number">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:12:27 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0232" hs:right-label-delim=":" text="new hs.util.NodeNumberTokenizer(nodeNumber : String) throws hs.exception.InvalidAddress"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="hasNext" hs:left-label-delim="" hs:nid="0233" hs:right-label-delim=":" text="hasNext() : Boolean"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="next" hs:left-label-delim="" hs:nid="0234" hs:right-label-delim=":" text="next() : Integer"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:42:08 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0789" hs:right-label-delim=":" text="hs.util.XSLTLoader">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:42:32 GMT+00:00" hs:label="Will" hs:left-label-delim="" hs:nid="0790" hs:right-label-delim=":" text="Will asychronously load a set of XSLT files, tell you when they are loaded, transform them into XML DOMs, and return them by name">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:43:06 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0791" hs:right-label-delim=":" text="new hs.util.XSLTLoader(files : Object[], loadedHandler : Function)">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:43:17 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0792" hs:right-label-delim=":" text="Note: 'files' is an Array of Object literals, where each object has a member named 'name' that has the unique name of this XSLT, and 'url' is a member which has the URL to this XSLT file."/>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:43:35 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0793" hs:right-label-delim=":" text="Note: 'loadedHandler' is a Function pointer to a JavaScript function that will receive two arguments: function(success : Boolean, error : hs.util.InvalidAddress)"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:44:10 GMT+00:00" hs:label="load" hs:left-label-delim="" hs:nid="0794" hs:right-label-delim=":" text="load()"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:44:20 GMT+00:00" hs:label="getXSLT" hs:left-label-delim="" hs:nid="0795" hs:right-label-delim=":" text="getXSLT(name : String) : XSLTProcessor">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:44:24 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0796" hs:right-label-delim=":" text="Note: XSLTProcessor is the particular platform's underlying XSLT processor"/>
+                        </outline>
+                     </outline>
+                  </outline>
+               </outline>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:20:00 GMT+00:00" hs:label="Module" hs:left-label-delim="" hs:nid="0131" hs:right-label-delim=":" text="Module: Rendering">
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:40:42 GMT+00:00" hs:label="render" hs:left-label-delim="" hs:nid="083" hs:right-label-delim=":" text="render.xsl">
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:08:08 GMT+00:00" hs:label="XSLT" hs:left-label-delim="" hs:nid="0132" hs:right-label-delim=":" text="XSLT file that renders our final, processed OPML into HTML suitable for displaying">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:19:02 GMT+00:00" hs:label="Our" hs:left-label-delim="" hs:nid="0817" hs:right-label-delim=":" text="Our JavaScript code invokes render.xsl with a number of XSLT parameters using XSLTProcessor.setParameter; these are documented here:">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:10:39 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0802" hs:right-label-delim=":" text="hs-internal:context-node-number">
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:10:52 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0803" hs:right-label-delim=":" text="Possible Values: string node number, such as 2A"/>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:01 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0432" hs:right-label-delim=":" text="hs-internal:lineClipping">
+                              <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:32:16 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0446" hs:right-label-delim=":" text="Possible Values:  none or number"/>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:01 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0433" hs:right-label-delim=":" text="hs-internal:levelClipping">
+                              <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:32:17 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0447" hs:right-label-delim=":" text="Possible Values:  none or number"/>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:02 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0435" hs:right-label-delim=":" text="hs-internal:show-blank-lines">
+                              <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:32:17 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0457" hs:right-label-delim=":" text="Possible Values:  true, false"/>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:03 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0436" hs:right-label-delim=":" text="hs-internal:show-node-addressing">
+                              <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:32:18 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0456" hs:right-label-delim=":" text="Possible Values:  true, false"/>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:03 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0437" hs:right-label-delim=":" text="hs-internal:node-addressing-placement">
+                              <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:32:26 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0455" hs:right-label-delim=":" text="Possible Values:  left, right"/>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:04 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0438" hs:right-label-delim=":" text="hs-internal:show-node-signatures">
+                              <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:32:26 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0454" hs:right-label-delim=":" text="Possible Values:  true, false"/>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:05 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0439" hs:right-label-delim=":" text="hs-internal:show-frozen-nodes">
+                              <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:32:27 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0453" hs:right-label-delim=":" text="Possible Values:  true, false"/>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:05 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0440" hs:right-label-delim=":" text="hs-internal:node-addressing-type">
+                              <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:32:27 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0452" hs:right-label-delim=":" text="Possible Values:  id, number"/>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:11 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0441" hs:right-label-delim=":" text="hs-internal:show-node-labels">
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:10 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0451" hs:right-label-delim=":" text="Possible Values:  true, false"/>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:12 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0442" hs:right-label-delim=":" text="hs-internal:structure-clipping">
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:16:32 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0450" hs:right-label-delim=":" text="Possible Values:  none, branch, plex"/>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:12 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0443" hs:right-label-delim=":" text="hs-internal:content-filtering-type">
+                              <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:32:28 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0449" hs:right-label-delim=":" text="Possible Values:  none, all, next_node"/>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:13 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0444" hs:right-label-delim=":" text="hs-internal:level-indenting-type">
+                              <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:32:29 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0448" hs:right-label-delim=":" text="Possible Values:  on, off, to_context_node"/>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:30:47 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0854" hs:right-label-delim=":" text="hs-internal:plex-parent-number">
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:31:04 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0856" hs:right-label-delim=":" text="Possible Values: a number (ex: 2A) or &quot;none&quot;"/>
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:31:09 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0857" hs:right-label-delim=":" text="Note: Used to record the parent of our branch that we want to plex to"/>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:35:20 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0871" hs:right-label-delim=":" text="hs-internal:included-from">
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:35:22 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0872" hs:right-label-delim=":" text="Possible Values: String URL"/>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:35:25 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0873" hs:right-label-delim=":" text="hs-internal:included-type">
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:35:29 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0874" hs:right-label-delim=":" text="Possible Values: node, plex, branches"/>
+                           </outline>
+                        </outline>
+                     </outline>
+                  </outline>
+               </outline>
+               <outline hs:createdBy="BKN" hs:createdOn="Tue 6 Jun 2006 07:15:32 GMT+00:00" hs:label="Module" hs:left-label-delim="" hs:nid="0753" hs:right-label-delim=":" text="Module: External Links">
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:39:41 GMT+00:00" hs:label="bootstrap" hs:left-label-delim="" hs:nid="0754" hs:right-label-delim=":" text="bootstrap.xsl">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:39:44 GMT+00:00" hs:label="All" hs:left-label-delim="" hs:nid="0755" hs:right-label-delim=":" text="All OPML files include a single line, &lt;a href=&quot;#?xml-stylesheet type=&amp;quot;test/xsl&amp;quot; href=&amp;quot;bootstrap.xsl&amp;quot;?&quot;&gt;&amp;lt;?xml-stylesheet type=&amp;quot;test/xsl&amp;quot; href=&amp;quot;bootstrap.xsl&amp;quot;?&amp;gt;&lt;/a&gt; "/>
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 00:40:06 GMT+00:00" hs:label="This" hs:left-label-delim="" hs:nid="0756" hs:right-label-delim=":" text="This line will load the bootstrap.xsl stylesheet, which will cause the opml to load in our UI chrome."/>
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 6 Jun 2006 07:17:37 GMT+00:00" hs:label="This" hs:left-label-delim="" hs:nid="0757" hs:right-label-delim=":" text="This means a user can give an OPML url, such as http://foobar.com/hydesign.opml, and instead of returning XML we will transform it into an HTML file with our Ajax UI."/>
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 6 Jun 2006 07:17:41 GMT+00:00" hs:label="This" hs:left-label-delim="" hs:nid="0758" hs:right-label-delim=":" text="This allows us to not need a server side for phase 1."/>
+                  </outline>
+               </outline>
+            </outline>
+            <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:45:11 GMT+00:00" hs:label="Server" hs:left-label-delim="" hs:nid="0883" hs:right-label-delim=":" text="Server">
+               <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:45:16 GMT+00:00" hs:label="Module" hs:left-label-delim="" hs:nid="0884" hs:right-label-delim=":" text="Module: proxy.php">
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:45:29 GMT+00:00" hs:label="PHP" hs:left-label-delim="" hs:nid="0886" hs:right-label-delim=":" text="PHP file that does cross-host inclusions">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:46:15 GMT+00:00" hs:label="This" hs:left-label-delim="" hs:nid="0891" hs:right-label-delim=":" text="This is a simple PHP file that securely proxies requests to third party hosts when fetching foreign OPML files - an optional file, HyperScope will run without this, it just can not do cross-host inclusions."/>
+                  </outline>
+               </outline>
+               <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:45:24 GMT+00:00" hs:label="Module" hs:left-label-delim="" hs:nid="0885" hs:right-label-delim=":" text="Module: Mod_Rewrite">
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:45:45 GMT+00:00" hs:label="An" hs:left-label-delim="" hs:nid="0887" hs:right-label-delim=":" text="An Apache module that can create 'friendlier' URLs on a website, versus their logical locations">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:45:50 GMT+00:00" hs:label="We" hs:left-label-delim="" hs:nid="0888" hs:right-label-delim=":" text="We use mod_rewrite in two cases:">
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:45:58 GMT+00:00" hs:label="" hs:left-label-delim="" hs:nid="0889" hs:right-label-delim=":" text="/get/ - We rewrite the proxy.php URL to be at /get/ so it is at a cleaner address and independent of the backend technology"/>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:46:05 GMT+00:00" hs:label="" hs:left-label-delim="" hs:nid="0890" hs:right-label-delim=":" text="/hyperscope/ - We 'host' hyperscope at this address to have a consistent URL for getting hyperscope resources"/>
+                     </outline>
+                  </outline>
+               </outline>
+            </outline>
+         </outline>
+         <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 06:44:54 GMT+00:00" hs:label="Control" hs:left-label-delim="" hs:nid="05" hs:right-label-delim=":" text="Control Flow">
+            <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:19:43 GMT+00:00" hs:label="Back" hs:left-label-delim="" hs:nid="0608" hs:right-label-delim=":" text="Back to Overview:  &lt;a href=&quot;#Overview:gwnBy&quot;&gt;&amp;lt;Overview:gwnBy&amp;gt;&lt;/a&gt; "/>
+            <outline hs:createdBy="BKN" hs:createdOn="Sat 10 Jun 2006 00:40:23 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0770" hs:right-label-delim=":" text="Note: This section will not be maintained as the system is developed; only the class area, the file format info, and so on will be maintained."/>
+            <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:23 GMT+00:00" hs:label="User" hs:left-label-delim="" hs:nid="0462" hs:right-label-delim=":" text="User action is transformed into an address (hs.address.Address)">
+               <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:46:29 GMT+00:00" hs:label="if" hs:left-label-delim="" hs:nid="0465" hs:right-label-delim=":" text="if page just loaded">
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:23 GMT+00:00" hs:label="var" hs:left-label-delim="" hs:nid="0466" hs:right-label-delim=":" text="var address = new hs.address.Address(window.location.href)">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:23 GMT+00:00" hs:label="inside" hs:left-label-delim="" hs:nid="0483" hs:right-label-delim=":" text="inside hs.address.Address constructor">
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:49:00 GMT+00:00" hs:label="tokenize" hs:left-label-delim="" hs:nid="0484" hs:right-label-delim=":" text="tokenize the URL we've been given">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:05:47 GMT+00:00" hs:label="var" hs:left-label-delim="" hs:nid="0485" hs:right-label-delim=":" text="var tk = new hs.util.AddressTokenizer(url)">
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:05:47 GMT+00:00" hs:label="inside" hs:left-label-delim="" hs:nid="0486" hs:right-label-delim=":" text="inside hs.util.AddressTokenizer constructor">
+                                 <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:03:53 GMT+00:00" hs:label="parse" hs:left-label-delim="" hs:nid="0487" hs:right-label-delim=":" text="parse url from left to right, building up internal hs.address.Pieces as we do so"/>
+                              </outline>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:48:43 GMT+00:00" hs:label="while" hs:left-label-delim="" hs:nid="0488" hs:right-label-delim=":" text="while tk.hasNext()">
+                              <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:48:44 GMT+00:00" hs:label="var" hs:left-label-delim="" hs:nid="0489" hs:right-label-delim=":" text="var piece = tk.next()"/>
+                              <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:48:47 GMT+00:00" hs:label="if" hs:left-label-delim="" hs:nid="0490" hs:right-label-delim=":" text="if piece.isPieceType(&quot;FileInfo&quot;)">
+                                 <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:48:49 GMT+00:00" hs:label="set" hs:left-label-delim="" hs:nid="0491" hs:right-label-delim=":" text="set our fileInfo value"/>
+                              </outline>
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:38 GMT+00:00" hs:label="else" hs:left-label-delim="" hs:nid="0492" hs:right-label-delim=":" text="else if we are an hs.address.NodeAddress">
+                                 <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 07:51:28 GMT+00:00" hs:label="add" hs:left-label-delim="" hs:nid="0493" hs:right-label-delim=":" text="add to our nodeAddresses array"/>
+                              </outline>
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:03:53 GMT+00:00" hs:label="etc" hs:left-label-delim="" hs:nid="0494" hs:right-label-delim=":" text="etc. for other hs.address.Piece parts"/>
+                           </outline>
+                        </outline>
+                     </outline>
+                  </outline>
+               </outline>
+               <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:46:30 GMT+00:00" hs:label="if" hs:left-label-delim="" hs:nid="0467" hs:right-label-delim=":" text="if jump command">
+                  <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:45:35 GMT+00:00" hs:label="get" hs:left-label-delim="" hs:nid="0468" hs:right-label-delim=":" text="get a location">
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:46:31 GMT+00:00" hs:label="if" hs:left-label-delim="" hs:nid="0469" hs:right-label-delim=":" text="if mouse marks with click of button">
+                        <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 07:53:28 GMT+00:00" hs:label="var" hs:left-label-delim="" hs:nid="0470" hs:right-label-delim=":" text="var address = hs.ui.Marker.toAddress(evt)"/>
+                     </outline>
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:46:31 GMT+00:00" hs:label="if" hs:left-label-delim="" hs:nid="0471" hs:right-label-delim=":" text="if text entry into jump field">
+                        <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 07:53:27 GMT+00:00" hs:label="create" hs:left-label-delim="" hs:nid="0472" hs:right-label-delim=":" text="create address from field text"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:45:52 GMT+00:00" hs:label="call" hs:left-label-delim="" hs:nid="0474" hs:right-label-delim=":" text="call correct hs.commands facade method">
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:46:45 GMT+00:00" hs:label="for" hs:left-label-delim="" hs:nid="0475" hs:right-label-delim=":" text="for jumping up">
+                        <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 07:50:23 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0476" hs:right-label-delim=":" text="hs.commands.jumpUp(address)">
+                           <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:46:55 GMT+00:00" hs:label="internally" hs:left-label-delim="" hs:nid="0477" hs:right-label-delim=":" text="internally, all commands are transformed into form suitable for hs.commands.jumpItem"/>
+                        </outline>
+                     </outline>
+                  </outline>
+               </outline>
+               <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:47:09 GMT+00:00" hs:label="if" hs:left-label-delim="" hs:nid="0478" hs:right-label-delim=":" text="if Set Viewspecs">
+                  <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:47:18 GMT+00:00" hs:label="get" hs:left-label-delim="" hs:nid="0480" hs:right-label-delim=":" text="get viewspecs and content filter from viewspec text field"/>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:23 GMT+00:00" hs:label="turn" hs:left-label-delim="" hs:nid="0481" hs:right-label-delim=":" text="turn them into hs.address.Addresses"/>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:23 GMT+00:00" hs:label="call" hs:left-label-delim="" hs:nid="0482" hs:right-label-delim=":" text="call hs.commands.jumpItem with the hs.address.Address"/>
+               </outline>
+            </outline>
+            <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 07:50:26 GMT+00:00" hs:label="Resolve" hs:left-label-delim="" hs:nid="0463" hs:right-label-delim=":" text="Resolve the address">
+               <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 07:50:29 GMT+00:00" hs:label="execute" hs:left-label-delim="" hs:nid="0495" hs:right-label-delim=":" text="execute address.resolve(handler, replacePage, relativeTo)">
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:23 GMT+00:00" hs:label="inside" hs:left-label-delim="" hs:nid="0499" hs:right-label-delim=":" text="inside hs.address.Address.resolve">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:23 GMT+00:00" hs:label="fully" hs:left-label-delim="" hs:nid="0496" hs:right-label-delim=":" text="fully expand this hs.address.Address first">
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:50:00 GMT+00:00" hs:label="this" hs:left-label-delim="" hs:nid="0497" hs:right-label-delim=":" text="this.expandFileInfo(relativeTo)">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:13 GMT+00:00" hs:label="fully" hs:left-label-delim="" hs:nid="0502" hs:right-label-delim=":" text="fully expands out our file information so it is no longer relative, using the hs.model.Document given by relativeTo to do so"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 07:51:23 GMT+00:00" hs:label="this" hs:left-label-delim="" hs:nid="0500" hs:right-label-delim=":" text="this.expandNodeAddress()">
+                           <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:50:23 GMT+00:00" hs:label="Adds" hs:left-label-delim="" hs:nid="0503" hs:right-label-delim=":" text="Adds a default address if one is not given (which is 0)"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:50:09 GMT+00:00" hs:label="this" hs:left-label-delim="" hs:nid="0501" hs:right-label-delim=":" text="this.expandViewspecs(relativeTo)">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:23 GMT+00:00" hs:label="expands" hs:left-label-delim="" hs:nid="0504" hs:right-label-delim=":" text="expands our viewspecs, adding in the default and current viewspecs before this hs.address.Addresses viewspecs so they are parsed when we get to the rendering phase"/>
+                        </outline>
+                     </outline>
+                     <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:51:18 GMT+00:00" hs:label="should" hs:left-label-delim="" hs:nid="0505" hs:right-label-delim=":" text="should we fully reload the page (if replacePage is true and we are not an address working with the current visible page)?">
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:51:10 GMT+00:00" hs:label="reload" hs:left-label-delim="" hs:nid="0506" hs:right-label-delim=":" text="reload the page ">
+                           <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:51:09 GMT+00:00" hs:label="window" hs:left-label-delim="" hs:nid="0508" hs:right-label-delim=":" text="window.location.href = this.toURL()"/>
+                        </outline>
+                     </outline>
+                     <outline hs:createdBy="BKN" hs:createdOn="Sat 10 Jun 2006 00:40:07 GMT+00:00" hs:label="else" hs:left-label-delim="" hs:nid="0507" hs:right-label-delim=":" text="else ask the hs.util.XMLFetcher for this page ">
+                        <outline hs:createdBy="BKN" hs:createdOn="Sat 10 Jun 2006 00:40:07 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0509" hs:right-label-delim=":" text="hs.util.XMLFetcher.load(url, handler)">
+                           <outline hs:createdBy="BKN" hs:createdOn="Sat 10 Jun 2006 00:40:07 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0510" hs:right-label-delim=":" text="hs.util.XMLFetcher either remotely retrieves the document if not seen before, or it fetches it from its cache"/>
+                           <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:51:48 GMT+00:00" hs:label="when" hs:left-label-delim="" hs:nid="0511" hs:right-label-delim=":" text="when the document is returned, it transforms it into an XML document using Sarissa"/>
+                           <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:51:52 GMT+00:00" hs:label="it" hs:left-label-delim="" hs:nid="0512" hs:right-label-delim=":" text="it also asserts that the document is OPML and OPML version 2"/>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:13 GMT+00:00" hs:label="it" hs:left-label-delim="" hs:nid="0513" hs:right-label-delim=":" text="it then creates an hs.model.Document and returns it to the handler function passed into load()"/>
+                        </outline>
+                     </outline>
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:23 GMT+00:00" hs:label="when" hs:left-label-delim="" hs:nid="0514" hs:right-label-delim=":" text="when the hs.model.Document is loaded and returned to our hs.address.Address...">
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:52:19 GMT+00:00" hs:label="normalize" hs:left-label-delim="" hs:nid="0515" hs:right-label-delim=":" text="normalize the document">
+                           <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:52:23 GMT+00:00" hs:label="document" hs:left-label-delim="" hs:nid="0516" hs:right-label-delim=":" text="document.normalize()">
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:12:50 GMT+00:00" hs:label="internally" hs:left-label-delim="" hs:nid="0517" hs:right-label-delim=":" text="internally calls new hs.filter.Normalizer().apply(document)">
+                                 <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:12:52 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0518" hs:right-label-delim=":" text="hs.filter.Normalizer strips out all elements except for DOM nodes, and adds in numbering metadata"/>
+                              </outline>
+                           </outline>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:52:44 GMT+00:00" hs:label="setup" hs:left-label-delim="" hs:nid="0519" hs:right-label-delim=":" text="setup our starting context node">
+                           <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:52:48 GMT+00:00" hs:label="document" hs:left-label-delim="" hs:nid="0520" hs:right-label-delim=":" text="document.jumpOrigin()"/>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:52:52 GMT+00:00" hs:label="resolve" hs:left-label-delim="" hs:nid="0521" hs:right-label-delim=":" text="resolve each of our infile addresses">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:38 GMT+00:00" hs:label="for" hs:left-label-delim="" hs:nid="0522" hs:right-label-delim=":" text="for each hs.address.NodeAddress">
+                              <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:52:58 GMT+00:00" hs:label="call" hs:left-label-delim="" hs:nid="0523" hs:right-label-delim=":" text="call its apply() method">
+                                 <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:53:00 GMT+00:00" hs:label="currentAddress" hs:left-label-delim="" hs:nid="0524" hs:right-label-delim=":" text="currentAddress[i].apply(this)">
+                                    <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:38 GMT+00:00" hs:label="internally" hs:left-label-delim="" hs:nid="0525" hs:right-label-delim=":" text="internally, each hs.address.NodeAddress works differently and uses the hs.model.Document to jump to that node, then sets the hs.model.Documents nodeCtxt to this new hs.model.Node that we have at the top of the screen (our context)"/>
+                                 </outline>
+                              </outline>
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="examples" hs:left-label-delim="" hs:nid="0526" hs:right-label-delim=":" text="examples : ">
+                                 <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:13:01 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0527" hs:right-label-delim=":" text="hs.address.NodeNumber.apply - 2A4C">
+                                    <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:00:13 GMT+00:00" hs:label="doc" hs:left-label-delim="" hs:nid="0528" hs:right-label-delim=":" text="doc.jumpNumber(this.number)">
+                                       <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:13 GMT+00:00" hs:label="inside" hs:left-label-delim="" hs:nid="0529" hs:right-label-delim=":" text="inside hs.model.Document.jumpNumber()">
+                                          <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:53:32 GMT+00:00" hs:label="uses" hs:left-label-delim="" hs:nid="0530" hs:right-label-delim=":" text="uses XPath to resolve desired node number (most jumps uses XPath)"/>
+                                       </outline>
+                                    </outline>
+                                 </outline>
+                                 <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:13:13 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0531" hs:right-label-delim=":" text="hs.address.Label.apply - *label">
+                                    <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:07:58 GMT+00:00" hs:label="doc" hs:left-label-delim="" hs:nid="0532" hs:right-label-delim=":" text="doc.jumpLabel(this.label, hs.commands.JumpConstants.NEXT)">
+                                       <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:53:46 GMT+00:00" hs:label="inside" hs:left-label-delim="" hs:nid="0533" hs:right-label-delim=":" text="inside jumpLabel uses XPath"/>
+                                    </outline>
+                                 </outline>
+                                 <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:13:14 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0534" hs:right-label-delim=":" text="hs.address.Relative.apply - .2u">
+                                    <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:53:54 GMT+00:00" hs:label="doc" hs:left-label-delim="" hs:nid="0535" hs:right-label-delim=":" text="doc.nodeCtxt.jumpUp(2)"/>
+                                 </outline>
+                                 <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:13:15 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0536" hs:right-label-delim=":" text="hs.address.IndirectLink.apply - .l">
+                                    <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:00:18 GMT+00:00" hs:label="doc" hs:left-label-delim="" hs:nid="0537" hs:right-label-delim=":" text="doc.nodeCtxt.cursor.jumpLink(this.offset)"/>
+                                    <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:00:19 GMT+00:00" hs:label="var" hs:left-label-delim="" hs:nid="0538" hs:right-label-delim=":" text="var link = doc.nodeCtxt.cursor.getLink()"/>
+                                    <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:23 GMT+00:00" hs:label="link" hs:left-label-delim="" hs:nid="0539" hs:right-label-delim=":" text="link = new hs.address.Address(link)"/>
+                                    <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:54:18 GMT+00:00" hs:label="now" hs:left-label-delim="" hs:nid="0540" hs:right-label-delim=":" text="now merge the master document's remaining infile addresses _before_ this link's addresses"/>
+                                    <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:54:22 GMT+00:00" hs:label="merge" hs:left-label-delim="" hs:nid="0541" hs:right-label-delim=":" text="merge the master document's viewspecs _before_ this links viewspecs"/>
+                                    <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:13:21 GMT+00:00" hs:label="call" hs:left-label-delim="" hs:nid="0542" hs:right-label-delim=":" text="call link.resolve(handler, true, doc)"/>
+                                    <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:54:31 GMT+00:00" hs:label="simply" hs:left-label-delim="" hs:nid="0543" hs:right-label-delim=":" text="simply return - we are done, since the indirect link now takes over recursively"/>
+                                 </outline>
+                                 <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:13:17 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0544" hs:right-label-delim=":" text="hs.address.StringPosition.apply - -2w">
+                                    <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:00:22 GMT+00:00" hs:label="doc" hs:left-label-delim="" hs:nid="0545" hs:right-label-delim=":" text="doc.nodeCtxt.cursor.jumpWord(-2)"/>
+                                 </outline>
+                                 <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:13:18 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0546" hs:right-label-delim=":" text="hs.addressStringSearch.apply - &quot;foo&quot;">
+                                    <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:05:55 GMT+00:00" hs:label="make" hs:left-label-delim="" hs:nid="0547" hs:right-label-delim=":" text="make a hs.util.NodeWalker starting at doc.nodeCtxt">
+                                       <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:05:55 GMT+00:00" hs:label="new" hs:left-label-delim="" hs:nid="0548" hs:right-label-delim=":" text="new hs.util.NodeWalker(doc.nodeCtxt)"/>
+                                    </outline>
+                                    <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:00:35 GMT+00:00" hs:label="turn" hs:left-label-delim="" hs:nid="0549" hs:right-label-delim=":" text="turn our address into a regular expression">
+                                       <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:00:38 GMT+00:00" hs:label="this" hs:left-label-delim="" hs:nid="0550" hs:right-label-delim=":" text="this.toRegularExpression()"/>
+                                    </outline>
+                                    <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:00:43 GMT+00:00" hs:label="walk" hs:left-label-delim="" hs:nid="0551" hs:right-label-delim=":" text="walk the tree, applying our expression at every node">
+                                       <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:00:46 GMT+00:00" hs:label="while" hs:left-label-delim="" hs:nid="0552" hs:right-label-delim=":" text="while walker.hasNext()">
+                                          <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:00:49 GMT+00:00" hs:label="walker" hs:left-label-delim="" hs:nid="0553" hs:right-label-delim=":" text="walker.next().test(regExp)"/>
+                                       </outline>
+                                    </outline>
+                                 </outline>
+                              </outline>
+                           </outline>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:04:44 GMT+00:00" hs:label="if" hs:left-label-delim="" hs:nid="0554" hs:right-label-delim=":" text="if sequence generators are on (doc.currentViewspecs.runSequenceGenerators()), then run the hs.filter.Transcluder">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:04:44 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0555" hs:right-label-delim=":" text="hs.filter.Transcluder.apply(doc)">
+                              <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:31:12 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0654" hs:right-label-delim=":" text="hs.filter.Transcluder uses XPath to find all OPML nodes with 'type=include'"/>
+                              <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:31:23 GMT+00:00" hs:label="for" hs:left-label-delim="" hs:nid="0559" hs:right-label-delim=":" text="for each matching node">
+                                 <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:31:30 GMT+00:00" hs:label="extract" hs:left-label-delim="" hs:nid="0560" hs:right-label-delim=":" text="extract the transclude type (custom attribute hs:include-type)"/>
+                                 <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:23 GMT+00:00" hs:label="extract" hs:left-label-delim="" hs:nid="0561" hs:right-label-delim=":" text="extract the hs.address.Address"/>
+                                 <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:01:53 GMT+00:00" hs:label="merge" hs:left-label-delim="" hs:nid="0562" hs:right-label-delim=":" text="merge our current document's viewspecs _before_ the include link's viewspecs"/>
+                                 <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 07:46:26 GMT+00:00" hs:label="address" hs:left-label-delim="" hs:nid="0563" hs:right-label-delim=":" text="address.resolve() is called so as to not replace the current page">
+                                    <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:13:34 GMT+00:00" hs:label="include" hs:left-label-delim="" hs:nid="0564" hs:right-label-delim=":" text="include.resolve(handler, false, doc)"/>
+                                 </outline>
+                                 <outline hs:createdBy="BKN" hs:createdOn="Thu 18 May 2006 05:35:32 GMT+00:00" hs:label="when" hs:left-label-delim="" hs:nid="0565" hs:right-label-delim=":" text="when address resolver is done and calls our callback">
+                                    <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:02:09 GMT+00:00" hs:label="we" hs:left-label-delim="" hs:nid="0567" hs:right-label-delim=":" text="we take the HTML returned and simply write it into the data for this OPML node">
+                                       <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:02:12 GMT+00:00" hs:label="currentNode" hs:left-label-delim="" hs:nid="0568" hs:right-label-delim=":" text="currentNode.domNode.data = includedDoc.render()"/>
+                                    </outline>
+                                 </outline>
+                              </outline>
+                           </outline>
+                        </outline>
+                        <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:02:47 GMT+00:00" hs:label="apply" hs:left-label-delim="" hs:nid="0570" hs:right-label-delim=":" text="apply viewspecs">
+                           <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:02:54 GMT+00:00" hs:label="consolidate" hs:left-label-delim="" hs:nid="0571" hs:right-label-delim=":" text="consolidate our viewspecs">
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:04:31 GMT+00:00" hs:label="doc" hs:left-label-delim="" hs:nid="0572" hs:right-label-delim=":" text="doc.currentViewspecs = new hs.filter.CurrentViewspecs(doc.expandedLocation.viewspecs, doc)"/>
+                           </outline>
+                           <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:03:02 GMT+00:00" hs:label="apply" hs:left-label-delim="" hs:nid="0573" hs:right-label-delim=":" text="apply the viewspecs">
+                              <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:03:05 GMT+00:00" hs:label="doc" hs:left-label-delim="" hs:nid="0574" hs:right-label-delim=":" text="doc.currentViewspecs.apply(doc)">
+                                 <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:04:31 GMT+00:00" hs:label="inside" hs:left-label-delim="" hs:nid="0575" hs:right-label-delim=":" text="inside hs.filter.CurrentViewspecs.apply">
+                                    <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0576" hs:right-label-delim=":" text="hs.filter.CurrentViewspecs uses its boolean methods, such as showBlankLines(), to set corresponding custom attributes on the OPML root node, such as hs-internal : show-blank-lines=&quot;true&quot;. These will be used in the rendering phase with XSLT to control output"/>
+                                 </outline>
+                              </outline>
+                           </outline>
+                        </outline>
+                     </outline>
+                     <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:03:30 GMT+00:00" hs:label="if" hs:left-label-delim="" hs:nid="0577" hs:right-label-delim=":" text="if content filters are to be shown, apply them">
+                        <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 07:46:31 GMT+00:00" hs:label="address" hs:left-label-delim="" hs:nid="0579" hs:right-label-delim=":" text="address.contentFilter.apply">
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="write" hs:left-label-delim="" hs:nid="0578" hs:right-label-delim=":" text="write hs-internal : content-filtering-type to root OPML node, used to control j and k filtering types"/>
+                           <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:03:55 GMT+00:00" hs:label="turn" hs:left-label-delim="" hs:nid="0580" hs:right-label-delim=":" text="turn our content filter address into a regular expression"/>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:05:55 GMT+00:00" hs:label="create" hs:left-label-delim="" hs:nid="0581" hs:right-label-delim=":" text="create a hs.util.NodeWalker starting at the node after the current document's context node"/>
+                           <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:04:01 GMT+00:00" hs:label="test" hs:left-label-delim="" hs:nid="0582" hs:right-label-delim=":" text="test each node for passing"/>
+                           <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="if" hs:left-label-delim="" hs:nid="0583" hs:right-label-delim=":" text="if it passes, write out the custom attribute hs-internal : passes-content-filter to this hs.model.Node; this is used in the rendering phase to eliminate other nodes"/>
+                        </outline>
+                     </outline>
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 18 May 2006 05:35:45 GMT+00:00" hs:label="render" hs:left-label-delim="" hs:nid="0464" hs:right-label-delim=":" text="render document into HTML">
+                        <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:04:19 GMT+00:00" hs:label="doc" hs:left-label-delim="" hs:nid="0584" hs:right-label-delim=":" text="doc.render()">
+                           <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:04:24 GMT+00:00" hs:label="applies" hs:left-label-delim="" hs:nid="0585" hs:right-label-delim=":" text="applies XSLT script, render.xslt, to OPML DOM">
+                              <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:04:28 GMT+00:00" hs:label="inside" hs:left-label-delim="" hs:nid="0586" hs:right-label-delim=":" text="inside render.xslt">
+                                 <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:04:30 GMT+00:00" hs:label="draws" hs:left-label-delim="" hs:nid="0587" hs:right-label-delim=":" text="draws viewspecs, content filters, OPML data, etc."/>
+                                 <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:04:37 GMT+00:00" hs:label="write's" hs:left-label-delim="" hs:nid="0588" hs:right-label-delim=":" text="write's out class names to root HTML div element which we can use to toggle different visual things, such as the class .show-signatures to show signatures"/>
+                                 <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:04:43 GMT+00:00" hs:label="writes" hs:left-label-delim="" hs:nid="0589" hs:right-label-delim=":" text="writes out class info for each node's level, for such things as correct indenting, for example"/>
+                              </outline>
+                              <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:05:55 GMT+00:00" hs:label="do" hs:left-label-delim="" hs:nid="0590" hs:right-label-delim=":" text="do a final hs.util.NodeWalker pass to apply line clipping (if on)">
+                                 <outline hs:createdBy="BKN" hs:createdOn="Wed 10 May 2006 00:04:50 GMT+00:00" hs:label="for" hs:left-label-delim="" hs:nid="0591" hs:right-label-delim=":" text="for each node, render its data offscreen to determine its line height"/>
+                                 <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:02:06 GMT+00:00" hs:label="scale" hs:left-label-delim="" hs:nid="0592" hs:right-label-delim=":" text="scale div's height appropriately, using computed line height and setting this hs.model.Node's domNode style manually"/>
+                              </outline>
+                           </outline>
+                        </outline>
+                     </outline>
+                  </outline>
+               </outline>
+            </outline>
+            <outline hs:createdBy="BKN" hs:createdOn="Thu 18 May 2006 05:36:56 GMT+00:00" hs:label="Display" hs:left-label-delim="" hs:nid="0695" hs:right-label-delim=":" text="Display our rendered hs.model.Document's rendered HTML in the UI">
+               <outline hs:createdBy="BKN" hs:createdOn="Thu 18 May 2006 05:36:22 GMT+00:00" hs:label="document" hs:left-label-delim="" hs:nid="0593" hs:right-label-delim=":" text="document.write our hs.model.Document's rendered HTML string into our display iframe"/>
+            </outline>
+            <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:19:43 GMT+00:00" hs:label="Back" hs:left-label-delim="" hs:nid="0615" hs:right-label-delim=":" text="Back to Overview:  &lt;a href=&quot;#Overview:gwnBy&quot;&gt;&amp;lt;Overview:gwnBy&amp;gt;&lt;/a&gt; "/>
+         </outline>
+         <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 06:44:55 GMT+00:00" hs:label="File" hs:left-label-delim="" hs:nid="06" hs:right-label-delim=":" text="File Format">
+            <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:19:44 GMT+00:00" hs:label="Back" hs:left-label-delim="" hs:nid="0609" hs:right-label-delim=":" text="Back to Overview:  &lt;a href=&quot;#Overview:gwnBy&quot;&gt;&amp;lt;Overview:gwnBy&amp;gt;&lt;/a&gt; "/>
+            <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:33:30 GMT+00:00" hs:label="Our" hs:left-label-delim="" hs:nid="0407" hs:right-label-delim=":" text="Our native file format is OPML 2.0, documented at http://www.opml.org/2006/03/04#a278"/>
+            <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:38:46 GMT+00:00" hs:label="OPML" hs:left-label-delim="" hs:nid="0409" hs:right-label-delim=":" text="OPML is a simple XML-based file format the has existed for several years, and which can model an outline document with HTML and hyperlinks mixed into the outline nodes. It was created by Dave Weiner, author of RSS and XML-RPC, two successful standards."/>
+            <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:38:09 GMT+00:00" hs:label="OPML" hs:left-label-delim="" hs:nid="0408" hs:right-label-delim=":" text="OPML is very easy to work with using XPath, XSLT, and the DOM, and is simple and easy."/>
+            <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:24:27 GMT+00:00" hs:label="Public" hs:left-label-delim="" hs:nid="0634" hs:right-label-delim=":" text="Public Markup">
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:33:49 GMT+00:00" hs:label="We" hs:left-label-delim="" hs:nid="0410" hs:right-label-delim=":" text="We add a number of custom attributes and tags to OPML 2.0 that are specific to HyperScope; these are all in the namespace http://www.hyperscope.org/hyperscope/opml/public/2006/05/09, usually preceded with the namespace identifier &quot;hs:&quot;, such as &quot;hs:nid&quot;">
+                  <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:38:38 GMT+00:00" hs:label="Custom" hs:left-label-delim="" hs:nid="0411" hs:right-label-delim=":" text="Custom tags added to the opml:head section">
+                     <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:24:11 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0412" hs:right-label-delim=":" text="hs:left-label-delim">
+                        <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:37:59 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0413" hs:right-label-delim=":" text="Possible Values: char | the string &quot;null&quot;"/>
+                     </outline>
+                     <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:24:11 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0414" hs:right-label-delim=":" text="hs:right-label-delim">
+                        <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:37:58 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0674" hs:right-label-delim=":" text="Possible Values: char | the string &quot;null&quot;"/>
+                     </outline>
+                     <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:38:03 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0675" hs:right-label-delim=":" text="hs:markers and hs:marker">
+                        <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:38:15 GMT+00:00" hs:label="Possible" hs:left-label-delim="" hs:nid="0676" hs:right-label-delim=":" text="Possible Values: (see-- 0658)"/>
+                     </outline>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="Custom" hs:left-label-delim="" hs:nid="0415" hs:right-label-delim=":" text="Custom attributes inside opml : body area">
+                     <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:24:11 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0416" hs:right-label-delim=":" text="hs:nid"/>
+                     <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:24:11 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0417" hs:right-label-delim=":" text="hs:createdBy"/>
+                     <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:24:11 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0418" hs:right-label-delim=":" text="hs:createdOn"/>
+                     <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:24:11 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0419" hs:right-label-delim=":" text="hs:lastEditedBy"/>
+                     <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:24:11 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0420" hs:right-label-delim=":" text="hs:lastEditedOn"/>
+                     <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:24:11 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0421" hs:right-label-delim=":" text="hs:transcluded">
+                        <outline hs:createdBy="BKN" hs:createdOn="Fri 19 May 2006 07:47:34 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0422" hs:right-label-delim=":" text="Note: Whether this node had an INCLUDE in it, and it's contents were replaced with the remote include's contents"/>
+                     </outline>
+                     <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:24:11 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0423" hs:right-label-delim=":" text="hs:left-label-delim"/>
+                     <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:24:11 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0424" hs:right-label-delim=":" text="hs:right-label-delim"/>
+                     <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:24:11 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0425" hs:right-label-delim=":" text="hs:label"/>
+                     <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:32:14 GMT+00:00" hs:label="hs" hs:left-label-delim="" hs:nid="0657" hs:right-label-delim=":" text="hs:include-type"/>
+                  </outline>
+               </outline>
+            </outline>
+            <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:25:01 GMT+00:00" hs:label="Include" hs:left-label-delim="" hs:nid="0638" hs:right-label-delim=":" text="Include Links">
+               <outline hs:createdBy="BKN" hs:createdOn="Tue 6 Jun 2006 07:18:30 GMT+00:00" hs:label="We" hs:left-label-delim="" hs:nid="0640" hs:right-label-delim=":" text="We will use OPML 2.0s 'include' link type for include links. The 'text' attribute must be empty."/>
+               <outline hs:createdBy="BKN" hs:createdOn="Tue 6 Jun 2006 07:18:36 GMT+00:00" hs:label="We" hs:left-label-delim="" hs:nid="0655" hs:right-label-delim=":" text="We will add one custom attribute: hs:include-type, which can be of three values: branch, plex, node">
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:32:10 GMT+00:00" hs:label="If" hs:left-label-delim="" hs:nid="0656" hs:right-label-delim=":" text="If this attribute is left off, it defaults to node."/>
+               </outline>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:29:06 GMT+00:00" hs:label="See" hs:left-label-delim="" hs:nid="0641" hs:right-label-delim=":" text="See http://www.opml.org/spec2#inclusion for details on how OPML 2.0 inclusion works and is specified."/>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:28:32 GMT+00:00" hs:label="Server-side" hs:left-label-delim="" hs:nid="0642" hs:right-label-delim=":" text="Server-side transforms will need to convert Augment include links into this OPML type (type=inclusion)"/>
+            </outline>
+            <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:25:03 GMT+00:00" hs:label="Embedded" hs:left-label-delim="" hs:nid="0639" hs:right-label-delim=":" text="Embedded Links">
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:34:19 GMT+00:00" hs:label="Augment-style" hs:left-label-delim="" hs:nid="0643" hs:right-label-delim=":" text="Augment-style links must be fully transformed when they reach the client-side."/>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:29:34 GMT+00:00" hs:label="The" hs:left-label-delim="" hs:nid="0644" hs:right-label-delim=":" text="The Augment server-side transformer must change the following Augment-style links into their full HTML style:">
+                  <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:29:37 GMT+00:00" hs:label="" hs:left-label-delim="" hs:nid="0645" hs:right-label-delim=":" text="&lt;a href=&quot;#link&quot;&gt;&amp;lt;link&amp;gt;&lt;/a&gt;"/>
+                  <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:29:38 GMT+00:00" hs:label="" hs:left-label-delim="" hs:nid="0646" hs:right-label-delim=":" text="[link]"/>
+                  <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:29:39 GMT+00:00" hs:label="" hs:left-label-delim="" hs:nid="0647" hs:right-label-delim=":" text="(link)"/>
+                  <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:29:41 GMT+00:00" hs:label="" hs:left-label-delim="" hs:nid="0648" hs:right-label-delim=":" text="(see--)">
+                     <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:30:38 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0649" hs:right-label-delim=":" text="Note: Anything that begins with a word, and is followed by --, is ignored when surrounded by parentheses"/>
+                  </outline>
+               </outline>
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:29:57 GMT+00:00" hs:label="These" hs:left-label-delim="" hs:nid="0652" hs:right-label-delim=":" text="These must be transformed into embedded HTML links, with their Augment style delimiters left:">
+                  <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:30:07 GMT+00:00" hs:label="" hs:left-label-delim="" hs:nid="0653" hs:right-label-delim=":" text="&lt;a href=&quot;link&quot;&gt;&amp;amp;lt;link&amp;amp;gt;&lt;a href=&quot;#/a&quot;&gt;&amp;lt;/a&amp;gt;&lt;/a&gt;"/>
+               </outline>
+            </outline>
+            <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:35:01 GMT+00:00" hs:label="Markers" hs:left-label-delim="" hs:nid="0658" hs:right-label-delim=":" text="Markers">
+               <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:35:07 GMT+00:00" hs:label="We" hs:left-label-delim="" hs:nid="0659" hs:right-label-delim=":" text="We need to support Augment markers in OPML."/>
+               <outline hs:createdBy="BKN" hs:createdOn="Tue 6 Jun 2006 07:19:00 GMT+00:00" hs:label="This" hs:left-label-delim="" hs:nid="0760" hs:right-label-delim=":" text="This is done simply by using embedded A NAME anchors in our HTML: ">
+                  <outline hs:createdBy="BKN" hs:createdOn="Tue 6 Jun 2006 07:19:05 GMT+00:00" hs:label="" hs:left-label-delim="" hs:nid="0761" hs:right-label-delim=":" text="&lt;a name=&quot;markerFoo&quot;&gt;f&lt;a href=&quot;#/a&quot;&gt;&amp;lt;/a&amp;gt;&lt;/a&gt;"/>
+               </outline>
+               <outline hs:createdBy="BKN" hs:createdOn="Tue 6 Jun 2006 07:21:45 GMT+00:00" hs:label="These" hs:left-label-delim="" hs:nid="0762" hs:right-label-delim=":" text="These embedded links must be generated by the server-side transformers, surrounding the letter that was marked."/>
+            </outline>
+            <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:24:39 GMT+00:00" hs:label="Private" hs:left-label-delim="" hs:nid="0636" hs:right-label-delim=":" text="Private Markup">
+               <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:19:38 GMT+00:00" hs:label="We" hs:left-label-delim="" hs:nid="0426" hs:right-label-delim=":" text="We also have a number of private attributes that are added to the OPML DOM during Location resolution, specifically on opml:outline elements; these are used in the final rendering and jumping phases to display a document. These values should never appear in public OPML documents. They are located in the namespace http://www.hyperscope.org/hyperscope/opml/private/2006/05/09, usually preceded with the namespace identifier &quot;hs-internal:&quot;">
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:14 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0428" hs:right-label-delim=":" text="hs-internal:number"/>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:14 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0429" hs:right-label-delim=":" text="hs-internal:level"/>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:15 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0430" hs:right-label-delim=":" text="hs-internal:passes-content-filter"/>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:11:15 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0776" hs:right-label-delim=":" text="hs-internal:node-offset">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 15 Jun 2006 07:04:52 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0777" hs:right-label-delim=":" text="Note: This is this nodes offset from the top of the document, starting from 1. If you were to be viewing this document, for example, then this would be the ordering of nodes from top to bottom independent of hierarchy. This is used for implementing jumping back and forward from a given node."/>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:32:46 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0861" hs:right-label-delim=":" text="hs-internal:included">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:32:57 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0862" hs:right-label-delim=":" text="Note: Added to any included nodes; value is &quot;yes&quot;"/>
+                  </outline>
+                  <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:33:02 GMT+00:00" hs:label="hs-internal" hs:left-label-delim="" hs:nid="0863" hs:right-label-delim=":" text="hs-internal:include-failed">
+                     <outline hs:createdBy="BKN" hs:createdOn="Thu 7 Dec 2006 01:33:07 GMT+00:00" hs:label="Note" hs:left-label-delim="" hs:nid="0864" hs:right-label-delim=":" text="Note: Added if an include failed on some node so we can highlight it differently; value will be &quot;yes&quot; if present"/>
+                  </outline>
+               </outline>
+            </outline>
+            <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:19:44 GMT+00:00" hs:label="Back" hs:left-label-delim="" hs:nid="0616" hs:right-label-delim=":" text="Back to Overview:  &lt;a href=&quot;#Overview:gwnBy&quot;&gt;&amp;lt;Overview:gwnBy&amp;gt;&lt;/a&gt; "/>
+         </outline>
+         <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 06:45:12 GMT+00:00" hs:label="Third-Party" hs:left-label-delim="" hs:nid="011" hs:right-label-delim=":" text="Third-Party Libraries">
+            <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:19:44 GMT+00:00" hs:label="Back" hs:left-label-delim="" hs:nid="0610" hs:right-label-delim=":" text="Back to Overview:  &lt;a href=&quot;#Overview:gwnBy&quot;&gt;&amp;lt;Overview:gwnBy&amp;gt;&lt;/a&gt; "/>
+            <outline hs:createdBy="BKN" hs:createdOn="Thu 11 May 2006 00:10:24 GMT+00:00" hs:label="We" hs:left-label-delim="" hs:nid="0459" hs:right-label-delim=":" text="We will be using two open source libraries : ">
+               <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:43:22 GMT+00:00" hs:label="The" hs:left-label-delim="" hs:nid="0460" hs:right-label-delim=":" text="The Dojo Toolkit - general DHTML framework"/>
+               <outline hs:createdBy="BKN" hs:createdOn="Tue 9 May 2006 07:43:27 GMT+00:00" hs:label="Sarissa" hs:left-label-delim="" hs:nid="0461" hs:right-label-delim=":" text="Sarissa - Utility library for working with XML, XPath, and XSLT in a cross-browser manner"/>
+            </outline>
+            <outline hs:createdBy="BKN" hs:createdOn="Mon 15 May 2006 06:19:45 GMT+00:00" hs:label="Back" hs:left-label-delim="" hs:nid="0617" hs:right-label-delim=":" text="Back to Overview:  &lt;a href=&quot;#Overview:gwnBy&quot;&gt;&amp;lt;Overview:gwnBy&amp;gt;&lt;/a&gt; "/>
+         </outline>
+      </outline>
+   </body>
+</opml>

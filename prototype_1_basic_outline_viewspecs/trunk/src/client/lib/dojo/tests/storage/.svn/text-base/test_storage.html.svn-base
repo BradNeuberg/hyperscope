@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd"> 
+
+<title>Dojo Durable Storage Test</title>
+
+<script type="text/javascript">
+	var djConfig = { isDebug: true };
+</script>
+
+<script type="text/javascript" src="../../dojo.js"></script>
+<script type="text/javascript">
+	dojo.require("dojo.storage.*");
+</script>
+<script type="text/javascript">
+	var ctr = 0;
+	function storeJunk(){
+		var val = ["this is a test value   [["];
+		var jlen = 1000+Math.random()*(1000*Math.random());
+		for(var x=0; x<jlen; x++){
+			val.push("*");
+		}
+		val.push("]]");
+		var key = String(ctr++);
+		var ret = dojo.storage.set(key, val.join(""));
+		dojo.debug(ret, ":", key, ":", val.join(""));
+	}
+</script>
+
+<button onclick="dojo.storage.provider.unHideStore();">show player</button>
+<button onclick="dojo.storage.provider.hideStore();">hide player</button>
+<button onclick="storeJunk();">store something!</button>

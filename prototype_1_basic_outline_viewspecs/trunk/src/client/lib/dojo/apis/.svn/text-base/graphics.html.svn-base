@@ -1,0 +1,47 @@
+<h2 id="dojo.graphics">dojo.graphics</h2><h3>Properties</h3><pre>Object <a href="#dojo.graphics.color">color</a>
+Object <a href="#dojo.graphics.htmlEffects">htmlEffects</a>
+</pre><h2 id="dojo.graphics.color">dojo.graphics.color</h2><h3>Methods</h3><pre>blend (a, b, _346)
+blendHex (a, b, _349)
+extractRGB (_350)
+hex2rgb (hex)
+rgb2hex (r, g, b)
+</pre><h2 id="dojo.graphics.htmlEffects">dojo.graphics.htmlEffects</h2><h3>Methods</h3><pre>fadeOut (node, _559, _560)
+fadeIn (node, _561, _562)
+fadeHide (node, _563, _564)
+fadeShow (node, _565, _566)
+fade (node, _567, _568, _569, _570)
+slideTo (node, _571, _572, _573)
+slideBy (node, _574, _575, _576)
+slide (node, _577, _578, _579, _580)
+colorFadeIn (node, _581, _582, _583, _584)
+highlight (node, _581, _582, _583, _584)
+colorFadeFrom (node, _581, _582, _583, _584)
+colorFadeOut (node, _588, _589, _590, _591)
+unhighlight (node, _588, _589, _590, _591)
+colorFadeTo (node, _588, _589, _590, _591)
+colorFade (node, _593, _594, _595, _596, _597)
+wipeIn (node, _598, _599, _600)
+wipeOut (node, _604, _605, _606)
+explode (_610, _611, _612, _613)
+explodeFromBox (_615, _616, _617, _618)
+implode (_621, _622, _623, _624)
+implodeToBox (_626, _627, _628, _629)
+Exploder (_631, _632)
+</pre><h2 id="dojo.graphics.htmlEffects.Exploder Object">dojo.graphics.htmlEffects.Exploder Object</h2><h3>Methods</h3><pre>timeShow ()
+show ()
+timeHide ()
+hide ()
+</pre><h3>Properties</h3><pre>Number waitToHide
+Number timeToShow
+Number waitToShow
+Number timeToHide
+Boolean autoShow
+Boolean autoHide
+Boolean showing
+undefined onBeforeExplode
+undefined onAfterExplode
+undefined onBeforeImplode
+undefined onAfterImplode
+undefined onExploding
+undefined onImploding
+</pre>

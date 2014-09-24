@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    HyperScope
+    Copyright (C) 2006 Bootstrap Alliance
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+-->
+<commands>
+	<subsystem id="base-subsystem" output="BASE">
+		<verb	activate="j"
+				output="Jump (to) "
+				method="hs.commands.jumpItem(readyHandler, address, relativeTo)">
+			<noun activate="i" output="Item ">
+				<input type="location">
+						<input type="viewspecs">
+							<method eval="hs.commands.jumpItem(readyHandler, address, relativeTo, viewspecs)"/>
+						</input>
+				</input>
+			</noun>
+
+			<noun activate="l" output="Link ">
+				<input type="typein">
+					<method eval="hs.commands.jumpLink(readyHandler, address, relativeTo, typein)"/>
+				</input>
+			</noun>
+
+			<noun activate="o" output="Origin (of file) ">
+				<input type="address">
+					<input type="viewspecs">
+						<method eval="hs.commands.jumpOrigin(readyHandler, address, relativeTo, viewspecs)"/>
+					</input>
+				</input>
+			</noun>
+
+			<noun activate="f" output="File (named) ">
+				<input type="typein">
+					<input type="viewspecs">
+						<method eval="hs.commands.jumpFile(readyHandler, address, relativeTo, typein, viewspecs)"/>
+					</input>
+				</input>
+			</noun>
+
+
+			<noun activate=" n" output="Next (from) ">
+				<input type="location">
+					<input type="viewspecs">
+						<method eval="hs.commands.jumpNext(readyHandler, address, relativeTo, viewspecs)"/>
+					</input>
+				</input>
+			</noun>
+
+			<noun activate="b" output="Back (from) ">
+				<input type="location">
+					<input type="viewspecs">
+						<method eval="hs.commands.jumpBack(readyHandler, address, relativeTo, viewspecs)"/>
+					</input>
+				</input>
+			</noun>
+
+			<noun activate="d" output="Down (from) ">
+				<input type="location">
+					<input type="viewspecs">
+						<method eval="hs.commands.jumpDown(readyHandler, address, relativeTo,viewspecs)"/>
+					</input>
+				</input>
+			</noun>
+
+			<noun activate="u" output="Up (from) ">
+				<input type="location">
+					<input type="viewspecs">
+						<method eval="hs.commands.jumpUp(readyHandler, address, relativeTo, viewspecs)"/>
+					</input>
+				</input>
+			</noun>
+
+			<noun activate="s" output="Successor (of) ">
+				<input type="location">
+					<input type="viewspecs">
+						<method eval="hs.commands.jumpSuccessor(readyHandler, address, relativeTo, viewspecs)"/>
+					</input>
+				</input>
+			</noun>
+
+			<noun activate="p" output="Predecessor (of) ">
+				<input type="location">
+					<input type="viewspecs">
+						<method eval="hs.commands.jumpPredecessor(readyHandler, address, relativeTo, viewspecs)"/>
+					</input>
+				</input>
+			</noun>
+
+			<noun activate="h" output="Head (of plex at) ">
+				<input type="location">
+					<input type="viewspecs">
+						<method eval="hs.commands.jumpHead(readyHandler, address, relativeTo, viewspecs)"/>
+					</input>
+				</input>
+			</noun>
+
+			<noun activate="t" output="Tail (of plex at) ">
+				<input type="location">
+					<input type="viewspecs">
+						<method eval="hs.commands.jumpTail(readyHandler, address, relativeTo, viewspecs)"/>
+					</input>
+				</input>
+			</noun>
+
+			<noun activate="e" output="End (of) ">
+				<noun activate="b" output="Branch (at) ">
+					<input type="location">
+						<input type="viewspecs">
+							<method eval="hs.commands.jumpEndBranch(readyHandler, address, relativeTo, viewspecs)"/>
+						</input>
+					</input>
+				</noun>
+
+				<noun activate="p" output="Plex (at) ">
+					<input type="location">
+						<input type="viewspecs">
+							<method eval="hs.commands.jumpEndBranch(readyHandler, address, relativeTo)"/>
+						</input>
+					</input>
+				</noun>
+			</noun>
+
+			<noun activate="c" output="Content ">
+				<noun activate="f" output="First ">
+					<input type="persisted typein">
+						<input type="viewspecs">
+							<method eval="hs.commands.jumpContent(readyHandler, address, relativeTo, typein, viewspecs, hs.commands.JumpConstants.FIRST)"/>
+						</input>
+					</input>
+				</noun>
+
+				<noun activate="n" output="Next ">
+					<input type="persisted typein">
+						<input type="viewspecs">
+							<method eval="hs.commands.jumpContent(readyHandler, address, relativeTo, typein, viewspecs, hs.commands.JumpConstants.NEXT)"/>
+						</input>
+					</input>
+				</noun>
+			</noun>
+
+			<noun activate="w" output="Word ">
+				<noun activate="f" output="First ">
+					<input type="persisted typein">
+						<input type="viewspecs">
+							<method eval="hs.commands.jumpWord(readyHandler, address, relativeTo, typein, viewspecs, hs.commands.JumpConstants.FIRST)"/>
+						</input>
+					</input>
+				</noun>
+
+				<noun activate="n" output="Next ">
+					<input type="persisted typein">
+						<input type="viewspecs">
+							<method eval="hs.commands.jumpWord(readyHandler, address, relativeTo, typein, viewspecs, hs.commands.JumpConstants.NEXT)"/>
+						</input>
+					</input>
+				</noun>
+			</noun>
+
+			<noun activate="n" output="Name ">
+				<noun activate="f" output="First ">
+					<input type="persisted typein">
+						<input type="viewspecs">
+							<method eval="hs.commands.jumpLabel(readyHandler, address, relativeTo, typein, viewspecs, hs.commands.JumpConstants.FIRST)"/>
+						</input>
+					</input>
+				</noun>
+
+				<noun activate="n" output="Next ">
+					<input type="persisted typein">
+						<input type="viewspecs">
+							<method eval="hs.commands.jumpLabel(readyHandler, address, relativeTo, typein, viewspecs, hs.commands.JumpConstants.NEXT)"/>
+						</input>
+					</input>
+				</noun>
+			</noun>
+		</verb>
+
+		<verb activate="res" output="Reset ">
+			<noun activate="v" output="Viewspecs (to defaults) ">
+				<input type="ok">
+					<method eval="hs.commands.resetViewspecs(readyHandler, address, relativeTo)"/>
+				</input>
+			</noun>
+		</verb>
+	
+		<verb activate=" se" output="Set ">
+			<noun activate="v" output="Viewspecs ">
+				<input type="viewspecs">
+					<method eval="hs.commands.setViewspecs(readyHandler, address, relativeTo, viewspecs)"/>
+				</input>
+			</noun>
+		</verb>
+	</subsystem>
+</commands>

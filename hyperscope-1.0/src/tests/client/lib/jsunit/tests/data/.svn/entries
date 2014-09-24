@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="31"
+   name=""
+   committed-date="2006-05-17T19:35:45.566621Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/tests/client/lib/jsunit/tests/data"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="31"
+   name="staff.xml"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="1147c2a173b4072865acb1e93a74c259"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="staff.css"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="d58057429e508dde46d294edadaf2d8a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="data.html"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="da968339d8af7cdefbf0d77777c57e7d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+<entry
+   committed-rev="31"
+   name="staff.dtd"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="4e8601c589726f570684d546ec5f56cc"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+</wc-entries>

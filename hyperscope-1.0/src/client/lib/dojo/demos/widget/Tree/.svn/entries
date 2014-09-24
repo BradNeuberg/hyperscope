@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/demos/widget/Tree"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="tree.html"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="16f4b9bd95dcc8691570ea4723a82b46"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="removeNode"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b326b5062b2f0e69046810717534cb09"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="move"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b326b5062b2f0e69046810717534cb09"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   name="static"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="createChild"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="e2ce9f444b6f8c0fa8df1660a8f17ed4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="getChildren"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3466de4fcc434a53d917cf60c3b86d81"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+</wc-entries>

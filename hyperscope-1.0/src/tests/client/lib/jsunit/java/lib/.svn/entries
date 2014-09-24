@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="31"
+   name=""
+   committed-date="2006-05-17T19:35:45.566621Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/tests/client/lib/jsunit/java/lib"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="31"
+   name="jdom.jar"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="12eb2c02056698b5fe7ad057f6808032"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:51.000000Z"/>
+<entry
+   committed-rev="31"
+   name="junit.jar"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="1f40fb782a4f2cf78f161d32670f7a3a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:51.000000Z"/>
+<entry
+   committed-rev="31"
+   name="xerces.jar"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="7a8bd403f9faf9c21d084d20daa51c49"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:52.000000Z"/>
+<entry
+   committed-rev="31"
+   name="javax.servlet.jar"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="b7d6f2f43500a3444b28a4fa10fba9b8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:53.000000Z"/>
+<entry
+   committed-rev="31"
+   name="jetty.jar"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="1732fb3494d834af60780f5101777b9a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+</wc-entries>

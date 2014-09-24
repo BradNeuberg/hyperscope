@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="349"
+   name=""
+   committed-date="2006-09-04T05:45:35.731244Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/hs/templates"
+   last-author="eekim"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="308"
+   name="JumpOverlay.html"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-02T03:22:29.268175Z"
+   checksum="32945c09b7db599563ab4af9dbdb9dae"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="311"
+   name="HelpOverlay.css"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-02T04:14:55.145739Z"
+   checksum="8f7e3c31dab06a778893178356644d95"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="241"
+   name="JumpOverlay.css"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-08-24T18:52:22.787523Z"
+   checksum="e754bac0933537ee314ab2f2502cdc10"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="349"
+   name="HelpContent.html"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-04T05:45:35.731244Z"
+   checksum="29833d1465c7e9442203077b88f59444"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="344"
+   name="HyperScopeToolbar.html"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-04T04:29:10.115502Z"
+   checksum="f7ce4162e03f4ee33b2864fde2e077dd"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="318"
+   name="ViewspecOverlay.html"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-02T12:16:39.126235Z"
+   checksum="e205a88cdde5094ad78350b2100d1e68"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="344"
+   name="HyperScopeToolbar.css"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-04T04:29:10.115502Z"
+   checksum="869a21eb718e3d75d7812682328abf15"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="311"
+   name="HelpOverlay.html"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-02T04:14:55.145739Z"
+   checksum="3f764742f19c25797aae487013d41c34"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="234"
+   name="ViewspecOverlay.css"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-08-24T02:07:22.302750Z"
+   checksum="671d040e65b42849fc1c28680e1b11b0"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+</wc-entries>

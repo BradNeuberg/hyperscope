@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="211"
+   name=""
+   committed-date="2006-08-02T18:00:34.735229Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/tests/client/util"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="202"
+   name="TestAddressSerializer.html"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-08-02T05:29:45.820814Z"
+   checksum="c655057acf80d390ee5b86b2d233dc53"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="202"
+   name="TestAddressTokenizer.html"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-08-02T05:29:45.820814Z"
+   checksum="935db0aafff72fd33e79ef0e5b44e968"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="211"
+   name="TestXMLFetcher.html"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-08-02T18:00:34.735229Z"
+   checksum="54558c7a6ab03f1552886bc1bd72100c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="202"
+   name="TestXSLTLoader.html"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-08-02T05:29:45.820814Z"
+   checksum="d3add3b49e51f9ee0164aebb5fbe335b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+</wc-entries>

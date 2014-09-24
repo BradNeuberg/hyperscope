@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="123"
+   name=""
+   committed-date="2006-06-15T01:14:47.760852Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/trunk/augxml/src/java/org/nlsaugment/augxml/memory"
+   last-author="jcheyer"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="76"
+   name="MemoryObject.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-05-30T15:55:47.896418Z"
+   checksum="d1aa6a9b04393344c6930ecb3fb752a9"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="117"
+   name="WriteableMemorySpace.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-13T22:18:12.643972Z"
+   checksum="3a6b661b4d534a9d48400f5c7b5a9977"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="117"
+   name="MemorySpace.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-13T22:18:12.643972Z"
+   checksum="6531eabd4544e3f22c9c9dea9f717381"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="123"
+   name="Location.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-15T01:14:47.760852Z"
+   checksum="27aeb8b7f11852776c744f64e3189189"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="76"
+   name="Page.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-05-30T15:55:47.896418Z"
+   checksum="284181b757f0e8b948d648675ae716e4"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+</wc-entries>

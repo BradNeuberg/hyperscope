@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title>Builder Test</title>
+		<style type="text/css">
+			#Mover {
+				position : absolute;
+				background : #ccc;
+				left : 200px;
+				top : 200px;
+			}
+		</style>
+		<script language="JavaScript" type="text/javascript">
+			// Dojo configuration
+			djConfig = { 
+				isDebug: true
+			};
+		</script>
+		<script language="JavaScript" type="text/javascript" src="../../dojo.js"></script>
+		<script language="JavaScript" type="text/javascript" src="../jsunit_browser.js"></script>
+		<script language="JavaScript" type="text/javascript">
+			dojo.require("dojo.string");
+			dojo.require("dojo.string.Builder");
+			function test_Builder_ctor(){
+				var a = new dojo.string.Builder();
+				jum.assertEquals("test10", "", a.toString());
+				var b = new dojo.string.Builder("foo");
+				jum.assertEquals("test20", "foo", b.toString());
+				jum.assertEquals("test30", "foo", b.valueOf());
+			}
+
+			function test_Builder_append(){
+				var b = new dojo.string.Builder("foo");
+				b.append("bar");
+				jum.assertEquals("test40", "foobar", b.valueOf());
+				b.append(" baz");
+				jum.assertEquals("test50", "foobar baz", b.toString());
+			}
+
+			function test_Builder_clear(){
+				var b = new dojo.string.Builder("foo");
+				jum.assertEquals("test60", "foo", b.valueOf());
+				b.clear();
+				jum.assertEquals("test70", "", b.valueOf());
+			}
+
+			function test_Builder_remove(){
+				var b = new dojo.string.Builder("foo ");
+				b.remove(0, 3);
+				jum.assertEquals("test80", " ", b.valueOf());
+			}
+
+			function test_Builder_replace(){
+				var b = new dojo.string.Builder(" foo ");
+				b.replace(" foo", "bar");
+				jum.assertEquals("test90", "bar ", b.valueOf());
+			}
+
+			function test_Builder_insert(){
+				var b = new dojo.string.Builder(" ");
+				b.insert(0, "foo");
+				jum.assertEquals("test100", "foo ", b.valueOf());
+				var b = new dojo.string.Builder(" ");
+				b.insert(1, "foo");
+				jum.assertEquals("test110", " foo", b.valueOf());
+			}
+			function init(){
+				test_Builder_ctor();
+				test_Builder_append();
+				test_Builder_clear();
+				test_Builder_remove();
+				test_Builder_replace();
+				test_Builder_insert();
+			}
+			dojo.hostenv.modulesLoadedListeners.push(init);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

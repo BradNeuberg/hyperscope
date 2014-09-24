@@ -1,0 +1,317 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<HTML>
+<HEAD>
+<TITLE>
+sarissa Overview
+</TITLE>
+<LINK REL ="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<SCRIPT>
+function asd()
+{
+parent.document.title=" Overview";
+}
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#eeeeee" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<A NAME="navbar_top"><!-- --></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#b8cade" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3">
+  <TR ALIGN="center" VALIGN="top">
+  
+  
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-summary.html"><FONT CLASS="NavBarFont1"><b>Overview</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev">	&nbsp;<FONT CLASS="NavBarFont1Rev"><b>File</b></FONT>&nbsp;</TD>
+  
+
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"> 	<FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-tree.html"><FONT CLASS="NavBarFont1"><b>Tree</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="index-all.html"--><FONT CLASS="NavBarFont1"><b>Index</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="help-doc.html"><FONT CLASS="NavBarFont1"><b>Help</b></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD BGCOLOR="#b8cade" ALIGN="right" VALIGN="top">
+<EM>
+<b>sarissa</b></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="index.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="overview-summary.html" TARGET="_top"><B>NO FRAMES</B></A>
+&nbsp;&nbsp;
+<SCRIPT>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+</TABLE>
+<!-- =========== END OF NAVBAR =========== -->
+
+<HR>
+<CENTER>
+
+   <H2>sarissa_ieemu_xslt.js</H2>
+
+</CENTER>
+        
+            
+        
+        
+        <h4>Summary</h4>
+        <p>
+        
+           No overview generated for 'sarissa_ieemu_xslt.js'<BR/><BR/>
+           
+        </p>
+
+<HR>
+
+
+
+
+
+
+<!-- START SOURCECODE -->
+<pre class="sourceview">
+<span class="comment">/**
+ * ====================================================================
+ * About
+ * ====================================================================
+ * Sarissa cross browser XML library - IE XSLT Emulation (deprecated)
+ * <span class="attrib">@version</span> 0.9.7
+ * <span class="attrib">@author</span>: Manos Batsis, mailto: mbatsis at users full stop sourceforge full stop net
+ *
+ * This script emulates Internet Explorer's transformNode and transformNodeToObject
+ * for Mozilla and provides a common way to set XSLT parameters
+ * via Sarissa.setXslParameter.
+ *
+ * All functionality in this file is DEPRECATED, the XSLTProcessor
+ * should be used instead.
+ *
+ * ====================================================================
+ * Licence
+ * ====================================================================
+ * Sarissa is free software distributed under the GNU GPL version 2 (see &lt;a href="gpl.txt"&gt;gpl.txt&lt;/a&gt;) or higher, 
+ * GNU LGPL version 2.1 (see &lt;a href="lgpl.txt"&gt;lgpl.txt&lt;/a&gt;) or higher and Apache Software License 2.0 or higher 
+ * (see &lt;a href="asl.txt"&gt;asl.txt&lt;/a&gt;). This means you can choose one of the three and use that if you like. If 
+ * you make modifications under the ASL, i would appreciate it if you submitted those.
+ * In case your copy of Sarissa does not include the license texts, you may find
+ * them online in various formats at &lt;a href="http://www.gnu.org"&gt;http://www.gnu.org&lt;/a&gt; and 
+ * &lt;a href="http://www.apache.org"&gt;http://www.apache.org&lt;/a&gt;.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+ */</span>
+<span class="reserved">if</span>(!Sarissa.IS_ENABLED_TRANSFORM_NODE &amp;&amp; window.XSLTProcessor){
+    <span class="comment">/** 
+     * &lt;p&gt;&lt;b&gt;Deprecated, will be removed in 0.9.6 (use XSLTProcessor instead): &lt;/b&gt;Extends the Element class to emulate IE's transformNodeToObject (deprecated).
+     * &lt;b&gt;Note &lt;/b&gt;: The transformation result &lt;i&gt;must &lt;/i&gt; be well formed,
+     * otherwise an error will be thrown&lt;/p&gt;
+     * <span class="attrib">@uses</span> Mozilla's XSLTProcessor  
+     * <span class="attrib">@deprecated</span> use the XSLTProcessor instead
+     * <span class="attrib">@argument</span> xslDoc The stylesheet to use (a DOM Document instance)
+     * <span class="attrib">@argument</span> oResult The Document to store the transformation result
+     */</span>
+    XMLElement.<span class="reserved">prototype</span>.transformNodeToObject = <span class="reserved">function</span>(xslDoc, oResult){
+        var oDoc = document.implementation.createDocument(<span class="literal">""</span>, <span class="literal">""</span>, null);
+        Sarissa.copyChildNodes(<span class="reserved">this</span>, oDoc);
+        oDoc.transformNodeToObject(xslDoc, oResult);
+    };
+    <span class="comment">/**
+     * &lt;p&gt;&lt;b&gt;Deprecated, will be removed in 0.9.6 (use XSLTProcessor instead): &lt;/b&gt; Extends the Document class to emulate IE's transformNodeToObject (deprecated).&lt;/p&gt;
+     * <span class="attrib">@uses</span> Mozilla's XSLTProcessor  
+     * <span class="attrib">@deprecated</span> use the XSLTProcessor instead
+     * <span class="attrib">@argument</span> xslDoc The stylesheet to use (a DOM Document instance)
+     * <span class="attrib">@argument</span> oResult The Document to store the transformation result
+     * <span class="attrib">@throws</span> Errors that try to be informative
+     */</span>
+    Document.<span class="reserved">prototype</span>.transformNodeToObject = <span class="reserved">function</span>(xslDoc, oResult){
+        var xsltProcessor = null;
+        try{
+            xsltProcessor = new XSLTProcessor();
+            <span class="reserved">if</span>(xsltProcessor.reset){
+                <span class="comment">/* new nsIXSLTProcessor is available */</span>
+                xsltProcessor.importStylesheet(xslDoc);
+                var newFragment = xsltProcessor.transformToFragment(<span class="reserved">this</span>, oResult);
+                Sarissa.copyChildNodes(newFragment, oResult);
+            }<span class="reserved">else</span>{
+                <span class="comment">/* only nsIXSLTProcessorObsolete is available */</span>
+                xsltProcessor.transformDocument(<span class="reserved">this</span>, xslDoc, oResult, null);
+            };
+        }catch(e){
+            <span class="reserved">if</span>(xslDoc &amp;&amp; oResult)
+                throw <span class="literal">"Failed to transform document. (original exception: "</span>+e+<span class="literal">")"</span>;
+            <span class="reserved">else</span> <span class="reserved">if</span>(!xslDoc)
+                throw <span class="literal">"No Stylesheet Document was provided. (original exception: "</span>+e+<span class="literal">")"</span>;
+            <span class="reserved">else</span> <span class="reserved">if</span>(!oResult)
+                throw <span class="literal">"No Result Document was provided. (original exception: "</span>+e+<span class="literal">")"</span>;
+            <span class="reserved">else</span> <span class="reserved">if</span>(xsltProcessor == null)
+                throw <span class="literal">"Could not instantiate an XSLTProcessor object. (original exception: "</span>+e+<span class="literal">")"</span>;
+            <span class="reserved">else</span>
+                throw e;
+        };
+    };
+    <span class="comment">/**
+     * &lt;p&gt;&lt;b&gt;Deprecated, will be removed in 0.9.6 (use XSLTProcessor instead): &lt;/b&gt;Extends the Element class to emulate IE's transformNode (deprecated). &lt;/p&gt;
+     * &lt;p&gt;&lt;b&gt;Note &lt;/b&gt;: The result of your transformation must be well formed,
+     * otherwise you will get an error&lt;/p&gt;. 
+     * <span class="attrib">@uses</span> Mozilla's XSLTProcessor    
+     * <span class="attrib">@deprecated</span> use the XSLTProcessor instead
+     * <span class="attrib">@argument</span> xslDoc The stylesheet to use (a DOM Document instance)
+     * <span class="attrib">@returns</span> the result of the transformation serialized to an XML String
+     */</span>
+    XMLElement.<span class="reserved">prototype</span>.transformNode = <span class="reserved">function</span>(xslDoc){
+        var oDoc = document.implementation.createDocument(<span class="literal">""</span>, <span class="literal">""</span>, null);
+        Sarissa.copyChildNodes(<span class="reserved">this</span>, oDoc);
+        <span class="reserved">return</span> oDoc.transformNode(xslDoc);
+    };
+    <span class="comment">/**
+     * &lt;p&gt;&lt;b&gt;Deprecated, will be removed in 0.9.6 (use XSLTProcessor instead): &lt;/b&gt;Extends the Document class to emulate IE's transformNode (deprecated).&lt;/p&gt;
+     * &lt;p&gt;&lt;b&gt;Note &lt;/b&gt;: The result of your transformation must be well formed,
+     * otherwise you will get an error&lt;/p&gt;
+     * <span class="attrib">@uses</span> Mozilla's XSLTProcessor
+     * <span class="attrib">@deprecated</span> use the XSLTProcessor instead
+     * <span class="attrib">@argument</span> xslDoc The stylesheet to use (a DOM Document instance)
+     * <span class="attrib">@returns</span> the result of the transformation serialized to an XML String
+     */</span>
+    Document.<span class="reserved">prototype</span>.transformNode = <span class="reserved">function</span>(xslDoc){
+        var out = document.implementation.createDocument(<span class="literal">""</span>, <span class="literal">""</span>, null);
+        <span class="reserved">this</span>.transformNodeToObject(xslDoc, out);
+        var str = null;
+        try{
+            var serializer = new XMLSerializer();
+            str = serializer.serializeToString(out);
+        }catch(e){
+            throw <span class="literal">"Failed to serialize result document. (original exception: "</span>+e+<span class="literal">")"</span>;
+        };
+        <span class="reserved">return</span> str;
+    };
+    Sarissa.IS_ENABLED_TRANSFORM_NODE = true;
+};
+<span class="comment">/**
+ * &lt;p&gt;Deprecated (use XSLTProcessor instead): Set xslt parameters.&lt;/p&gt;
+ * &lt;p&gt;&lt;b&gt;Note &lt;/b&gt; that this method can only work for the main stylesheet and not any included/imported files.&lt;/p&gt;
+ * <span class="attrib">@deprecated</span> use the XSLTProcessor instead
+ * <span class="attrib">@argument</span> oXslDoc the target XSLT DOM Document
+ * <span class="attrib">@argument</span> sParamName the name of the XSLT parameter
+ * <span class="attrib">@argument</span> sParamValue the value of the XSLT parameter
+ * <span class="attrib">@returns</span> whether the parameter was set succefully
+ */</span>
+Sarissa.setXslParameter = <span class="reserved">function</span>(oXslDoc, sParamQName, sParamValue){
+    try{
+        var params = oXslDoc.getElementsByTagName(_SARISSA_IEPREFIX4XSLPARAM+<span class="literal">"param"</span>);
+        var iLength = params.length;
+        var bFound = false;
+        var param;
+        <span class="reserved">if</span>(sParamValue){
+            <span class="reserved">for</span>(var i=0; i &lt; iLength &amp;&amp; !bFound;i++){
+                <span class="reserved">if</span>(params[i].getAttribute(<span class="literal">"name"</span>) == sParamQName){
+                        param = params[i];
+                    <span class="reserved">while</span>(param.firstChild)
+                        param.removeChild(param.firstChild);
+                    <span class="reserved">if</span>(!sParamValue || sParamValue == null){
+                    }<span class="reserved">else</span> <span class="reserved">if</span>(typeof sParamValue == <span class="literal">"string"</span>){ 
+                        param.setAttribute(<span class="literal">"select"</span>, sParamValue);
+                        bFound = true;
+                    }<span class="reserved">else</span> <span class="reserved">if</span>(sParamValue.nodeName){
+                        param.removeAttribute(<span class="literal">"select"</span>);
+                        param.appendChild(sParamValue.cloneNode(true));
+                        bFound = true;
+                    }<span class="reserved">else</span> <span class="reserved">if</span> (sParamValue.item(0) &amp;&amp; sParamValue.item(0).nodeType){
+                        <span class="reserved">for</span>(var j=0;j &lt; sParamValue.length;j++)
+                            <span class="reserved">if</span>(sParamValue.item(j).nodeType)
+                                param.appendChild(sParamValue.item(j).cloneNode(true));
+                        bFound = true;
+                    }<span class="reserved">else</span>
+                        throw <span class="literal">"Failed to set xsl:param "</span>+sParamQName+<span class="literal">" (original exception: "</span>+e+<span class="literal">")"</span>;
+                };
+            };
+        };
+        <span class="reserved">return</span> bFound;
+    }catch(e){
+        throw e;
+        <span class="reserved">return</span> false;
+    };
+};
+
+</pre>
+<!-- END SOURCECODE -->
+<HR>
+
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<A NAME="navbar_top"><!-- --></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#b8cade" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3">
+  <TR ALIGN="center" VALIGN="top">
+  
+  
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-summary.html"><FONT CLASS="NavBarFont1"><b>Overview</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev">	&nbsp;<FONT CLASS="NavBarFont1Rev"><b>File</b></FONT>&nbsp;</TD>
+  
+
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"> <FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="overview-tree.html"><FONT CLASS="NavBarFont1"><b>Tree</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="index-all.html"--><FONT CLASS="NavBarFont1"><b>Index</b></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#b8cade" CLASS="NavBarCell1">    <A HREF="help-doc.html"><FONT CLASS="NavBarFont1"><b>Help</b></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD BGCOLOR="#b8cade" ALIGN="right" VALIGN="top"><EM>
+<b>sarissa</b></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="#eeeeee" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="index.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="overview-summary.html" TARGET="_top"><B>NO FRAMES</B></A>
+&nbsp;&nbsp;
+<SCRIPT>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+</TABLE>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<FONT SIZE="-1">
+
+</FONT>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Tue May  9 22:30:39 2006</div>
+</BODY>
+</HTML>

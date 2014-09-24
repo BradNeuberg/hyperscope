@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="31"
+   name=""
+   committed-date="2006-05-17T19:35:45.566621Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/tests/client/lib/jsunit/java/src"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   name="net"
+   kind="dir"/>
+<entry
+   committed-rev="31"
+   name=".cvsignore"
+   text-time="2006-10-14T00:59:54.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="40fa73c9d0083043c6576dd2b40511e4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:54.000000Z"/>
+</wc-entries>

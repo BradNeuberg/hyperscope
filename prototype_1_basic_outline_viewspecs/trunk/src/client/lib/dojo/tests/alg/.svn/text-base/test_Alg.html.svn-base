@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<script language="JavaScript" type="text/javascript">
+			// Dojo configuration
+			djConfig = { 
+				isDebug: true
+			};
+		</script>
+		<script language="JavaScript" type="text/javascript" 
+			src="../../dojo.js"></script>
+		<script language="JavaScript" type="text/javascript">
+			dojo.require("dojo.event.*");
+			dojo.require("dojo.alg.*");
+
+			function debug1K(what){
+				for(var x=0; x<1000; x++){
+					document.body.removeChild(document.body.lastChild);
+					dj_debug(what);
+				}
+			}
+
+			function init(){
+				var tic = new Date();
+				dj_debug("init, ", tic);
+				dojo.alg.delayThese([
+						function(){ debug1K("1") }, 
+						function(){ debug1K("2"); }, 
+						function(){ debug1K("3"); }, 
+						function(){ debug1K("4"); }, 
+						function(){ debug1K("5"); }, 
+						function(){ debug1K("6"); } 
+					], 
+					function(){ dj_debug((new Date() - tic), "ms"); }, 
+					100);
+			}
+
+			dojo.event.connect(dojo.hostenv, "loaded", dj_global, "init");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

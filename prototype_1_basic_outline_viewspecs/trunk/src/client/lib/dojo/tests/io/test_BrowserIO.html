@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<!--[if lt IE 5.5]>
+		<script language="JavaScript" type="text/javascript" src="http://burstproject.org/burst/fix_ecma.js"></script>
+		<![endif]-->
+		<script language="JavaScript" type="text/javascript">
+			// Dojo configuration
+			djConfig = { 
+				// preventBackButtonFix: true,
+				isDebug: true
+			};
+		</script>
+		<script language="JavaScript" type="text/javascript" 
+			src="../../dojo.js"></script>
+		<script language="JavaScript" type="text/javascript">
+			dojo.require("dojo.io.*");
+
+			function init(){
+				var bindArgs = {
+					url: "test_BrowserIO_data.txt",
+					load: function(type, data, evt){
+						dj_debug(data);
+						// we could just set mimetype: "text/javascript" to
+						// have it auto-eval, but that's not as interesting
+						// dj_eval(data); 
+					},
+					backButton: function(){
+						alert("we intercepted the back button");
+					},
+					forwardButton: function(){
+						alert("onward ho!");
+					},
+					changeURL: "foo"+(new Date()).getTime()
+				};
+				var canBind = dojo.io.bind(bindArgs);
+			}
+
+			function initRequest(){
+				var req = new dojo.io.Request("test_BrowserIO_data.txt");
+				req.changeURL = "foobar" + (new Date()).getTime();
+				req.onload = function (e) {
+					dj_debug(e.data);
+				}
+				req.addEventListener("backbutton", function (e) { alert("we intercepted the back button"); });
+				dojo.io.bind(req);
+			}
+
+			dojo.hostenv.modulesLoadedListeners.push(init);
+		</script>
+	</head>
+	<body>
+		Check your javascript log; the scripts were all loaded in the head.
+	</body>
+</html>
+

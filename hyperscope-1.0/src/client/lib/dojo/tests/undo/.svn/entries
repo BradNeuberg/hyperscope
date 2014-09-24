@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/tests/undo"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   name="browser"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="test_browser.html"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="01913c601e098f56daf753427290cee8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Manager.html"
+   text-time="2006-10-14T01:00:05.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="22de7cd506dfad5767f33674117051ae"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:05.000000Z"/>
+</wc-entries>

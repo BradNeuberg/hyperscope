@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<title>FisheyeList Widget Demo</title>
+
+<script type="text/javascript">
+
+	var djConfig = {isDebug: true , debugAtAllCosts: true };
+
+</script>
+<script type="text/javascript" src="../../dojo.js"></script>
+<script language="JavaScript" type="text/javascript">
+
+	//dojo.require("dojo.widget.*");
+	dojo.require("dojo.widget.HtmlFisheyeList");
+	dojo.hostenv.writeIncludes();
+</script>
+</head>
+<body style="padding: 150px;">
+
+<p>HTML before</p>
+<p>HTML before</p>
+<p>HTML before</p>
+
+<div dojoType="FisheyeList"
+	itemWidth="40" itemHeight="40"
+	itemMaxWidth="150" itemMaxHeight="150"
+	orientation="horizontal"
+	effectUnits="2"
+	itemPadding="10"
+	attachEdge="center"
+	labelEdge="bottom"
+>
+
+	<div dojoType="FisheyeListItem"
+		onclick="alert('click on 1!');"
+		caption="Item 1"
+		iconsrc="images/fisheye_1.png">
+	</div>
+
+	<div dojoType="FisheyeListItem"
+		caption="Item 2"
+		iconsrc="images/fisheye_2.png">
+	</div>
+
+	<div dojoType="FisheyeListItem"
+		caption="Item 3"
+		iconsrc="images/fisheye_3.png">
+	</div>
+
+	<div dojoType="FisheyeListItem"
+		iconsrc="images/fisheye_4.png">
+	</div>
+
+	<div dojoType="FisheyeListItem"
+		caption="Really Long Item Label"
+		iconsrc="images/fisheye_3.png">
+	</div>
+
+	<div dojoType="FisheyeListItem"
+		iconsrc="images/fisheye_2.png">
+	</div>
+
+	<div dojoType="FisheyeListItem"
+		iconsrc="images/fisheye_1.png">
+	</div>
+</div>
+
+<p>HTML after</p>
+<p>HTML after</p>
+<p>HTML after</p>
+
+</body>
+</html>

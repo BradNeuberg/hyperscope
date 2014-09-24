@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+
+<title>Inline Edit Box Widget Demo</title>
+
+<script type="text/javascript"> var djConfig = {isDebug: true}; </script>
+<script type="text/javascript" src="../../dojo.js"></script>
+<script type="text/javascript">
+	dojo.require("dojo.widget.*");
+	dojo.require("dojo.widget.HtmlInlineEditBox");
+</script>
+
+<style type="text/css">
+	body { font-family : sans-serif; background:#ccc; }
+</style>
+
+<h1 dojoType="inlineEditBox">Edit me</h1>

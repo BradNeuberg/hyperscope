@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="198"
+   name=""
+   committed-date="2006-07-30T14:09:25.223535Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/mockups/christinas_mockup"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="198"
+   name="bannerdetail.htm"
+   text-time="2006-10-14T00:59:48.000000Z"
+   committed-date="2006-07-30T14:09:25.223535Z"
+   checksum="5bc567bb20a271fb0128747956784ce4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="198"
+   name="help.htm"
+   text-time="2006-10-14T00:59:48.000000Z"
+   committed-date="2006-07-30T14:09:25.223535Z"
+   checksum="32d7e90c54be8da9894ebf54d29cb368"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   name="views_files"
+   kind="dir"/>
+<entry
+   name="viewsStyles_files"
+   kind="dir"/>
+<entry
+   name="ViewspecsAll_files"
+   kind="dir"/>
+<entry
+   committed-rev="198"
+   name="views.htm"
+   text-time="2006-10-14T00:59:48.000000Z"
+   committed-date="2006-07-30T14:09:25.223535Z"
+   checksum="a983439c82e457670ede8a61eeefa4cb"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:48.000000Z"/>
+<entry
+   name="menu_files"
+   kind="dir"/>
+<entry
+   committed-rev="198"
+   name="ViewspecsAll.htm"
+   text-time="2006-10-14T00:59:48.000000Z"
+   committed-date="2006-07-30T14:09:25.223535Z"
+   checksum="8d5fb2aa3677d17e876d77d908e66e86"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:48.000000Z"/>
+<entry
+   committed-rev="198"
+   name="viewsStyles.htm"
+   text-time="2006-10-14T00:59:48.000000Z"
+   committed-date="2006-07-30T14:09:25.223535Z"
+   checksum="a5dfd4e313d7ae14c9e05c8183c63257"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:48.000000Z"/>
+<entry
+   committed-rev="198"
+   name="menu.htm"
+   text-time="2006-10-14T00:59:48.000000Z"
+   committed-date="2006-07-30T14:09:25.223535Z"
+   checksum="1bd5570f42a4195993b757824ec882ff"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:48.000000Z"/>
+<entry
+   name="ViewspecsBasic_files"
+   kind="dir"/>
+<entry
+   name="jump_files"
+   kind="dir"/>
+<entry
+   committed-rev="198"
+   name="Viewspecs_morelevelelements.jpg"
+   text-time="2006-10-14T00:59:48.000000Z"
+   committed-date="2006-07-30T14:09:25.223535Z"
+   checksum="ca97831e4da3331b2aa94e6549483381"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:48.000000Z"/>
+<entry
+   name="jumpOverlay_files"
+   kind="dir"/>
+<entry
+   name="mockup1_files"
+   kind="dir"/>
+<entry
+   committed-rev="198"
+   name="ViewspecsBasic.htm"
+   text-time="2006-10-14T00:59:48.000000Z"
+   committed-date="2006-07-30T14:09:25.223535Z"
+   checksum="f91f3f02e02221f1723428939f6060f1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:48.000000Z"/>
+<entry
+   name="viewsMore_files"
+   kind="dir"/>
+<entry
+   committed-rev="198"
+   name="jump.htm"
+   text-time="2006-10-14T00:59:48.000000Z"
+   committed-date="2006-07-30T14:09:25.223535Z"
+   checksum="3409e02455e40ae023299bbff8521a52"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:48.000000Z"/>
+<entry
+   committed-rev="198"
+   name="jumpOverlay.htm"
+   text-time="2006-10-14T00:59:48.000000Z"
+   committed-date="2006-07-30T14:09:25.223535Z"
+   checksum="6af4fe547d7a4e56e5f580a2987f7ea1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:48.000000Z"/>
+<entry
+   committed-rev="198"
+   name="mockup1.htm"
+   text-time="2006-10-14T00:59:48.000000Z"
+   committed-date="2006-07-30T14:09:25.223535Z"
+   checksum="8afb401567a12cf6d84777001052c7c2"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:48.000000Z"/>
+<entry
+   committed-rev="198"
+   name="viewsMore.htm"
+   text-time="2006-10-14T00:59:48.000000Z"
+   committed-date="2006-07-30T14:09:25.223535Z"
+   checksum="4b2f9a3aaabac5881bd459817b7278dc"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:48.000000Z"/>
+<entry
+   name="bannerdetail_files"
+   kind="dir"/>
+<entry
+   name="help_files"
+   kind="dir"/>
+</wc-entries>

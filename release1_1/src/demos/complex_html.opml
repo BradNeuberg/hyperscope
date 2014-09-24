@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/hyperscope/src/client/lib/hs/xslt/hyperscope.xsl"?>
+<opml xmlns:hs="http://www.hyperscope.org/hyperscope/opml/public/2006/05/09" hs:version="1.0" version="2.0"><head>
+<title>FrontPage</title>
+</head>
+<body>
+	<outline text="FrontPage">
+		<outline hs:nid="01" text="PurpleWiki&lt;a href=&quot;&quot; class=&quot;wikiword&quot;&gt;?&lt;/a&gt; testbed -- for testing the latest and greatest ass-kicking features." />
+		<outline hs:nid="02" text="&lt;a href=&quot;#&quot; class=&quot;wikiword&quot;&gt;SandBox&lt;/a&gt;, peoples." />
+		<outline hs:createdBy="THOM" hs:createdOn="Mon 7 Jul 1980 05:22:17 GMT+00:00" hs:label="(for command delete" hs:left-label-delim="(" hs:right-label-delim=")" text="This file is a sort of &quot;programmed text&quot; for new users of AUGMENT.  By following the instructions contained in it, you should be able to learn by yourself how to use many of the capabilities of this system.  Don't worry if you make a mistake -- you can't hurt anything.  If you do make a mistake, press the key marked CMD DELETE (for command delete) and start over."/>
+		<outline hs:createdBy="THOM" hs:createdOn="Mon 7 Jul 1980 05:22:17 GMT+00:00" hs:label="First," hs:left-label-delim="(" hs:right-label-delim=")" text="First, and most important, look on the right side of your keyboard at the small device with three buttons on top of it.  It is called a mouse.  Without pushing any buttons, roll the mouse around on the surface of your worktable, and watch the screen.  Notice that there is a cursor, or underline character, which moves as you roll the mouse.  When you roll the mouse right and left, the cursor moves right and left; as you roll the mouse toward and away from you, the cursor moves down and up.  Later, when a command requires you to point to something, you will do so by moving the mouse until the cursor is under the character you want to point to, and then pressing the OK key."/>
+		<outline hs:createdBy="THOM" hs:createdOn="Mon 7 Jul 1980 05:22:17 GMT+00:00" hs:label="(for jump" hs:left-label-delim="(" hs:right-label-delim=")" text="To see the &lt;b&gt;next screenful, for example, type the letter j (for jump), &lt;/b&gt;put the cursor anywhere under the word JUMPING below (pointing to the place you want to jump to), and press the OK key twice.  Do this now."/>
+		<outline text="&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/en/a/af/Monet.waterlilies.500pix.jpg&quot;&gt;&lt;/img&gt;"/>
+		<outline hs:createdBy="THOM" hs:createdOn="Mon 7 Jul 1980 05:22:17 GMT+00:00" hs:label="(for command delete" hs:left-label-delim="(" hs:right-label-delim=")" text="This file is a sort of programmed text for new users of AUGMENT.  By following the instructions contained in it, you should be able to learn by yourself how to use many of the capabilities of this system.  Don't worry if you make a mistake - &lt;img src=&quot;http://upload.wikimedia.org/wikipedia/en/a/af/Monet.waterlilies.500pix.jpg&quot;&gt;&lt;/img&gt; you can't hurt anything.  If you do make a mistake, press the key marked CMD DELETE (for command delete) and start over."/>
+    
+		<outline hs:nid="03" text="&lt;h1&gt;Line One of H1&lt;/h1&gt;&lt;br /&gt;&lt;h1&gt;Line Two of H1&lt;/h1&gt;">
+			<outline text="&lt;h2&gt;Line One of H2&lt;/h2&gt;&lt;br /&gt;&lt;h2&gt;Line Two of H2&lt;/h2&gt;"/>
+			<outline hs:nid="04" text="This is a new section." />
+		</outline>
+	</outline>
+</body>
+
+</opml>
+

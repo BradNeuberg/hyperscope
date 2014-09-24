@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="358"
+   name=""
+   committed-date="2006-09-04T08:40:18.559144Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/hs/xslt"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="341"
+   name="render.xsl"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-04T01:13:38.501854Z"
+   checksum="c02ecb3291dc51d8a529d131a455b317"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+<entry
+   committed-rev="358"
+   name="hyperscope.xsl"
+   text-time="2006-10-14T01:00:00.000000Z"
+   committed-date="2006-09-04T08:40:18.559144Z"
+   checksum="93bea591ca9071c1a36133c8a12301aa"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:00.000000Z"/>
+</wc-entries>

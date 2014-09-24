@@ -1,0 +1,2715 @@
+<html>
+	<head>
+		<title>Test Page for hs.model.Document and hs.model.Node</title>
+		
+		<script language="javascript" src="../lib/jsunit/app/jsUnitCore.js"></script>
+
+		<script type="text/javascript" src="../../../client/lib/sarissa/sarissa.js"></script>
+		<script type="text/javascript" src="../../../client/lib/sarissa/sarissa_ieemu_xpath.js"></script>
+		
+		<script type="text/javascript">
+			var djConfig = { testing: true, isDebug: true, disableFlashStorage: true };
+		</script>
+		<script type="text/javascript" src="../../../client/lib/dojo/dojo.js.uncompressed.js"></script>
+		
+		<script type="text/javascript" src="../../../client/lib/hs/exception.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/filter.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/util.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/address.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/model.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/commands.js"></script>
+		<script type="text/javascript" src="../../../client/lib/hs/ui.js"></script>
+	</head>
+	<body>
+		<h1>Test Page for hs.model.Document and hs.model.Node</h1>
+
+		<p>This page contains a suite of tests for testing HyperScope.</p>
+	
+		<script language="javascript">
+			// wait for page to finish loading
+			dojo.event.connect(dojo, "loaded", pageLoaded);
+			
+			/** Our HyperScope design document, using full HyperScope attributes in the OPML. */ 
+			var hyDoc = new Object();
+			
+			/** An OPML 1.0 document with no HyperScope attributes. */
+			var opml1 = new Object();
+			
+			/** An OPML 2.0 document with no HyperScope attributes. */
+			var opml2 = new Object();
+			
+			/** The number of files we have loaded so far. When we 
+			  	hit three we are done.
+			 */
+			var loadedFiles = 0;
+			
+			function setUpPage(){
+			}
+			
+			function pageLoaded(){
+				debug("page loaded");
+				var addr, fetch, url;
+				
+				// setup our fake testing environment
+				hs.model.testing = true;
+				hs.model.testingCurrentURL = getDocRoot() 
+						+ "../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml";
+						
+				// load our test files
+				var root = getDocRoot();
+				
+				info("---TestDocumentAndNode:pageLoaded()");
+				
+				info("Loading testing files...");
+				
+				// HyperScope-specific OPML
+				url = root + 
+						"../../data/user2/neuberg/HYARCH.AUG.66.DIR/HYARCH.AUG.66-hyperscope.opml";
+				info("Loading url: " + url);
+				addr = new hs.address.Address(url);
+				fetch = new hs.util.XMLFetcher();
+				var hyDocHandler = function(address, dom, error){
+					if(dom == null || error != null
+						|| dojo.lang.isUndefined(dom)){
+						dojo.raise("Test file could not be loaded, file=" + address + ", error=" + error);
+					}
+					
+					debug("Loaded: " + address);
+					
+					hyDoc.dom = dom;
+					hyDoc.addr = address;
+					
+					// see if we are done
+					loadedFiles++;
+					if(loadedFiles >= 3){
+						setUpPageStatus = "complete";
+					}
+				}
+				fetch.load(url, hyDocHandler);
+				
+				// OPML 1.0 file with no HyperScope attributes
+				url = root + 
+						"../../data/non_hyp_opml/opml1_0.opml";
+				info("Loading url: " + url);
+				addr = new hs.address.Address(url);
+				fetch = new hs.util.XMLFetcher();
+				var opml1Handler = function(address, dom, error){
+					if(dom == null || error != null
+						|| dojo.lang.isUndefined(dom)){
+						dojo.raise("Test file could not be loaded, file=" + address + ", error=" + error);
+					}
+					
+					debug("Loaded: " + address);
+					
+					opml1.dom = dom;
+					opml1.addr = address;
+					
+					// see if we are done
+					loadedFiles++;
+					if(loadedFiles >= 3){
+						setUpPageStatus = "complete";
+					}
+				}
+				fetch.load(url, opml1Handler);
+				
+				// OPML 2.0 file with no HyperScope attributes
+				url = root + 
+						"../../data/non_hyp_opml/opml2_0.opml";
+				info("Loading url: " + url);
+				addr = new hs.address.Address(url);
+				fetch = new hs.util.XMLFetcher();
+				var opml2Handler = function(address, dom, error){
+					if(dom == null || error != null
+						|| dojo.lang.isUndefined(dom)){
+						dojo.raise("Test file could not be loaded, file=" + address + ", error=" + error);
+					}
+					
+					debug("Loaded: " + address);
+					
+					opml2.dom = dom;
+					opml2.addr = address;
+					
+					// see if we are done
+					loadedFiles++;
+					if(loadedFiles >= 3){
+						setUpPageStatus = "complete";
+					}
+				}
+				fetch.load(url, opml2Handler);
+			}
+			
+			function getDocRoot(){
+				var url = window.location.href;
+				var endCut = null, hasFilename = false;
+				
+				// chop off any filenames
+				for(var i = url.length; i--; i >= 0){
+					// url[i] not supported on IE, because
+					// underlying window.location.href is not
+					// a String object but something native
+					if(url.charAt(i) == "/"){
+						if(hasFilename){
+							endCut = i + 1;
+						}
+						break;
+					}else if(url.charAt(i) == "."){
+						hasFilename = true;
+					}
+				}
+
+				if(hasFilename){
+					url = url.substring(0, endCut);
+				}
+				return url;
+			}
+			
+			function testDocument(){
+				var doc, xml, addr, dom;
+				var node0, node1, node6, node2A, node4B1A1A1A1, node4;
+				
+				info("---TestDocumentAndNode:testDocument()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+	
+				xml = dojo.dom.innerXML(doc.dom);
+				debug("xml="+xml);
+				
+				// make sure we have the right properties
+				assertNotNull(doc.dom);
+				assertNotNull(doc.origDom);
+				assertNotNull(doc.address);
+				assertEquals(hyDoc.addr.toString(), doc.address.toString());
+				
+				// make sure we are OPML
+				assertNotNull(doc.dom.selectNodes("/opml"));
+				assertEquals(1, doc.dom.selectNodes("/opml").length);
+				
+				// make sure we have the right default node ctxt
+				info("Making sure we have right default node ctxt...");
+				assertNotNull(doc.nodeCtxt);
+				assertNotNull(doc.nodeCtxt.jumpUp);
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// grab a bunch of nodes by node number, nested,
+				// and make sure they point to the right content, level, 
+				// and number to make sure normalization is working right
+				info("Making sure private attributes 'number' and 'level' are right "
+						+ "and point to correct content...");
+				node0 = doc.dom.selectNodes("//outline[@"
+												+ hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+												+ ":number = '0']").item(0);
+				node2A = doc.dom.selectNodes("//outline[@"
+												+ hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+												+ ":number = '2A']").item(0);
+				node4B1A1A1A1 = doc.dom.selectNodes("//outline[@"
+												+ hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+												+ ":number = '4B1A1A1A1']").item(0);
+				assertNotNull(node0);
+				assertNotNull(node2A);
+				assertNotNull(node4B1A1A1A1);
+				
+				// 0
+				assertEquals("0", node0.getAttribute(hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+																+ ":level"));
+				assertEquals("0", node0.getAttribute(hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+																+ ":number"));
+																
+				// 2A											
+				assertEquals("2", node2A.getAttribute(hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+																+ ":level"));
+				assertEquals("2A", node2A.getAttribute(hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+																+ ":number"));
+				assertEquals("Use the following links to gain various levels of detail and information "
+								+ "about the HyperScope design : ", node2A.getAttribute("text"));
+					
+				// 4C1A1A1A1			
+				assertEquals("9", node4B1A1A1A1.getAttribute(hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+																+ ":level"));
+				assertEquals("4B1A1A1A1", node4B1A1A1A1.getAttribute(hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+																+ ":number"));
+				assertEquals("parse url from left to right, building up internal hs.address.Pieces as we do so", 
+								node4B1A1A1A1.getAttribute("text"));
+								
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+	
+				xml = dojo.dom.innerXML(doc.dom);
+				debug("xml="+xml);
+				
+				// make sure we have the right properties
+				assertNotNull(doc.dom);
+				assertNotNull(doc.origDom);
+				assertNotNull(doc.address);
+				assertEquals(opml2.addr.toString(), doc.address.toString());
+				
+				// make sure we are OPML
+				assertNotNull(doc.dom.selectNodes("/opml"));
+				assertEquals(1, doc.dom.selectNodes("/opml").length);
+				
+				// make sure we have the right default node ctxt
+				info("Making sure we have right default node ctxt...");
+				assertNotNull(doc.nodeCtxt);
+				assertNotNull(doc.nodeCtxt.jumpUp);
+				assertEquals("1", doc.nodeCtxt.number); // no level 0
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// grab a bunch of nodes by node number, nested,
+				// and make sure they point to the right content, level, 
+				// and number to make sure normalization is working right
+				info("Making sure private attributes 'number' and 'level' are right "
+						+ "and point to correct content...");
+				node1 = doc.dom.selectNodes("//outline[@"
+												+ hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+												+ ":number = '1']").item(0);
+				node6 = doc.dom.selectNodes("//outline[@"
+												+ hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+												+ ":number = '6']").item(0);
+				assertNotNull(node1);
+				assertNotNull(node6);
+				
+				// 1
+				assertEquals("1", node1.getAttribute(hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+																+ ":level"));
+				assertEquals("1", node1.getAttribute(hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+																+ ":number"));
+				assertEquals("CNET News.com", node1.getAttribute("text"));
+																
+				// 6											
+				assertEquals("1", node6.getAttribute(hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+																+ ":level"));
+				assertEquals("6", node6.getAttribute(hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+																+ ":number"));
+				assertEquals("Christian Science Monitor | Top Stories", node6.getAttribute("text"));
+				
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+	
+				xml = dojo.dom.innerXML(doc.dom);
+				debug("xml="+xml);
+				
+				// make sure we have the right properties
+				assertNotNull(doc.dom);
+				assertNotNull(doc.origDom);
+				assertNotNull(doc.address);
+				assertEquals(opml1.addr.toString(), doc.address.toString());
+				
+				// make sure we are OPML
+				assertNotNull(doc.dom.selectNodes("/opml"));
+				assertEquals(1, doc.dom.selectNodes("/opml").length);
+				
+				// make sure we have the right default node ctxt
+				info("Making sure we have right default node ctxt...");
+				assertNotNull(doc.nodeCtxt);
+				assertNotNull(doc.nodeCtxt.jumpUp);
+				assertEquals("1", doc.nodeCtxt.number); // no level 0
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// grab a bunch of nodes by node number, nested,
+				// and make sure they point to the right content, level, 
+				// and number to make sure normalization is working right
+				info("Making sure private attributes 'number' and 'level' are right "
+						+ "and point to correct content...");
+				node1 = doc.dom.selectNodes("//outline[@"
+												+ hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+												+ ":number = '1']").item(0);
+				node2A = doc.dom.selectNodes("//outline[@"
+												+ hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+												+ ":number = '2A']").item(0);
+				node4 = doc.dom.selectNodes("//outline[@"
+												+ hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+												+ ":number = '4']").item(0);
+				assertNotNull(node1);
+				assertNotNull(node2A);
+				assertNotNull(node4);
+				
+				// 1
+				assertEquals("1", node1.getAttribute(hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+																+ ":level"));
+				assertEquals("1", node1.getAttribute(hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+																+ ":number"));
+				assertEquals("It's XML, of course", node1.getAttribute("text"));
+								
+				// 2A											
+				assertEquals("2", node2A.getAttribute(hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+																+ ":level"));
+				assertEquals("2A", node2A.getAttribute(hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+																+ ":number"));
+				assertEquals("All playlists are outlineDocuments. This is the main file format "
+								+ "for Radio UserLand. When you create a new file it's saved as an "
+								+ "outlineDocument. Because users can save them into the www folder, "
+								+ "they can be accessed over the Web, either from a script or a Web "
+								+ "browser such as MSIE. (Of course they could be served by any HTTP "
+								+ "server, not just the Radio UserLand server.)", 
+								node2A.getAttribute("text"));
+					
+				// 4			
+				assertEquals("1", node4.getAttribute(hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+																+ ":level"));
+				assertEquals("4", node4.getAttribute(hs.model.Document.HS_INTERNAL_NAMESPACE_PREFIX
+																+ ":number"));
+				assertEquals("Rules of the road", node4.getAttribute("text"));
+			}
+			
+			function testJumpOrigin(){
+				var node, j, exp, root, xml, addr, dom, doc;
+				var node0, node1, node6, node2A, node4B1A1A1A1, node4;
+				
+				info("---TestDocumentAndNode:testJumpOrigin()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// 2A
+				info('doc.jumpOrigin()');
+				node = doc.jumpNumber("2A");
+				node = doc.jumpOrigin();
+				assertNotNull(node);
+				assertEquals("0", node.number);
+				assertEquals(0, node.level);
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// 4
+				info('doc.jumpOrigin()');
+				node = doc.jumpNumber("4");
+				node = doc.jumpOrigin();
+				assertNotNull(node);
+				assertEquals("1", node.number);
+				assertEquals(1, node.level);
+				assertEquals("CNET News.com", node.data);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// 2A
+				info('doc.jumpOrigin()');
+				node = doc.jumpOrigin();
+				assertNotNull(node);
+				assertEquals("1", node.number);
+				assertEquals(1, node.level);
+				assertEquals("It's XML, of course", node.data);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+			
+			function testJumpNumber(){
+				var node, j, exp, root, xml, addr, dom, doc;
+				var node0, node1, node6, node2A, node4B1A1A1A1, node4;
+				
+				info("---TestDocumentAndNode:testJumpNumber()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// 2A
+				info('doc.jumpNumber("2A")');
+				node = doc.jumpNumber("2A");
+				assertNotNull(node);
+				assertEquals("2A", node.number);
+				assertEquals(2, node.level);
+				assertEquals("Use the following links to gain various levels of detail and information "
+							+ "about the HyperScope design : ", node.data);
+				assertEquals("2A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// 0
+				info('doc.jumpNumber("0")');
+				node = doc.jumpNumber("0");
+				assertNotNull(node);
+				assertEquals("0", node.number);
+				assertEquals(0, node.level);
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: doc.jumpNumber(null)');
+				exp = null;
+				try{ 
+					node = doc.jumpNumber(null);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: doc.jumpNumber("-1")');
+				exp = null;
+				try{ 
+					node = doc.jumpNumber("-1");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// 1
+				info('doc.jumpNumber("1")');
+				node = doc.jumpNumber("1");
+				assertNotNull(node);
+				assertEquals("1", node.number);
+				assertEquals(1, node.level);
+				assertEquals("CNET News.com", node.data);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// 6
+				info('doc.jumpNumber("6")');
+				node = doc.jumpNumber("6");
+				assertNotNull(node);
+				assertEquals("6", node.number);
+				assertEquals(1, node.level);
+				assertEquals("Christian Science Monitor | Top Stories", node.data);
+				assertEquals("6", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: doc.jumpNumber("2A")');
+				exp = null;
+				try{ 
+					node = doc.jumpNumber("2A");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("6", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: doc.jumpNumber("0")');
+				exp = null;
+				try{ 
+					node = doc.jumpNumber("0");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("6", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// 1
+				info('doc.jumpNumber("1")');
+				node = doc.jumpNumber("1");
+				assertNotNull(node);
+				assertEquals("1", node.number);
+				assertEquals(1, node.level);
+				assertEquals("It's XML, of course", node.data);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// 2A
+				info('doc.jumpNumber("2A")');
+				node = doc.jumpNumber("2A");
+				assertNotNull(node);
+				assertEquals("2A", node.number);
+				assertEquals(2, node.level);
+				assertEquals("All playlists are outlineDocuments. This is the main file format "
+								+ "for Radio UserLand. When you create a new file it's saved "
+								+ "as an outlineDocument. Because users can save them into the "
+								+ "www folder, they can be accessed over the Web, either from a "
+								+ "script or a Web browser such as MSIE. (Of course they could be "
+								+ "served by any HTTP server, not just the Radio UserLand server.)", 
+								node.data);
+				assertEquals("2A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// 4
+				info('doc.jumpNumber("4")');
+				node = doc.jumpNumber("4");
+				assertNotNull(node);
+				assertEquals("4", node.number);
+				assertEquals(1, node.level);
+				assertEquals("Rules of the road", node.data);
+				assertEquals("4", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: doc.jumpNumber("0")');
+				exp = null;
+				try{ 
+					node = doc.jumpNumber("0");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("4", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('doc.jumpNumber("2A2")');
+				exp = null;
+				try{ 
+					node = doc.jumpNumber("2A2");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("4", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+			
+			function testJumpId(){
+				var node, j, exp, root, xml, addr, dom, doc;
+				var node0, node1, node6, node2A, node4B1A1A1A1, node4;
+				
+				info("---TestDocumentAndNode:testjumpId()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// 0214
+				info('doc.jumpId("0214")');
+				node = doc.jumpId("0214");
+				assertNotNull(node);
+				assertEquals("3B3C1E", node.number);
+				assertEquals("0214", node.id);
+				assertEquals("jumpCharacters(numChars : Integer) throws hs.exception.Jump", node.data);
+				assertEquals("3B3C1E", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('doc.jumpId("0")');
+				exp = null;
+				try{ 
+					node = doc.jumpId("0");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("3B3C1E", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// invalid
+				info('doc.jumpId("01")');
+				exp = null;
+				try{ 
+					node = doc.jumpId("01");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// invalid
+				info('doc.jumpId("01")');
+				exp = null;
+				try{ 
+					node = doc.jumpId("01");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+			
+			function testJumpMarker(){
+				var node, j, exp, root, xml, addr, dom, doc;
+				var node0, node1, node6, node2A, node4B1A1A1A1, node4;
+				
+				info("---TestDocumentAndNode:testJumpMarker()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// testMarker
+				info('doc.jumpMarker("testMarker")');
+				node = doc.jumpMarker("testMarker");
+				assertNotNull(node);
+				assertEquals("027", node.id);
+				assertEquals("<a name=\"testMarker\"></a>hs.ui.CommandHelper", node.data);
+				assertEquals("027", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('doc.jumpMarker("badMarker")');
+				exp = null;
+				try{ 
+					node = doc.jumpMarker("badMarker");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("027", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('doc.jumpMarker("")');
+				exp = null;
+				try{ 
+					node = doc.jumpMarker("");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("027", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('doc.jumpMarker(null)');
+				exp = null;
+				try{ 
+					node = doc.jumpMarker(null);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("027", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// invalid
+				info('doc.jumpMarker("badMarker")');
+				exp = null;
+				try{ 
+					node = doc.jumpMarker("badMarker");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// invalid
+				info('doc.jumpMarker("badMarker")');
+				exp = null;
+				try{ 
+					node = doc.jumpMarker("badMarker");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+			
+			function testJumpLabel(){
+				var node, j, exp, root, xml, addr, dom, doc;
+				var node0, node1, node6, node2A, node4B1A1A1A1, node4;
+				
+				info("---TestDocumentAndNode:testJumpLabel()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// "view" from origin
+				info('doc.jumpLabel("view", hs.commands.JumpConstants.FIRST)');
+				node = doc.jumpLabel("view", hs.commands.JumpConstants.FIRST);
+				assertNotNull(node);
+				assertEquals("0598", node.id);
+				assertEquals("0598", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// "View" from next
+				info('doc.jumpLabel("View", hs.commands.JumpConstants.NEXT)');
+				node = doc.jumpLabel("View", hs.commands.JumpConstants.NEXT);
+				assertNotNull(node);
+				assertEquals("0599", node.id);
+				assertEquals("0599", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: doc.jumpLabel("hs.address.Piece", hs.commands.JumpConstants.FIRST)');
+				exp = null;
+				try{ 
+					node = doc.jumpLabel("hs.address.Piece", hs.commands.JumpConstants.FIRST);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("0599", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: doc.jumpLabel("view", hs.commands.JumpConstants.NEXT) from final node');
+				doc.jumpId("0617");
+				exp = null;
+				try{ 
+					node = doc.jumpLabel("view", hs.commands.JumpConstants.NEXT);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("0617", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// "Module" from origin
+				info('doc.jumpLabel("Module", hs.commands.JumpConstants.NEXT)');
+				doc.jumpOrigin();
+				node = doc.jumpLabel("Module", hs.commands.JumpConstants.NEXT);
+				assertNotNull(node);
+				assertEquals("013", node.id);
+				assertEquals("013", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// "Module" from last match
+				info('doc.jumpLabel("Module", hs.commands.JumpConstants.NEXT) from last match');
+				node = doc.jumpLabel("Module", hs.commands.JumpConstants.NEXT);
+				assertNotNull(node);
+				assertEquals("028", node.id);
+				assertEquals("028", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// "Module" after jumpId("0625")
+				info('doc.jumpLabel("Module", hs.commands.JumpConstants.NEXT) after jumpId("0625")');
+				doc.jumpId("0625");
+				node = doc.jumpLabel("Module", hs.commands.JumpConstants.NEXT);
+				assertNotNull(node);
+				assertEquals("0626", node.id);
+				assertEquals("0626", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: doc.jumpLabel("Module", hs.commands.JumpConstants.NEXT) at final match');
+				exp = null;
+				try{ 
+					node = doc.jumpLabel("Module", hs.commands.JumpConstants.NEXT);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("0626", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// invalid
+				info('doc.jumpLabel("badlabel", hs.commands.JumpConstants.NEXT)');
+				exp = null;
+				try{ 
+					node = doc.jumpLabel("badlabel", hs.commands.JumpConstants.NEXT);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// invalid
+				info('doc.jumpLabel("badlabel", hs.commands.JumpConstants.NEXT)');
+				exp = null;
+				try{ 
+					node = doc.jumpLabel("badlabel", hs.commands.JumpConstants.NEXT);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+			
+			function testJumpWord(){
+				var node, j, exp, root, xml, addr, dom, doc;
+				var node0, node1, node6, node2A, node4B1A1A1A1, node4;
+				
+				info("---TestDocumentAndNode:testJumpWord()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// "hs.address.Piece" from origin
+				info('doc.jumpWord("hs.address.Piece", hs.commands.JumpConstants.FIRST)');
+				node = doc.jumpWord("hs.address.Piece", hs.commands.JumpConstants.FIRST);
+				assertNotNull(node);
+				assertEquals("039", node.id);
+				assertEquals("039", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// "hs.address.Piece" next
+				info('doc.jumpWord("hs.address.Piece", hs.commands.JumpConstants.NEXT)');
+				node = doc.jumpWord("hs.address.Piece", hs.commands.JumpConstants.NEXT);
+				assertNotNull(node);
+				assertEquals("0258", node.id);
+				assertEquals("0258", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// make sure partial matches don't work
+				info('doc.jumpWord("partial", hs.commands.JumpConstants.FIRST) against partial matching');
+				node = doc.jumpWord("partial", hs.commands.JumpConstants.FIRST);
+				assertNotNull(node);
+				// should hit this node, not 0698, which has "partialmatch," rather than just the word
+				// "partial"
+				assertEquals("0599", node.id);
+				assertEquals("0599", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// make sure case sensitivity is preserved
+				info('doc.jumpWord("caps", hs.commands.JumpConstants.FIRST) with case sensitivity');
+				node = doc.jumpWord("caps", hs.commands.JumpConstants.FIRST);
+				assertNotNull(node);
+				// should hit this node, not 0602, which has "CAPS" rather than just the lower-case word
+				// "caps"
+				assertEquals("0607", node.id);
+				assertEquals("0607", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// funky word
+				info('doc.jumpWord("!@#$%^&*()\"/\\><.,:;{}[]+=-_", hs.commands.JumpConstants.FIRST)');
+				doc.jumpOrigin();
+				node = doc.jumpWord("!@#$%^&*()\"/\\><.,:;{}[]+=-_", hs.commands.JumpConstants.FIRST);
+				assertNotNull(node);
+				assertEquals("0185", node.id);
+				assertEquals("0185", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// funky word
+				info('doc.jumpWord("!@#$%^&*()\"/\\><.,:;{}[]+=-_", hs.commands.JumpConstants.FIRST)');
+				doc.jumpId("0179");
+				node = doc.jumpWord("!@#$%^&*()\"/\\><.,:;{}[]+=-_", hs.commands.JumpConstants.FIRST);
+				assertNotNull(node);
+				assertEquals("0185", node.id);
+				assertEquals("0185", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: doc.jumpWord("hs.address.Piece", hs.commands.JumpConstants.NEXT) from final match');
+				doc.jumpId("0494");
+				exp = null;
+				try{ 
+					node = doc.jumpWord("hs.address.Piece", hs.commands.JumpConstants.NEXT);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("0494", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// "News" from origin
+				info('doc.jumpWord("News", hs.commands.JumpConstants.FIRST)');
+				node = doc.jumpWord("News", hs.commands.JumpConstants.FIRST);
+				assertNotNull(node);
+				assertEquals("InfoWorld: Top News", node.data);
+				assertEquals("InfoWorld: Top News", doc.nodeCtxt.data);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// "News" next
+				info('doc.jumpWord("News", hs.commands.JumpConstants.NEXT)');
+				node = doc.jumpWord("News", hs.commands.JumpConstants.NEXT);
+				assertNotNull(node);
+				assertEquals("Scripting News", node.data);
+				assertEquals("Scripting News", doc.nodeCtxt.data);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// "Wired" next
+				info('doc.jumpWord("Wired", hs.commands.JumpConstants.NEXT)');
+				node = doc.jumpWord("Wired", hs.commands.JumpConstants.NEXT);
+				assertNotNull(node);
+				assertEquals("Wired News", node.data);
+				assertEquals("Wired News", doc.nodeCtxt.data);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: doc.jumpWord("Wired", hs.commands.JumpConstants.NEXT) from final match');
+				exp = null;
+				try{ 
+					node = doc.jumpWord("Wired", hs.commands.JumpConstants.NEXT);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("Wired News", node.data);
+				assertEquals("Wired News", doc.nodeCtxt.data);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// "formats" from origin
+				info('doc.jumpWord("formats", hs.commands.JumpConstants.FIRST)');
+				node = doc.jumpWord("formats", hs.commands.JumpConstants.FIRST);
+				assertNotNull(node);
+				assertEquals("This page documents the file formats used by Radio UserLand.", node.data);
+				assertEquals("This page documents the file formats used by Radio UserLand.", doc.nodeCtxt.data);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// "formats" next
+				info('doc.jumpWord("formats", hs.commands.JumpConstants.NEXT)');
+				node = doc.jumpWord("formats", hs.commands.JumpConstants.NEXT);
+				assertNotNull(node);
+				assertEquals("All formats are open and public and may be "
+								+ "used for any purpose whatsoever.", 
+								node.data);
+				assertEquals("All formats are open and public and may be "
+								+ "used for any purpose whatsoever.", 
+								doc.nodeCtxt.data);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: doc.jumpWord("formats", hs.commands.JumpConstants.NEXT) from final match');
+				exp = null;
+				try{ 
+					node = doc.jumpWord("formats", hs.commands.JumpConstants.NEXT);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("All formats are open and public and may be "
+								+ "used for any purpose whatsoever.", 
+								node.data);
+				assertEquals("All formats are open and public and may be "
+								+ "used for any purpose whatsoever.", 
+								doc.nodeCtxt.data);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+			
+			function testJumpContent(){
+				var node, j, exp, root, xml, addr, dom, doc;
+				var node0, node1, node6, node2A, node4B1A1A1A1, node4;
+				
+				info("---TestDocumentAndNode:testJumpContent()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// "follow" from origin
+				info('doc.jumpContent("follow", hs.commands.JumpConstants.FIRST)');
+				node = doc.jumpContent("follow", hs.commands.JumpConstants.FIRST);
+				assertNotNull(node);
+				assertEquals("0596", node.id);
+				assertEquals("0596", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// "follow" from last hit
+				info('doc.jumpContent("follow", hs.commands.JumpConstants.NEXT)');
+				node = doc.jumpContent("follow", hs.commands.JumpConstants.NEXT);
+				assertNotNull(node);
+				assertEquals("0117", node.id);
+				assertEquals("0117", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// next from context
+				info('doc.jumpContent("follow", hs.commands.JumpConstants.NEXT) from context 0661');
+				doc.jumpId("0661");
+				node = doc.jumpContent("follow", hs.commands.JumpConstants.NEXT);
+				assertNotNull(node);
+				assertEquals("0662", node.id);
+				assertEquals("0662", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// funky content
+				info('doc.jumpContent("!@#$%^&*()\"/\\><.,:;{}[]+=-_", hs.commands.JumpConstants.FIRST)');
+				doc.jumpOrigin();
+				node = doc.jumpContent("!@#$%^&*()\"/\\><.,:;{}[]+=-_", hs.commands.JumpConstants.FIRST);
+				assertNotNull(node);
+				assertEquals("0185", node.id);
+				assertEquals("0185", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// funky content
+				info('doc.jumpContent("!@#$%^&*()\"/\\><.,:;{}[]+=-_", hs.commands.JumpConstants.NEXT)');
+				doc.jumpId("0179");
+				node = doc.jumpContent("!@#$%^&*()\"/\\><.,:;{}[]+=-_", hs.commands.JumpConstants.NEXT);
+				assertNotNull(node);
+				assertEquals("0185", node.id);
+				assertEquals("0185", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// make sure case sensitivity is preserved
+				info('doc.jumpContent("caps", hs.commands.JumpConstants.FIRST) with case sensitivity');
+				node = doc.jumpContent("caps", hs.commands.JumpConstants.FIRST);
+				assertNotNull(node);
+				// should hit this node, not 0602, which has "CAPS" rather than just the lower-case content
+				// "caps"
+				assertEquals("0607", node.id);
+				assertEquals("0607", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: doc.jumpContent("follow", hs.commands.JumpConstants.NEXT) from last match');
+				doc.jumpId("0664");
+				exp = null;
+				try{ 
+					node = doc.jumpContent("follow", hs.commands.JumpConstants.NEXT);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("0664", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// "News" from origin
+				info('doc.jumpContent("News", hs.commands.JumpConstants.FIRST)');
+				node = doc.jumpContent("News", hs.commands.JumpConstants.FIRST);
+				assertNotNull(node);
+				assertEquals("CNET News.com", node.data);
+				assertEquals("CNET News.com", doc.nodeCtxt.data);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// "News" next
+				info('doc.jumpContent("News", hs.commands.JumpConstants.NEXT)');
+				node = doc.jumpContent("News", hs.commands.JumpConstants.NEXT);
+				assertNotNull(node);
+				assertEquals("Yahoo! News: Technology", node.data);
+				assertEquals("Yahoo! News: Technology", doc.nodeCtxt.data);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// "News" next
+				info('doc.jumpContent("News", hs.commands.JumpConstants.NEXT)');
+				node = doc.jumpContent("News", hs.commands.JumpConstants.NEXT);
+				assertNotNull(node);
+				assertEquals("InfoWorld: Top News", node.data);
+				assertEquals("InfoWorld: Top News", doc.nodeCtxt.data);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// "News" next
+				info('doc.jumpContent("News", hs.commands.JumpConstants.NEXT)');
+				node = doc.jumpContent("News", hs.commands.JumpConstants.NEXT);
+				assertNotNull(node);
+				assertEquals("Scripting News", node.data);
+				assertEquals("Scripting News", doc.nodeCtxt.data);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// "News" next
+				info('doc.jumpContent("News", hs.commands.JumpConstants.NEXT)');
+				node = doc.jumpContent("News", hs.commands.JumpConstants.NEXT);
+				assertNotNull(node);
+				assertEquals("Wired News", node.data);
+				assertEquals("Wired News", doc.nodeCtxt.data);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: doc.jumpContent("News", hs.commands.JumpConstants.NEXT) from final match');
+				exp = null;
+				try{ 
+					node = doc.jumpContent("News", hs.commands.JumpConstants.NEXT);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("Wired News", node.data);
+				assertEquals("Wired News", doc.nodeCtxt.data);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// "XML" from origin
+				info('doc.jumpContent("XML", hs.commands.JumpConstants.FIRST)');
+				node = doc.jumpContent("XML", hs.commands.JumpConstants.FIRST);
+				assertNotNull(node);
+				assertEquals("It's XML, of course", node.data);
+				assertEquals("It's XML, of course", doc.nodeCtxt.data);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// "XML" next
+				info('doc.jumpContent("XML", hs.commands.JumpConstants.NEXT)');
+				node = doc.jumpContent("XML", hs.commands.JumpConstants.NEXT);
+				assertNotNull(node);
+				assertEquals("There's a simple XML-RPC interface that allows a user to register with an aggregator. ", node.data);
+				assertEquals("There's a simple XML-RPC interface that allows a user to register with an aggregator. ", doc.nodeCtxt.data);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: doc.jumpContent("XML", hs.commands.JumpConstants.NEXT) from final match');
+				node = doc.jumpNumber("3D");
+				exp = null;
+				try{ 
+					node = doc.jumpContent("XML", hs.commands.JumpConstants.NEXT);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("Here's an <a href=\"http://static.userland.com/gems/radiodiscuss/songs.xml\">"
+								+ "example</a> of the XML file. The mapping between the table and the "
+								+ "XMLization should be fairly clear.", 
+								node.data);
+				assertEquals("Here's an <a href=\"http://static.userland.com/gems/radiodiscuss/songs.xml\">"
+								+ "example</a> of the XML file. The mapping between the table and the "
+								+ "XMLization should be fairly clear.", 
+								doc.nodeCtxt.data);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+			
+			function testJumpUp(){
+				var node, j, exp, root, xml, node0, node2A, node4B1A1A1A1, addr, dom, doc;
+				
+				info("---TestDocumentAndNode:testJumpUp()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// no offset
+				info("node.jumpUp() from 4B1A1A1A1");
+				node = doc.jumpNumber("4B1A1A1A1");
+				j = node.jumpUp();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("4B1A1A1A", j.number);
+				assertEquals("inside hs.util.AddressTokenizer constructor",
+							j.data);
+				assertEquals("4B1A1A1A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpUp(5) from 4B1A1A1A1");
+				node = doc.jumpNumber("4B1A1A1A1");
+				j = node.jumpUp(5);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("4B1A", j.number);
+				assertEquals("var address = new hs.address.Address(window.location.href)",
+							j.data);
+				assertEquals("4B1A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// with offset that is too large
+				info("node.jumpUp(200) from 4B1A1A1A1");
+				node = doc.jumpNumber("4B1A1A1A1");
+				j = node.jumpUp(200);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0", j.number);
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// should return same node
+				info("node.jumpUp() from 0");
+				node = doc.jumpNumber("0");
+				j = node.jumpUp();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0", j.number);
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpUp(2) from 1");
+				node = doc.jumpNumber("1");
+				j = node.jumpUp(2);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0", j.number);
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info("INVALID: node.jumpUp(0)");
+				exp = null;
+				try{ 
+					j = node.jumpUp(0);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);	
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);	
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+							
+				// should return same node
+				info("node.jumpUp() from 2");
+				node = doc.jumpNumber("2");
+				j = node.jumpUp();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("2", j.number);
+				assertEquals("2", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpUp() from origin");
+				node = doc.jumpOrigin();
+				j = node.jumpUp();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1", j.number);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);	
+				
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// no offset
+				info("node.jumpUp() from 2A");
+				node = doc.jumpNumber("2A");
+				j = node.jumpUp();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("2", j.number);
+				assertEquals("outlineDocument", j.data);
+				assertEquals("2", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// should return same node
+				info("node.jumpUp() from 2");
+				node = doc.jumpNumber("2");
+				j = node.jumpUp();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("2", j.number);
+				assertEquals("2", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// too large offset
+				info("node.jumpUp(2) from 2A");
+				node = doc.jumpNumber("2A");
+				j = node.jumpUp(2);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("2", j.number);
+				assertEquals("2", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+			
+			function testJumpDown(){
+				var node, j, exp, root, xml, node0, node2A, node4B1A1A1A1, addr, dom, doc;
+				var addr = hyDoc.addr;
+				var dom = hyDoc.dom;
+				var doc;
+				
+				info("---TestDocumentAndNode:testJumpDown()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);																	
+				
+				// no offset
+				info("node.jumpDown() from 3B1F1");
+				node = doc.jumpNumber("3B1F1");
+				j = node.jumpDown();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("3B1F1A", j.number);
+				assertEquals("<a href=\"<dojo widget>\">&lt;<dojo widget>&gt;</a>",
+							j.data);
+				assertEquals("3B1F1A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// with offset
+				info("node.jumpDown(3) from 3B2");
+				node = doc.jumpNumber("3B2");
+				j = node.jumpDown(3);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("3B2A1A", j.number);
+				assertEquals("<a href=\"<static singleton>\">&lt;<static singleton>&gt;</a>",
+							j.data);
+				assertEquals("3B2A1A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpDown() from 6C");
+				node = doc.jumpNumber("6C");
+				j = node.jumpDown();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("6C", j.number);
+				assertEquals("6C", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpDown(3) from 6A");
+				node = doc.jumpNumber("6A");
+				j = node.jumpDown(3);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("6A", j.number);
+				assertEquals("6A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// too large offset
+				info("node.jumpDown(200) from 0658");
+				node = doc.jumpId("0658");
+				j = node.jumpDown(200);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0659", j.id);
+				assertEquals("0659", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info("INVALID: node.jumpDown(0)");
+				exp = null;
+				try{ 
+					j = node.jumpDown(0);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);	
+				assertEquals("0659", j.id);
+				assertEquals("0659", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);	
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);																	
+				
+				// should return same node
+				info("node.jumpDown() from 1");
+				node = doc.jumpNumber("1");
+				j = node.jumpDown();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1", j.number);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);																	
+				
+				// no offset
+				info("node.jumpDown() from 1");
+				node = doc.jumpNumber("1");
+				j = node.jumpDown();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1A", j.number);
+				assertEquals("This page documents the file formats used by Radio UserLand.",
+							j.data);
+				assertEquals("1A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpDown() from 4A");
+				node = doc.jumpNumber("4A");
+				j = node.jumpDown();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("4A", j.number);
+				assertEquals("4A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);	
+			}
+			
+			function testJumpNext(){
+				var node, j, exp, root, xml, node0, node2A, node4B1A1A1A1, addr, dom, doc;
+				
+				info("---TestDocumentAndNode:testJumpNext()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// no offset
+				info("node.jumpNext() from 4B1A1A1A");
+				node = doc.jumpNumber("4B1A1A1A");
+				j = node.jumpNext();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("4B1A1A1A1", j.number);
+				assertEquals("parse url from left to right, building up "
+								+ "internal hs.address.Pieces as we do so",
+								j.data);
+				assertEquals("4B1A1A1A1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpNext(10) from 4B1A1A1A1");			
+				node = doc.jumpNumber("4B1A1A1A1");
+				j = node.jumpNext(10);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("4B2A1", j.number);
+				assertEquals("if mouse marks with click of button",
+							j.data);
+				assertEquals("4B2A1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpNext(1) from 0");			
+				node = doc.jumpOrigin();
+				j = node.jumpNext(1);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1", j.number);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpNext() from final node");
+				node = doc.jumpId("0617");
+				j = node.jumpNext();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0617", j.id);
+				assertEquals("0617", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// 0461
+				info("node.jumpNext(2) from 0461, next to final node");
+				node = doc.jumpId("0461");
+				j = node.jumpNext(2);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0617", j.id);
+				assertEquals("0617", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// too large offset
+				info("node.jumpNext(1000) from 0663");
+				node = doc.jumpId("0663");
+				j = node.jumpNext(1000);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0617", j.id);
+				assertEquals("0617", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info("INVALID: node.jumpNext(0)");
+				exp = null;
+				try{ 
+					j = node.jumpNext(0);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("0617", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// no offset
+				info("node.jumpNext() from 3");
+				node = doc.jumpNumber("3");
+				j = node.jumpNext();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("4", j.number);
+				assertEquals("Yahoo! News: Technology", j.data);
+				assertEquals("4", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpNext(2) from 2");			
+				node = doc.jumpNumber("2");
+				j = node.jumpNext(2);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("4", j.number);
+				assertEquals("Yahoo! News: Technology", j.data);
+				assertEquals("4", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpNext() from 13");
+				node = doc.jumpNumber("13");
+				j = node.jumpNext();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("13", j.number);
+				assertEquals("13", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// too large offset
+				info("node.jumpNext(3) from 11");
+				node = doc.jumpNumber("11");
+				j = node.jumpNext(3);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("13", j.number);
+				assertEquals("13", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// no offset
+				info("node.jumpNext() from 2D");
+				node = doc.jumpNumber("2D");
+				j = node.jumpNext();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("3", j.number);
+				assertEquals("songList", j.data);
+				assertEquals("3", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpNext(2) from 2D");
+				node = doc.jumpNumber("2D");
+				j = node.jumpNext(2);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("3A", j.number);
+				assertEquals("As you're listening to music, Radio UserLand "
+								+ "keeps track of what you listen to. Here's "
+							 	+ "a <a href=\"http://static.userland.com/images/radiodiscuss/userPlaylistSongs.gif\">"
+								+ "screen shot</a> of the table, user.playlist.songs, that "
+								+ "keeps track of the stuff. ", 
+								j.data);
+				assertEquals("3A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpNext() from last node");
+				node = doc.jumpNumber("4A");
+				j = node.jumpNext();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("4A", j.number);
+				assertEquals("4A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+			
+			function testJumpBack(){
+				var node, j, exp, root, xml, node0, node2A, node4B1A1A1A1, addr, dom, doc;
+				
+				info("---TestDocumentAndNode:testJumpBack()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// no offset
+				info("node.jumpBack() from 4B1A1A1A1");
+				node = doc.jumpNumber("4B1A1A1A1");
+				j = node.jumpBack();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("4B1A1A1A", j.number);
+				assertEquals("inside hs.util.AddressTokenizer constructor",
+							j.data);
+				assertEquals("4B1A1A1A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpBack(10) from 4B1A1A1A1");			
+				node = doc.jumpNumber("4B1A1A1A1");
+				j = node.jumpBack(10);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("3C1A1C", j.number);
+				assertEquals("Note: In phase 2, when we have a more "
+							 + "sophisticated server-side, mod_rewrite rules "
+							 + "will be replaced with a Java servlet that will "
+							 + "handle this mapping",
+							j.data);
+				assertEquals("3C1A1C", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpBack(1) from 1");			
+				node = doc.jumpNumber("1");
+				j = node.jumpBack(1);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0", j.number);
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpBack() from 0");
+				node = doc.jumpNumber("0");
+				j = node.jumpBack();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0", j.number);
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpBack(2) from 0");
+				node = doc.jumpNumber("0");
+				j = node.jumpBack(2);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0", j.number);
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info("INVALID: node.jumpBack(0)");
+				exp = null;
+				try{ 
+					j = node.jumpBack(0);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// no offset
+				info("node.jumpBack() from 5");
+				node = doc.jumpNumber("5");
+				j = node.jumpBack();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("4", j.number);
+				assertEquals("Yahoo! News: Technology", j.data);
+				assertEquals("4", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpBack(2) from 4");			
+				node = doc.jumpNumber("4");
+				j = node.jumpBack(2);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("2", j.number);
+				assertEquals("washingtonpost.com - Politics",
+							j.data);
+				assertEquals("2", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpBack() from 1");
+				node = doc.jumpNumber("1");
+				j = node.jumpBack();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1", j.number);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// no offset
+				info("node.jumpBack() from 4");
+				node = doc.jumpNumber("4");
+				j = node.jumpBack();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("3D", j.number);
+				assertEquals("Here's an <a href=\"http://static.userland.com/gems/radiodiscuss/songs.xml\">"
+								+ "example</a> of the XML file. The mapping between the table and the "
+								+ "XMLization should be fairly clear.", j.data);
+				assertEquals("3D", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpBack(2) from 3D");			
+				node = doc.jumpNumber("3D");
+				j = node.jumpBack(2);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("3B", j.number);
+				assertEquals("ctPlays is the number of times the song has been played. "
+								+ "ctSeconds is the duration of the song, determined by a "
+								+ "heuristic that's pretty accurate. f is the file that "
+								+ "contains the MP3, on the local file system. whenFirstPlayed "
+								+ "is the time/date the song was played for the first time, "
+								+ "whenLastPlayed is the most recent time/date. whenLoaded "
+								+ "is when Radio UserLand discovered the file in your MP3 folder.",
+								j.data);
+				assertEquals("3B", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpBack() from 1");
+				node = doc.jumpNumber("1");
+				j = node.jumpBack();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1", j.number);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+
+			function testJumpBranchEnd(){
+				var node, j, exp, root, xml, node0, node2A, node4B1A1A1A1, addr, dom, doc;
+				
+				info("---TestDocumentAndNode:testJumpBranchEnd()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// no offset - should return same node
+				info("node.jumpBranchEnd() from 0729");
+				node = doc.jumpId("0729");
+				j = node.jumpBranchEnd();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0729", j.id);
+				assertEquals("0729", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// no offset - should return same node
+				info("node.jumpBranchEnd() from 058");
+				node = doc.jumpId("058");
+				j = node.jumpBranchEnd();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0734", j.id);
+				assertEquals("0734", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// 0
+				info("node.jumpBranchEnd() from 0");
+				node = doc.jumpOrigin();
+				j = node.jumpBranchEnd();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0617", j.id);
+				assertEquals("0617", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// 4B1A1A1A1 - should return same node
+				info("node.jumpBranchEnd() from 4B1A1A1A1");
+				node = doc.jumpNumber("4B1A1A1A1");
+				j = node.jumpBranchEnd();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("4B1A1A1A1", j.number);
+				assertEquals("parse url from left to right, building up "
+								+ "internal hs.address.Pieces as we do so",
+								j.data);
+				assertEquals("4B1A1A1A1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// 5 - should return same node
+				info("node.jumpBranchEnd() from 5");
+				node = doc.jumpNumber("5");
+				j = node.jumpBranchEnd();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("5", j.number);
+				assertEquals("5", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// origin
+				info("node.jumpBranchEnd() from origin");
+				node = doc.jumpOrigin();
+				j = node.jumpBranchEnd();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1D", j.number);
+				assertEquals("1D", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// 2B - should return same node
+				info("node.jumpBranchEnd(2) from 2B");			
+				node = doc.jumpNumber("2B");
+				j = node.jumpBranchEnd(2);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("2B", j.number);
+				assertEquals("2B", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+			
+			function testJumpPlexHead(){
+				var node, j, exp, root, xml, node0, node2A, node4B1A1A1A1, addr, dom, doc;
+				
+				info("---TestDocumentAndNode:testJumpPlexHead()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// 0145
+				info("node.jumpPlexHead() from 0145");
+				node = doc.jumpId("0145");
+				j = node.jumpPlexHead();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("030", j.id);
+				assertEquals("030", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// 095 - should return same node
+				info("node.jumpPlexHead() from 095");
+				node = doc.jumpId("095");
+				j = node.jumpPlexHead();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("095", j.id);
+				assertEquals("095", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// 0
+				info("node.jumpPlexHead() from 0");			
+				node = doc.jumpNumber("0");
+				j = node.jumpPlexHead();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0", j.number);
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// 030
+				info("node.jumpPlexHead() from 0156");
+				node = doc.jumpId("0156");
+				j = node.jumpPlexHead();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("030", j.id);
+				assertEquals("030", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// final node
+				info("node.jumpPlexHead() from final node");
+				node = doc.jumpId("0617");
+				j = node.jumpPlexHead();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0610", j.id);
+				assertEquals("0610", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// 5
+				info("node.jumpPlexHead() from 5");
+				node = doc.jumpNumber("5");
+				j = node.jumpPlexHead();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1", j.number);
+				assertEquals("CNET News.com", j.data);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// 2
+				info("node.jumpPlexHead() from 2");
+				node = doc.jumpNumber("2");
+				j = node.jumpPlexHead();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1", j.number);
+				assertEquals("It's XML, of course", j.data);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpPlexHead() from 4A");
+				node = doc.jumpNumber("4A");
+				j = node.jumpPlexHead();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("4A", j.number);
+				assertEquals("4A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+			
+			function testJumpPlexTail(){
+				var node, j, exp, root, xml, node0, node2A, node4B1A1A1A1, addr, dom, doc;
+				
+				info("---TestDocumentAndNode:testJumpPlexTail()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// 0145
+				info("node.jumpPlexTail() from 0145");
+				node = doc.jumpId("0145");
+				j = node.jumpPlexTail();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0161", j.id);
+				assertEquals("0161", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// 0 - should return same node
+				info("node.jumpPlexTail() from 0");			
+				node = doc.jumpNumber("0");
+				j = node.jumpPlexTail();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0", j.number);
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// 0 - should return same node
+				info("node.jumpPlexTail() from 0461");			
+				node = doc.jumpId("0461");
+				j = node.jumpPlexTail();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0461", j.id);
+				assertEquals("0461", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpPlexTail() from final node");
+				node = doc.jumpId("0617");
+				j = node.jumpPlexTail();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0617", j.id);
+				assertEquals("0617", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// 1
+				info("node.jumpPlexTail() from 1");
+				node = doc.jumpNumber("1");
+				j = node.jumpPlexTail();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("13", j.number);
+				assertEquals("13", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// 1
+				info("node.jumpPlexTail() from 1A");
+				node = doc.jumpNumber("1A");
+				j = node.jumpPlexTail();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1D", j.number);
+				assertEquals("All formats are open and public and may be used "
+								+ "for any purpose whatsoever.", j.data);
+				assertEquals("1D", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return samenode
+				info("INVALID: node.jumpPlexTail() from 4A");
+				node = doc.jumpNumber("4A");
+				j = node.jumpPlexTail();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("4A", j.number);
+				assertEquals("4A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+			
+			function testJumpSuccessor(){
+				var node, j, exp, root, xml, node0, node2A, node4B1A1A1A1, addr, dom, doc;
+				
+				info("---TestDocumentAndNode:testJumpSuccessor()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// no offset
+				info("node.jumpSuccessor() from 0639");
+				node = doc.jumpId("0639");
+				j = node.jumpSuccessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0658", j.id);
+				assertEquals("0658", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpSuccessor(2) from 0639");
+				node = doc.jumpId("0639");
+				j = node.jumpSuccessor(2);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0636", j.id);
+				assertEquals("0636", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpSuccessor(1) from 1");			
+				node = doc.jumpNumber("1");
+				j = node.jumpSuccessor(1);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("2", j.number);
+				assertEquals("2", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// doing jumpSuccessor on node with no successor
+				info("node.jumpSuccessor() from final node");			
+				node = doc.jumpId("0617");
+				j = node.jumpSuccessor(1);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0617", j.id); // returns same node
+				assertEquals("0617", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// jumpSuccessor from 0
+				info("node.jumpSuccessor() from 0");			
+				node = doc.jumpOrigin();
+				j = node.jumpSuccessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0", j.number); // returns same node
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// jumpSuccessor from next to final node
+				info("node.jumpSuccessor(2) from 0461, next to final node");
+				node = doc.jumpId("0461");
+				j = node.jumpSuccessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0461", j.id); // returns same node
+				assertEquals("0461", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info("INVALID: node.jumpSuccessor(0)");
+				exp = null;
+				try{ 
+					j = node.jumpSuccessor(0);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("0461", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// no offset
+				info("node.jumpSuccessor() from 3");
+				node = doc.jumpNumber("3");
+				j = node.jumpSuccessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("4", j.number);
+				assertEquals("Yahoo! News: Technology", j.data);
+				assertEquals("4", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpSuccessor(2) from 2");			
+				node = doc.jumpNumber("2");
+				j = node.jumpSuccessor(2);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("4", j.number);
+				assertEquals("Yahoo! News: Technology", j.data);
+				assertEquals("4", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpSuccessor() from 13");
+				node = doc.jumpNumber("13");
+				j = node.jumpSuccessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("13", j.number);
+				assertEquals("13", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpSuccessor(3) from 11");
+				node = doc.jumpNumber("11");
+				j = node.jumpSuccessor(3);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("13", j.number);
+				assertEquals("13", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// no offset
+				info("node.jumpSuccessor() from 2");
+				node = doc.jumpNumber("2");
+				j = node.jumpSuccessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("3", j.number);
+				assertEquals("songList", j.data);
+				assertEquals("3", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpSuccessor(2) from 2A");
+				node = doc.jumpNumber("2A");
+				j = node.jumpSuccessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("2B", j.number);
+				assertEquals("The outlineDocument format is <a href=\"http://backend.userland.com/stories/storyReader$53\">"
+								+ "documented</a> on backend.userland.com. There will no doubt be changes and "
+								+ "refinements to the format. One area that needs work is the format for "
+								+ "the data attribute on a headline. Currently there are bugs in the way "
+								+ "Radio UserLand uses this attribute. (Every headline gets a data attribute, "
+								+ "whether or not it links to a song. We need to XMLize this and fit in data "
+								+ "not as an attribute but as a legal sub-item. Shouldn't be hard to do, and "
+								+ "with this caveat, breakage should be expected.)", 
+								j.data);
+				assertEquals("2B", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpSuccessor() from last node");
+				node = doc.jumpNumber("4A");
+				j = node.jumpSuccessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("4A", j.number);
+				assertEquals("4A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpSuccessor() from 1D");
+				node = doc.jumpNumber("1D");
+				j = node.jumpSuccessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1D", j.number);
+				assertEquals("1D", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+			
+			function testJumpPredecessor(){
+				var node, j, exp, root, xml, node0, node2A, node4B1A1A1A1, addr, dom, doc;
+				
+				info("---TestDocumentAndNode:testJumpPredecessor()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// no offset
+				info("node.jumpPredecessor() from 0658");
+				node = doc.jumpId("0658");
+				j = node.jumpPredecessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0639", j.id);
+				assertEquals("0639", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpPredecessor(2) from 0636");
+				node = doc.jumpId("0636");
+				j = node.jumpPredecessor(2);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0639", j.id);
+				assertEquals("0639", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpPredecessor(1) from 2");			
+				node = doc.jumpNumber("2");
+				j = node.jumpPredecessor(1);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1", j.number);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpPredecessor() from first node");
+				node = doc.jumpNumber("1");
+				j = node.jumpPredecessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1", j.number);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpPredecessor() from 0");
+				node = doc.jumpOrigin();
+				j = node.jumpPredecessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0", j.number);
+				assertEquals("0", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// 2
+				info("node.jumpPredecessor(2) from 2");
+				node = doc.jumpNumber("2");
+				j = node.jumpPredecessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1", j.number);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpPredecessor() from 0659");
+				node = doc.jumpId("0659");
+				j = node.jumpPredecessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("0659", j.id);
+				assertEquals("0659", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info("INVALID: node.jumpPredecessor(0)");
+				node = doc.jumpNumber("2");
+				exp = null;
+				try{ 
+					j = node.jumpPredecessor(0);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("2", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// no offset
+				info("node.jumpPredecessor() from 4");
+				node = doc.jumpNumber("4");
+				j = node.jumpPredecessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("3", j.number);
+				assertEquals("Scobleizer: Microsoft Geek Blogger", j.data);
+				assertEquals("3", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpPredecessor(2) from 4");			
+				node = doc.jumpNumber("4");
+				j = node.jumpPredecessor(2);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("2", j.number);
+				assertEquals("washingtonpost.com - Politics", j.data);
+				assertEquals("2", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpPredecessor() from 1");
+				node = doc.jumpNumber("1");
+				j = node.jumpPredecessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1", j.number);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// 3
+				info("node.jumpPredecessor(3) from 3");
+				node = doc.jumpNumber("3");
+				j = node.jumpPredecessor(3);
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1", j.number);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// no offset
+				info("node.jumpPredecessor() from 3");
+				node = doc.jumpNumber("3");
+				j = node.jumpPredecessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("2", j.number);
+				assertEquals("outlineDocument", j.data);
+				assertEquals("2", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+							
+				// with offset
+				info("node.jumpPredecessor(3) from 2B");
+				node = doc.jumpNumber("2B");
+				j = node.jumpPredecessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("2A", j.number);
+				assertEquals("All playlists are outlineDocuments. This is the main file format for "
+								+ "Radio UserLand. When you create a new file it's saved as an "
+								+ "outlineDocument. Because users can save them into the www "
+								+ "folder, they can be accessed over the Web, either from a "
+								+ "script or a Web browser such as MSIE. (Of course they "
+								+ "could be served by any HTTP server, not just the "
+								+ "Radio UserLand server.)", 
+								j.data);
+				assertEquals("2A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// should return same node
+				info("node.jumpPredecessor() from first node");
+				node = doc.jumpOrigin();
+				j = node.jumpPredecessor();
+				assertNotNull(j);
+				assertNotUndefined(j);
+				assertEquals("1", j.number);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+			
+			function testJumpBranchSearch(){
+				// TODO: finish me
+				var node, j, exp, root, xml, addr, dom, doc;
+				var node0, node1, node6, node2A, node4B1A1A1A1, node4;
+				
+				info("---TestDocumentAndNode:testJumpBranchSearch()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// "static" from 0124
+				info('node.jumpBranchSearch("static")');
+				node = doc.jumpId("0124");
+				node = node.jumpBranchSearch("static");
+				assertNotNull(node);
+				assertEquals("0384", node.id);
+				assertEquals("0384", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// "Module" from origin
+				info('doc.jumpBranchSearch("Module")');
+				node = doc.jumpOrigin();
+				node = node.jumpBranchSearch("Module");
+				assertNotNull(node);
+				assertEquals("013", node.id);
+				assertEquals("013", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: doc.jumpBranchSearch("badLabel")');
+				node = doc.jumpNumber("1");
+				exp = null;
+				try{ 
+					node = node.jumpBranchSearch("badLabel");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// invalid
+				info('doc.jumpBranchSearch("badlabel")');
+				exp = null;
+				try{ 
+					node = doc.jumpBranchSearch("badlabel");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// invalid
+				info('doc.jumpBranchSearch("badlabel")');
+				exp = null;
+				try{ 
+					node = doc.jumpBranchSearch("badlabel");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+			
+			function testJumpOffset(){
+				var node, j, exp, root, xml, addr, dom, doc;
+				var node0, node1, node6, node2A, node4B1A1A1A1, node4;
+				
+				info("---TestDocumentAndNode:testJumpOffset()");
+				
+				info("Testing document with HyperScope attributes..");
+				addr = hyDoc.addr;
+				dom = hyDoc.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// 2A2
+				info('node.jumpOffset("2A2") from context 028');
+				node = doc.jumpId("028");
+				node = node.jumpOffset("2A2");
+				assertNotNull(node);
+				assertEquals("0166", node.id);
+				assertEquals("NEXT", node.data);
+				assertEquals("0166", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: node.jumpOffset("0")');
+				node = doc.jumpId("028");
+				exp = null;
+				try{ 
+					node = node.jumpOffset("0", true);
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("028", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				// invalid
+				info('INVALID: node.jumpOffset("1") from context 0147');
+				node = doc.jumpId("0147");
+				exp = null;
+				try{ 
+					node = node.jumpOffset("1");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("0147", doc.nodeCtxt.id);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				info("Testing OPML 2.0 document with no HyperScope attributes..");
+				addr = opml2.addr;
+				dom = opml2.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// invalid
+				info('INVALID: node.jumpOffset("1") from context 1');
+				node = doc.jumpNumber("1");
+				exp = null;
+				try{ 
+					node = node.jumpOffset("1");
+				}catch(e){
+					exp = e;
+				}
+				assertNotNull(exp);
+				assertEquals("1", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+				
+				
+				info("Testing OPML 1.0 document with no HyperScope attributes..");
+				addr = opml1.addr;
+				dom = opml1.dom;
+				doc = new hs.model.Document(addr, dom);
+				
+				// 1
+				info('node.jumpOffset("1") from context 4');
+				node = doc.jumpNumber("4");
+				node = node.jumpOffset("1");
+				assertNotNull(node);
+				assertEquals("4A", node.number);
+				assertEquals(2, node.level);
+				assertEquals("Rules of the road will be determined later, "
+								+ "since many of these files will be on users' "
+								+ "machines, we want to provide guidelines for "
+							 	+ "bots, aggregators and content systems; and "
+								+ "whatever other kinds of applications people "
+								+ "think of. Feel free to use the discussion "
+								+ "group here to raise issues. ", 
+								node.data);
+				assertEquals("4A", doc.nodeCtxt.number);
+				assertEquals(doc, doc.nodeCtxt.doc);
+			}
+			
+			function testLoaded(){
+				info("---TestDocumentAndNode:testLoaded()");
+				
+				var hsLoaded = false;
+				hs.model.addOnLoad(function(){
+					hsLoaded = true;
+				});
+				assertTrue(hsLoaded);
+				assertNotNull(hs.model.Document._renderXslt);
+				assertNotUndefined(hs.model.Document._renderXslt);
+				assertNotNull(hs.model.Document._renderXslt.transformToDocument);
+				assertNotUndefined(hs.model.Document._renderXslt.transformToDocument);
+			}
+		</script>
+	</body>
+</html>

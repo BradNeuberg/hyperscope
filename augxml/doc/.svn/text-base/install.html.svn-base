@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Linux)">
+	<META NAME="CREATED" CONTENT="20060524;17252800">
+	<META NAME="CHANGED" CONTENT="20060524;17454100">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Installing AugXml</H1>
+<H2>Getting AugXml</H2>
+<P>The AugXml program is part of the <A HREF="http://hyperscope.org/">HyperScope</A>
+project. There has not been a stable release yet, but you can
+download the latest source code from the <A HREF="http://blueoxen.net/c/hyperscope/wiki.pl?Download">AugXml</A>
+Subversion repository.</P>
+<HR>
+<H2>System Requirements</H2>
+<P>In order to run the AugXml program, you will need Java 5. You can
+download a <A HREF="http://java.sun.com/j2se/1.5.0/download.jsp">JRE</A>
+from the Java site at Sun.</P>
+<P>To compile, there are some additional requirements. You will need
+the following:</P>
+<UL>
+	<LI><P><A HREF="http://java.sun.com/j2se/1.5.0/download.jsp">JDK 5</A>
+	– older versions of Java (i.e. 1.4.x) are not sufficient.</P>
+	<LI><P><A HREF="http://ant.apache.org/">Ant 1.7</A> or newer - this
+	is not yet released, so you will need to download a <A HREF="http://cvs.apache.org/snapshots/ant/">nightly</A>
+	build from apache and build it yourself.</P>
+	<LI><P><A HREF="http://www.junit.org/">JUnit</A> 4 – this version
+	of JUnit requires JDK 5 and Ant 1.7 or newer.</P>
+</UL>
+<HR>
+<H2>Running AugXml</H2>
+<P>Instructions – TBD.</P>
+<H2>Building AugXml</H2>
+<P>Instructions for building – TBD.</P>
+<HR>
+<H2>Troubleshooting</H2>
+<P>See the FAQ for troubleshooting tips.</P>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

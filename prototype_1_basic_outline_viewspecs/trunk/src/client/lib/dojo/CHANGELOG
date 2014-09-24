@@ -1,0 +1,28 @@
+Dojo Changelog
+
+Configuration Changes:
+- all djConfig properties should now be "live", which is to say that modifying
+  them at runtime should affect system behavior directly.
+- djConfig.ieClobberMinimal now defaults to true (previously was false)
+- djConfig.preventBackButtonFix now defaults to true (previously was false)
+
+API Changes:
+- dojo.io.bind now returns a dojo.io.Request object instead of a boolean
+
+Namespace refactoring:
+- dojo.graphics.htmlEffects -> dojo.fx
+- dojo.alg -> (added to) dojo.lang
+- dojo.text -> dojo.string
+- dojo.xml.htmlUtil -> dojo.html + dojo.style
+- dojo.xml.domUtil -> dojo.dom
+- dojo.io.cookies -> dojo.io.cookie
+
+Individual function refactoring
+- dj_unimplmemented() -> dojo.unimpl()
+- dj_inherits() -> dojo.inherits()
+- dj_deprecated() -> dojo.deprecated()
+- dj_eval_object_path() -> dojo.evalObjPath()
+- dj_error_to_string() -> dojo.errorToString()
+- dj_throw() -> dojo.raise()
+- dj_rethrow() -> dojo.raise()
+- dj_debug() -> dojo.debug()

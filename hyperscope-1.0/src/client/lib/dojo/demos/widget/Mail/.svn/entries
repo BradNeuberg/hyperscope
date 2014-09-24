@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/demos/widget/Mail"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="RemainingWork.html"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5c991d3780c3788b68f45a3eb4a87f35"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="SentMail.html"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="59a9ae9f019f7be3bd4a146958dfd9b5"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="mailbox1.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a3f9b8a70eb405752eb9e65b482089f3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Inbox.html"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a72454a41eeed119dd4dac33831819ad"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="mail_get.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5857e8740c5476ed650c810927a6acbd"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Work.html"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="7a57372395e2dbf0de66482531db7a6b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="trashcan_full.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="0eec36715626bf7def53f9f039b97594"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="cancel.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="58ed23545a95d2a6b20e61e5bcf6146a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Meeting.html"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="c037cd91d2706d6b93688ffe0212cf14"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="checkmark.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="05fd3e6a974b30f99a4a9709a8361d1b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="mail.js"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="1cea5b5bb39888dada67f4411a182dbf"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Friends.html"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="7a57372395e2dbf0de66482531db7a6b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="mail_new.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="9bbbb16f0a56ad365f129759d76f52b7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="folder_documents.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5b28378894ea10de9ef154bee3b445b6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="NewMessage.html"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="1a4d88e741f03e30b4fee7a891e64f64"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="MailAccount.html"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="4f4f55477ca4190da85771a0ffc42027"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Bob.html"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="7a57372395e2dbf0de66482531db7a6b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="SavedMail.html"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="7a57372395e2dbf0de66482531db7a6b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Deleted.html"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="e29db800e62eab2037e51b50e9552061"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="mail.css"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="80ade126e910d6fe5ed17d6886cde54f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="folder_sent_mail.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5b28378894ea10de9ef154bee3b445b6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Jack.html"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="7a57372395e2dbf0de66482531db7a6b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Lunch.html"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="eba713be549251b6308fe7595f4e75be"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="ok.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="48d587ee6f7ed2cf34dc3d37aa8f90e8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Paint.html"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="6487e4d05f82ef814f01409fee943d9f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+<entry
+   committed-rev="203"
+   name="folder_inbox.gif"
+   text-time="2006-10-14T01:00:10.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5b28378894ea10de9ef154bee3b445b6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:10.000000Z"/>
+</wc-entries>

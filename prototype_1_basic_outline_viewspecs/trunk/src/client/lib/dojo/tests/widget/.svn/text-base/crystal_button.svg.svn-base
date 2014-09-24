@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="500px"
+   height="500px">
+  <defs id="defs3">
+		<linearGradient id="linearGradient5639">
+			<stop
+				style="stop-color:#ffffff;stop-opacity:1.0;"
+				offset="0"
+				id="stop5640" />
+			<stop
+				style="stop-color:#ffffff;stop-opacity:0.4;"
+				offset="1"
+				id="stop5641" />
+		</linearGradient>
+		<linearGradient id="linearGradient3140">
+			<stop
+				style="stop-color:#c2c2bf;stop-opacity:1.0;"
+				offset="0"
+				id="stop3141" />
+			<stop
+				style="stop-color:#ffffff;stop-opacity:1.0;"
+				offset="1"
+				id="stop3142" />
+		</linearGradient>
+		<linearGradient
+			xlink:href="#linearGradient3140"
+			id="linearGradient3144"
+			x1="0.48606810"
+			y1="0.13065326"
+			x2="0.48606810"
+			y2="0.90954775" />
+		<linearGradient xlink:href="#linearGradient5639"
+			id="linearGradient5638"
+			x1="0.59130436"
+			y1="0.040816326"
+			x2="0.59130436"
+			y2="1.0000000" />
+		<symbol id="crystal_button" preserveAspectRatio="xMinYMin meet">
+			<rect
+				style="fill:url(#linearGradient3144);fill-opacity:1.0000000;fill-rule:evenodd;stroke:#adadad;stroke-width:1.2500000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1.0000000;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;"
+				id="rect2518"
+				width="235"
+				height="95"
+				x="0"
+				y="0"
+				rx="40.000000"
+				ry="40.000000" />
+			<rect
+				style="fill:url(#linearGradient5638);fill-opacity:0.88983053;fill-rule:evenodd;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;"
+				id="rect3766"
+				width="217"
+				height="45"
+				x="10"
+				y="1"
+				rx="40.000000"
+				ry="40.000000" />
+		</symbol>
+	</defs>
+
+	<use xlink:href="#crystal_button" width="240px" height="100px" />
+
+</svg>

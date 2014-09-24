@@ -1,0 +1,346 @@
+<div 	dojoType="FloatingPane" 
+		id="${this.widgetId}Pane"
+		hasShadow="true" 
+		title="Set View" 
+		resizable="false"
+		displayCloseAction="false"
+		constrainToContainer="true"
+		dojoAttachPoint="viewOverlayPane"
+		class="viewspecOverlay initial-overlay-state">
+
+	<table	class="viewTable lessMode" 
+			dojoAttachPoint="viewTable"
+			width="100%" 
+			cellpadding="0" 
+			cellspacing="0">
+		
+		<tbody>
+	
+			<tr valign="middle">
+				<td colspan="4" width="50%">
+					<!-- 
+						An embedded table is the only way to get the right-hand
+						lines to the right of our section titles to run all
+						the way to the right side and line up independent of
+						font and screen size.
+					-->
+					<table cellpadding="2" cellspacing="0" width="100%">
+						<tr>
+							<td width="10%">
+								<hr noshade="true" size="1px" />
+							</td>
+							
+							<td width="5%">
+								Show
+							</td>
+							
+							<td class="line-right-show">
+								<hr noshade="true" size="1px" />
+							</td>
+						</tr>
+					</table>
+				</td>
+				
+				<td colspan="4" width="50%">
+					<table cellpadding="2" cellspacing="0" width="100%">
+						<tr>
+							<td width="10%">
+								<hr noshade="true" size="1px" />
+							</td>
+							
+							<td width="8%">
+								Outline
+							</td>
+							
+							<td>
+								<hr noshade="true" size="1px" />
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+	
+			<tr valign="middle">
+				<td width="3%" class="viewspecLetter">y</td>
+				<td width="3%" class="viewspecLetter">z</td>
+				<td width="3%">
+					<input	dojoAttachPoint="showBlankLines" 
+							dojoAttachEvent="onclick: _toggleBlankLines"
+							type="checkbox" />
+				</td>
+				<td width="41%">Blank lines</td>
+				
+				<td width="3%" class="viewspecLetter"></td>
+				<td width="3%" class="viewspecLetter">x</td>
+				<td width="3%">
+					<input	dojoAttachPoint="showFirstOutline" 
+							dojoAttachEvent="onclick: _showFirstOutline"
+							type="checkbox" />
+				</td>
+				
+				<td width="40%">1st line and level</td>
+			</tr>
+			
+			<tr valign="middle">
+				<td width="3%" class="viewspecLetter">m</td>
+				<td width="3%" class="viewspecLetter">n</td>
+				<td width="3%">
+					<input	type="checkbox" 
+							dojoAttachEvent="onclick: _toggleNodeAddressing"
+							dojoAttachPoint="showNodeAddressing" />
+				</td>
+				<td width="41%">Numbering</td>
+				
+				<td width="3%" class="viewspecLetter"></td>
+				<td width="3%" class="viewspecLetter">w</td>
+				<td width="3%">
+					<input	dojoAttachPoint="showAllOutline" 
+							dojoAttachEvent="onclick: _showAllOutline"
+							type="checkbox" />
+				</td>
+				
+				<td width="40%">All lines and levels</td>
+			</tr>
+			
+			<tr valign="middle" class="advanced">
+				<td colspan="4" width="50%">
+					<!-- Placement Options -->
+					<table	class="placementTable" width="100%"
+							cellpadding="0" cellspacing="0">
+						<tbody>		
+							<tr valign="middle">
+								<td	width="5%" 
+									class="viewspecLetter first-column">H</td>
+								<td	width="4%" 
+									class="viewspecLetter">G</td>
+								
+								<td width="3%">
+									<input	type="radio" 
+											dojoAttachEvent="onclick: _setPlacementLeft"
+											dojoAttachPoint="placementLeft" />
+								</td>
+								<td width="8%">Left</td>
+								
+								<td width="3%">
+									<input	type="radio" 
+											dojoAttachEvent="onclick: _setPlacementRight"
+											dojoAttachPoint="placementRight" />
+								</td>
+								<td width="77%">Right</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				
+				<td colspan="4" rowspan="3" width="50%">
+					
+					<table	class="outlineTable" width="100%"
+							cellpadding="0" cellspacing="0">
+								
+						<tr valign="middle">
+							<td width="4%" class="first-column"></td>
+							<td colspan="2" width="9%" class="header">Levels</td>
+							<td width="5%"></td>
+							<td colspan="2" width="9%" class="header">Lines</td>
+							<td width="73%"></td>
+						</tr>
+						
+						<tr valign="middle">
+							<td width="4%" class="viewspecLetter first-column">b</td>
+							
+							<!-- 
+								9650 is Unicode for an up arrow;
+								9660 is Unicode for a down arrow.
+							-->
+							<td width="4%">
+								<button	dojoAttachPoint="levelUp"
+										dojoAttachEvent="onclick: _incrementLevel">
+									&#9650;
+								</button>
+							</td>
+							
+							<td width="4%" rowspan="2">
+								<input	type="textfield" 
+										dojoAttachPoint="levelInput" />
+							</td>
+							
+							<td width="4%"></td>
+							
+							<td width="4%" rowspan="2">
+								<input	type="textfield"
+										class="lineInput"
+										dojoAttachPoint="lineInput"/>
+							</td>
+							
+							<td width="4%">
+								<button	dojoAttachPoint="lineUp"
+										dojoAttachEvent="onclick: _incrementLine">
+										&#9650;
+								</button>
+							</td>
+							
+							<td width="73%" class="viewspecLetter letter-r">r</td>
+						</tr>
+						
+						<tr valign="middle">
+							<td width="4%" class="viewspecLetter first-column">a</td>
+							
+							<td width="4%">
+								<button	dojoAttachPoint="levelDown"
+										dojoAttachEvent="onclick: _decrementLevel">
+									&#9660;
+								</button>
+							</td>
+							
+							<td width="4%"></td>
+							
+							<td width="4%">
+								<button	dojoAttachPoint="lineDown"
+										dojoAttachEvent="onclick: _decrementLine">
+									&#9660;
+								</button>
+							</td>
+							
+							<td width="73%" class="viewspecLetter letter-q">q</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			
+			<tr valign="top" class="advanced">
+				<!-- commenting out for future implementation -->
+				<!--
+				<td width="3%" class="viewspecLetter">C</td>
+				<td width="3%" class="viewspecLetter">D</td>
+				<td width="3%">
+					<input	type="checkbox" 
+							dojoAttachEvent="onclick: _toggleNodeLabels"
+							dojoAttachPoint="showNodeLabels" />
+				</td>
+				<td width="41%">Labels</td>
+				-->
+				
+				<td width="3%" class="viewspecLetter">O</td>
+				<td width="3%" class="viewspecLetter">P</td>
+				<td width="3%">
+					<input	type="checkbox" 
+							dojoAttachEvent="onclick: _toggleIncludesOn"
+							dojoAttachPoint="includesOn" />
+				</td>
+				<td width="41%">Includes on</td>
+				
+				<td colspan="4" width="50%"></td>
+			</tr>
+			
+			<tr valign="middle" class="advanced">
+				<!-- commenting out for future implementation -->
+				<!--
+				<td width="3%" class="viewspecLetter">K</td>
+				<td width="3%" class="viewspecLetter">L</td>
+				<td width="3%">
+					<input	type="checkbox" 
+							dojoAttachEvent="onclick: _toggleNodeSignatures"
+							dojoAttachPoint="showNodeSignatures" />
+				</td>
+				<td width="41%">Time signatures</td>
+				-->
+				
+				<td colspan="4" width="50%"></td>
+				
+				<td colspan="4" width="50%"></td>
+			</tr>
+			
+			<tr valign="middle" class="advanced">
+				<td colspan="4" width="50%"></td>
+				
+				<td colspan="4" width="50%">
+					<table cellpadding="2" cellspacing="0" width="100%">
+						<tr>
+							<td width="10%">
+								<hr noshade="true" size="1px" />
+							</td>
+							
+							<td width="6%">
+								Filter
+							</td>
+							
+							<td>
+								<hr noshade="true" size="1px" />
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			
+			<tr valign="middle" class="advanced">
+				<td colspan="4" width="50%"></td>
+				
+				<td width="3%" class="viewspecLetter">i</td>
+				<td width="3%" class="viewspecLetter">j</td>
+				<td width="3%">
+					<input	type="checkbox" 
+							dojoAttachEvent="onclick: _toggleFilter"
+							dojoAttachPoint="applyFilter" />
+				</td>
+				<td width="40%">Apply filter:</td>
+			</tr>
+			
+			<tr valign="middle" class="advanced">
+				<td colspan="4" width="50%"></td>
+				
+				<td colspan="4" width="50%">
+					<input	class="filterInput" 
+							type="textarea" 
+							dojoAttachPoint="filterInput" />
+				</td>
+			</tr>
+			
+			<tr valign="middle">
+				<td colspan="8" width="100%">
+					<hr noshade="true" size="1px" />
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="8" width="100%" valign="middle">
+					Selected viewspecs:
+					<input	type="textfield" 
+							class="selected-viewspecs-input"
+							dojoAttachEvent="onkeyup: _toggleSelectedViewspecs; onblur: _printSelectedViewspecs"
+							dojoAttachPoint="selectedViewspecs" />
+							
+					<span	class="selected-viewspecs-error"
+							dojoAttachPoint="errorArea">
+					</span>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="8" width="100%" valign="middle">
+					<div class="viewButtons">
+						<!--
+							Commented out for future implementation.
+						-->
+						<!--
+						<button class="viewHelpButton">?</button>
+						-->
+						
+						<button	class="viewToggleAdvancedButton"
+								dojoAttachEvent="onclick: _toggleAdvanced"
+								dojoAttachPoint="advancedButton">
+							More&nbsp;&#9660;
+						</button>
+						
+						<button	class="viewResetButton" 
+								dojoAttachEvent="onclick: _handleReset">Reset</button>
+						<button	class="viewCancelButton"
+								dojoAttachEvent="onclick: _handleCancel">Cancel</button>
+						<button	class="viewApplyButton"
+								dojoAttachPoint="applyButton"
+								dojoAttachEvent="onclick: _handleApply">Apply</button>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

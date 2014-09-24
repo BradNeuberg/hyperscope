@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="118"
+   name=""
+   committed-date="2006-06-13T23:24:22.258049Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/mockups/images"
+   last-author="eekim"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="118"
+   name="toolbar_and_content.png"
+   text-time="2006-10-14T00:59:50.000000Z"
+   committed-date="2006-06-13T23:24:22.258049Z"
+   checksum="61020f9910c712238d639ce41f403207"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:48.000000Z"/>
+<entry
+   committed-rev="118"
+   name="jump_pulldown.png"
+   text-time="2006-10-14T00:59:50.000000Z"
+   committed-date="2006-06-13T23:24:22.258049Z"
+   checksum="f02b1182ead8577fe9334aefaeb2e708"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:49.000000Z"/>
+<entry
+   committed-rev="118"
+   name="after_jump_selection.png"
+   text-time="2006-10-14T00:59:50.000000Z"
+   committed-date="2006-06-13T23:24:22.258049Z"
+   checksum="252fef776d07c1bbc26f997456090865"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:49.000000Z"/>
+<entry
+   committed-rev="118"
+   name="other.png"
+   text-time="2006-10-14T00:59:50.000000Z"
+   committed-date="2006-06-13T23:24:22.258049Z"
+   checksum="d234a04edabe691b13aca36d6c8a2490"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:49.000000Z"/>
+<entry
+   committed-rev="118"
+   name="other2.png"
+   text-time="2006-10-14T00:59:50.000000Z"
+   committed-date="2006-06-13T23:24:22.258049Z"
+   checksum="b0f934005864fe3a9e68ec098baf6228"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:49.000000Z"/>
+<entry
+   committed-rev="118"
+   name="viewspec_chosen.png"
+   text-time="2006-10-14T00:59:50.000000Z"
+   committed-date="2006-06-13T23:24:22.258049Z"
+   checksum="77997522dbc48c83844743c446ea8e82"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:49.000000Z"/>
+<entry
+   committed-rev="118"
+   name="viewspec1.png"
+   text-time="2006-10-14T00:59:50.000000Z"
+   committed-date="2006-06-13T23:24:22.258049Z"
+   checksum="192064f9128d9b11a6e13b3d3ea824c2"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:49.000000Z"/>
+<entry
+   committed-rev="118"
+   name="viewspec2.png"
+   text-time="2006-10-14T00:59:50.000000Z"
+   committed-date="2006-06-13T23:24:22.258049Z"
+   checksum="dae57e19976925fe8051cdaba1e74d31"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:49.000000Z"/>
+<entry
+   committed-rev="118"
+   name="viewspecs_dialog.png"
+   text-time="2006-10-14T00:59:50.000000Z"
+   committed-date="2006-06-13T23:24:22.258049Z"
+   checksum="81f22ae0e1ac88697e06ec1acc960a0c"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:50.000000Z"/>
+<entry
+   committed-rev="118"
+   name="marked_address.png"
+   text-time="2006-10-14T00:59:50.000000Z"
+   committed-date="2006-06-13T23:24:22.258049Z"
+   checksum="abe885204d3b4e45b399c3249f01dc20"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:50.000000Z"/>
+<entry
+   committed-rev="118"
+   name="viewspec3.png"
+   text-time="2006-10-14T00:59:50.000000Z"
+   committed-date="2006-06-13T23:24:22.258049Z"
+   checksum="3da86c72a8204d70995db6f2258c29eb"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:50.000000Z"/>
+<entry
+   committed-rev="118"
+   name="advanced_viewspec.png"
+   text-time="2006-10-14T00:59:50.000000Z"
+   committed-date="2006-06-13T23:24:22.258049Z"
+   checksum="ac1400a8ed5613139356b119add085ee"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:50.000000Z"/>
+<entry
+   committed-rev="118"
+   name="viewspec_filter.png"
+   text-time="2006-10-14T00:59:50.000000Z"
+   committed-date="2006-06-13T23:24:22.258049Z"
+   checksum="ac9f01d8c3786afb688d85b20af7d18a"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:50.000000Z"/>
+</wc-entries>

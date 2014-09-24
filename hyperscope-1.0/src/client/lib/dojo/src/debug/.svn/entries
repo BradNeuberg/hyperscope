@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/src/debug"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="deep.html"
+   text-time="2006-10-14T01:00:12.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="007b66f76247672823d69a16d9389ed8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="spacer.gif"
+   text-time="2006-10-14T01:00:12.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="7ed59fc23c1bcf70e4c71883d905a7cf"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="arrow_hide.gif"
+   text-time="2006-10-14T01:00:12.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="f56c8e3542d5c0628d375ed19604355c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Firebug.js"
+   text-time="2006-10-14T01:00:12.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d0b2eeeb561f058fb3f732c16235d59d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="arrow_show.gif"
+   text-time="2006-10-14T01:00:12.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="591ed20d20513b30944ba562d45d8f10"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+</wc-entries>

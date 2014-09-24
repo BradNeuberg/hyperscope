@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/src/reflect"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="edab1f9f4f3e4b4fe625eb4608aace49"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="reflection.js"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="6e96dbb71931e49119983c3685037d4b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+</wc-entries>

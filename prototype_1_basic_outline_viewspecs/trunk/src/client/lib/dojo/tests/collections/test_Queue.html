@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>Queue Test</title>
+		<style type="text/css">
+			#Mover {
+				position : absolute;
+				background : #ccc;
+				left : 200px;
+				top : 200px;
+			}
+		</style>
+		<script language="JavaScript" type="text/javascript">
+			// Dojo configuration
+			djConfig = { 
+				isDebug: true
+			};
+		</script>
+		<script language="JavaScript" type="text/javascript" src="../../dojo.js"></script>
+		<script language="JavaScript" type="text/javascript" src="../jsunit_browser.js"></script>
+		<script language="JavaScript" type="text/javascript">
+			dojo.require("dojo.collections.Queue");
+			function init(){
+				var a = ["foo","bar","test","bull"];
+				var queue = new dojo.collections.Queue(a);
+
+				//	test the constructor
+				jum.assertEquals("test10", 4, queue.count);
+
+				//	clear
+				var a = ["foo","bar","test","bull"];
+				var queue = new dojo.collections.Queue(a);
+				queue.clear();
+				jum.assertEquals("test60", 0, queue.count);
+
+				//	clone
+				var a = ["foo","bar","test","bull"];
+				var queue = new dojo.collections.Queue(a);
+				var cloned = queue.clone();
+				jum.assertEquals("Queue.clone()", queue.count, cloned.count);
+
+				//	contains
+				jum.assertEquals("Queue.contains() 1", true, queue.contains("bar"));
+				jum.assertEquals("Queue.contains() 2", false, queue.contains("faz"));
+
+				//	iterator test
+				var e = queue.getIterator();
+				while (!e.atEnd) e.moveNext();
+				jum.assertEquals("Queue.getIterator()", "bull", e.current);
+
+				//	peek, pop and push
+				jum.assertEquals("Queue.peek()", "foo", queue.peek());
+				jum.assertEquals("Queue.dequeue()", "foo", queue.dequeue());
+
+				queue.enqueue("bull");
+				var arr = queue.toArray();
+				jum.assertEquals("Queue.enqueue()", "bull", arr[arr.length-1]);
+				
+				//	toArray
+				var a = ["foo","bar","test","bull"];
+				var queue = new dojo.collections.Queue(a);
+				var arr = queue.toArray();
+				jum.assertEquals("Queue.toArray()", "foo,bar,test,bull" , arr.join(","));
+			}
+			dojo.hostenv.modulesLoadedListeners.push(init);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

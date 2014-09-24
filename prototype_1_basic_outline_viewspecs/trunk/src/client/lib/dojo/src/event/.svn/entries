@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2006-03-06T23:36:47.192473Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/prototype_1_basic_outline_viewspecs/trunk/src/client/lib/dojo/src/event"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="11"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="116751a47233515dbe96a493b45c5ede"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="topic.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="590697f7704a61ced117aa1c3f2deb5b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+<entry
+   committed-rev="11"
+   name="browser.js"
+   text-time="2006-10-14T01:00:28.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="1ff32068a590f35c5b6323a39da86922"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:28.000000Z"/>
+</wc-entries>

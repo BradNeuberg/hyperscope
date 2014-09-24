@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<title>SortedList Test</title>
+		<style type="text/css">
+			#Mover {
+				position : absolute;
+				background : #ccc;
+				left : 200px;
+				top : 200px;
+			}
+		</style>
+		<script language="JavaScript" type="text/javascript">
+			// Dojo configuration
+			djConfig = { 
+				isDebug: true
+			};
+		</script>
+		<script language="JavaScript" type="text/javascript" src="../../dojo.js"></script>
+		<script language="JavaScript" type="text/javascript" src="../jsunit_browser.js"></script>
+		<script language="JavaScript" type="text/javascript">
+			dojo.require("dojo.collections.SortedList");
+			function init(){
+				var sl = new dojo.collections.SortedList();
+
+				//	add and item
+				sl.add("foo","bar");
+				jum.assertEquals("SortedList.add", "bar" , sl.item("foo").valueOf());
+
+				//	clear
+				sl.clear();
+				jum.assertEquals("SortedList.clear", 0, sl.count);
+
+				//	set up for other tests.
+				sl.add("foo","bar");
+				sl.add("baz","fab");
+				sl.add("buck","shot");
+				sl.add("apple","orange");
+				var d2 = sl.clone();
+
+				//	clone, contains, containsKey
+				jum.assertEquals("SortedList.contains", true, sl.contains("baz"));
+				jum.assertEquals("SortedList.clone", true, d2.contains("baz"));
+				jum.assertEquals("SortedList.containsKey", true, sl.containsKey("buck"));
+
+				//	contains value
+				jum.assertEquals("SortedList.containsValue", true, sl.containsValue("shot"));
+
+				//	note that the following two tests also test .getIterator()
+				//	getKeyList
+				var keys = sl.getKeyList();
+				jum.assertEquals("SortedList.getKeyList", "foo,baz,buck,apple", keys.join(","));
+
+				//	getValueList
+				var values = sl.getValueList();
+				jum.assertEquals("SortedList.getValueList", "bar,fab,shot,orange", values.join(","));
+
+				//	copyTo
+				var arr = ["bek"];
+				sl.copyTo(arr,0);
+				jum.assertEquals("SortedList.copyTo", "bar,fab,shot,orange,bek", arr.join(","));
+
+				//	getByIndex
+				jum.assertEquals("SortedList.getByIndex", "shot", sl.getByIndex(2));
+
+				//	getKey
+				jum.assertEquals("SortedList.getKey", "apple", sl.getKey(0));
+
+				//	indexOfKey, indexOfValue
+				jum.assertEquals("SortedList.indexOfKey", 0, sl.indexOfKey("apple"));
+				jum.assertEquals("SortedList.indexOfValue", 3, sl.indexOfValue("bar"));
+				
+				//	remove
+				sl.remove("baz");
+				jum.assertEquals("SortedList.remove test1", 3, sl.count);
+				jum.assertEquals("SortedList.remove test2", "undefined", sl.item("baz"));
+
+				//	removeAt
+				sl.removeAt(2);
+				jum.assertEquals("SortedList.removeAt", "undefined", sl.item("foo"));
+
+				//	setByIndex
+				sl.setByIndex(0, "bar");
+				jum.assertEquals("SortedList.setByIndex", "bar", sl.getByIndex(0));
+			}
+			dojo.hostenv.modulesLoadedListeners.push(init);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

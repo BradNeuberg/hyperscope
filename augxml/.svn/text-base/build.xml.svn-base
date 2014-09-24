@@ -1,0 +1,188 @@
+<!--
+  - HyperScope Project - augxml
+  - Copyright (C) 2006 Bootstrap Alliance
+  - All rights reserved.
+  - 
+  - Licensed under GPL Version 2.
+  - http://www.gnu.org/licenses/gpl.html
+  -
+  - Author: Jonathan Cheyer
+  -->
+  <project name="augxml" default="main">
+
+  <!--  PROPERTY  -->
+
+  <property name="component.name" value="${ant.project.name}"/>
+  <property name="packages" value="org.nlsaugment.*"/>
+
+  <property name="version" value="0.1"/>
+
+  <dirname property="dir.top" file="${ant.file}"/>
+  <property name="dir.src" location="${dir.top}/src"/>
+  <property name="dir.src.java" location="${dir.src}/java"/>
+  <property name="dir.src.test" location="${dir.src}/test"/>
+  <property name="dir.src.scripts" location="${dir.src}/scripts"/>
+  <property name="dir.doc" value="${dir.top}/doc"/>
+  <property name="dir.build" location="${dir.top}/build"/>
+  <property name="dir.build.classes" location="${dir.build}/classes"/>
+  <property name="dir.build.testclasses" value="${dir.build}/testclasses"/>
+  <property name="dir.build.testreports" value="${dir.build}/testreports"/>
+  <property name="dir.tar" location="${dir.build}/${component.name}-${version}"/>
+  <property name="file.jar" value="${component.name}.jar"/>
+  <property name="file.jar.build" value="${dir.tar}/${file.jar}"/>
+  <property name="file.targz" value="${component.name}-${version}.tar.gz"/>
+  <property name="file.html" value="augxml.html"/>
+  <property name="file.license" value="license.txt"/>
+  <property name="file.augxml.sh" value="augxml.sh"/> 
+  <property name="file.augxml.props" value="augxml.properties"/> 
+  <property name="dir.javadoc" value="${dir.build}/javadoc"/>
+  <property name="dir.rls" value="${dir.top}/rls"/>
+   
+  <!-- Place the JUnit 4 jar file in this location or override this property
+       with the -D option when calling ant. This jar file must be JUnit 4 or newer.
+       JUnit 3.8 will not work.
+       
+       ex:
+       ant -Djunit.home=<LOCATION_OF_YOUR_JUNIT>
+  -->
+  <property name="junit.home" value="${dir.top}/lib/junit-4.1.jar"/> 
+  <property name="base64.home" value="${dir.top}/lib/base64-2.1/base64.jar"/> 
+
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.deprecation" value="on"/>
+
+  <path id="cp-compile">
+    <pathelement location="${dir.build.classes}"/>
+    <pathelement location="${base64.home}"/>
+  </path>
+
+  <path id="cp-test">
+    <pathelement location="${dir.build.classes}"/> 
+    <pathelement location="${dir.build.testclasses}"/>  
+    <pathelement location="${junit.home}"/>
+  </path>
+
+  <!--  INIT  -->
+
+  <target name="-init" depends="">
+    <tstamp/>
+  </target>
+
+  <target name="-init-build" depends="-init">
+    <mkdir dir="${dir.build.classes}"/>
+    <mkdir dir="${dir.build.testclasses}"/>
+  </target>
+
+  <target name="-init-javadoc" depends="-init">
+    <mkdir dir="${dir.javadoc}"/>
+  </target>
+
+
+  <!--  CLEAN  -->
+
+  <target name="-antclean" depends="-init">
+    <mkdir dir="${dir.build}"/>
+    <delete>
+      <fileset dir="${dir.build}" excludes="eclipse/**"/>
+    </delete>
+    <delete dir="${dir.rls}" />
+  </target>
+
+   <target name="-clean" depends="-init">
+      <delete dir="${dir.build}" />
+      <delete dir="${dir.rls}" />
+      <delete dir="${dir.javadoc}" />
+   </target>
+
+  <!--  COMPILE  -->
+
+  <target name="-compile" depends="-antclean, -init-build">
+    <javac destdir="${dir.build.classes}" classpathref="cp-compile" failonerror="true" debug="${compiler.debug}" deprecation="${compiler.deprecation}" source="1.5" target="1.5" encoding="UTF8">
+      <compilerarg value="-Xlint"/>
+      <src path="${dir.src.java}" />
+    </javac>
+  </target>
+
+
+  <!--  BUILD  -->
+
+  <target name="-build" depends="-antclean, -init-build, -compile">
+    <mkdir dir="${dir.tar}"/>
+    <copy file="${dir.src.scripts}/${file.augxml.props}" todir="${dir.build.classes}"/> 
+    <zip zipfile="${file.jar.build}" basedir="${dir.build.classes}"/>
+    <copy file="${base64.home}" todir="${dir.tar}"/>
+    <copy todir="${dir.tar}/doc">
+      <fileset dir="${dir.doc}" includes="**"/>
+    </copy> 
+    <copy file="${dir.src.scripts}/${file.augxml.sh}" todir="${dir.tar}"/> 
+    <chmod file="${dir.tar}/${file.augxml.sh}" perm="775"/>
+  </target>
+
+
+  <!--  JAVADOC  -->
+
+  <target name="-check-javadoc">
+    <dependset>
+      <srcfileset dir="${dir.src.java}" includes="**/*.java"/>
+      <targetfileset dir="${dir.javadoc}" includes="**/*.html"/>
+    </dependset>
+    <available property="javadoc.exists" file="${dir.javadoc}/index.html"/>
+  </target>
+
+  <target name="-javadoc" depends="-build, -init-javadoc, -check-javadoc" unless="javadoc.exists">
+    <javadoc packagenames="${packages}" destdir="${dir.javadoc}" classpathref="cp-compile" access="private" source="1.5">
+      <sourcepath>
+        <pathelement location="${dir.src.java}"/>
+      </sourcepath>
+    </javadoc>
+  </target>
+
+
+  <!--  TEST -->
+  <target name="-test">
+    <javac destdir="${dir.build.testclasses}" classpathref="cp-test" failonerror="true" debug="${compiler.debug}" deprecation="${compiler.deprecation}" source="1.5" target="1.5" encoding="UTF8">
+      <compilerarg value="-Xlint"/>
+      <src path="${dir.src.test}" />
+    </javac>
+    
+   <!-- 
+    The JUnit tests being run are JUnit 4 tests. This target must be run with Ant 1.7 or newer.
+    Ant 1.6.5 does not support JUnit 4 tests and will cause the build to fail if you try.
+   -->
+    <mkdir dir="${dir.build.testreports}"/>
+    <junit printsummary="yes" fork="yes">
+      <formatter type="xml"/>
+      <classpath>
+        <path refid="cp-test"/>
+      </classpath> 
+      <batchtest todir="${dir.build.testreports}">
+        <fileset dir="${dir.src.test}"> 
+          <include name="**/Test*.java"/>
+        </fileset>
+      </batchtest> 
+    </junit>
+    <junitreport todir="${dir.build.testreports}">
+      <fileset dir="${dir.build.testreports}" includes="TEST-*.xml"/>
+      <report format="noframes" todir="${dir.build.testreports}"/>
+    </junitreport> 
+  </target> 
+    
+    
+  <!--  RLS  -->
+
+  <target name="-release" depends="-build, -javadoc, -test">
+    <mkdir dir="${dir.rls}"/>
+    <tar tarfile="${dir.rls}/${file.targz}" basedir="${dir.build}"
+         includes="${component.name}-${version}/**" compression="gzip"/>
+  </target>
+
+    
+  <!--  PUBLIC targets  -->
+
+  <target name="clean" depends="-clean"/>
+  <target name="javadoc" depends="-javadoc"/>
+  <target name="main" depends="-build, -javadoc"/>
+  <target name="test" depends="-build, -javadoc, -test"/> 
+  <target name="release" depends="-release"/> 
+
+</project>

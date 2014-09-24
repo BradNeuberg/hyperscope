@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<title>LayoutPane External Content Test</title>
+
+<script type="text/javascript">
+
+	var djConfig = {isDebug: true};
+
+	djConfig.debugAtAllCosts = true;
+
+</script>
+<script type="text/javascript" src="../../dojo.js"></script>
+<script language="JavaScript" type="text/javascript">
+	dojo.require("dojo.widget.HtmlLayoutPane");
+	dojo.require("dojo.widget.html.ComboBox");
+	dojo.require("dojo.widget.Tree");
+	dojo.require("dojo.widget.HtmlFloatingPane");
+	dojo.hostenv.writeIncludes();
+</script>
+
+<script>
+	function DisplayTreeContent(){
+	    this.update = function(message) {
+	        var clickedTreeNode =     
+	            dojo.widget.getWidgetById(message);
+
+			var docPane = dojo.widget.getWidgetById("docpane");
+			docPane.setUrl(clickedTreeNode.title + ".html");
+	    };
+	}
+	var displayer = new DisplayTreeContent();
+	var nodeSelectionTopic = dojo.event.topic.getTopic("treeSelected");
+	nodeSelectionTopic.subscribe(displayer, "update");
+</script>
+</head>
+<body>
+
+<p>HTML before</p>
+<p>HTML before</p>
+<p>HTML before</p>
+
+<div dojoType="LayoutPane"
+	layoutChildPriority='left-right'
+	style="border: 2px solid black; width: 90%; height: 500px; padding: 10px;"
+>
+	<div dojoType="LayoutPane" layoutAlign="top" style="background-color: #b39b86; ">
+		top bar
+	</div>
+	<div dojoType="LayoutPane" layoutAlign="bottom" style="background-color: #b39b86;">
+		bottom bar
+	</div>
+	<a dojoType="LayoutPane" layoutAlign="left" style="background-color: #acb386; width: 100px;"
+		url="tree.html"></a>
+	<div dojoType="LayoutPane" layoutAlign="right" style="background-color: #acb386;">
+		right
+	</div>
+	<div dojoType="LayoutPane" layoutAlign="client" style="background-color: #f5ffbf; padding: 10px;"
+		url="doc0.html" id="docpane">
+	</div>
+</div>
+
+<div dojoType="FloatingPane" style="width: 300px; height: 300px;"
+	title="externally loaded" url="doc0.html"></div>
+<p>HTML after</p>
+<p>HTML after</p>
+<p>HTML after</p>
+
+</body>
+</html>

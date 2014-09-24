@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<title>TemplatedContainer Nesting Test</title>
+
+<script type="text/javascript">
+
+	var djConfig = {isDebug: true};
+
+	//djConfig.debugAtAllCosts = true;
+
+</script>
+<script type="text/javascript" src="../../dojo.js"></script>
+<script language="JavaScript" type="text/javascript">
+
+	dojo.require("dojo.widget.HtmlTemplatedContainer");
+
+	dojo.hostenv.writeIncludes();
+</script>
+<style>
+
+div {
+	background-color: white;
+	border: 2px solid black;
+	padding: 8px;
+	margin: 4px;
+}
+
+</style>
+</head>
+<body>
+
+<p>pre-TemplatedContainer paragraph</p>
+
+<div dojoType="TemplatedContainer">
+
+	some text (top-level TemplatedContainer)
+
+	<div dojoType="TemplatedContainer">
+
+		text in the inner TemplatedContainer (1)
+
+		<div dojoType="TemplatedContainer">
+
+			inner-inner 1
+		</div>
+
+		text in the inner TemplatedContainer (2)
+
+		<div dojoType="TemplatedContainer">
+
+			inner-inner 2
+		</div>
+
+		text in the inner TemplatedContainer (3)
+
+		<div dojoType="TemplatedContainer">
+
+			inner-inner 3
+		</div>
+
+		text in the inner TemplatedContainer (4)
+
+	</div>
+
+	some more text (top-level TemplatedContainer)
+</div>
+
+<p>mid-TemplatedContainer paragraph</p>
+
+<div dojoType="TemplatedContainer">
+	2nd top-level TemplatedContainer
+</div>
+
+<p>post-TemplatedContainer paragraph</p>
+
+</body>
+</html>

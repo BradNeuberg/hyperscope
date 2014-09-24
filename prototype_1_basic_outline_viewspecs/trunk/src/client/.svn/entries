@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="18"
+   name=""
+   committed-date="2006-03-07T19:38:50.365759Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/prototype_1_basic_outline_viewspecs/trunk/src/client"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   name="style"
+   kind="dir"/>
+<entry
+   name="lib"
+   kind="dir"/>
+<entry
+   committed-rev="18"
+   name="index.html"
+   text-time="2006-10-14T01:00:30.000000Z"
+   committed-date="2006-03-07T19:38:50.365759Z"
+   checksum="df36fe91c7836c175b462c7589a51faf"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:30.000000Z"/>
+</wc-entries>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/src/animation"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:12.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="9a71bc9d8d02787eb1e11e51d4b73710"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="AnimationSequence.js"
+   text-time="2006-10-14T01:00:12.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="8db84958879e2e5f49c428f817802829"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Animation.js"
+   text-time="2006-10-14T01:00:12.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d950ac328515e2848cd34d2eaff586d4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="Timer.js"
+   text-time="2006-10-14T01:00:12.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="c7ff3f5486b6c8f993cb00cb7977a8c6"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="AnimationEvent.js"
+   text-time="2006-10-14T01:00:12.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d6cd42e959acbdc0cfbd4e5b1b57d223"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+</wc-entries>

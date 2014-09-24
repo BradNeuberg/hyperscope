@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="30"
+   name=""
+   committed-date="2006-05-17T19:31:50.682190Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/sarissa/sample-apps/minesweeper"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="30"
+   name="MapBuilderBombList.xsl"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="f8669a8a296f249d15c5c655a86d6b56"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="RevealBombs.xsl"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="82eed9773641dc7cec3f86f0132384fc"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="MapExpander.xsl"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="d5872e2661a31e1da27100419e414e85"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="index.html"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="f06284bf4ee50ef7afc4face1828d1c3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+<entry
+   committed-rev="30"
+   name="minesweeper.js"
+   text-time="2006-10-14T00:59:58.000000Z"
+   committed-date="2006-05-17T19:31:50.682190Z"
+   checksum="74f3960610b81f958b574494c70347d0"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:58.000000Z"/>
+</wc-entries>

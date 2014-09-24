@@ -1,0 +1,54 @@
+.jumpOverlay{
+	width: 30em;
+	z-index: 3;
+	position: absolute;
+}
+
+/**
+	Our floating pane's nifty drop shadow depends
+	on being displayed in order to calculate
+	it's shadow; however, when we combine this
+	with not being displayed on page load and our
+	nifty fade in animation to display the overlay,
+	the shadow gets messed up. This is a trick below
+	to 'hide' the jump overlay offscreen but 'visible'
+	so the shadow can be calculated.
+*/
+.initial-overlay-state{
+	left: -1000px !important;
+	top: -1000px !important;
+}
+
+.jumpInput input{
+	width: 15em;
+	display: inline;
+}
+
+.jumpInput span{
+	margin-right: 5px;
+}
+
+.jumpOverlay .dialog-content{
+	width: 100%;
+}
+
+.jumpOverlay .jumpButtons{
+	clear: both;
+	padding-top: 10px;
+}
+
+.jumpHelpButton,
+.jumpMoreButton{
+	float: left;
+	margin-right: 4px;
+}
+
+.jumpOKButton,
+.jumpCancelButton{
+	float: right;
+	margin-left: 4px;
+}
+
+.jumpHelpButton{
+	width: 3em;
+}

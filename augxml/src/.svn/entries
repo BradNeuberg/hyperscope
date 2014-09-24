@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="371"
+   name=""
+   committed-date="2006-09-22T05:18:18.204358Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/trunk/augxml/src"
+   last-author="jcheyer"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   name="test"
+   kind="dir"/>
+<entry
+   name="java"
+   kind="dir"/>
+<entry
+   name="scripts"
+   kind="dir"/>
+</wc-entries>

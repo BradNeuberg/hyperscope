@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<title>SplitPane Widget Demo</title>
+
+<script type="text/javascript">
+
+	var djConfig = {isDebug: true };
+
+</script>
+<script type="text/javascript" src="../../dojo.js"></script>
+<script language="JavaScript" type="text/javascript">
+
+	dojo.require("dojo.widget.HtmlSplitPane");
+	dojo.hostenv.writeIncludes();
+</script>
+</head>
+<body style="padding: 50px;">
+
+<p>HTML before</p>
+<p>HTML before</p>
+<p>HTML before</p>
+
+<div dojoType="SplitPane"
+	orientation="vertical"
+	sizerWidth="30"
+	activeSizing="0"
+	style="border: 2px solid black; float: left; margin-right: 30px;  width: 400px; height: 300px;"
+>
+	<div dojoType="SplitPanePanel" sizeMin="10" sizeShare="50">
+		this box has three split panes
+	</div>
+	<div dojoType="SplitPanePanel" sizeMin="20" sizeShare="50" style="background-color: yellow; border: 3px solid purple;">
+		in vertical mode
+	</div>
+	<div dojoType="SplitPanePanel" sizeMin="10" sizeShare="50">
+		without active resizing
+	</div>
+</div>
+
+<div dojoType="SplitPane"
+	orientation="horizontal"
+	sizerWidth="5"
+	activeSizing="1"
+	style="border: 2px solid black; float: left; width: 400px; height: 300px;"
+>
+	<div dojoType="SplitPanePanel" sizeMin="20" sizeShare="20">
+		this box has two horizontal panes
+	</div>
+	<div dojoType="SplitPanePanel" sizeMin="50" sizeShare="50">
+		with active resizing, a smaller sizer, different starting sizes and minimum sizes
+	</div>
+</div>
+
+<p style="clear: both;">HTML after</p>
+<p>HTML after</p>
+<p>HTML after</p>
+
+</body>
+</html>

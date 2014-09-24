@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="198"
+   name=""
+   committed-date="2006-07-30T14:09:25.223535Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/mockups/christinas_mockup/help_files"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="198"
+   name="hyperScope_banner.jpg"
+   text-time="2006-10-14T00:59:48.000000Z"
+   committed-date="2006-07-30T14:09:25.223535Z"
+   checksum="8170cd5ca0235a7e5fad702647c0425d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:48.000000Z"/>
+</wc-entries>

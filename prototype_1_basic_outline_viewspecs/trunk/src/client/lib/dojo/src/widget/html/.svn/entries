@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2006-03-06T23:36:47.192473Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/prototype_1_basic_outline_viewspecs/trunk/src/client/lib/dojo/src/widget/html"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="11"
+   name="ComboBox.js"
+   text-time="2006-10-14T01:00:26.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="5cc7dcdf0d5b3202d4ecceae3a688344"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="DropdownButton.js"
+   text-time="2006-10-14T01:00:26.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="3179cecf1cb3514ddf87521fdbb88d6d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="ContextMenu.js"
+   text-time="2006-10-14T01:00:26.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="292b1e743fc543b14762193375c85b64"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="Tooltip.js"
+   text-time="2006-10-14T01:00:26.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="53c4ab40e21b7bc549a2bb4b4b441ef5"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="Button.js"
+   text-time="2006-10-14T01:00:26.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="b6542a1f3fc1e394fbca369d9f83f9e9"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="DatePicker.js"
+   text-time="2006-10-14T01:00:26.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="62f1ecf20ba0d0c8a5d224e7a6825d20"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="TimePicker.js"
+   text-time="2006-10-14T01:00:26.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="95b8c07deddc393b187cf82c1a10ce1e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+<entry
+   committed-rev="11"
+   name="stabile.js"
+   text-time="2006-10-14T01:00:26.000000Z"
+   committed-date="2006-03-06T23:36:47.192473Z"
+   checksum="080301ebbfec25bbefb72efb758c8a4d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:26.000000Z"/>
+</wc-entries>

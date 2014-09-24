@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="31"
+   name=""
+   committed-date="2006-05-17T19:35:45.566621Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/tests/client/lib/jsunit"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="31"
+   name="changelist.txt"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="d480223b95e342be340de8433e88b6cc"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:51.000000Z"/>
+<entry
+   name="app"
+   kind="dir"/>
+<entry
+   name="java"
+   kind="dir"/>
+<entry
+   name="tests"
+   kind="dir"/>
+<entry
+   name="logs"
+   kind="dir"/>
+<entry
+   name="images"
+   kind="dir"/>
+<entry
+   name="licenses"
+   kind="dir"/>
+<entry
+   committed-rev="31"
+   name="jsunit.properties.sample"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="90c8f3ee8036720130535cce94f9c7e1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   name="css"
+   kind="dir"/>
+<entry
+   name="intellij"
+   kind="dir"/>
+<entry
+   committed-rev="31"
+   name="readme.txt"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="e066cf3b36f17991d8283b93b9f536aa"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="31"
+   name="testRunner.html"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="ea622f5588b27f5d83c2c4d18b0093cd"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="31"
+   name="build.xml"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="f7c66dac63d8defbccb44a837bf043c8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+</wc-entries>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="31"
+   name=""
+   committed-date="2006-05-17T19:35:45.566621Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/tests/client/lib/jsunit/intellij"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="31"
+   name="JsUnit.ipr"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="866c85221cd6336cff05ba39575a768d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="31"
+   name="JsUnit.iml"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="461bd8741bce665136d669c38b8cca86"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="31"
+   name=".cvsignore"
+   text-time="2006-10-14T00:59:55.000000Z"
+   committed-date="2006-05-17T19:35:45.566621Z"
+   checksum="d0a27f7fb5e5deb5f1a74626f5beba9d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+</wc-entries>

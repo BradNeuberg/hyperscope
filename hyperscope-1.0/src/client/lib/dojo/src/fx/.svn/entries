@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/src/fx"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="html.js"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="65f8df8b29792c0523013e3ad2ba17cc"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="__package__.js"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="52d5bba8aa0c25a061b6c7f57c3089f8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="svg.js"
+   text-time="2006-10-14T01:00:13.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="24b0aa79bb32f28f45c0973caf9c16c3"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+</wc-entries>

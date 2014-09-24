@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="359"
+   name=""
+   committed-date="2006-09-04T09:51:44.716880Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/demos"
+   last-author="eekim"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="186"
+   name="sample_word_file.doc"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-07-14T22:37:48.217012Z"
+   checksum="045eb13e00f2f4d26a4f8929a12f7305"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="355"
+   name="bi-2120.opml"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-09-04T07:38:19.539624Z"
+   checksum="2ec56df23e9601c004e87cb92a7a5f99"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="346"
+   name="tutor.opml"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-09-04T05:20:03.886087Z"
+   checksum="fa503ca16083451735284cac0ab1a06e"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="346"
+   name="hyarch.opml"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-09-04T05:20:03.886087Z"
+   checksum="1c41108433996e2f6c84b08dc13e29bd"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="355"
+   name="oad-2221.opml"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-09-04T07:38:19.539624Z"
+   checksum="dbe6a5de91da052339d5e9be6a46bc8b"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="355"
+   name="oad-2250.opml"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-09-04T07:38:19.539624Z"
+   checksum="ad8236bc1ea7b5920a94b632521e7015"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="augmentinghumanintellect.opml"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="59ab77dd7e9ab0ae129ab2bf5c3427bb"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="346"
+   name="complex_html.opml"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-09-04T05:20:03.886087Z"
+   checksum="7b8cecd85daaf44a871e72a9109c2344"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="augment-132082.opml"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="672590f9e467ab65ec016238372116fc"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="359"
+   name="augment-132811.opml"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-09-04T09:51:44.716880Z"
+   checksum="890971271de98f4d7214ee48a9d918b3"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   committed-rev="346"
+   name="tutor-browser.opml"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-09-04T05:20:03.886087Z"
+   checksum="0a95d924fcf63f6ca31a565341df20a6"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:55.000000Z"/>
+<entry
+   name="figures"
+   kind="dir"/>
+<entry
+   committed-rev="346"
+   name="tutor2.opml"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-09-04T05:20:03.886087Z"
+   checksum="5ceb79ecd04154838d163eb4bd2342a4"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="346"
+   name="tutor3.opml"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-09-04T05:20:03.886087Z"
+   checksum="fbea6d86f1b6a6ad4a83308e08a35d9a"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="346"
+   name="transclude.opml"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-09-04T05:20:03.886087Z"
+   checksum="27fd1315f605141e3bd42075baec4295"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="320"
+   name="opml1_0.opml"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-09-02T12:46:44.224621Z"
+   checksum="adcddc008f0e8bd703c9c6aaa4bec326"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="187"
+   name="opml_gateway.php"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-07-15T17:39:50.303070Z"
+   checksum="ecc2efa2ecf536f7029362c8d64ed00a"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+<entry
+   committed-rev="320"
+   name="opml2_0.opml"
+   text-time="2006-10-14T00:59:57.000000Z"
+   committed-date="2006-09-02T12:46:44.224621Z"
+   checksum="dd12a516048eeea9c2591285fa251bfe"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T00:59:57.000000Z"/>
+</wc-entries>

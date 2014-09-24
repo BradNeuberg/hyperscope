@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="361"
+   name=""
+   committed-date="2006-09-04T10:00:06.795207Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0"
+   last-author="eekim"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="303"
+   name="LICENSE"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-09-01T20:28:49.177080Z"
+   checksum="686e6cb566fd6382c9fcc7a557bf4544"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   committed-rev="348"
+   name="INSTALL"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-09-04T05:31:32.905039Z"
+   checksum="64c23bc1aba64852ad1254e2c164c2b8"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   name="src"
+   kind="dir"/>
+<entry
+   name="docs"
+   kind="dir"/>
+<entry
+   committed-rev="353"
+   name="build.properties"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-09-04T07:11:27.223951Z"
+   checksum="279ca0f29dd962301562c33597f3c0b7"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:22.000000Z"/>
+<entry
+   committed-rev="348"
+   name="README"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-09-04T05:31:32.905039Z"
+   checksum="a1e0a50cfad4b49ece77933ec71864b4"
+   last-author="eekim"
+   kind="file"
+   prop-time="2006-10-14T01:00:22.000000Z"/>
+<entry
+   committed-rev="353"
+   name="build.xml"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-09-04T07:11:27.223951Z"
+   checksum="5570b7ead7e55b8babc474d74ed8cb58"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:22.000000Z"/>
+</wc-entries>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="113"
+   name=""
+   committed-date="2006-06-12T14:40:43.347429Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/trunk/augxml/src/test/org/nlsaugment/augxml/memory"
+   last-author="jcheyer"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="76"
+   name="TestMemoryObject.java"
+   text-time="2006-10-14T00:59:46.000000Z"
+   committed-date="2006-05-30T15:55:47.896418Z"
+   checksum="bc3793fbab059b1ab58cd5042e86392d"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="76"
+   name="TestMemorySpace.java"
+   text-time="2006-10-14T00:59:46.000000Z"
+   committed-date="2006-05-30T15:55:47.896418Z"
+   checksum="0594aaa2ecd6008676d1bbda20a4cfaa"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="113"
+   name="TestLocation.java"
+   text-time="2006-10-14T00:59:46.000000Z"
+   committed-date="2006-06-12T14:40:43.347429Z"
+   checksum="53b5e2875e778af5831f9238f2635bb7"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+<entry
+   committed-rev="76"
+   name="TestPage.java"
+   text-time="2006-10-14T00:59:46.000000Z"
+   committed-date="2006-05-30T15:55:47.896418Z"
+   checksum="6d8211465c79c7532da4c57a4509b5ee"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:46.000000Z"/>
+</wc-entries>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/tests/crypto"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="test_Blowfish.html"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="8fded1a288b16f75e4da38dd2109e045"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_MD5.js"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="96d6817f607ea24b3b4a759c07119570"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Rijndael.js"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b94256fe546c042f7d184e23fad0001f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_SHA256.js"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="78b7a192ecbc2436d7dffa106eacab66"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_SHA.js"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="caa7a9aedadc6c0e8e59d75f58bbac62"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="test_Blowfish.js"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="79af46314ace4f8c073211ac72fbd3fb"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+<entry
+   committed-rev="203"
+   name="TESTVALUES.txt"
+   text-time="2006-10-14T01:00:07.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="6083251d1894bdfa0a88e8058e767bc0"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:07.000000Z"/>
+</wc-entries>

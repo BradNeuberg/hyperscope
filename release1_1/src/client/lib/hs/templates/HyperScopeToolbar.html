@@ -1,0 +1,61 @@
+<div id="toolbar">
+	<!--
+		Tables are the only way to do vertical-centering of content
+		in a cross-browser way, since CSS's 'vertical-align: middle' does not work
+		with certain kinds of elements and Internet Explorer does not
+		support 'display: table-cell'. See
+		http://www.quirksmode.org/css/centering.html
+		for details. It's also the only way to do it in a way that is independent
+		of system font size.
+
+		Our trick to get the iframe to take up the rest of it's vertical space while
+		only displaying a scrollbar inside of it's content and not
+		on the full toolbar or browser window (again needed because
+		Internet Explorer does not support 'display: fixed') means we have to use
+		two table cells to align some buttons on the left of the toolbar and
+		some on the right.
+
+		This is not semantic markup, but it's needed to combine all of what we need
+		cross-browser.
+	-->
+	<table border="0">
+		<tr>
+			<td class="left" valign="middle">
+				<span id="logo">
+					HyperScope
+				</span>
+
+				<img	id="toolbarHelpButton"
+						class="toolbar-button"
+						dojoAttachPoint="toolbarHelpButton" />
+			</td>
+
+			<td dojoAttachPoint="commandBarCell" class="middle" valign="middle">
+				<div	id="commandBar">
+				</div>
+			</td>
+
+			<td dojoAttachPoint="rightHandCell" class="right" valign="middle">
+				<img	id="toolbarJumpButton"
+						class="toolbar-button"
+						dojoAttachPoint="toolbarJumpButton" />
+
+				<img	id="toolbarViewspecsButton"
+						class="toolbar-button"
+						dojoAttachPoint="toolbarViewspecsButton" />
+
+				<img	id="toolbarTurboModeButton"
+						class="toolbar-button"
+						dojoAttachPoint="toolbarTurboModeButton" />
+
+				<img	id="toolbarBrowserModeButton"
+						class="toolbar-button"
+						dojoAttachPoint="toolbarBrowserModeButton" />
+
+				<a href="#" id="current-link">
+					<img src="/hyperscope/src/client/images/link.gif" />
+				</a>
+			</td>
+		</tr>
+	</table>
+</div>

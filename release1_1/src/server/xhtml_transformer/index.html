@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>HyperScope HTML Transformer</title>
+	
+	<script src="bookmarklet.js"></script>
+	
+	<style type="text/css">
+		body { margin: 2em; }
+		h2 { margin-top: 2.5em; }
+		label { display: inline; font-weight: bold; }
+		#submit { margin-top: 2em; }
+		#url { width: 70%; }
+	</style>
+</head>
+<body onunload="clearStatus()">
+
+<h1>HTML Transformer for HyperScope</h1>
+
+<p>If you encounter problems please email <a href="mailto:bkn3@columbia.edu">Brad Neuberg</a>.</p>
+
+<h2>Use the following form to dynamically bring an HTML document into HyperScope</h2>
+
+<form method="GET" onsubmit="return submitTransform();">
+	<div>
+		<label for="url">
+			URL:&nbsp;
+		</label>
+		<input name="url" id="url" type="text" />
+	</div>
+	
+	<p>By default, the HTML transformer caches results for faster retrieval. Select the following checkbox
+	to force the transformer to reload a page:</p>
+	
+	<div>
+		<label for="reload">Force Reload:&nbsp;</label>
+		<input type="checkbox" id="reload" name="reload" />
+	</div>
+	
+	<div> 
+		<input id="submit" type="submit" value="Transform URL" />
+	</div>
+</form>
+
+
+<h2>Use the following bookmarklet to dynamically bring HTML pages you are viewing into HyperScope</h2>
+
+<ul>
+	<li>
+		<a href="javascript:document.immediatelyTransform = true; function loadScript(scriptURL) { var scriptElem = document.createElement('SCRIPT'); scriptElem.setAttribute('language', 'JavaScript'); scriptElem.setAttribute('src', scriptURL); document.body.appendChild(scriptElem);} loadScript('http://codinginparadise.org/hyperscope/src/server/xhtml_transformer/bookmarklet.js');">
+		HTML Transformer</a> - 
+		Drag this link to your toolbar; when viewing an HTML page click this link to view the page inside the HyperScope.
+	</li>
+</ul>
+
+</body>
+</html>

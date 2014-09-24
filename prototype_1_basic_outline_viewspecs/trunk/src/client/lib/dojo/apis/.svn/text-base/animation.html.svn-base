@@ -1,0 +1,36 @@
+<h2 id="dojo.animation">dojo.animation</h2><h3>Methods</h3><pre>Animation (_536, _537, _538, _539)
+AnimationEvent (anim, type, _548, _549, _550, _551, dur, pct, fps)
+AnimationSequence (_555)
+</pre><h2 id="dojo.animation.Animation Object">dojo.animation.Animation Object</h2><h3>Methods</h3><pre>play (_542)
+pause ()
+playPause ()
+gotoPercent (pct, _544)
+stop (_545)
+status ()
+</pre><h3>Properties</h3><pre>undefined curve
+undefined duration
+undefined accel
+Number repeatCount
+undefined onBegin
+undefined onAnimate
+undefined onEnd
+undefined onPlay
+undefined onPause
+undefined onStop
+undefined handler
+</pre><h2 id="dojo.animation.AnimationSequence Object">dojo.animation.AnimationSequence Object</h2><h3>Methods</h3><pre>add ()
+remove (anim)
+removeAll ()
+play (_558)
+pause ()
+playPause ()
+stop ()
+status ()
+setCurrent (anim)
+playNext ()
+</pre><h3>Properties</h3><pre>Number repeatCount
+undefined onBegin
+undefined onEnd
+undefined onNext
+undefined handler
+</pre>

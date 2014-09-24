@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style/global.css"></link>
+
+		<!-- The Dojo Framework -->
+		<script type="text/javascript"> 
+				djConfig = { isDebug: false, 
+				             baseRelativePath: "lib/dojo/", 
+				             parseWidgets: false };
+		</script>
+		<script type="text/javascript" src="lib/dojo/dojo.js"></script>
+
+		<!-- Custom libraries -->
+		<script type="text/javascript">
+			// define our custom packages
+      dojo.hostenv.setModulePrefix("hyperscope", "../hyperscope"); // path is relative to dojo root
+      dojo.require("hyperscope.*");
+		</script>
+	</head>
+	
+	<body>
+		<h3>Instructions</h3>
+		<div>Press any of the following keys:</div>
+		<div>a = one level less</div>
+		<div>b = one level more</div>
+		<div>c = show all levels</div>
+		<div>d = show first level only</div>
+		
+		<ol>
+		<li><a>Linkblogs</a>
+	    <ol>
+	      <li><a href="http://diveintomark.org/xml/blink.xml" type="application/rss+xml">dive into mark b-links</a></li>
+	      <li><a href="http://www.thauvin.net/blog/xml.jsp?format=rdf" type="application/rss+xml">Eric&#39;s Weblog</a></li>
+	      <li><span>here is a nested item</span>
+	
+	      		<ol>
+	      			<li>hello</li>
+	      			<li>mom</li>
+	      			<li><span>Yet another nested item!</span>
+	      				<ol>
+	      					<li>one</li>
+	      					<li>two</li>
+	
+	      					<li>three</li>
+	      				</ol>
+	      			</li>
+	      		</ol>
+	      </li>
+	    </ol>
+	  </li>
+	  <li><a>Weblogs</a>
+	
+	    <ol compact="compact">
+	      <li><a href="http://intertwingly.net/blog/index.rss2" type="application/rss+xml">Sam Ruby</a></li>
+	      <li><a href="http://diveintomark.org/xml/atom.xml" type="application/atom+xml">dive into mark</a></li>
+	      <li><a href="http://www.decafbad.com/blog/index.rss" type="application/rss+xml">0xDECAFBAD</a></li>
+	    </ol>
+	  </li>
+	</ol>
+	</body>
+</html>

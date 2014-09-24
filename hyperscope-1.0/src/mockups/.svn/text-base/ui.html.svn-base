@@ -1,0 +1,74 @@
+<html>
+<head>
+  <title>HyperScope</title>
+  <script type="text/javascript" src="lib/dojo/dojo.js"></script>
+  <script type="text/javascript">
+    dojo.require("dojo.event.*");
+    dojo.require("dojo.widget.*");
+    dojo.require("dojo.widget.Button");
+  </script>
+  <style type="text/css">
+    #toolbar {
+      color: white;
+      padding: 0.5em;
+      background-color: blue;
+      font-weight: bold;
+      font-size: 16pt;
+    }
+
+    #document {
+      margin-left: 5em;
+      margin-right: 5em;
+    }
+
+    #document p:hover {
+      background-color: lightgray;
+    }
+
+    .indent {
+      padding-left: 2em;
+    }
+  </style>
+</head>
+<body>
+<div id="toolbar">
+HyperScope
+<button dojoType="Button">Help</button>
+<button dojoType="dropdownButton" menuId='jumpMenu'>Jump</button>
+<button dojoType="dropdownButton" menuId='viewMenu'>Viewspecs
+</button>
+</div>
+
+<div id="document">
+
+<p id="hid1"><b>HyperScope Mockups</b></p>
+<div class="indent">
+  <p id="hid1A">Layout and Controls</p>
+    <div class="indent">
+      <p id="hid1A1">This is an HTML mockup for Phase 1 of the HyperScope
+         development.  If done properly, these mockups can be
+         used as the basis for the actual HyperScope UI.</p>
+      <p id="hid1A2">The blue bar above is the toolbar.  There are two pulldown
+         menus there, one for jumping and one for viewspecs.</p>
+      <p id="hid1A3">This area is the document viewing area.
+         <a href="http://purple.blueoxen.net/">Purple numbers</a>
+         -- when turned on -- are displayed on the right-hand
+         margin.  There are some controls embedded here as well.
+         When you hover over a node, controls will appear in the 
+         left margin.  These are viewspec shortcuts.</p>
+    </div>
+  <p id="hid1B">To Do</p>
+    <div class="indent">
+      <p id="hid1B1">Layout toolbar correctly and keep it on the page at all
+         times.</p>
+      <p id="hid1B2">Turn off bullets from these list items. <b>Done</b></p>
+      <p id="hid1B3">Display purple numbers.</p>
+      <p id="hid1B4">Implement hover controls.</p>
+      <p id="hid1B5">Implement pull-down dialog boxes in the toolbar.</p>
+      <p id="hid1B6">Implement keyboard shortcut hovering.</p>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

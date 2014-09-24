@@ -1,0 +1,208 @@
+<html>
+<head>
+  <title>HyperScope</title>
+  <script type="text/javascript" src="lib/dojo/dojo.js"></script>
+  <script type="text/javascript">
+    dojo.require("dojo.event.*");
+    dojo.require("dojo.widget.*");
+    dojo.require("dojo.widget.Button");
+  </script>
+  <style type="text/css">
+    #toolbar {
+      color: white;
+      padding: 0.5em;
+      margin-bottom: 2em;
+      background-color: blue;
+      font-weight: bold;
+      font-size: 16pt;
+      width: 100%;
+/*      position: fixed; */
+    }
+
+    #document {
+    }
+
+    .indent {
+      padding-left: 2em;
+    }
+
+    a.hid {
+      font-family: "Helvetica", "Arial", sans-serif;
+      font-size: small;
+      font-style: italic;
+      font-weight: bold;
+      text-decoration: none;
+      color: #C8A8FF; /* light purple */
+    }
+  </style>
+</head>
+<body>
+<div id="toolbar">
+HyperScope
+<button dojoType="Button">Help</button>
+<button dojoType="dropdownButton" menuId='jumpMenu'>Jump</button>
+<button dojoType="dropdownButton" menuId='viewMenu'>Viewspecs
+</button>
+</div>
+
+<div id="document">
+<table cellpadding="10" width="100%" border="0">
+  <tr>
+    <td width="10%" valign="top"></td>
+    <td width="78%" valign="top"><b>HyperScope Mockups</b></td>
+    <td width="10%" align="right" valign="top">
+      <a class="hid" href="">1</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" valign="top"></td>
+    <td width="78%" valign="top">
+      <div class="indent">Layout and Controls</div>
+    </td>
+    <td width="10%" align="right" valign="top">
+      <a class="hid" href="">1A</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" align="center" valign="top" bgcolor="lightgray">
+      <img src="images/viewspec1.png" />
+      <img src="images/viewspec2.png" />
+      <img src="images/viewspec3.png" />
+    </td>
+    <td width="78%" valign="top" bgcolor="lightgray">
+    <div class="indent">
+      <div class="indent">
+      This is an HTML mockup for Phase 1 of the HyperScope
+      development.  If done properly, these mockups can be
+      used as the basis for the actual HyperScope UI.
+      </div>
+    </div>
+    </td>
+    <td width="10%" align="right" valign="top" bgcolor="lightgray">
+      <a class="hid" href="">1A1</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" valign="top"></td>
+    <td width="78%" valign="top">
+    <div class="indent">
+      <div class="indent">
+      The blue bar above is the toolbar.  There are two pulldown
+      menus there, one for jumping and one for viewspecs.
+      </div>
+    </div>
+    </td>
+    <td width="10%" align="right" valign="top">
+      <a class="hid" href="">1A2</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" valign="top"></td>
+    <td width="78%" valign="top">
+    <div class="indent">
+      <div class="indent">
+      This area is the document viewing area.
+      <a href="http://purple.blueoxen.net/">Purple numbers</a>
+      -- when turned on -- are displayed on the right-hand
+      margin.  There are some controls embedded here as well.
+      When you hover over a node, controls will appear in the 
+      left margin.  These are viewspec shortcuts.
+      </div>
+    </div>
+    </td>
+    <td width="10%" align="right" valign="top">
+      <a class="hid" href="">1A3</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" valign="top"></td>
+    <td width="78%" valign="top">
+    <div class="indent">To Do</div>
+    </td>
+    <td width="10%" align="right" valign="top">
+      <a class="hid" href="">1B</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" valign="top"></td>
+    <td width="78%" valign="top">
+    <div class="indent">
+      <div class="indent">
+      Layout toolbar correctly and keep it on the page at all times.
+      </div>
+    </div>
+    </td>
+    <td width="10%" align="right" valign="top">
+      <a class="hid" href="">1B1</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" valign="top"></td>
+    <td width="78%" valign="top">
+    <div class="indent">
+      <div class="indent">
+      Turn off bullets from these list items. <b>Done</b>
+      </div>
+    </div>
+    </td>
+    <td width="10%" align="right" valign="top">
+      <a class="hid" href="">1B2</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" valign="top"></td>
+    <td width="78%" valign="top">
+    <div class="indent">
+      <div class="indent">
+      Display purple numbers.  <b>Done</b>
+      </div>
+    </div>
+    </td>
+    <td width="10%" align="right" valign="top">
+      <a class="hid" href="">1B3</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" valign="top"></td>
+    <td width="78%" valign="top">
+    <div class="indent">
+      <div class="indent">
+      Implement hover controls.
+      </div>
+    </div>
+    </td>
+    <td width="10%" align="right" valign="top">
+      <a class="hid" href="">1B4</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" valign="top"></td>
+    <td width="78%" valign="top">
+    <div class="indent">
+      <div class="indent">
+      Implement pull-down dialog boxes in the toolbar.
+      </div>
+    </div>
+    </td>
+    <td width="10%" align="right" valign="top">
+      <a class="hid" href="">1B5</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" valign="top"></td>
+    <td width="78%" valign="top">
+    <div class="indent">
+      <div class="indent">
+      Implement keyboard shortcut hovering.
+      </div>
+    </div>
+    </td>
+    <td width="10%" align="right" valign="top">
+      <a class="hid" href="">1B6</a>
+    </td>
+  </tr>
+</table>
+</div>
+
+</body>
+</html>

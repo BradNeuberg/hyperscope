@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Dictionary Entry Test</title>
+		<style type="text/css">
+			#Mover {
+				position : absolute;
+				background : #ccc;
+				left : 200px;
+				top : 200px;
+			}
+		</style>
+		<script language="JavaScript" type="text/javascript">
+			// Dojo configuration
+			djConfig = { 
+				isDebug: true
+			};
+		</script>
+		<script language="JavaScript" type="text/javascript" src="../../dojo.js"></script>
+		<script language="JavaScript" type="text/javascript" src="../jsunit_browser.js"></script>
+		<script language="JavaScript" type="text/javascript">
+			dojo.require("dojo.collections.Collections");
+			function test_DictionaryEntry(){
+				var d = new dojo.collections.DictionaryEntry("foo","bar");
+				jum.assertEquals("test10", "bar", d.valueOf());
+				jum.assertEquals("test20", "bar", d.toString());
+			}
+			function init(){
+				test_DictionaryEntry();
+			}
+			dojo.hostenv.modulesLoadedListeners.push(init);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd"> 
+<html>
+<head>
+	<title>Dojo Tooltip Widget Test</title>
+	
+	<script type="text/javascript">
+		var djConfig = {isDebug: true, debugAtAllCosts: true };
+	</script>
+	
+	<script type="text/javascript" src="../../dojo.js"></script>
+	<script type="text/javascript">
+		dojo.require("dojo.widget.Tooltip");
+		dojo.require("dojo.widget.html.Tooltip");
+		dojo.require("dojo.fx.html");
+		dojo.hostenv.writeIncludes();
+	</script>
+	
+	<style>
+		.tt { border-bottom: 1px dotted black; cursor: pointer; }
+		body .dojoTooltip { color: blue; }
+	</style>
+</head>
+
+<body>
+	<h1>Tooltip test</h1>
+	<p>Click on the items below to test tooltips:</p>
+	<p>
+		<span id="one" class="tt">text</span>
+		<span dojoType="tooltip" connectId="one">
+			<b>
+				<span style="color: blue;">rich formatting</span>
+				<span style="color: red; font-size: x-large;"><i>!</i></span>
+			</b>
+		</span>
+		
+		<a id="three" href="#bogus">anchor</a>
+		<span dojoType="tooltip" connectId="three" caption="inline caption w/fade in" toggle="fade"></span>
+	</p>
+	
+	<button id="four">button</button>
+	<span dojoType="tooltip" connectId="four" caption="tooltip on button"></span>
+	
+	<img id="five" src="images/question.gif"></img>
+	<span dojoType="tooltip" connectId="five" toggle="explode">
+		exploding tooltip
+	</span>
+
+    <select id="six">
+      <option value="alpha">Alpha</option>
+      <option value="beta">Beta</option>
+      <option value="gamma">Gamma</option>
+      <option value="delta">Delta</option>
+    </select>
+	<span dojoType="tooltip" connectId="six" caption="tooltip on select"></span>
+</body>
+</html>
+

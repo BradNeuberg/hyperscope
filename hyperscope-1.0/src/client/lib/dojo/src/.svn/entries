@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="338"
+   name=""
+   committed-date="2006-09-04T00:29:51.730934Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/src"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   name="animation"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="html.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="bcb7dc134b0ac847f5e645df13b86eba"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   name="text"
+   kind="dir"/>
+<entry
+   name="debug"
+   kind="dir"/>
+<entry
+   name="validate"
+   kind="dir"/>
+<entry
+   name="lfx"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="crypto.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="6e5eee68f6943ad81d15e057d671a191"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="hostenv_rhino.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2b2b45953acdeee7b8c1f84cc45d548e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="hostenv_jsc.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="16bb0afd9c7fb6daa5cb89c3adb79074"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="validate.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="670af057b45c4dcd72ca49ac92103e2d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="browser_debug.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="e5fce47e2cef785cfd92a3d26dc39ce1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   name="storage"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="regexp.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2524557fb448020e0d0e61cba4cabc33"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   name="undo"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="bootstrap2.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="d29f244234cf406406922c2c90950f71"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="203"
+   name="svg.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5a27d36c169e99af3c95ab972affad6d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:12.000000Z"/>
+<entry
+   committed-rev="338"
+   name="style.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-09-04T00:29:51.730934Z"
+   checksum="cbe634ef6e21d3cf8654fd26f447e067"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="loader_xd.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="50fdb866acd9f2eb76c64b8cc23a6041"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   name="fx"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="doc.js"
+   text-time="2006-10-14T01:00:21.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="0fefb12eae7c76eab10a24aaa192487d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="string.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="9549d9174c616218857acdadbc93e8c8"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   name="lang"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="hostenv_wsh.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="df9b16ccfbab00196105bcb123a87795"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="json.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b3e597982b0a727eb61ce1626c76f2fe"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   name="reflect"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="Deferred.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3f4d177829d3b270e9e3dc8f98d8ae6f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="lang.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="f67ea1d4faa9e017553994e2bfbeb94f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="iCalendar.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="fa2c6038765f8bb8e5e813333694887e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   name="flash"
+   kind="dir"/>
+<entry
+   name="graphics"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="hostenv_browser.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="c03316f6838e3921ef6ba47a972b6ad4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   name="string"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="flash.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="324aa960c22a00b1d771045ed5b4588c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="bootstrap1.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="3e914fdd6d8d0ca4ca8b567e4cdafad0"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="hostenv_adobesvg.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="154d025b612e8beb6ccf2e216513647e"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   name="collections"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="storage.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="13e32da0b88242b2435aaf68dd9d0199"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="hostenv_svg.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a71a48962f5496fc4f46ff5abdf00d6c"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   committed-rev="203"
+   name="io.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="e8c6edc861140d13e5d953a81671fa6b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:13.000000Z"/>
+<entry
+   name="widget"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="AdapterRegistry.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="9443d0d66b5fc2b6547f687143eb0d2d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   name="rpc"
+   kind="dir"/>
+<entry
+   name="math"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="animation.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="79fb0421352c860c9b58f3b661eddf5d"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   name="uri"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="math.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="579500bfd205ef9a78e79c918e3bf769"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   name="html"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="hostenv_dashboard.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="a6e73bb819f7debb7e13cc85c73a5fd1"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   name="data"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="profile.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="ec1b3f2fda80157647508ab1c9bebd00"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   name="i18n"
+   kind="dir"/>
+<entry
+   name="crypto"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="loader.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="fd1ecfd6cc62a57d4ec6a204cd710e1f"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   name="event"
+   kind="dir"/>
+<entry
+   name="compat"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="data.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="f0a8d33485d34c721cd113d03f3da347"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   name="selection"
+   kind="dir"/>
+<entry
+   name="logging"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="date.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="8bd6b2d85719d91504d60a4d08902872"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="hostenv_spidermonkey.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="6eb505ddec9b6265855ccb1a1c3e7d14"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="dom.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="2244952be182b8fe214a715adbc11209"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="event.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="0d361dc203f17e7ddf7cacfa9e09770b"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   name="xml"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="debug.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="79dfb178adf955f5ffb1dfdce7f94c63"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   name="dnd"
+   kind="dir"/>
+<entry
+   name="uuid"
+   kind="dir"/>
+<entry
+   name="io"
+   kind="dir"/>
+<entry
+   committed-rev="203"
+   name="experimental.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="612feab7ae80f657d95a82fd9f5fa9a4"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+<entry
+   committed-rev="203"
+   name="behavior.js"
+   text-time="2006-10-14T01:00:22.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="b4e85dd866ccb4b091453892e8633f31"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:21.000000Z"/>
+</wc-entries>

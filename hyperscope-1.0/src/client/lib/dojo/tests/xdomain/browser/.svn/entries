@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="203"
+   name=""
+   committed-date="2006-08-02T05:30:55.624530Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/tags/hyperscope-1.0/src/client/lib/dojo/tests/xdomain/browser"
+   last-author="bradneuberg"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   committed-rev="203"
+   name="xhr1.xml"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="fcaa9ab6fb873a1ad46515ac84f1ee26"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="xhr2.xml"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="5617931c854521a1410e1644bc783d14"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="xhr3.xml"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="48ea304e562905b5a7dc1b53851391f5"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+<entry
+   committed-rev="203"
+   name="xhr4.xml"
+   text-time="2006-10-14T01:00:08.000000Z"
+   committed-date="2006-08-02T05:30:55.624530Z"
+   checksum="8f0a4905ba9c75587c37780f3004db61"
+   last-author="bradneuberg"
+   kind="file"
+   prop-time="2006-10-14T01:00:08.000000Z"/>
+</wc-entries>

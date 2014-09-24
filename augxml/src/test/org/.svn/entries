@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="128"
+   name=""
+   committed-date="2006-06-20T14:41:13.419970Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/trunk/augxml/src/test/org"
+   last-author="jcheyer"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   name="nlsaugment"
+   kind="dir"/>
+</wc-entries>

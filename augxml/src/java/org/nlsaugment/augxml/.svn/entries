@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="366"
+   name=""
+   committed-date="2006-09-11T03:15:41.785512Z"
+   url="http://svn.blueoxen.net/repos/hyperscope/trunk/augxml/src/java/org/nlsaugment/augxml"
+   last-author="jcheyer"
+   kind="dir"
+   uuid="30ae8734-f80c-0410-bb5b-ec0abe88e01a"
+   repos="http://svn.blueoxen.net/repos/hyperscope"
+   revision="371"/>
+<entry
+   name="model"
+   kind="dir"/>
+<entry
+   name="type"
+   kind="dir"/>
+<entry
+   name="reader"
+   kind="dir"/>
+<entry
+   name="memory"
+   kind="dir"/>
+<entry
+   name="writer"
+   kind="dir"/>
+<entry
+   committed-rev="128"
+   name="Constants.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-06-20T14:41:13.419970Z"
+   checksum="b9be97b1e4ec1ca8b48610d146bb751a"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   name="util"
+   kind="dir"/>
+<entry
+   committed-rev="354"
+   name="AugXml.java"
+   text-time="2006-10-14T00:59:47.000000Z"
+   committed-date="2006-09-04T07:11:34.984977Z"
+   checksum="1029f9387ff905fab285f27b28ad3f1f"
+   last-author="jcheyer"
+   kind="file"
+   prop-time="2006-10-14T00:59:47.000000Z"/>
+<entry
+   name="exception"
+   kind="dir"/>
+</wc-entries>
